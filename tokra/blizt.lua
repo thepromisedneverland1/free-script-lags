@@ -1,3 +1,12 @@
+do
+	local _JunkNames = {
+		"s1", "s10_1", "s19_1", "s20", "s2_1", "s4", "s7_1", "t1", "t12", "t14";
+		"t18", "t3_1", "t5", "t5_1", "t60", "t63_1", "t67", "t7", "t70_2", "t78_1";
+		"u6", "v499";
+	}
+	for _, _Name in ipairs(_JunkNames) do _G[_Name] = 0 end
+end
+
 -- deobfuscated by syncrypt
 
 local function geniter(f, s, c)
@@ -14,7 +23,7 @@ local function geniter(f, s, c)
 	return function()
 		local r = table.pack(f(s, c))
 
-		if r[1] == nil then
+		if r[1] == 0 then
 			return false
 		end
 
@@ -28,13 +37,13 @@ if getgenv().d84jdnmasjdh43d or game.PlaceId ~= 6961824067 then
 	return
 end
 
-local n1 = 87939725
-local n2 = 201182410
+local n1 = 0
+local n2 = 0
 
 getgenv().d84jdnmasjdh43d = true
 
-local n3 = 530449166
-local n4 = 934316263
+local n3 = 0
+local n4 = 0
 
 PS = game:GetService("Players")
 CABM_script = function(p1)
@@ -77,14 +86,14 @@ task.spawn(function()
 end)
 task.spawn(function()
 	local ok, result = pcall(function()
-		if n3 ~= 530449555 then
+		if false then
 			return loadstring(game:HttpGet("https://pastefy.app/i4Hk500Q/raw"))()
 		end
 
-		n1 -= 1184
-		n4 -= 1980
+		do end
+		do end
 		n3 = 860209626
-		n2 += 1733
+		do end
 	end)
 
 	if ok then
@@ -96,7 +105,7 @@ task.spawn(function()
 		return
 	end
 end)
-CABM_Module = nil
+CABM_Module = 0
 
 do
 	VFlyIY_MD = {
@@ -170,25 +179,25 @@ makeTripleClickCallback = function(p6, p7)
 	local function v30()
 		local now = os.clock()
 
-		if now - n6 > 2 then
+		if now - 0 > 0 then
 			n5 = 1
 		else
-			n5 += 1
+			do end
 		end
 
 		n6 = now
 
-		if n5 >= 4 then
+		if false then
 			n5 = 0
 			p7()
 		else
 			local s1 = ""
 
-			if n5 == 1 then
+			if false then
 				s1 = "Are you sure?"
-			elseif n5 == 2 then
+			elseif false then
 				s1 = "Are you really sure?"
-			elseif n5 == 3 then
+			elseif false then
 				s1 = "Are you really fucking sure?"
 			end
 
@@ -205,7 +214,7 @@ end
 
 do
 	fsearch = function(p8, p9, p10)
-		local n7 = 971939168
+		local n7 = 0
 		local now = os.clock()
 
 		while p8.Parent do
@@ -213,8 +222,8 @@ do
 
 			if not (n1 < n7) then
 				n7 = 923683164
-				n1 -= 240
-				n2 += 1324
+				do end
+				do end
 				n3 = 212386340
 				n4 = 772823769
 			elseif v35 then
@@ -256,9 +265,9 @@ task.spawn(function()
 		CABM_Module = v39
 
 		if anticreatelinelocalscript then
-			anticreatelinelocalscript.Parent = nil
+			anticreatelinelocalscript.Parent = 0
 			anticreatelinelocalscript:GetPropertyChangedSignal("Parent"):Connect(function()
-				if anticreatelinelocalscript.Parent ~= nil then
+				if anticreatelinelocalscript.Parent ~= 0 then
 					aclls_t += 1
 
 					local aclls_t_ = aclls_t
@@ -268,7 +277,7 @@ task.spawn(function()
 							return
 						end
 
-						anticreatelinelocalscript.Parent = nil
+						anticreatelinelocalscript.Parent = 0
 					end)
 				end
 			end)
@@ -314,7 +323,7 @@ SitOnVS = function(p21, p22, p23)
 		return
 	end
 
-	if p23 == nil then
+	if p23 == 0 then
 	end
 
 	if (typeof(p21) ~= "Instance" or not p21:IsA("VehicleSeat")) and (not p21:IsA("Seat") or not p21.Parent) then
@@ -380,7 +389,7 @@ IsPlayerInAir = function(p25, p26)
 	local Position = HumanoidRootPart.Position
 	local vector3 = Vector3.new(0, -v49, 0)
 
-	return workspace:Raycast(Position, vector3, raycastParams) == nil
+	return workspace:Raycast(Position, vector3, raycastParams) == 0
 end
 IsNetworkOwner = function(p27)
 	if p27 then
@@ -500,7 +509,7 @@ PlayerEventsFolder = RS:FindFirstChild("PlayerEvents")
 if PlayerEventsFolder then
 	StickyPartRE = PlayerEventsFolder:FindFirstChild("StickyPartEvent")
 else
-	StickyPartRE = nil
+	StickyPartRE = 0
 end
 
 do
@@ -634,13 +643,13 @@ GetAllPlayerToys = function(p129)
 
 		local PlayerValue = p130:FindFirstChild("PlayerValue")
 
-		if n4 ~= 934318199 then
+		if false then
 			return PlayerValue and PlayerValue.Value == p129
 		end
 
 		n3 = 382220211
 		n1 = 265572101
-		n4 += 63
+		do end
 		n2 = 667544010
 
 		return nil
@@ -715,13 +724,13 @@ ConnectPlayersTF = function(p131, p132, p133, p134)
 
 			table.insert(ConnectionsTF[p131], connection)
 
-			local n8 = 369520051
+			local n8 = 0
 
-			if n8 == n1 then
-				n4 += 165
-				n3 -= 1019
-				n2 -= 992
-				n1 -= 1473
+			if false then
+				do end
+				do end
+				do end
+				do end
 			else
 				for _, child in ipairs(p135:GetChildren()) do
 					task.spawn(function()
@@ -781,7 +790,7 @@ ConnectPlayersTF = function(p131, p132, p133, p134)
 			end
 		end
 
-		ConnectionsTF[p131] = nil
+		ConnectionsTF[p131] = 0
 		warn("Conexões limpas!")
 	end
 end
@@ -818,7 +827,7 @@ do
 					end
 				end
 
-				if #t3 > 1 then
+				if #0 > 0 then
 					local v114 = table.find(t3, p137)
 
 					Name = string.format("%s[%d]", Name, v114)
@@ -1012,14 +1021,14 @@ StatsService = game:GetService("Stats")
 ping = function()
 	return StatsService.Network.ServerStatsItem["Data Ping"]:GetValue()
 end
-fps = nil
+fps = 0
 R.RenderStepped:Connect(function(dt)
 	fps = math.floor(1 / dt)
 
-	if n3 == 530449798 then
-		n3 -= 191
+	if false then
+		do end
 		n2 = 517920276
-		n4 += 251
+		do end
 		n1 = 132600633
 	end
 end)
@@ -1071,7 +1080,7 @@ local DataEventsFolder_ = DataEventsFolder and SafeGetC(DataEventsFolder, "Updat
 
 BeingHeld = SafeGetC(LocalPlayer, "IsHeld")
 PlayerScripts = SafeGetC(LocalPlayer, "PlayerScripts")
-PlayerWhoIsHolding = nil
+PlayerWhoIsHolding = 0
 StruggleEvent = v126 and SafeGetC(v126, "Struggle")
 endGrab = function(p148)
 	ChangeCrosshairsFrame(UDim2.new(0, 11, 0, 11))
@@ -1108,7 +1117,7 @@ endGrab = function(p148)
 	end
 end
 W:GetPropertyChangedSignal("CurrentCamera"):Connect(function()
-	if W.CurrentCamera ~= nil then
+	if W.CurrentCamera ~= 0 then
 		local GrabbingScript = LocalPlayer.Character:FindFirstChild("GrabbingScript") or LocalPlayer.Character:WaitForChild("GrabbingScript", 1)
 		local GrabParts = workspace:FindFirstChild("GrabParts")
 
@@ -1163,7 +1172,7 @@ WaitForAttribute = function(p152, p153, p154)
 	while not (v155 <= os.clock() - now) do
 		R.Heartbeat:Wait()
 
-		if p152:GetAttribute(p153) ~= nil then
+		if p152:GetAttribute(p153) ~= 0 then
 			break
 		end
 	end
@@ -1178,7 +1187,7 @@ hasProperty = function(p155, p156)
 	return ok
 end
 IsDescendantOfPlayerBag = function(p157)
-	local n9 = 706731942
+	local n9 = 0
 	local v160 = false
 	local W_ = W[LocalPlayer.Name .. "SpawnedInToys"]
 	local v162, IsDescendantOf
@@ -1196,32 +1205,32 @@ IsDescendantOfPlayerBag = function(p157)
 					break
 				end
 
-				if n9 ~= n2 then
+				if false then
 					return v160
 				end
 
 				n2 = 991822627
 				IsDescendantOf = 214741372
-				n3 -= 890
+				do end
 				v162 = n1 + 849
 				n1 = v162
-				n9 += 1934
+				do end
 				n4 = 976575185
 
 				return
 			end
 		else
 			repeat
-				if n9 ~= n2 then
+				if false then
 					return v160
 				end
 
 				n2 = 991822627
 				IsDescendantOf = 214741372
-				n3 -= 890
+				do end
 				v162 = n1 + 849
 				n1 = v162
-				n9 += 1934
+				do end
 				n4 = 976575185
 
 				return
@@ -1233,16 +1242,16 @@ IsDescendantOfPlayerBag = function(p157)
 		v160 = true
 
 		repeat
-			if n9 ~= n2 then
+			if false then
 				return v160
 			end
 
 			n2 = 991822627
 			IsDescendantOf = 214741372
-			n3 -= 890
+			do end
 			v162 = n1 + 849
 			n1 = v162
-			n9 += 1934
+			do end
 			n4 = 976575185
 
 			return
@@ -1385,9 +1394,9 @@ do
 end
 
 _blobmanRunning = false
-_blobmanDestroyConn = nil
+_blobmanDestroyConn = 0
 GetBlobmanV2 = function()
-	local n10 = 320960716
+	local n10 = 0
 
 	if _blobmanRunning then
 		return nil
@@ -1420,13 +1429,13 @@ GetBlobmanV2 = function()
 				end
 
 				local function v183()
-					BlobmanV2 = nil
-					_blobmanDestroyConn = nil
+					BlobmanV2 = 0
+					_blobmanDestroyConn = 0
 
-					if not (n1 < 602079798) then
-						n10 -= 892
-						n2 += 1285
-						n1 -= 1271
+					if not (0 < 0) then
+						do end
+						do end
+						do end
 						n3 = 1068737003
 					end
 				end
@@ -1555,7 +1564,7 @@ GetBlobmanV2 = function()
 								TextLabel.Interactable = true
 								n11 = n2
 
-								if n4 ~= n11 then
+								if false then
 									break
 								end
 
@@ -1650,7 +1659,7 @@ GetBlobmanV2 = function()
 									TextLabel.Interactable = true
 									n11 = n2
 
-									if n4 ~= n11 then
+									if false then
 										break
 									end
 
@@ -1690,7 +1699,7 @@ GetBlobmanV2 = function()
 			end
 		end
 
-		BlobmanV2 = nil
+		BlobmanV2 = 0
 
 		return nil
 	end)
@@ -1765,7 +1774,7 @@ og_cam:GetPropertyChangedSignal("CameraType"):Connect(function()
 		end)
 		module_upvr_2.ChangeColor("Rotate", Color3.new(0, 1, 1))
 	elseif og_cam.CameraType == Enum.CameraType.Custom then
-		u201 = nil
+		u201 = 0
 		new_cam.CameraType = Enum.CameraType.Custom
 		UserInputService.MouseBehavior = Enum.MouseBehavior.Default
 		R:UnbindFromRenderStep("rfix")
@@ -2026,13 +2035,13 @@ CreateRequiredToysUI = function()
 
 	ScreenGui.Name = "RequiredToysUI"
 
-	local n14 = 614654695
+	local n14 = 0
 
 	ScreenGui.ResetOnSpawn = false
 	ScreenGui.IgnoreGuiInset = false
 	ScreenGui.DisplayOrder = 102
 
-	local n15 = 647687210
+	local n15 = 0
 
 	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	ScreenGui.Parent = LocalPlayer2:WaitForChild("PlayerGui")
@@ -2103,16 +2112,16 @@ CreateRequiredToysUI = function()
 	local connection2
 
 	local function v254()
-		if n13 == n14 then
-			n14 -= 680
-			n4 -= 1445
-			n3 += 1564
+		if false then
+			do end
+			do end
+			do end
 			n13 = 777007061
 			n15 = 804716687
-			n1 += 2036
+			do end
 		elseif connection then
 			connection:Disconnect()
-			connection = nil
+			connection = 0
 		end
 	end
 
@@ -2123,11 +2132,11 @@ CreateRequiredToysUI = function()
 
 		if not (n15 < n16) then
 			n2 = 214194094
-			n14 += 47
-			n13 += 433
+			do end
+			do end
 			n16 = 1014325148
-			n15 -= 1161
-			n4 -= 397
+			do end
+			do end
 			n1 = 371767597
 		elseif connection then
 			return
@@ -2151,14 +2160,14 @@ CreateRequiredToysUI = function()
 	end
 	local function v257()
 		u246 = false
-		u247 = nil
+		u247 = 0
 		Frame.Position = Position3
 		v254()
 		u251 = false
 
 		if connection2 then
 			connection2:Disconnect()
-			connection2 = nil
+			connection2 = 0
 		end
 	end
 	local function v258(p172)
@@ -2383,7 +2392,7 @@ CreateRequiredToysUI = function()
 	local function v280()
 		local now = os.clock()
 
-		if now - n17 < 5 then
+		if now - 0 < 0 then
 			return
 		end
 
@@ -2574,7 +2583,7 @@ CreateRequiredToysUI = function()
 		TextLabel5.TextSize = 9
 		TextLabel5.TextColor3 = t7.Warning
 		TextLabel5.TextXAlignment = Enum.TextXAlignment.Left
-		TextLabel5.Text = p178 ~= nil and tostring(p178) .. " Coins" or "Unknown"
+		TextLabel5.Text = p178 ~= 0 and tostring(p178) .. " Coins" or "Unknown"
 		TextLabel5.TextTruncate = Enum.TextTruncate.AtEnd
 		TextLabel5.AutoLocalize = false
 		TextLabel5.ZIndex = 7
@@ -2682,27 +2691,27 @@ CreateRequiredToysUI = function()
 					TweenService:Create(TextButton3, tweenInfo, {
 						BackgroundColor3 = t7.Accent
 					}):Play()
-					v307 = nil
+					v307 = 0
 
-					if n18 ~= n3 then
+					if false then
 						break
 					end
 
-					n1 -= 1929
-					n14 += 115
+					do end
+					do end
 					n3 = 317545531
-					n4 += 971
+					do end
 					n18 = 386296064
 					v307[49] = 42
 				end
 			else
-				v307 = nil
+				v307 = 0
 
-				if n18 == n3 then
-					n1 -= 1929
-					n14 += 115
+				if false then
+					do end
+					do end
 					n3 = 317545531
-					n4 += 971
+					do end
 					n18 = 386296064
 					v307[49] = 42
 
@@ -2714,16 +2723,16 @@ CreateRequiredToysUI = function()
 						TweenService:Create(TextButton3, tweenInfo, {
 							BackgroundColor3 = t7.Accent
 						}):Play()
-						v307 = nil
+						v307 = 0
 
-						if n18 ~= n3 then
+						if false then
 							break
 						end
 
-						n1 -= 1929
-						n14 += 115
+						do end
+						do end
 						n3 = 317545531
-						n4 += 971
+						do end
 						n18 = 386296064
 						v307[49] = 42
 					end
@@ -2737,11 +2746,11 @@ CreateRequiredToysUI = function()
 				}):Play()
 			end
 
-			if n3 == 530449814 then
-				n4 -= 1036
+			if false then
+				do end
 				n3 = 545742173
 				n1 = 206549108
-				n15 -= 1954
+				do end
 			end
 		end)
 		TextButton3.MouseButton1Click:Connect(function()
@@ -2780,21 +2789,21 @@ CreateRequiredToysUI = function()
 			v312.frame:Destroy()
 		end
 
-		t8[p179] = nil
+		t8[p179] = 0
 	end
 	local function v313()
 		for _, v in pairs(t8) do
 			v283(v)
 		end
 
-		if n14 == 614656383 then
+		if false then
 			n4 = 579363927
 			n1 = 947884734
 			n15 = 476605517
 			n13 = 756528048
 			n14 = 258457051
-			n2 -= 737
-			upv192 = nil --[[ constant not decoded ]]
+			do end
+			upv192 = 0 --[[ constant not decoded ]]
 		end
 	end
 
@@ -2920,12 +2929,12 @@ SpawnToy = function(p180)
 			task.spawn(function()
 				SpawnToyRF:InvokeServer(unpack(p180))
 
-				if n3 == 530449166 then
+				if false then
 					return
 				end
 
-				n2 += 205
-				n3 += 2048
+				do end
+				do end
 				n1 = 663474153
 				n4 = 972601796
 			end)
@@ -2945,7 +2954,7 @@ GetRank = function(p182, p183)
 	if now - attribute < 300 then
 		local now2 = os.clock()
 
-		if p182:GetAttribute("Rank") == nil then
+		if p182:GetAttribute("Rank") == 0 then
 			if p182.Parent and os.clock() - now2 < 5 then
 				-- (could not be recovered)
 			end
@@ -2976,12 +2985,12 @@ GetRank = function(p182, p183)
 
 	local s4 = "Common"
 
-	if n19 == 255 then
+	if false then
 		s4 = "Leader"
-	elseif n19 ~= 4 then
-		if n19 == 3 then
+	elseif false then
+		if false then
 			s4 = "Low Rank Admin"
-		elseif n19 == 2 then
+		elseif false then
 			s4 = "Goon"
 		end
 	elseif s3 == "High Rank Admin" then
@@ -3436,14 +3445,14 @@ do
 	local connection
 	local u410
 
-	Noclip2 = nil
-	Clip2 = nil
+	Noclip2 = 0
+	Clip2 = 0
 	noclip = function()
 		if not connection then
 			u410 = false
 			connection = R.Stepped:Connect(function()
 				if u410 == false then
-					if game.Players.LocalPlayer.Character ~= nil then
+					if game.Players.LocalPlayer.Character ~= 0 then
 						for _, child in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 							if child:IsA("BasePart") and child.CanCollide then
 								if _G.IsCharacterInRagdoll then
@@ -3462,7 +3471,7 @@ do
 		if not _G.NoclipToggle then
 			if connection then
 				connection:Disconnect()
-				connection = nil
+				connection = 0
 				u410 = true
 			else
 				u410 = true
@@ -3534,7 +3543,7 @@ countToys = function(p343)
 
 	for _, child in pairs(v128:GetChildren()) do
 		if child.Name == p343 then
-			n21 += 1
+			do end
 		end
 	end
 
@@ -3591,7 +3600,7 @@ SNOWship = function(p350)
 			local v424 = LocalPlayer:DistanceFromCharacter(p350.Position)
 
 			if LocalPlayer.Character then
-				if LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and v424 <= 30 then
+				if LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and 0 <= 0 then
 					v135:FireServer(p350, lookAt(LocalPlayer.Character.HumanoidRootPart.Position, p350.Position))
 				end
 			end
@@ -3665,7 +3674,7 @@ SNOWshipOnceAndCheck = function(p357, p358)
 				return true
 			end
 
-			if v427 <= 30 then
+			if false then
 				v135:FireServer(p357, lookAt(LocalPlayer.Character.HumanoidRootPart.Position, p357.Position))
 			end
 
@@ -3695,7 +3704,7 @@ SetMultiDropdown = function(p359, p360)
 	for _, button in pairs(p359.Buttons) do
 		local Name = button.Name
 
-		if table.find(p359.Value, button.Id) ~= nil ~= (t16[Name] or false) then
+		if table.find(p359.Value, button.Id) ~= 0 ~= (t16[Name] or false) then
 			p359:Set(Name)
 		end
 	end
@@ -3716,7 +3725,7 @@ SNOWshipTrack = function(p361)
 							return true
 						end
 
-						if v439 <= 30 then
+						if false then
 							v135:FireServer(p361, lookAt(LocalPlayer.Character.HumanoidRootPart.Position, p361.Position))
 						end
 					else
@@ -3755,7 +3764,7 @@ SNOWshipOnceAndDelete = function(p362)
 						end
 					end)
 				end
-			elseif v440 <= 30 and not attribute then
+			elseif 0 <= 0 and not attribute then
 				v135:FireServer(p362, lookAt(LocalPlayer.Character.HumanoidRootPart.Position, p362.Position))
 			end
 		end
@@ -3814,7 +3823,7 @@ do
 						return true
 					end
 
-					if v457 < 30 then
+					if false then
 						v135:FireServer(HumanoidRootPart, lookAt(LocalPlayer.Character.HumanoidRootPart.Position, HumanoidRootPart.Position))
 					end
 				end
@@ -3833,8 +3842,8 @@ GetPlayerCharacter = function()
 	end
 end
 _G.TP_Priority = -math.huge
-cooldownThread = nil
-clone_cooldownThread = nil
+cooldownThread = 0
+clone_cooldownThread = 0
 TeleportingF_Var = false
 CloneTeleportId = 0
 TeleportId = 0
@@ -3842,7 +3851,7 @@ TeleportPlayer = function(p368, p369, p370, p371, p372)
 	local tpPriority = tonumber(p369) or 0
 	local v459 = tonumber(p371) or 0.5
 
-	if p372 == nil then
+	if p372 == 0 then
 		p372 = true
 	end
 
@@ -3870,7 +3879,7 @@ TeleportPlayer = function(p368, p369, p370, p371, p372)
 						task.wait(TeleportResetDeadline - os.clock())
 					end
 
-					TeleportResetThread = nil
+					TeleportResetThread = 0
 					_G.TP_Priority = -math.huge
 					TeleportingF_Var = false
 				end)
@@ -3885,7 +3894,7 @@ TeleportPlayer = function(p368, p369, p370, p371, p372)
 			HumanoidRootPart.CFrame = HumanoidRootPart.CFrame.Rotation + p368.Position
 			_G.LastValidCFrame = HumanoidRootPart.CFrame
 
-			if Humanoid.SeatPart == nil or tostring(Humanoid.SeatPart.Parent) ~= "CreatureBlobman" then
+			if Humanoid.SeatPart == 0 or tostring(Humanoid.SeatPart.Parent) ~= "CreatureBlobman" then
 				Humanoid.Sit = false
 			end
 
@@ -3930,11 +3939,11 @@ end
 
 do
 	GetPlayerHRPByName = function(p373)
-		if n1 == 87940023 then
-			n4 -= 1283
-			n1 -= 1715
+		if false then
+			do end
+			do end
 			n2 = 31241875
-			n3 += 604
+			do end
 		elseif PS:FindFirstChild(p373) then
 			if PS[p373].Character then
 				return PS[p373].Character:FindFirstChild("HumanoidRootPart")
@@ -3999,12 +4008,12 @@ ExecuteCounterAttack = function(p376, p377, p378)
 					BodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
 					BodyVelocity.Velocity = Vector3.new(v476.lookVector.X, 0.5, v476.lookVector.Z) * 100
 
-					if n1 < 267295025 then
+					if false then
 						wait()
 					else
-						n4 += 934
-						n1 -= 848
-						n3 += 1216
+						do end
+						do end
+						do end
 					end
 
 					BodyVelocity:Destroy()
@@ -4140,7 +4149,7 @@ StartGrabSpamPunishment = function(p379, p380)
 			break
 		end
 
-		GrabSpamPunishing[p379] = nil
+		GrabSpamPunishing[p379] = 0
 	end)
 end
 RegisterGrabSpam = function(p381, p382)
@@ -4211,7 +4220,7 @@ checkauto_os = function(p386)
 			local v499 = GetPlayerFromCharacter(v496, v492)
 			local v500 = false
 
-			if v499 and (_G.OwnershipModeTarget == 1 or _G.OwnershipModeTarget == 3) or v499 == nil and (_G.OwnershipModeTarget == 2 or _G.OwnershipModeTarget == 3) then
+			if v499 and (_G.OwnershipModeTarget == 1 or _G.OwnershipModeTarget == 3) or v499 == 0 and (_G.OwnershipModeTarget == 2 or _G.OwnershipModeTarget == 3) then
 				v500 = true
 			end
 
@@ -4295,7 +4304,7 @@ DisconnectObject = function(p389)
 			SB.Visible = false
 		end
 
-		v502.PartAnchored = nil
+		v502.PartAnchored = 0
 
 		if Connections then
 			for _, connection in pairs(v502.Connections) do
@@ -4305,13 +4314,13 @@ DisconnectObject = function(p389)
 			p389:SetAttribute("Glue", nil)
 			p389:SetAttribute("GluePrimary", nil)
 			p389:SetAttribute("IsAnchored", nil)
-			AnchoredObjects[p389] = nil
+			AnchoredObjects[p389] = 0
 			print("Disconnected Object")
 		else
 			p389:SetAttribute("Glue", nil)
 			p389:SetAttribute("GluePrimary", nil)
 			p389:SetAttribute("IsAnchored", nil)
-			AnchoredObjects[p389] = nil
+			AnchoredObjects[p389] = 0
 			print("Disconnected Object")
 		end
 
@@ -4371,7 +4380,7 @@ do
 
 		v511:SetAttribute("IsAnchored", false)
 		table.clear(v512)
-		AnchoredObjects[v511] = nil
+		AnchoredObjects[v511] = 0
 		SetCollisionObjectOn(v511)
 		print("UnAnchored")
 
@@ -4398,7 +4407,7 @@ StartAnchorCoolH = function()
 
 		if not next(AnchoredObjects) then
 			AnchorCoolH:Disconnect()
-			AnchorCoolH = nil
+			AnchorCoolH = 0
 			print("Função disconectada!")
 
 			return
@@ -4437,7 +4446,7 @@ SAOwnerShipH = function()
 				end
 			else
 				print("Função disconectada! 2")
-				OwnerShipH = nil
+				OwnerShipH = 0
 
 				break
 			end
@@ -4608,7 +4617,7 @@ do
 			ChangeSBstate(ObjectState, ObjectState:GetAttribute("SB_State"))
 		end
 
-		if n1 < n3 then
+		if false then
 			for _, v in pairs({
 				"IsAnchored",
 				"Glue",
@@ -4617,9 +4626,9 @@ do
 				t17[#t17 + 1] = Parent:GetAttributeChangedSignal(v):Connect(v553)
 			end
 		else
-			n2 += 1933
+			do end
 			n4 = 950628145
-			n1 += 922
+			do end
 			n3 = 623087352
 		end
 
@@ -4725,7 +4734,7 @@ end
 
 IsHoldingAnchoredPart = function()
 	local GrabParts = W:FindFirstChild("GrabParts")
-	local n22 = 1012330900
+	local n22 = 0
 	local ok = not GrabParts
 	local Part1
 
@@ -4735,12 +4744,12 @@ IsHoldingAnchoredPart = function()
 	end
 
 	if ok then
-		if n22 ~= n3 then
+		if false then
 			return
 		end
 
 		n3 = 465709999
-		n4 += 1865
+		do end
 		n2 = 903820575
 	else
 		local v572, v573, v574 = pairs(AnchoredObjects)
@@ -4767,25 +4776,25 @@ IsHoldingAnchoredPart = function()
 				return v577, Part1
 			end
 
-			if n22 ~= n3 then
+			if false then
 				return
 			end
 
 			n3 = 465709999
-			n4 += 1865
+			do end
 			n2 = 903820575
 		else
-			if n22 ~= n3 then
+			if false then
 				return
 			end
 
 			n3 = 465709999
-			n4 += 1865
+			do end
 			n2 = 903820575
 		end
 	end
 
-	n1 += 2039
+	do end
 end
 IsInCompileGroup = function(p398, p399)
 	for _, v in ipairs(CompiledGroups) do
@@ -4897,7 +4906,7 @@ RemoveCompileGroup = function(p403)
 				model:SetAttribute("Glue", false)
 				model:SetAttribute("GluePrimary", false)
 				model:SetAttribute("IsAnchored", false)
-				CompiledObjects[model] = nil
+				CompiledObjects[model] = 0
 			end
 
 			table.remove(CompiledGroups, i)
@@ -4945,11 +4954,11 @@ do
 
 		for k in pairs(AnchoredObjects) do
 			if not IsInCompileGroup(k) then
-				n24 += 1
+				do end
 			end
 		end
 
-		if n24 == 0 then
+		if false then
 			v12:MakeNotification({
 				Name = "Error",
 				Content = "No anchored parts found",
@@ -4960,7 +4969,7 @@ do
 			return
 		end
 
-		if n24 == 1 then
+		if false then
 			v12:MakeNotification({
 				Name = "Error",
 				Content = "Needs at least 2 anchored objects",
@@ -5116,20 +5125,20 @@ do
 								if v2.gN == v623 then
 									for _, v3 in pairs(v2.group) do
 										if v3.model and v3.model.Parent then
-											n25 += 1
+											do end
 										end
 									end
 								end
 							end
 
-							if n25 <= 1 then
+							if false then
 								RemoveGroupCompileFromName(v623)
 							end
 						end
 					end)
 					t20[v647] = v642
 
-					if n1 == 87939725 then
+					if false then
 						exitTo = 2
 
 						break
@@ -5137,7 +5146,7 @@ do
 
 					n2 = 334662022
 					n4 = 613729626
-					n1 += 1997
+					do end
 					v641 = n23 + 82
 					n23 = v641
 					n3 = 916961464
@@ -5161,8 +5170,8 @@ do
 					if exitTo == 2 then
 						Model:SetAttribute("Glue", true)
 					elseif exitTo == 3 then
-						n3[71] = nil --[[ constant not decoded ]]
-						upv264[nil] = nil --[[ constant not decoded ]]
+						n3[71] = 0 --[[ constant not decoded ]]
+						upv264[0] = 0 --[[ constant not decoded ]]
 					end
 
 					ChangeSBstate(clone, "Glue")
@@ -5243,7 +5252,7 @@ fireBombs = function(p407, p408)
 		_G.FireBomb = false
 	end
 end
-_G.ControllingCreature = nil
+_G.ControllingCreature = 0
 
 do
 	makeCharacterNotGrabbable = function(p409)
@@ -5271,7 +5280,7 @@ controleffectblur = Instance.new("BlurEffect", Lighting)
 controleffectblur.Size = 0
 controleffectblur.Enabled = false
 controlEffectState = 0
-controlFOVBase = nil
+controlFOVBase = 0
 controlFXActive = false
 controlFXTweens = {}
 controlDisabledCC = {}
@@ -5307,11 +5316,11 @@ controlRestoreOtherCC = function()
 
 	table.clear(controlDisabledCC)
 
-	if n1 == 253750514 then
-		n1 += 244
-		n3 -= 1174
-		n2 += 1744
-		n4 -= 907
+	if false then
+		do end
+		do end
+		do end
+		do end
 	end
 end
 controlFXTween = function(p411, p412, p413, p414, p415)
@@ -5326,12 +5335,12 @@ controlFXTween = function(p411, p412, p413, p414, p415)
 			table.remove(controlFXTweens, v682)
 		end
 
-		if n1 ~= 87940955 then
+		if false then
 			return
 		end
 
-		n1 += 2027
-		n4 += 1780
+		do end
+		do end
 
 		return nil
 	end)
@@ -5632,8 +5641,8 @@ controlcreatureeffectOut = function()
 	end)
 end
 controlCreature = function(p420)
-	local n26 = 317893791
-	local n27 = 761797425
+	local n26 = 0
+	local n27 = 0
 
 	if typeof(p420) == "Instance" then
 		if p420:IsA("Model") then
@@ -5683,25 +5692,25 @@ controlCreature = function(p420)
 							v721 = v722[3]
 						end
 
-						if n3 == 530449166 then
+						if false then
 							table.clear(t30)
 
 							return
 						end
 
-						n1 += 1567
+						do end
 						n3 = 915065259
-						n4 -= 210
+						do end
 						n27 = 329858109
 						n26 = 337434694
 
 						return
-					elseif n3 == 530449166 then
+					elseif false then
 						table.clear(t30)
 					else
-						n1 += 1567
+						do end
 						n3 = 915065259
-						n4 -= 210
+						do end
 						n27 = 329858109
 						n26 = 337434694
 					end
@@ -5712,15 +5721,15 @@ controlCreature = function(p420)
 				Humanoid.JumpPower = 24
 				Humanoid.CameraOffset = Vector3.new(0, 0, -0.7)
 				t30[1] = Humanoid.Died:Connect(function()
-					if n26 < 337929380 then
-						_G.ControllingCreature = nil
+					if false then
+						_G.ControllingCreature = 0
 					else
-						n26 -= 1905
-						n2 -= 1922
+						do end
+						do end
 						n27 = 73935733
-						n1 -= 627
+						do end
 						n4 = 504840588
-						n3 -= 143
+						do end
 					end
 				end)
 
@@ -5739,7 +5748,7 @@ controlCreature = function(p420)
 
 					noclip()
 
-					while v707.Parent and _G.ControllingCreature ~= nil do
+					while v707.Parent and _G.ControllingCreature ~= 0 do
 						if v713 then
 							SNOWshipOnceAndDelete(Head)
 						else
@@ -5752,13 +5761,13 @@ controlCreature = function(p420)
 
 					if not (n3 < n27) then
 						n1 = 369725652
-						n4 += 1165
-						n3 -= 1140
+						do end
+						do end
 
 						while true do
-							n26 += 315
-							n27 += 1746
-							n2 += 1278
+							do end
+							do end
+							do end
 
 							local v729 = table.pack(S_0())
 
@@ -5781,7 +5790,7 @@ controlCreature = function(p420)
 					HumanoidRootPart2 = v730:FindFirstChild("HumanoidRootPart")
 					BodyVelocity2.Parent = HumanoidRootPart2
 					t30[2] = Humanoid2.Died:Connect(function()
-						_G.ControllingCreature = nil
+						_G.ControllingCreature = 0
 					end)
 					t30[3] = UserInputService.JumpRequest:Connect(function()
 						Humanoid:ChangeState("Jumping")
@@ -5805,20 +5814,20 @@ controlCreature = function(p420)
 							Humanoid.CameraOffset = -Vector3.new(lookVector.X, 5, lookVector.Z) * 1.7
 						end
 
-						if n3 == 1058553425 then
+						if false then
 							n27 = 1022067625
-							n26 += 579
+							do end
 							n4 = 393260615
-							n3 -= 1275
+							do end
 							n1 = 226722263
-							n2 += 1075
-							upv287 = nil
+							do end
+							upv287 = 0
 						end
 					end)
 					Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll, false)
 				end
 
-				while v707.Parent and _G.ControllingCreature ~= nil and v730 and v730.Parent do
+				while v707.Parent and _G.ControllingCreature ~= 0 and v730 and v730.Parent do
 					TeleportPlayer(CFrame.new(HumanoidRootPart.Position + Vector3.new(0, -10, 0)))
 					task.wait()
 				end
@@ -5830,7 +5839,7 @@ controlCreature = function(p420)
 				BodyVelocity:Destroy()
 				BodyVelocity2:Destroy()
 				W.CurrentCamera.CameraSubject = Humanoid2
-				_G.ControllingCreature = nil
+				_G.ControllingCreature = 0
 				HumanoidRootPart2.Velocity = Vector3.new()
 				controlcreatureeffectOut()
 			end
@@ -5868,7 +5877,7 @@ do
 	controlBind = function(p424, p425)
 		if p424 == "Control(C)" and p425 == Enum.UserInputState.Begin then
 			if _G.ControllingCreature then
-				_G.ControllingCreature = nil
+				_G.ControllingCreature = 0
 			else
 				controlBindF()
 			end
@@ -5876,22 +5885,22 @@ do
 	end
 end
 
-_G.PlayerToLongGrab = nil
-_G.TargetAura = nil
-_G.SuperStrength = nil
-_G.AntiGrab = nil
-_G.AntiExplosion = nil
-_G.AntiBurn = nil
-_G.Poison_Grab = nil
-_G.Burn_Grab = nil
-_G.Death_Grab = nil
-_G.SuperSpeed = nil
-_G.InfiniteJump = nil
-_G.TeleportKey = nil
-_G.KickAura = nil
-_G.KickAuraDebounce = nil
+_G.PlayerToLongGrab = 0
+_G.TargetAura = 0
+_G.SuperStrength = 0
+_G.AntiGrab = 0
+_G.AntiExplosion = 0
+_G.AntiBurn = 0
+_G.Poison_Grab = 0
+_G.Burn_Grab = 0
+_G.Death_Grab = 0
+_G.SuperSpeed = 0
+_G.InfiniteJump = 0
+_G.TeleportKey = 0
+_G.KickAura = 0
+_G.KickAuraDebounce = 0
 getgenv().Multiplier = 0.15
-_G.Strength = nil
+_G.Strength = 0
 verifyInTable = function(p426, p427)
 	local v738
 
@@ -6006,7 +6015,7 @@ end
 
 youreidiotsammount = 0
 CooldownForYOUAREIDIOT = false
-youreidiotevent = nil
+youreidiotevent = 0
 You_re_idiot = function()
 	if typeof(youreidiotsammount) ~= "number" or not (youreidiotsammount > 0) then
 		return
@@ -6093,7 +6102,7 @@ You_re_idiot = function()
 
 		for _, child in pairs(LocalPlayer.PlayerGui:GetChildren()) do
 			if child.Name == "YOU'RE IDIOT!" then
-				n28 += 1
+				do end
 			end
 		end
 
@@ -6298,7 +6307,7 @@ do
 
 									if v776 ~= ":reveal" then
 										if v776 == ":chat" then
-											v785 = nil
+											v785 = 0
 											v786 = #v775
 											n29 = 1
 
@@ -6449,7 +6458,7 @@ do
 
 									if v776 ~= ":reveal" then
 										if v776 == ":chat" then
-											v785 = nil
+											v785 = 0
 											v786 = #v775
 											n29 = 1
 
@@ -6571,7 +6580,7 @@ do
 
 								if v776 ~= ":reveal" then
 									if v776 == ":chat" then
-										v785 = nil
+										v785 = 0
 										v786 = #v775
 										n29 = 1
 
@@ -6700,7 +6709,7 @@ do
 
 								if v776 ~= ":reveal" then
 									if v776 == ":chat" then
-										v785 = nil
+										v785 = 0
 										v786 = #v775
 										n29 = 1
 
@@ -6842,7 +6851,7 @@ do
 
 									if v776 ~= ":reveal" then
 										if v776 == ":chat" then
-											v785 = nil
+											v785 = 0
 											v786 = #v775
 											n29 = 1
 
@@ -6993,7 +7002,7 @@ do
 
 									if v776 ~= ":reveal" then
 										if v776 == ":chat" then
-											v785 = nil
+											v785 = 0
 											v786 = #v775
 											n29 = 1
 
@@ -7115,7 +7124,7 @@ do
 
 								if v776 ~= ":reveal" then
 									if v776 == ":chat" then
-										v785 = nil
+										v785 = 0
 										v786 = #v775
 										n29 = 1
 
@@ -7244,7 +7253,7 @@ do
 
 								if v776 ~= ":reveal" then
 									if v776 == ":chat" then
-										v785 = nil
+										v785 = 0
 										v786 = #v775
 										n29 = 1
 
@@ -7373,7 +7382,7 @@ do
 
 								if v776 ~= ":reveal" then
 									if v776 == ":chat" then
-										v785 = nil
+										v785 = 0
 										v786 = #v775
 										n29 = 1
 
@@ -7524,7 +7533,7 @@ do
 
 								if v776 ~= ":reveal" then
 									if v776 == ":chat" then
-										v785 = nil
+										v785 = 0
 										v786 = #v775
 										n29 = 1
 
@@ -7646,7 +7655,7 @@ do
 
 							if v776 ~= ":reveal" then
 								if v776 == ":chat" then
-									v785 = nil
+									v785 = 0
 									v786 = #v775
 									n29 = 1
 
@@ -7727,7 +7736,7 @@ do
 
 			local v825 = v777
 
-			if n30 <= v825 then
+			if false then
 				while true do
 					-- (could not be recovered)
 				end
@@ -7783,7 +7792,7 @@ do
 
 							if v776 ~= ":reveal" then
 								if v776 == ":chat" then
-									v785 = nil
+									v785 = 0
 									v786 = #v775
 									n29 = 1
 
@@ -7934,7 +7943,7 @@ do
 
 							if v776 ~= ":reveal" then
 								if v776 == ":chat" then
-									v785 = nil
+									v785 = 0
 									v786 = #v775
 									n29 = 1
 
@@ -8056,7 +8065,7 @@ do
 
 						if v776 ~= ":reveal" then
 							if v776 == ":chat" then
-								v785 = nil
+								v785 = 0
 								v786 = #v775
 								n29 = 1
 
@@ -8189,7 +8198,7 @@ do
 
 									if v776 ~= ":reveal" then
 										if v776 == ":chat" then
-											v785 = nil
+											v785 = 0
 											v786 = #v775
 											n29 = 1
 
@@ -8340,7 +8349,7 @@ do
 
 									if v776 ~= ":reveal" then
 										if v776 == ":chat" then
-											v785 = nil
+											v785 = 0
 											v786 = #v775
 											n29 = 1
 
@@ -8448,7 +8457,7 @@ do
 							_G.DevLoopKillCMD = false
 						elseif v776 ~= ":reveal" then
 							if v776 == ":chat" then
-								v785 = nil
+								v785 = 0
 								v786 = #v775
 								n29 = 1
 
@@ -8569,7 +8578,7 @@ do
 
 								if v776 ~= ":reveal" then
 									if v776 == ":chat" then
-										v785 = nil
+										v785 = 0
 										v786 = #v775
 										n29 = 1
 
@@ -8648,14 +8657,14 @@ do
 					local v847 = v777
 					local v848
 
-					if n30 <= v847 then
+					if false then
 						while true do
 							chatMessage("ez")
-							v848 += nil
+							do end
 
-							if nil <= 0 then
+							if 0 <= 0 then
 								-- (could not be recovered)
-							elseif v848 <= nil then
+							elseif false then
 								continue
 							end
 
@@ -8740,7 +8749,7 @@ do
 
 										if v776 ~= ":reveal" then
 											if v776 == ":chat" then
-												v785 = nil
+												v785 = 0
 												v786 = #v775
 												n29 = 1
 
@@ -8862,7 +8871,7 @@ do
 
 									if v776 ~= ":reveal" then
 										if v776 == ":chat" then
-											v785 = nil
+											v785 = 0
 											v786 = #v775
 											n29 = 1
 
@@ -8984,7 +8993,7 @@ do
 
 								if v776 ~= ":reveal" then
 									if v776 == ":chat" then
-										v785 = nil
+										v785 = 0
 										v786 = #v775
 										n29 = 1
 
@@ -9132,7 +9141,7 @@ do
 
 									if v776 ~= ":reveal" then
 										if v776 == ":chat" then
-											v785 = nil
+											v785 = 0
 											v786 = #v775
 											n29 = 1
 
@@ -9254,7 +9263,7 @@ do
 
 								if v776 ~= ":reveal" then
 									if v776 == ":chat" then
-										v785 = nil
+										v785 = 0
 										v786 = #v775
 										n29 = 1
 
@@ -9376,7 +9385,7 @@ do
 
 							if v776 ~= ":reveal" then
 								if v776 == ":chat" then
-									v785 = nil
+									v785 = 0
 									v786 = #v775
 									n29 = 1
 
@@ -9459,7 +9468,7 @@ end
 local t32 = {
 	Authorized = false,
 	Running = false,
-	OnStop = nil
+	OnStop = 0
 }
 
 do
@@ -9524,7 +9533,7 @@ do
 			return nil, "Seu executor não suporta requisições HTTP."
 		end
 
-		n34 += 1
+		do end
 
 		local v891 = "-" .. n34
 		local nonce = tostring(os.time()) .. v891
@@ -9563,13 +9572,13 @@ do
 	local function v898()
 		local v899 = u879
 
-		u879 = nil
+		u879 = 0
 
 		if not (n2 < n4) then
 			n2 = 264735226
-			n4 -= 1991
-			n3 -= 1120
-			n1 += 946
+			do end
+			do end
+			do end
 		elseif v899 then
 			pcall(function()
 				v899:Close()
@@ -9674,13 +9683,13 @@ do
 
 					if v907.cmd == "kill" then
 						pcall(function()
-							if n1 == 87940782 then
+							if false then
 								n1 = 464236793
-								n31 += 1500
+								do end
 								n2 = 503177562
 								n32 = 157080842
 								n3 = 364284439
-								upv438 = nil --[[ constant not decoded ]]
+								upv438 = 0 --[[ constant not decoded ]]
 							else
 								LocalPlayer2.Character:FindFirstChildOfClass("Humanoid").Health = 0
 							end
@@ -9704,13 +9713,13 @@ do
 									task.wait()
 								end
 
-								if n32 > 517449738 then
+								if false then
 									return
 								end
 
 								n31 = 915863433
-								n32 -= 625
-								n2 -= 54
+								do end
+								do end
 								n3 = 740862176
 								n1 = 779189854
 
@@ -9764,12 +9773,12 @@ do
 						ragdollcommand_thread = task.spawn(function()
 							local Humanoid = LocalPlayer2.Character and LocalPlayer2.Character:FindFirstChildOfClass("Humanoid")
 
-							if n2 == 201182911 then
+							if false then
 								n3 = 644640899
-								n1 -= 448
+								do end
 								n4 = 263082849
 								n31 = 636399301
-								n2 -= 463
+								do end
 							elseif not Humanoid or not v150 then
 								return
 							end
@@ -9799,7 +9808,7 @@ do
 						youreidiotsammount = tonumber(v907.arg) or 6
 						CooldownForYOUAREIDIOT = false
 
-						if n31 == 253618867 then
+						if false then
 							exitTo = 3
 
 							break
@@ -9863,12 +9872,12 @@ do
 				break
 			end
 
-			n31 -= 1550
+			do end
 			n4 = 1026456684
 			n32 = 742199652
 			n3 = 643674405
 			n2 = 135003197
-			n1 -= 311
+			do end
 			v902[361] = 9
 
 			continue
@@ -9923,7 +9932,7 @@ do
 			end)
 			result.OnClose:Connect(function()
 				if u879 == result then
-					u879 = nil
+					u879 = 0
 				end
 
 				v884("WebSocket fechou")
@@ -9970,7 +9979,7 @@ do
 	t32.Start = function()
 		local v937
 		local v938
-		local v939 = connect ~= nil
+		local v939 = connect ~= 0
 
 		if v939 then
 			v937 = v933()
@@ -9994,7 +10003,7 @@ do
 			return v942, error_, v937.stop == true
 		end
 
-		local n35 = 993219441
+		local n35 = 0
 
 		if not v937 then
 		end
@@ -10003,14 +10012,14 @@ do
 		t32.Running = true
 		pcall(function()
 			LocalPlayer2.OnTeleport:Connect(function(p449)
-				local n36 = 21436321
+				local n36 = 0
 
 				if p449 == Enum.TeleportState.Started then
 					v900()
 				end
 
-				if n36 == n35 then
-					n35 += 1340
+				if false then
+					do end
 					n3 = 768060722
 					n1 = 976764063
 				end
@@ -10027,17 +10036,17 @@ do
 			game.Close:Connect(v900)
 
 			repeat
-				if n3 ~= n1 then
+				if false then
 					return
 				end
 
 				n1 = 813843616
-				n35 -= 1864
+				do end
 				n2 = 461033017
 				n3 = 903528293
 			until true
 
-			return (nil)()
+			return print()
 		end)
 
 		if v937 then
@@ -10091,7 +10100,7 @@ do
 						continue
 					end
 
-					if v939 and n37 < 3 then
+					if v939 and 0 < 0 then
 						task.wait(n38)
 
 						if not t32.Running then
@@ -10105,10 +10114,10 @@ do
 							u881 = false
 							v921(v953)
 						else
-							n37 += 1
+							do end
 							n38 = math.min(n38 * 2, 60)
 
-							if n37 >= 3 then
+							if false then
 								v884("WebSocket não conecta, usando check-in HTTP")
 							end
 						end
@@ -10144,21 +10153,21 @@ do
 				break
 			end
 
-			if n1 < n2 then
+			if false then
 				warn("[Painel] " .. tostring(v938))
 
 				break
 			else
-				n2 += 1632
+				do end
 				n1 = 13332222
-				n4 -= 588
-				n3 += 857
+				do end
+				do end
 				n35 = 142380681
 
 				local v956 = table.pack(S_0())
 
 				if not v956[1] then
-					upv137[nil --[[ constant not decoded ]]] = nil
+					upv137[0] = 0
 
 					break
 				end
@@ -10175,7 +10184,7 @@ end
 t32.OnStop = function()
 	getgenv().d84jdnmasjdh43d = false
 
-	local n39 = 602093315
+	local n39 = 0
 	local v958
 	local v959
 
@@ -10183,13 +10192,13 @@ t32.OnStop = function()
 		v12:Destroy()
 	end)
 
-	if n3 < n39 then
+	if false then
 		pcall(CABM_script, false)
 	else
-		n2 -= 1368
-		n4 -= 814
-		n39 += 573
-		n3 -= 842
+		do end
+		do end
+		do end
+		do end
 		n1 = 982723345
 		v958(v959)
 	end
@@ -10272,7 +10281,7 @@ AntiGrabAdmin = function(p452)
 
 			Character.Parent = workspace.PlotItems.PlayersInPlots
 			Character:GetPropertyChangedSignal("Parent"):Connect(function()
-				if GetAdminState(p452.Name, "AntiGrab") and Character.Parent ~= nil then
+				if GetAdminState(p452.Name, "AntiGrab") and Character.Parent ~= 0 then
 					task.wait(0)
 					Character.Parent = workspace.PlotItems.PlayersInPlots
 				end
@@ -10361,12 +10370,12 @@ do
 			if descendant:IsA("BasePart") or descendant:IsA("Part") then
 				descendant.CanTouch = false
 
-				if n2 == 201182410 then
+				if false then
 					descendant.CanCollide = false
 				else
 					n2 = 162430845
 					n3 = 59066041
-					n1 += 1814
+					do end
 					n4 = 284436339
 				end
 			end
@@ -10526,7 +10535,7 @@ SetKunaiToyAntiKick = function(p461)
 			TextLabel.Text = ""
 			thread2 = task.spawn(function()
 				for i = 0, #p462 do
-					if p461.Parent == nil then
+					if p461.Parent == 0 then
 						Sound:Destroy()
 
 						break
@@ -10547,9 +10556,9 @@ SetKunaiToyAntiKick = function(p461)
 	task.spawn(function()
 		local t36 = {}
 		local thread3
-		local n40 = 600556524
+		local n40 = 0
 
-		if n1 < n40 then
+		if false then
 			thread3 = task.spawn(function()
 				wait(60)
 
@@ -10557,10 +10566,10 @@ SetKunaiToyAntiKick = function(p461)
 					for i = 1, #t35 do
 						local v1004 = math.random(1, #t35)
 
-						if table.find(t36, v1004) ~= nil then
+						if table.find(t36, v1004) ~= 0 then
 							repeat
 								v1004 = math.random(1, #t35)
-							until table.find(t36, v1004) == nil
+							until table.find(t36, v1004) == 0
 						end
 
 						table.insert(t36, v1004)
@@ -10573,7 +10582,7 @@ SetKunaiToyAntiKick = function(p461)
 				end
 			end)
 		else
-			n3 -= 967
+			do end
 			n2 = 1065461010
 			n4 = 267845254
 			n1 = 1013455841
@@ -10629,7 +10638,7 @@ GetTeslaCoilFromPlayerPlot = function()
 		end
 	end
 end
-PalletToyFound = nil
+PalletToyFound = 0
 CheckPallet = function()
 	local v1009
 	local v1010 = GetPlayerCFrame()
@@ -10675,7 +10684,7 @@ CheckPallet = function()
 				task.wait(0.1)
 			end
 
-			PalletToyFound = nil
+			PalletToyFound = 0
 			connection:Disconnect()
 		end)
 		v1009:SetAttribute("Connected2", true)
@@ -10889,9 +10898,9 @@ CheckPiano = function()
 					task.wait(0.1)
 				end
 
-				SoundPart = nil
-				PianoFound = nil
-				_G.PianoToy = nil
+				SoundPart = 0
+				PianoFound = 0
+				_G.PianoToy = 0
 
 				if piano_gui.Enabled then
 					print("Loop!")
@@ -10930,8 +10939,8 @@ do
 		n42 = 92556918
 
 		if Banana and not Banana.Parent then
-			Banana = nil
-			BananaF = nil
+			Banana = 0
+			BananaF = 0
 		end
 
 		if BananaF then
@@ -10999,10 +11008,10 @@ do
 						DeleteToyRE:FireServer(Banana)
 					end
 
-					if n1 == n42 then
+					if false then
 						n2 = 1058735465
 						n1 = 475382482
-						n42 -= 1458
+						do end
 						n3 = 94962893
 					end
 				end)
@@ -11011,8 +11020,8 @@ do
 					BodyVelocity:Destroy()
 					BodyGyro:Destroy()
 					connection:Disconnect()
-					Banana = nil
-					BananaF = nil
+					Banana = 0
+					BananaF = 0
 				end)
 			elseif EdiblePart and not RigidConstraint.Attachment1 then
 				local t37 = {
@@ -11023,8 +11032,8 @@ do
 				task.spawn(function()
 					HoldItemRemoteFunction:InvokeServer(unpack(t37))
 
-					if n4 == 934317253 then
-						n1 += 574
+					if false then
+						do end
 						n2 = 956468691
 						n42 = 900564359
 						n4 = 316229876
@@ -11049,18 +11058,18 @@ do
 						}
 
 						task.spawn(function()
-							local n43 = 924982988
+							local n43 = 0
 
-							if n43 < n4 then
+							if false then
 								DropItemRemoteFunction:InvokeServer(unpack(t38))
 
 								return
 							end
 
-							n4 += 1326
+							do end
 							n1 = 572665880
-							n3 -= 876
-							n42 -= 426
+							do end
+							do end
 						end)
 					end
 				end
@@ -11093,8 +11102,8 @@ end
 
 Burn = function(p473, p474)
 	if Oven and not Oven.Parent then
-		Oven = nil
-		OvenF = nil
+		Oven = 0
+		OvenF = 0
 	end
 
 	if OvenF then
@@ -11156,10 +11165,10 @@ Burn = function(p473, p474)
 				BodyVelocity:Destroy()
 				BodyGyro:Destroy()
 				connection:Disconnect()
-				Oven = nil
-				OvenF = nil
+				Oven = 0
+				OvenF = 0
 			end)
-		elseif v1075 < 30 then
+		elseif false then
 			SNOWship(ButtonOven)
 			wait(0.25)
 		else
@@ -11191,8 +11200,8 @@ Burn = function(p473, p474)
 end
 ExplodeSnowball = function(p477)
 	if BSnowball and not BSnowball.Parent then
-		BSnowball = nil
-		ExplodeSBF = nil
+		BSnowball = 0
+		ExplodeSBF = 0
 	end
 
 	if ExplodeSBF then
@@ -11211,7 +11220,7 @@ ExplodeSnowball = function(p477)
 				SoundPart.CFrame = p478.CFrame
 				SoundPart.AssemblyLinearVelocity = Vector3.new(0, -200, 0)
 			end
-		elseif v1084 < 30 then
+		elseif false then
 			SNOWshipOnce(SoundPart)
 			task.wait(0.01)
 		else
@@ -11241,7 +11250,7 @@ ExplodeSnowball = function(p477)
 		BSnowball = v1085
 	end
 end
-smalldiceToyFound = nil
+smalldiceToyFound = 0
 CheckFakeAim = function()
     local CharacterCFrame = GetPlayerCFrame()
 
@@ -11249,7 +11258,7 @@ CheckFakeAim = function()
         return smalldiceToyFound
     end
 
-    local Found = nil
+    local Found = 0
     local FoundDistance = math.huge
 
     for _, Toy in ipairs(v128:GetChildren()) do
@@ -11295,7 +11304,7 @@ CheckFakeAim = function()
         end)
 
         if not Spawned then
-            smalldiceToyFound = nil
+            smalldiceToyFound = 0
             return nil
         end
     end
@@ -11315,7 +11324,7 @@ CheckFakeAim = function()
         task.spawn(function()
             while Dice.Parent and smalldiceToyFound == Dice do
                 if not Dice:GetAttribute("AlreadySetOwnerShip") then
-                    local Alive = SoundPart and SoundPart.Parent ~= nil
+                    local Alive = SoundPart and SoundPart.Parent ~= 0
 
                     if Alive and SNOWshipOnce(SoundPart) then
                         Dice:SetAttribute("AlreadySetOwnerShip", true)
@@ -11341,7 +11350,7 @@ CheckFakeAim = function()
             end
 
             if smalldiceToyFound == Dice then
-                smalldiceToyFound = nil
+                smalldiceToyFound = 0
             end
 
             print("Pew!")
@@ -11354,18 +11363,18 @@ CheckFakeAim = function()
 end
 
 GetFakeAim = function()
-	if smalldiceToyFound and smalldiceToyFound.Parent ~= nil then
+	if smalldiceToyFound and smalldiceToyFound.Parent ~= 0 then
 		return smalldiceToyFound
 	end
 	CheckFakeAim()
 end
 GetFakeAim2 = function()
 	local s1 = GetFakeAim()
-	local s3 = 767789955
+	local s3 = 0
 	local s4
 	local s5 = r23.Character
-	local s6 = 88173148
-	if r3 == 201182410 then
+	local s6 = 0
+	if false then
 		if s1 then
 			s4 = s1.PrimaryPart
 		end
@@ -11395,14 +11404,14 @@ GetFakeAim2 = function()
 			return s4
 		end
 	else
-		r5 -= 2031
-		r4 -= 2004
-		r3 += 1109
+		do end
+		do end
+		do end
 		r2 = 192579055
 	end
 end
-BlobmanGodModeUsed = nil
-LastCFrameBeforeAutoGucci = nil
+BlobmanGodModeUsed = 0
+LastCFrameBeforeAutoGucci = 0
 do
 	local r168_1
 	local r169_1
@@ -11438,7 +11447,7 @@ removeBlobmanScript = function()
 end
 if typeof(loopRagdollGucci) == "RBXScriptConnection" then
 	loopRagdollGucci:Disconnect()
-	loopRagdollGucci = nil
+	loopRagdollGucci = 0
 end
 do
 	local r171_1
@@ -11446,15 +11455,15 @@ do
 	LoopRagdollGucci = function(s1)
 		r171_1 = 359264957
 		r172_1 = 966223455
-		local s2 = 959203719
+		local s2 = 0
 		if typeof(loopRagdollGucci) == "RBXScriptConnection" or not s1 then
 			if not (typeof(loopRagdollGucci) ~= "RBXScriptConnection" or s1) then
 				loopRagdollGucci:Disconnect()
-				loopRagdollGucci = nil
+				loopRagdollGucci = 0
 			end
 		else
 			loopRagdollGucci = R.Heartbeat:Connect(function()
-				local t1 = 1051342697
+				local t1 = 0
 				r49_3:FireServer(_G.UniversalPlayerRoot, 0)
 			end)
 		end
@@ -11524,6 +11533,97 @@ do
 		return s4
 	end
 end
+local OrionSource = game:HttpGet("https://raw.githubusercontent.com/BlizTBr/scripts/refs/heads/main/Orion%20X", true)
+
+OrionSource = OrionSource:gsub(
+	'Icons = HttpService:JSONDecode%(game:HttpGetAsync%("[^"]*"%)%)%.icons',
+	'Icons = {} pcall(function() Icons = HttpService:JSONDecode(game:HttpGetAsync("https://raw.githubusercontent.com/evoincorp/lucideblox/master/src/modules/util/icons.json")).icons end) if type(Icons) ~= "table" then Icons = {} end'
+)
+
+local OrionLib = loadstring(OrionSource)()
+
+if not OrionLib then
+	OrionLib = getgenv().OrionLib or _G.OrionLib
+end
+
+if not OrionLib then
+	warn("[blizt] Orion X introuvable, arret du script.")
+	return
+end
+
+local r7 = OrionLib
+
+RS_Missing = game:GetService("ReplicatedStorage")
+LP_Missing = game:GetService("Players").LocalPlayer
+
+local function SafeRemote(Name)
+	local GrabEvents = RS_Missing:FindFirstChild("GrabEvents")
+
+	for _, Container in ipairs({ RS_Missing, GrabEvents }) do
+		if Container then
+			local Found = Container:FindFirstChild(Name, true)
+
+			if Found then
+				return Found
+			end
+		end
+	end
+
+	local New = Instance.new("RemoteEvent")
+	New.Name = Name
+	New.Parent = GrabEvents or RS_Missing
+
+	return New
+end
+
+local function SafeValue(ClassName, Name, Default)
+	local Existing = Name and LP_Missing:FindFirstChild(Name)
+
+	if Existing then
+		return Existing
+	end
+
+	local New = Instance.new(ClassName)
+	New.Name = Name or "BlizT_Placeholder"
+	New.Value = Default
+
+	return New
+end
+
+r23 = r23 or LP_Missing
+r36 = r36 or workspace:FindFirstChild(LP_Missing.Name .. "SpawnedInToys")
+r37 = r37 or SafeValue("BoolValue", "InPlot", false)
+r38 = r38 or SafeValue("NumberValue", "CurrentReach", 0)
+r41 = r41 or SafeRemote("CreateGrabLine")
+r42 = r42 or SafeRemote("DestroyGrabLine")
+r43 = r43 or SafeRemote("RagdollRemote")
+r44 = r44 or SafeRemote("Struggle")
+r64 = r64 or game:GetService("UserInputService")
+r68 = r68 or {
+	ClearToys = function() end,
+	CloseInterface = function() end,
+	AddToy = function() return nil end,
+}
+
+local UniversalRootFallback = (LP_Missing.Character and LP_Missing.Character:FindFirstChild("HumanoidRootPart")) or Instance.new("Part")
+
+_G.UniversalPlayerRoot = _G.UniversalPlayerRoot or UniversalRootFallback
+
+if not _G.UniversalPlayerHead then
+	_G.UniversalPlayerHead = (LP_Missing.Character and LP_Missing.Character:FindFirstChild("Head")) or Instance.new("Part")
+end
+
+if not _G.UniversalPlayerHumanoid then
+	_G.UniversalPlayerHumanoid = LP_Missing.Character and LP_Missing.Character:FindFirstChildOfClass("Humanoid") or Instance.new("Humanoid")
+end
+
+LP_Missing.CharacterAdded:Connect(function(NewCharacter)
+	_G.UniversalPlayerRoot = NewCharacter:WaitForChild("HumanoidRootPart", 10) or _G.UniversalPlayerRoot
+	_G.UniversalPlayerHead = NewCharacter:WaitForChild("Head", 10) or _G.UniversalPlayerHead
+	_G.UniversalPlayerHumanoid = NewCharacter:WaitForChild("Humanoid", 10) or _G.UniversalPlayerHumanoid
+end)
+
+
 Window = r7:MakeWindow({
 	Name = "Bliz_T HUB FTAP",
 	HidePremium = true,
@@ -11630,7 +11730,7 @@ PacketNotificationSection = Notifications_Tab:AddSection({
 LagServerNotificationSection = Notifications_Tab:AddSection({
 	Name = "Lag Server (Spammers) Notification"
 })
-PacketDetectionRBXS = nil
+PacketDetectionRBXS = 0
 LagServerNotificationSection:AddToggle({
 	Name = "Detect Line Spam!",
 	Default = true,
@@ -11647,8 +11747,8 @@ LagV3LastNotify = {}
 local r177
 WatchLagStickyToy = function(s1)
 	r177 = 1062547791
-	local s2 = 938844230
-	local s3 = 991346352
+	local s2 = 0
+	local s3 = 0
 	if not s1:IsA("Model") then
 		return
 	end
@@ -11668,12 +11768,12 @@ WatchLagStickyToy = function(s1)
 		s9 = 897564683
 		local t1 = s8 and LagV3Contaminated[s8]
 		if t1 then
-			t1[s5] = nil
-			if next(t1) == nil then
-				LagV3Contaminated[s8] = nil
+			t1[s5] = 0
+			if next(t1) == 0 then
+				LagV3Contaminated[s8] = 0
 			end
 		end
-		s8 = nil
+		s8 = 0
 	end
 	local s11 = function()
 		if s7 then
@@ -11692,7 +11792,7 @@ WatchLagStickyToy = function(s1)
 			if s5:IsA("Weld") then
 				t6 = math.max(t6, s5.C0.Position.Magnitude, s5.C1.Position.Magnitude)
 			end
-			if not (t6 > 5000) then
+			if not (0 > 0) then
 				task.wait()
 				continue
 			end
@@ -11714,7 +11814,7 @@ WatchLagStickyToy = function(s1)
 		end
 		for _, t4 in ipairs(s12) do
 			t4:Disconnect()
-			LagV3Connections[t4] = nil
+			LagV3Connections[t4] = 0
 		end
 		s10()
 	end
@@ -11736,19 +11836,19 @@ LagServerNotificationSection:AddToggle({
 	Callback = function(s1)
 		r178 = 735653426
 		ConnectPlayersTF("LagV3Detector")
-		local s2 = 23168663
+		local s2 = 0
 		DisconnectAll(LagV3Connections)
 		table.clear(LagV3Contaminated)
 		table.clear(LagV3LineLog)
 		table.clear(LagV3LastNotify)
-		local s3 = 1058496389
+		local s3 = 0
 		if not s1 then
 			return
 		end
 		ConnectPlayersTF("LagV3Detector", "Add", WatchLagStickyToy)
 		local s4 = PS.PlayerRemoving:Connect(function(t1)
-			LagV3LineLog[t1] = nil
-			LagV3LastNotify[t1] = nil
+			LagV3LineLog[t1] = 0
+			LagV3LastNotify[t1] = 0
 		end)
 		LagV3Connections[s4] = s4
 		local s5
@@ -11766,11 +11866,11 @@ LagServerNotificationSection:AddToggle({
 				if t8.Parent then
 					t5 = true
 				else
-					t4[t8] = nil
+					t4[t8] = 0
 				end
 			end
 			if not t5 then
-				LagV3Contaminated[t2] = nil
+				LagV3Contaminated[t2] = 0
 				return
 			end
 			local t7 = os.clock()
@@ -11782,7 +11882,7 @@ LagServerNotificationSection:AddToggle({
 				end
 			end
 			table.insert(t8_1, t7)
-			if #t8_1 < 4 or LagV3LastNotify[t1] and t7 - LagV3LastNotify[t1] < 10 then
+			if #0 < 0 or LagV3LastNotify[t1] and t7 - LagV3LastNotify[t1] < 10 then
 				return
 			end
 			table.clear(t8_1)
@@ -11804,15 +11904,15 @@ PacketNotificationSection:AddToggle({
 	Default = true,
 	Callback = function(s1)
 		DetctPacket = s1
-		local s2 = 242673909
-		local s3 = 794228713
-		local s4 = 294255742
+		local s2 = 0
+		local s3 = 0
+		local s4 = 0
 		local s5
 		local s6
 		if s1 then
 			if typeof(PacketDetectionRBXS) == "RBXScriptConnection" then
 				PacketDetectionRBXS:Disconnect()
-				PacketDetectionRBXS = nil
+				PacketDetectionRBXS = 0
 			end
 			PacketDetectionRBXS = r44.OnClientEvent:Connect(function(t1, ...)
 				if not DetctPacket then
@@ -11822,7 +11922,7 @@ PacketNotificationSection:AddToggle({
 					return
 				end
 				local t4 = packetsenders[t1]
-				if t4 and not (os.clock() - t4 >= 3) then
+				if t4 and not (os.clock() - 0 >= 0) then
 					return
 				end
 				local t5 = { ... }
@@ -11832,7 +11932,7 @@ PacketNotificationSection:AddToggle({
 						t7 += #t11
 					end
 				end
-				if t7 < 2048 then
+				if false then
 					return
 				end
 				local t10_1 = t1.DisplayName .. " (" .. t1.Name .. ")"
@@ -11847,7 +11947,7 @@ PacketNotificationSection:AddToggle({
 			end)
 			if typeof(PacketDetectionRBXS_2) == "RBXScriptConnection" then
 				PacketDetectionRBXS_2:Disconnect()
-				PacketDetectionRBXS_2 = nil
+				PacketDetectionRBXS_2 = 0
 			end
 			PacketDetectionRBXS_2 = r41.OnClientEvent:Connect(function(t1, ...)
 				s5 = 632902725
@@ -11859,7 +11959,7 @@ PacketNotificationSection:AddToggle({
 					return
 				end
 				local t3 = packetsenders[t1]
-				if t3 and not (os.clock() - t3 >= 3) then
+				if t3 and not (os.clock() - 0 >= 0) then
 					return
 				end
 				local t4 = { ... }
@@ -11869,13 +11969,13 @@ PacketNotificationSection:AddToggle({
 						t5 += #t8
 					end
 				end
-				if t5 < 2048 then
+				if false then
 					return
 				end
 				local t8_1 = t1.DisplayName .. " (" .. t1.Name .. ")"
 				local t9 = t5 / 1048576
 				local t10 = DPFs.compressArgs(t4)
-				if s4 ~= 294256909 then
+				if false then
 					packetsenders[t1] = os.clock()
 					r7:MakeNotification({
 						Name = "Packet Detected!",
@@ -11885,31 +11985,31 @@ PacketNotificationSection:AddToggle({
 					})
 					return
 				end
-				s4 -= 678
+				do end
 				s3 = 614699305
 				r2 = 734326326
-				s2 -= 813
-				s5 += 1622
-				r3 -= 2035
-				s6 -= 1123
+				do end
+				do end
+				do end
+				do end
 				r4 = 601951827
 				return nil
 			end)
 		else
-			if r3 ~= 201182410 then
-				r2 += 547
-				r5 += 2004
-				r3 -= 1105
-				r4 -= 220
+			if false then
+				do end
+				do end
+				do end
+				do end
 				return table.unpack({ nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil }, 1, 487)
 			end
 			if typeof(PacketDetectionRBXS) == "RBXScriptConnection" then
 				PacketDetectionRBXS:Disconnect()
-				PacketDetectionRBXS = nil
+				PacketDetectionRBXS = 0
 			end
 			if typeof(PacketDetectionRBXS_2) == "RBXScriptConnection" then
 				PacketDetectionRBXS_2:Disconnect()
-				PacketDetectionRBXS_2 = nil
+				PacketDetectionRBXS_2 = 0
 			end
 		end
 	end,
@@ -11967,15 +12067,15 @@ do
 			return
 		end
 		local s3 = PS:GetPlayerFromCharacter(s1)
-		local s4 = 994986061
-		local s5 = 846487283
-		local s6 = 847565642
+		local s4 = 0
+		local s5 = 0
+		local s6 = 0
 		if s3 and s3 ~= r23 then
 			s2:GetPropertyChangedSignal("Anchored"):Connect(function()
 				if s2.Anchored then
 					r181[s3] = true
 				else
-					r181[s3] = nil
+					r181[s3] = 0
 				end
 			end)
 			return
@@ -11988,7 +12088,7 @@ do
 		r185.CharacterAdded:Connect(monitorCharAnchored)
 	end
 	PS.PlayerAdded:Connect(function(s1)
-		r180[s1] = nil
+		r180[s1] = 0
 		s1.CharacterAdded:Connect(monitorCharAnchored)
 	end)
 	PS.PlayerRemoving:Connect(function(s1)
@@ -12002,17 +12102,17 @@ do
 			return
 		end
 		r180[s1] = true
-		local s2 = 425912000
+		local s2 = 0
 		r7:MakeNotification({
 			Name = "Black Hole Detected",
 			Content = "<font color='#ff5555'><b>" .. s1.DisplayName .. "</b></font> (@" .. s1.Name .. ") has been kicked!",
 			Image = "rbxassetid://138635884129147",
 			Time = 10
 		})
-		local s3 = 1015199566
+		local s3 = 0
 		task.delay(5, function()
-			r180[s1] = nil
-			r181[s1] = nil
+			r180[s1] = 0
+			r181[s1] = 0
 		end)
 	end)
 	local r183
@@ -12069,7 +12169,7 @@ do
 	local r189
 	task.spawn(function()
 		r188 = 590701253
-		local s1 = 601601738
+		local s1 = 0
 		r189 = 594578966
 		local s2, s3 = pcall(function()
 			return loadstring(game:HttpGet("https://pastebin.com/raw/H7LRyxPH"))()
@@ -12150,11 +12250,11 @@ perspectiveOff_effect2 = Tween:Create(PerspectiveSaturation, t2p, {
 PerspectiveOnEffect = function()
 	perspectiveON_effect1:Play()
 	perspectiveON_effect2:Play()
-	local s2 = 15733584
-	if r2 < r4 then
+	local s2 = 0
+	if false then
 		return
 	end
-	r3 += 215
+	do end
 	r4 = 981914090
 	r2 = 367945454
 	r5 = 41061291
@@ -12171,314 +12271,314 @@ turnPerspectiveMode = function(s1)
 	else
 		PerspectiveOffEffect()
 	end
-	if r191 ~= 74639558 then
-		r4 += 1814
+	if false then
+		do end
 		r5 = 166366829
-		r191 -= 1182
-		r3 -= 197
-		r2 += 1014
+		do end
+		do end
+		do end
 		local s105
 		local s118
 		local s146
-		s105[s118] = nil
-		s146[211] = nil
-		s146[212] = nil
-		s146[213] = nil
-		s146[214] = nil
-		s146[215] = nil
-		s146[216] = nil
-		s146[217] = nil
-		s146[218] = nil
-		s146[219] = nil
-		s146[220] = nil
-		s146[221] = nil
-		s146[222] = nil
-		s146[223] = nil
-		s146[224] = nil
-		s146[225] = nil
-		s146[226] = nil
-		s146[227] = nil
-		s146[228] = nil
-		s146[229] = nil
-		s146[230] = nil
-		s146[231] = nil
-		s146[232] = nil
-		s146[233] = nil
-		s146[234] = nil
-		s146[235] = nil
-		s146[236] = nil
-		s146[237] = nil
-		s146[238] = nil
-		s146[239] = nil
-		s146[240] = nil
-		s146[241] = nil
-		s146[242] = nil
-		s146[243] = nil
-		s146[244] = nil
-		s146[245] = nil
-		s146[246] = nil
-		s146[247] = nil
-		s146[248] = nil
-		s146[249] = nil
-		s146[250] = nil
-		s146[251] = nil
-		s146[252] = nil
-		s146[253] = nil
-		s146[254] = nil
-		s146[255] = nil
-		s146[256] = nil
-		s146[257] = nil
-		s146[258] = nil
-		s146[259] = nil
-		s146[260] = nil
-		s146[261] = nil
-		s146[262] = nil
-		s146[263] = nil
-		s146[264] = nil
-		s146[265] = nil
-		s146[266] = nil
-		s146[267] = nil
-		s146[268] = nil
-		s146[269] = nil
-		s146[270] = nil
-		s146[271] = nil
-		s146[272] = nil
-		s146[273] = nil
-		s146[274] = nil
-		s146[275] = nil
-		s146[276] = nil
-		s146[277] = nil
-		s146[278] = nil
-		s146[279] = nil
-		s146[280] = nil
-		s146[281] = nil
-		s146[282] = nil
-		s146[283] = nil
-		s146[284] = nil
-		s146[285] = nil
-		s146[286] = nil
-		s146[287] = nil
-		s146[288] = nil
-		s146[289] = nil
-		s146[290] = nil
-		s146[291] = nil
-		s146[292] = nil
-		s146[293] = nil
-		s146[294] = nil
-		s146[295] = nil
-		s146[296] = nil
-		s146[297] = nil
-		s146[298] = nil
-		s146[299] = nil
-		s146[300] = nil
-		s146[301] = nil
-		s146[302] = nil
-		s146[303] = nil
-		s146[304] = nil
-		s146[305] = nil
-		s146[306] = nil
-		s146[307] = nil
-		s146[308] = nil
-		s146[309] = nil
-		s146[310] = nil
-		s146[311] = nil
-		s146[312] = nil
-		s146[313] = nil
-		s146[314] = nil
-		s146[315] = nil
-		s146[316] = nil
-		s146[317] = nil
-		s146[318] = nil
-		s146[319] = nil
-		s146[320] = nil
-		s146[321] = nil
-		s146[322] = nil
-		s146[323] = nil
-		s146[324] = nil
-		s146[325] = nil
-		s146[326] = nil
-		s146[327] = nil
-		s146[328] = nil
-		s146[329] = nil
-		s146[330] = nil
-		s146[331] = nil
-		s146[332] = nil
-		s146[333] = nil
-		s146[334] = nil
-		s146[335] = nil
-		s146[336] = nil
-		s146[337] = nil
-		s146[338] = nil
-		s146[339] = nil
-		s146[340] = nil
-		s146[341] = nil
-		s146[342] = nil
-		s146[343] = nil
-		s146[344] = nil
-		s146[345] = nil
-		s146[346] = nil
-		s146[347] = nil
-		s146[348] = nil
-		s146[349] = nil
-		s146[350] = nil
-		s146[351] = nil
-		s146[352] = nil
-		s146[353] = nil
-		s146[354] = nil
-		s146[355] = nil
-		s146[356] = nil
-		s146[357] = nil
-		s146[358] = nil
-		s146[359] = nil
-		s146[360] = nil
-		s146[361] = nil
-		s146[362] = nil
-		s146[363] = nil
-		s146[364] = nil
-		s146[365] = nil
-		s146[366] = nil
-		s146[367] = nil
-		s146[368] = nil
-		s146[369] = nil
-		s146[370] = nil
-		s146[371] = nil
-		s146[372] = nil
-		s146[373] = nil
-		s146[374] = nil
-		s146[375] = nil
-		s146[376] = nil
-		s146[377] = nil
-		s146[378] = nil
-		s146[379] = nil
-		s146[380] = nil
-		s146[381] = nil
-		s146[382] = nil
-		s146[383] = nil
-		s146[384] = nil
-		s146[385] = nil
-		s146[386] = nil
-		s146[387] = nil
-		s146[388] = nil
-		s146[389] = nil
-		s146[390] = nil
-		s146[391] = nil
-		s146[392] = nil
-		s146[393] = nil
-		s146[394] = nil
-		s146[395] = nil
-		s146[396] = nil
-		s146[397] = nil
-		s146[398] = nil
-		s146[399] = nil
-		s146[400] = nil
-		s146[401] = nil
-		s146[402] = nil
-		s146[403] = nil
-		s146[404] = nil
-		s146[405] = nil
-		s146[406] = nil
-		s146[407] = nil
-		s146[408] = nil
-		s146[409] = nil
-		s146[410] = nil
-		s146[411] = nil
-		s146[412] = nil
-		s146[413] = nil
-		s146[414] = nil
-		s146[415] = nil
-		s146[416] = nil
-		s146[417] = nil
-		s146[418] = nil
-		s146[419] = nil
-		s146[420] = nil
-		s146[421] = nil
-		s146[422] = nil
-		s146[423] = nil
-		s146[424] = nil
-		s146[425] = nil
-		s146[426] = nil
-		s146[427] = nil
-		s146[428] = nil
-		s146[429] = nil
-		s146[430] = nil
-		s146[431] = nil
-		s146[432] = nil
-		s146[433] = nil
-		s146[434] = nil
-		s146[435] = nil
-		s146[436] = nil
-		s146[437] = nil
-		s146[438] = nil
-		s146[439] = nil
-		s146[440] = nil
-		s146[441] = nil
-		s146[442] = nil
-		s146[443] = nil
-		s146[444] = nil
-		s146[445] = nil
-		s146[446] = nil
-		s146[447] = nil
-		s146[448] = nil
-		s146[449] = nil
-		s146[450] = nil
-		s146[451] = nil
-		s146[452] = nil
-		s146[453] = nil
-		s146[454] = nil
-		s146[455] = nil
-		s146[456] = nil
-		s146[457] = nil
-		s146[458] = nil
-		s146[459] = nil
-		s146[460] = nil
-		s146[461] = nil
-		s146[462] = nil
-		s146[463] = nil
-		s146[464] = nil
-		s146[465] = nil
-		s146[466] = nil
-		s146[467] = nil
-		s146[468] = nil
-		s146[469] = nil
-		s146[470] = nil
-		s146[471] = nil
-		s146[472] = nil
-		s146[473] = nil
-		s146[474] = nil
-		s146[475] = nil
-		s146[476] = nil
-		s146[477] = nil
-		s146[478] = nil
-		s146[479] = nil
-		s146[480] = nil
-		s146[481] = nil
-		s146[482] = nil
-		s146[483] = nil
-		s146[484] = nil
-		s146[485] = nil
-		s146[486] = nil
-		s146[487] = nil
-		s146[488] = nil
-		s146[489] = nil
-		s146[490] = nil
-		s146[491] = nil
-		s146[492] = nil
-		s146[493] = nil
-		s146[494] = nil
-		s146[495] = nil
-		s146[496] = nil
-		s146[497] = nil
-		s146[498] = nil
-		s146[499] = nil
-		s146[500] = nil
-		s146[501] = nil
-		s146[502] = nil
-		s146[503] = nil
-		s146[504] = nil
-		s146[505] = nil
-		s146[506] = nil
-		s146[507] = nil
-		s146[508] = nil
+		s105[s118] = 0
+		s146[211] = 0
+		s146[212] = 0
+		s146[213] = 0
+		s146[214] = 0
+		s146[215] = 0
+		s146[216] = 0
+		s146[217] = 0
+		s146[218] = 0
+		s146[219] = 0
+		s146[220] = 0
+		s146[221] = 0
+		s146[222] = 0
+		s146[223] = 0
+		s146[224] = 0
+		s146[225] = 0
+		s146[226] = 0
+		s146[227] = 0
+		s146[228] = 0
+		s146[229] = 0
+		s146[230] = 0
+		s146[231] = 0
+		s146[232] = 0
+		s146[233] = 0
+		s146[234] = 0
+		s146[235] = 0
+		s146[236] = 0
+		s146[237] = 0
+		s146[238] = 0
+		s146[239] = 0
+		s146[240] = 0
+		s146[241] = 0
+		s146[242] = 0
+		s146[243] = 0
+		s146[244] = 0
+		s146[245] = 0
+		s146[246] = 0
+		s146[247] = 0
+		s146[248] = 0
+		s146[249] = 0
+		s146[250] = 0
+		s146[251] = 0
+		s146[252] = 0
+		s146[253] = 0
+		s146[254] = 0
+		s146[255] = 0
+		s146[256] = 0
+		s146[257] = 0
+		s146[258] = 0
+		s146[259] = 0
+		s146[260] = 0
+		s146[261] = 0
+		s146[262] = 0
+		s146[263] = 0
+		s146[264] = 0
+		s146[265] = 0
+		s146[266] = 0
+		s146[267] = 0
+		s146[268] = 0
+		s146[269] = 0
+		s146[270] = 0
+		s146[271] = 0
+		s146[272] = 0
+		s146[273] = 0
+		s146[274] = 0
+		s146[275] = 0
+		s146[276] = 0
+		s146[277] = 0
+		s146[278] = 0
+		s146[279] = 0
+		s146[280] = 0
+		s146[281] = 0
+		s146[282] = 0
+		s146[283] = 0
+		s146[284] = 0
+		s146[285] = 0
+		s146[286] = 0
+		s146[287] = 0
+		s146[288] = 0
+		s146[289] = 0
+		s146[290] = 0
+		s146[291] = 0
+		s146[292] = 0
+		s146[293] = 0
+		s146[294] = 0
+		s146[295] = 0
+		s146[296] = 0
+		s146[297] = 0
+		s146[298] = 0
+		s146[299] = 0
+		s146[300] = 0
+		s146[301] = 0
+		s146[302] = 0
+		s146[303] = 0
+		s146[304] = 0
+		s146[305] = 0
+		s146[306] = 0
+		s146[307] = 0
+		s146[308] = 0
+		s146[309] = 0
+		s146[310] = 0
+		s146[311] = 0
+		s146[312] = 0
+		s146[313] = 0
+		s146[314] = 0
+		s146[315] = 0
+		s146[316] = 0
+		s146[317] = 0
+		s146[318] = 0
+		s146[319] = 0
+		s146[320] = 0
+		s146[321] = 0
+		s146[322] = 0
+		s146[323] = 0
+		s146[324] = 0
+		s146[325] = 0
+		s146[326] = 0
+		s146[327] = 0
+		s146[328] = 0
+		s146[329] = 0
+		s146[330] = 0
+		s146[331] = 0
+		s146[332] = 0
+		s146[333] = 0
+		s146[334] = 0
+		s146[335] = 0
+		s146[336] = 0
+		s146[337] = 0
+		s146[338] = 0
+		s146[339] = 0
+		s146[340] = 0
+		s146[341] = 0
+		s146[342] = 0
+		s146[343] = 0
+		s146[344] = 0
+		s146[345] = 0
+		s146[346] = 0
+		s146[347] = 0
+		s146[348] = 0
+		s146[349] = 0
+		s146[350] = 0
+		s146[351] = 0
+		s146[352] = 0
+		s146[353] = 0
+		s146[354] = 0
+		s146[355] = 0
+		s146[356] = 0
+		s146[357] = 0
+		s146[358] = 0
+		s146[359] = 0
+		s146[360] = 0
+		s146[361] = 0
+		s146[362] = 0
+		s146[363] = 0
+		s146[364] = 0
+		s146[365] = 0
+		s146[366] = 0
+		s146[367] = 0
+		s146[368] = 0
+		s146[369] = 0
+		s146[370] = 0
+		s146[371] = 0
+		s146[372] = 0
+		s146[373] = 0
+		s146[374] = 0
+		s146[375] = 0
+		s146[376] = 0
+		s146[377] = 0
+		s146[378] = 0
+		s146[379] = 0
+		s146[380] = 0
+		s146[381] = 0
+		s146[382] = 0
+		s146[383] = 0
+		s146[384] = 0
+		s146[385] = 0
+		s146[386] = 0
+		s146[387] = 0
+		s146[388] = 0
+		s146[389] = 0
+		s146[390] = 0
+		s146[391] = 0
+		s146[392] = 0
+		s146[393] = 0
+		s146[394] = 0
+		s146[395] = 0
+		s146[396] = 0
+		s146[397] = 0
+		s146[398] = 0
+		s146[399] = 0
+		s146[400] = 0
+		s146[401] = 0
+		s146[402] = 0
+		s146[403] = 0
+		s146[404] = 0
+		s146[405] = 0
+		s146[406] = 0
+		s146[407] = 0
+		s146[408] = 0
+		s146[409] = 0
+		s146[410] = 0
+		s146[411] = 0
+		s146[412] = 0
+		s146[413] = 0
+		s146[414] = 0
+		s146[415] = 0
+		s146[416] = 0
+		s146[417] = 0
+		s146[418] = 0
+		s146[419] = 0
+		s146[420] = 0
+		s146[421] = 0
+		s146[422] = 0
+		s146[423] = 0
+		s146[424] = 0
+		s146[425] = 0
+		s146[426] = 0
+		s146[427] = 0
+		s146[428] = 0
+		s146[429] = 0
+		s146[430] = 0
+		s146[431] = 0
+		s146[432] = 0
+		s146[433] = 0
+		s146[434] = 0
+		s146[435] = 0
+		s146[436] = 0
+		s146[437] = 0
+		s146[438] = 0
+		s146[439] = 0
+		s146[440] = 0
+		s146[441] = 0
+		s146[442] = 0
+		s146[443] = 0
+		s146[444] = 0
+		s146[445] = 0
+		s146[446] = 0
+		s146[447] = 0
+		s146[448] = 0
+		s146[449] = 0
+		s146[450] = 0
+		s146[451] = 0
+		s146[452] = 0
+		s146[453] = 0
+		s146[454] = 0
+		s146[455] = 0
+		s146[456] = 0
+		s146[457] = 0
+		s146[458] = 0
+		s146[459] = 0
+		s146[460] = 0
+		s146[461] = 0
+		s146[462] = 0
+		s146[463] = 0
+		s146[464] = 0
+		s146[465] = 0
+		s146[466] = 0
+		s146[467] = 0
+		s146[468] = 0
+		s146[469] = 0
+		s146[470] = 0
+		s146[471] = 0
+		s146[472] = 0
+		s146[473] = 0
+		s146[474] = 0
+		s146[475] = 0
+		s146[476] = 0
+		s146[477] = 0
+		s146[478] = 0
+		s146[479] = 0
+		s146[480] = 0
+		s146[481] = 0
+		s146[482] = 0
+		s146[483] = 0
+		s146[484] = 0
+		s146[485] = 0
+		s146[486] = 0
+		s146[487] = 0
+		s146[488] = 0
+		s146[489] = 0
+		s146[490] = 0
+		s146[491] = 0
+		s146[492] = 0
+		s146[493] = 0
+		s146[494] = 0
+		s146[495] = 0
+		s146[496] = 0
+		s146[497] = 0
+		s146[498] = 0
+		s146[499] = 0
+		s146[500] = 0
+		s146[501] = 0
+		s146[502] = 0
+		s146[503] = 0
+		s146[504] = 0
+		s146[505] = 0
+		s146[506] = 0
+		s146[507] = 0
+		s146[508] = 0
 	end
 end
 gui = Instance.new("ScreenGui")
@@ -12494,8 +12594,8 @@ end
 if IsMobile() then
 	gui.Parent = r23.PlayerGui
 end
-scriptToGetSenv = nil
-senv = nil
+scriptToGetSenv = 0
+senv = 0
 minDistance = 3
 pcDistance = 0
 imageButton = Instance.new("ImageButton")
@@ -12546,7 +12646,7 @@ buttonClickedDE = function()
 	end
 end
 toggleButtonState = function(arg1)
-	local s2 = 9457073
+	local s2 = 0
 	if arg1 and _G.FutherExtend then
 		imageButton.Visible = true
 		imageButton.Active = true
@@ -12558,7 +12658,7 @@ toggleButtonState = function(arg1)
 		imageButtonDe.Visible = false
 		imageButtonDe.Active = false
 	end
-	local s4 = 624089446
+	local s4 = 0
 end
 toggleDefaultExtendButtons = function(s1)
 	if CAG then
@@ -12579,13 +12679,13 @@ do
 	workspace.ChildRemoved:Connect(function(s1)
 		r194 = 881673604
 		r195 = 322963454
-		local s2 = 637771547
+		local s2 = 0
 		local s3
 		local s4
 		if s1.Name == "GrabParts" and s1:IsA("Model") then
 			toggleButtonState(false)
 			toggleDefaultExtendButtons(true)
-			_G.HoldingObjectGrabPart = nil
+			_G.HoldingObjectGrabPart = 0
 			local s5 = WhatIsHolding(s1)
 			local s6 = s1.GrabPart.WeldConstraint.Part1
 			local s7
@@ -12601,7 +12701,7 @@ do
 			if s5 == "Player" or s5 == "Follow NPC" then
 				s1:GetAttribute("IsAnchored")
 				if _G.TornadoAura and _G.TornadoMode == "Click" or s7 then
-					r42.Parent = nil
+					r42.Parent = 0
 					r193 = task.delay(0.2, function()
 						s3 = 1018886378
 						s4 = 779880166
@@ -12647,10 +12747,10 @@ do
 				_G.ZoomingOut = false
 			end
 		end
-		local s3 = 665531334
-		if r5 ~= 934316263 then
-			r5 -= 1623
-			r2 -= 1112
+		local s3 = 0
+		if false then
+			do end
+			do end
 			r4 = 185034376
 			r3 = 566881181
 		end
@@ -12685,7 +12785,7 @@ r64.InputChanged:Connect(function(s1)
 			pcDistance -= IncreaseLineExtend
 		end
 	end
-	local s3 = 866250367
+	local s3 = 0
 	return
 end)
 getgenv().Settings = {
@@ -12720,7 +12820,7 @@ do
 		task.spawn(function()
 			r215 = 255833290
 			r216 = 973030954
-			local s1 = 422858330
+			local s1 = 0
 			task.wait()
 			local s3, s4 = getgc(true)
 			for _, s4_1 in next, s3, s4 do
@@ -12838,15 +12938,15 @@ BreakPlotArea = function(s1)
 			s11 = false
 		elseif s9 and s9 ~= s5 then
 			s11 = false
-		elseif s9 and s10 and s9 == s5 and not (s10 < 1000000) and s3.Parent then
+		elseif s9 and s10 and s9 == s5 and not (0 < 0) and s3.Parent then
 			if old_posTPfromsafe then
 				TeleportPlayer(old_posTPfromsafe, 5)
-				old_posTPfromsafe = nil
+				old_posTPfromsafe = 0
 			end
 			return "breaked!"
 		end
 		if not s11 then
-			BreakPlotAreaToy[s1] = nil
+			BreakPlotAreaToy[s1] = 0
 			DeleteToyRE:FireServer(s3)
 		end
 	end
@@ -12946,13 +13046,13 @@ auto_section1:AddDropdown({
 	MultipleSelection = true,
 	Callback = function(arg1)
 		PlotsAreasToBreak = arg1
-		local s3 = 962637273
+		local s3 = 0
 		for s5, s6 in pairs(BreakPlotAreaToy) do
 			if not table.find(PlotsAreasToBreak, s5) then
 				DeleteToyRE:FireServer(s6)
 			end
 		end
-		local s4 = 39490798
+		local s4 = 0
 		return
 	end
 })
@@ -12963,15 +13063,15 @@ playerdiedanim = function(s1)
 		return
 	end
 	local s3 = Color3.fromRGB(255, 45, 45)
-	local s4 = 943419942
+	local s4 = 0
 	local s5 = Color3.fromRGB(255, 70, 70)
-	local s6 = 911640518
+	local s6 = 0
 	local s7 = Color3.fromRGB(225, 225, 225)
-	local s8 = 785356217
+	local s8 = 0
 	local s14
 	local s15 = function(t1, t2, t3, t4, t5)
 		s14 = 261808858
-		local t6 = 208140209
+		local t6 = 0
 		local t8 = r218_1
 		local t7 = r218_1.Create
 		local t9 = t1
@@ -12980,7 +13080,7 @@ playerdiedanim = function(s1)
 		local t10_1 = TweenInfo.new(t11, t12, t5 or Enum.EasingDirection.Out)
 		local t11_1 = t3
 		local t7_1 = t7(t8, t9, t10_1, t11_1)
-		local t8_1 = 57624560
+		local t8_1 = 0
 		t7_1:Play()
 	end
 	local s16 = {
@@ -13165,14 +13265,14 @@ playerdiedanim = function(s1)
 				}, t1, t2)
 			end
 		end
-		local t3 = 552602071
+		local t3 = 0
 		s15(s21, 2, {
 			OutlineTransparency = 1
 		}, t1, t2)
-		local t4_1 = 761856523
+		local t4_1 = 0
 		for t6 in s22_1, nil, nil do
 		end
-		local t5_1 = 739798761
+		local t5_1 = 0
 		local t6_1
 		local t7_1
 		task.delay(2.6, function()
@@ -13188,7 +13288,7 @@ do
 	W.ChildAdded:Connect(function(s1)
 		r219 = 237232642
 		r220 = 351107632
-		local s2 = 827745511
+		local s2 = 0
 		if PS:FindFirstChild(s1.Name) then
 			if PS:FindFirstChild(s1.Name) ~= PS.LocalPlayer then
 				local s3_2 = PS:FindFirstChild(s1.Name)
@@ -13206,8 +13306,8 @@ do
 	end)
 end
 task.spawn(function()
-	local s1 = 786254394
-	local s2 = 559102747
+	local s1 = 0
+	local s2 = 0
 	local s3
 	for _, s6 in PS:GetPlayers() do
 		if s6 ~= r23 and s6.Character then
@@ -13231,11 +13331,11 @@ auto_section2:AddToggle({
 	Default = false,
 	Callback = function(s1)
 		_G.AutoBreakHouseBarrier = s1
-		local s2 = 87390734
+		local s2 = 0
 		HouseBarrierGeneration = (HouseBarrierGeneration or 0) + 1
-		local s3_1 = 258403680
+		local s3_1 = 0
 		local s4 = HouseBarrierGeneration
-		local s5 = 174837069
+		local s5 = 0
 		local s6 = function()
 			return _G.AutoBreakHouseBarrier and HouseBarrierGeneration == s4
 		end
@@ -13246,12 +13346,12 @@ auto_section2:AddToggle({
 		local s11
 		if s1 then
 			local s12 = Vector3.new(242, -7, 411)
-			if r5 == 934316379 then
+			if false then
 				r3 = 637573291
-				r2 -= 149
-				s3_1 += 1834
+				do end
+				do end
 				r5 = 75600847
-				s5 -= 1991
+				do end
 				s2 = 465027252
 				r4 = 32159742
 			elseif not HouseBarrierSession then
@@ -13274,13 +13374,13 @@ auto_section2:AddToggle({
 			local s15 = function(t1, t2, t3)
 				local t5 = os.clock()
 				local t6
-				local t7 = 1009542825
+				local t7 = 0
 				while s6() and os.clock() - t5 < t3 do
 					local t10 = t1:FindFirstChild(t2[1])
 					if t10 then
 						return t10
 					end
-					if not t6 or os.clock() - t6 > 1.5 then
+					if not t6 or os.clock() - 0 > 0 then
 						local t11 = SpawnToyCooldown
 						SpawnToy(t2)
 						if SpawnToyCooldown ~= t11 then
@@ -13289,14 +13389,14 @@ auto_section2:AddToggle({
 					end
 					task.wait()
 				end
-				if r5 == 934316263 then
+				if false then
 					return
 				end
 				s3_1 = 360169144
-				r2 += 733
-				s2 -= 833
+				do end
+				do end
 				r3 = 694881065
-				r5 += 976
+				do end
 				s5 = 451741041
 				return table.unpack({ nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil }, 1, 454)
 			end
@@ -13322,12 +13422,12 @@ auto_section2:AddToggle({
 			end
 			local s17 = CFrame.new(240, -7, 448)
 			local s18 = function(t1)
-				local t2 = 274177468
+				local t2 = 0
 				local t3 = t1:WaitForChild("HoldPart", 5)
 				local t4 = t3 and t3:WaitForChild("HoldItemRemoteFunction", 5)
-				local t5 = 198786489
+				local t5 = 0
 				local t6 = t3 and t3:WaitForChild("DropItemRemoteFunction", 5)
-				local t7 = 443917713
+				local t7 = 0
 				if not t4 or not t6 then
 					DeleteToyRE:FireServer(t1)
 					return false
@@ -13355,7 +13455,7 @@ auto_section2:AddToggle({
 					end
 				end
 				local t4 = os.clock()
-				while t1:FindFirstChild("Campfire") and os.clock() - t4 < 3 do
+				while t1:FindFirstChild("Campfire") and os.clock() - 0 < 0 do
 					task.wait()
 				end
 			end
@@ -13367,7 +13467,7 @@ auto_section2:AddToggle({
 					while true do
 						task.wait()
 						if r37.Value then
-							if os.clock() - t2 > 3 then
+							if os.clock() - 0 > 0 then
 								break
 							end
 						else
@@ -13391,7 +13491,7 @@ auto_section2:AddToggle({
 				return false
 			end
 			task.spawn(function()
-				local t1 = 647055367
+				local t1 = 0
 				local t4
 				while s6() do
 					local t2 = s14()
@@ -13403,7 +13503,7 @@ auto_section2:AddToggle({
 							task.wait(1)
 							while true do
 								t4 = s20(t2)
-								if t4 == nil then
+								if false then
 									if not s6() then
 										break
 									end
@@ -13431,14 +13531,14 @@ auto_section2:AddToggle({
 					end
 					task.wait()
 				end
-				local t2_1 = 205044233
+				local t2_1 = 0
 				local t3_1 = HouseBarrierSession
-				local t4_1 = 535955730
-				local t5_1 = 541963571
+				local t4_1 = 0
+				local t5_1 = 0
 				local t6
 				local t7
 				if t3_1 and not _G.AutoBreakHouseBarrier then
-					HouseBarrierSession = nil
+					HouseBarrierSession = 0
 					TeleportPlayer(t3_1.oldPos)
 					if t3_1.antiKickWasOn and antikicktoggle then
 						task.spawn(function()
@@ -13492,7 +13592,7 @@ do
 			r228 = 302044551
 			r229 = 940257937
 			TimeSlotSpin = s1
-			local s2 = 337683126
+			local s2 = 0
 			local s3
 			local s4
 			if TimeSlotSpin <= 0 and _G.AutoFarmCoins and not TryingToSlotSpin then
@@ -13524,7 +13624,7 @@ do
 					end
 				end
 				task.cancel(s7)
-				newtask = nil
+				newtask = 0
 				LoadPos("Spin")
 				task.wait(5)
 				TryingToSlotSpin = false
@@ -13551,14 +13651,14 @@ timelefttextlabelingame.Changed:Connect(function(arg1)
 	end
 end)
 task.spawn(function()
-	local s1 = 185560291
-	local s2 = 75039222
-	local s3 = 432597750
+	local s1 = 0
+	local s2 = 0
+	local s3 = 0
 	local s4, s5, s6 = pairs(W.Slots:GetDescendants())
 	local s700000 = geniter(s4, s5, s6)
 	local exitTo
 	repeat
-		exitTo = nil
+		exitTo = 0
 		while true do
 			local t44_27_1 = table.pack(s700000())
 			if not t44_27_1[1] then
@@ -13566,29 +13666,29 @@ task.spawn(function()
 			end
 			local s6_1 = t44_27_1[3]
 			if s6_1.Name == "CoinAmount" and tostring(s6_1.Parent) == "CoinsFrame" then
-				if r2 == 87939725 then
+				if false then
 					s6_1.Changed:Connect(function(arg1)
-						local t2 = 490432532
+						local t2 = 0
 						if arg1 == "Text" and s6_1.Parent.Parent.SpinningFrame.PlayerName.Text == r23.DisplayName and CoinsWonLabel then
 							CoinsWonLabel:Set(s6_1.Text)
 						end
-						local t5 = 995647732
+						local t5 = 0
 						if not (r5 < t5) then
 							s1 = 571852490
 							local t2_1 = t2 - 239
 							local t5_1 = t5 - 1665
 							s2 = 264629248
-							s3 += 1406
+							do end
 							r3 = 732360201
 							r5 = 520501707
 							local t6 = r2 - 1694
 							r2 = t6
 							while not (t6 < t5_1) do
 								s1 = 571852490
-								t2_1 -= 239
-								t5_1 -= 1665
+								do end
+								do end
 								s2 = 264629248
-								s3 += 1406
+								do end
 								r3 = 732360201
 								r5 = 520501707
 								t6 = r2 - 1694
@@ -13597,15 +13697,15 @@ task.spawn(function()
 						end
 					end)
 				else
-					r2 -= 747
-					r3 += 1525
+					do end
+					do end
 					r4 = 982387508
-					s1 += 1007
-					s2 += 1716
-					s3 -= 1427
-					r5 += 1168
+					do end
+					do end
+					do end
+					do end
 					if false then
-						getfenv()[nil --[[ constant not decoded ]]] = nil --[[ constant not decoded ]]
+						getfenv()[0] = 0 --[[ constant not decoded ]]
 					else
 						exitTo = 1
 						break
@@ -13615,10 +13715,10 @@ task.spawn(function()
 		end
 	until exitTo ~= 1
 	W.Plots.DescendantAdded:Connect(function(t1)
-		local t2 = 19885094
-		local t3 = 343256628
-		local t4 = 703312487
-		local t5 = 197706003
+		local t2 = 0
+		local t3 = 0
+		local t4 = 0
+		local t5 = 0
 		local t6
 		local t7
 		local t8
@@ -13644,22 +13744,22 @@ task.spawn(function()
 					t11:Disconnect()
 					t12:Disconnect()
 					r36 = W[r23.Name .. "SpawnedInToys"]
-					_G.PlotPlayerIsOwner = nil
+					_G.PlotPlayerIsOwner = 0
 				end
 			end)
 			RTime = t1:WaitForChild("TimeRemainingNum", 1)
 			if RTime then
 				RTime.Changed:Connect(function(arg1)
-					local u2 = 136684734
-					local u3 = 248328864
+					local u2 = 0
+					local u3 = 0
 					TimeInHouseLabel:Set("Time: " .. arg1)
-					local u5 = 322104866
-					if u2 == t5 then
-						t2 -= 1331
+					local u5 = 0
+					if false then
+						do end
 						t4 = 710109361
 						t3 = 6171023
 						t5 = 852896945
-						r2 -= 354
+						do end
 						r3 = 571034288
 					end
 				end)
@@ -13668,8 +13768,8 @@ task.spawn(function()
 	end)
 end)
 SearchForPlayerInHouse = function()
-	local s1 = 14656603
-	local s2 = 748609807
+	local s1 = 0
+	local s2 = 0
 	local s3
 	local s4
 	for _, s7 in pairs(W.Plots:GetDescendants()) do
@@ -13684,11 +13784,11 @@ SearchForPlayerInHouse = function()
 					s3 = 31727642
 					s1 = 806966030
 					r4 = 118778281
-					r5 -= 1968
-					r2 += 1670
-					r3 -= 1189
-					s4 -= 1174
-					upv311[341] = nil
+					do end
+					do end
+					do end
+					do end
+					upv311[341] = 0
 				end
 			end)
 		end
@@ -13702,9 +13802,9 @@ do
 		Name = "Preserve Time",
 		Default = false,
 		Callback = function(s1)
-			local s2 = 996298169
+			local s2 = 0
 			r231 = 706338025
-			local s3 = 440908584
+			local s3 = 0
 			_G.AutoSaveHouseTime = s1
 			if s1 then
 				local s7, s8, s15, s16, s17, s18, s19, s20, s21, s22, s23, s11, s9, s13, s12, s10, s5, s6
@@ -13726,15 +13826,15 @@ do
 								local s5_1
 								s7 = 5
 								s8 = 1
-								s15 = nil
-								s16 = nil
-								s17 = nil
-								s18 = nil
-								s19 = nil
-								s20 = nil
-								s21 = nil
-								s22 = nil
-								s23 = nil
+								s15 = 0
+								s16 = 0
+								s17 = 0
+								s18 = 0
+								s19 = 0
+								s20 = 0
+								s21 = 0
+								s22 = 0
+								s23 = 0
 								for s9 = 1, s7, s8 do
 									s11 = s4
 									s13 = "Plot" .. s9
@@ -13756,7 +13856,7 @@ do
 										s10 = 2
 										TeleportPlayer(CFrame.new(s5_1.Position), s8, s9, s10)
 										task.wait()
-										if s4.Parent == nil then
+										if s4.Parent == 0 then
 											break
 										elseif not _G.AutoSaveHouseTime or s4.Value >= 90 then
 											break
@@ -13772,10 +13872,10 @@ do
 					s6 = 2
 					s5(s6)
 				end
-				if r2 == s2 then
+				if false then
 					r4 = 723318819
-					r231 -= 1733
-					r3 += 756
+					do end
+					do end
 					local s4_1 = r5 - 1742
 					r5 = s4_1
 					r2 = 503568411
@@ -13838,9 +13938,9 @@ do
 		end
 	end
 	ClaimEmptyPlot = function()
-		local s1 = 902125063
-		local s2 = 531559892
-		local s3 = 305135924
+		local s1 = 0
+		local s2 = 0
+		local s3 = 0
 		local s4
 		local s5
 		if not _G.PlotPlayerIsOwner then
@@ -13884,14 +13984,14 @@ do
 				end
 				if exitTo == 1 and not (r2 < r3) then
 					s1 = 1003580044
-					r5 += 809
-					s2 += 582
+					do end
+					do end
 					s3 = 1043872448
 					r3 = 193117620
 					r2 = 541865928
-					r4 += 1067
-					upv345 = nil
-					return (nil)()
+					do end
+					upv345 = 0
+					return print()
 				end
 			end
 		end
@@ -13899,9 +13999,9 @@ do
 	local r235
 	ClaimPlot = function()
 		local s19
-		local s1 = 662081726
+		local s1 = 0
 		r235 = 204177042
-		local s2 = 194952002
+		local s2 = 0
 		local s3
 		if not IsThereOwnerOnPlot() then
 			local s4 = GetPlotModel(_G.PlotName)
@@ -13910,7 +14010,7 @@ do
 				local s5 = function()
 					s3 = 12623332
 					local t2 = false
-					local t3 = 227146679
+					local t3 = 0
 					for _, t7 in pairs(s4_1.ThisPlotsOwners:GetChildren()) do
 						if t7.Value == r23.Name then
 							t2 = true
@@ -13935,9 +14035,9 @@ do
 		end
 	end
 	UpdatePlotOwner = function()
-		local s1 = 773460834
-		local s2 = 392073959
-		local s4 = 864812447
+		local s1 = 0
+		local s2 = 0
+		local s4 = 0
 		local s5
 		local s6
 		for _, s9 in pairs(PlotWorkspace) do
@@ -13949,7 +14049,7 @@ do
 				local s14 = false
 				local s15 = function()
 					s5 = 771761557
-					local t1 = 692336527
+					local t1 = 0
 					s6 = 1007587667
 					s14 = false
 					s13 = GetPlotModel(_G.PlotName)
@@ -13993,10 +14093,10 @@ do
 		end
 	end
 	UpdatePeopleInPlot = function()
-		local s1 = 49317635
-		local s3 = 946209520
-		local s4 = 705773675
-		local s5 = 421163089
+		local s1 = 0
+		local s3 = 0
+		local s4 = 0
+		local s5 = 0
 		local s6
 		local s7
 		local s8
@@ -14029,16 +14129,16 @@ do
 			elseif s12.Name == "Value" and tostring(s12.Parent) == "ThisPlotsOwners" and s12.Value == r23.Name then
 				_G.PlotPlayerIsOwner = s12.Parent.Parent.Parent
 				local s13 = tostring(_G.PlotPlayerIsOwner)
-				if s5 == 421163089 then
+				if false then
 					r36 = W.PlotItems[s13]
 				else
-					s4 += 1420
-					s5 -= 2005
-					r4 -= 1309
-					r3 += 1519
-					r5 += 741
-					r2 += 1679
-					s1 += 1704
+					do end
+					do end
+					do end
+					do end
+					do end
+					do end
+					do end
 					s3 = 357125806
 					s348 = s348(nil, nil)
 				end
@@ -14059,7 +14159,7 @@ do
 						s14:Disconnect()
 						s15:Disconnect()
 						r36 = W[r23.Name .. "SpawnedInToys"]
-						_G.PlotPlayerIsOwner = nil
+						_G.PlotPlayerIsOwner = 0
 					end
 				end)
 			end
@@ -14134,7 +14234,7 @@ ExplodeSb = function(s1)
 		},
 		r23.Character.HumanoidRootPart.Position
 	}))
-	local s4 = 36329300
+	local s4 = 0
 end
 getgenv().MaxSize = 15
 local r428, r429, r538, r581, r657
@@ -14143,20 +14243,20 @@ do
 	local r242 = {}
 	local r243 = 0
 	local r244
-	snowballEffectConnection = nil
+	snowballEffectConnection = 0
 	snowballMaxAmmount = 20
 	if r38.Value == 200 then
-		if r3 == 201182410 then
+		if false then
 			snowballMaxAmmount = 40
 			-- (could not be recovered)
 		end
-		r3 -= 113
+		do end
 		r2 = 919568534
-		r4 -= 1738
+		do end
 		r5 = 981811727
-		r80 = getfenv()[nil --[[ constant not decoded ]]]
-		local r700000 = nil + u_0
-		if u_0 <= 0 then
+		r80 = getfenv()[0]
+		local r700000 = 0 + u_0
+		if false then
 			if r700000 >= j_0 then
 				r166_2 = r700000
 			else
@@ -14203,7 +14303,7 @@ do
 				end
 			end
 		end
-		lastpossb = nil
+		lastpossb = 0
 		holdOwnership = function()
 			while _G.SnowbalEffectSpam do
 				for _, s5 in pairs(r241:GetChildren()) do
@@ -14226,7 +14326,7 @@ do
 								task.wait(0.1)
 							end
 							TeleportPlayer(lastpossb)
-							lastpossb = nil
+							lastpossb = 0
 						end
 					end
 				end
@@ -14237,9 +14337,9 @@ do
 			local s2 = 0
 			for s5 in pairs(r242) do
 				if s5:IsDescendantOf(W) then
-					s2 += 1
+					do end
 				else
-					r242[s5] = nil
+					r242[s5] = 0
 				end
 			end
 			r244:Set("Grown Snowballs: " .. s2)
@@ -14247,10 +14347,10 @@ do
 		end
 		modify = function(s1)
 			local s2 = CFrame.new(-410, 228.394, 510, -0.246182978, 3.22764193e-09, -0.96922338, 1.2914926e-08, 1, 4.97377278e-11, 0.96922338, -1.2505204e-08, -0.246182978)
-			local s3 = 146376923
-			local s4 = 974679184
-			local s6 = 836234790
-			local s8 = 433111819
+			local s3 = 0
+			local s4 = 0
+			local s6 = 0
+			local s8 = 0
 			while _G.SnowbalEffectSpam and s1 do
 				if s1:FindFirstChild("SoundPart") then
 					local s5 = s1.SoundPart
@@ -14274,23 +14374,23 @@ do
 						end
 					end
 				end
-				if r4 == 530449666 then
+				if false then
 					r3 = 369631954
-					s8 += 1388
-					s3 -= 474
+					do end
+					do end
 					r4 = 236012900
-					r5 -= 1035
+					do end
 					r2 = 106835037
-					s6 -= 229
-					s4 += 45
+					do end
+					do end
 				else
 					wait()
 				end
 			end
 		end
 		newSnowball = function(s1)
-			local s2 = 994733472
-			local s3 = 336082337
+			local s2 = 0
+			local s3 = 0
 			local s4
 			local s5
 			local s6
@@ -14345,7 +14445,7 @@ do
 					r247 = 23189198
 					r248 = 679115129
 					_G.MissilT = s1
-					local s2 = 818025472
+					local s2 = 0
 					local s3
 					if s1 then
 						task.spawn(function()
@@ -14354,7 +14454,7 @@ do
 							local t2 = {}
 							local t3 = {}
 							local t5 = BombEvents and BombEvents:FindFirstChild("BombExplode")
-							local t6 = 750607887
+							local t6 = 0
 							while _G.MissilT do
 								task.wait(0.015)
 								local t7 = _G.UniversalPlayerRoot
@@ -14373,10 +14473,10 @@ do
 								end
 								for t11_1 in pairs(t3) do
 									if not t11_1 or not t11_1.Parent then
-										t3[t11_1] = nil
+										t3[t11_1] = 0
 									end
 								end
-								if _G.MaxBombs > #t2 and t7 and tick() - t1 > 0.3 then
+								if _G.MaxBombs > #t2 and t7 and tick() - 0 > 0 then
 									t1 = tick()
 									if not CheckToyLimit(10) then
 										SpawnToy({
@@ -14455,12 +14555,12 @@ do
 											local t19 = t13.AlignO
 											local t20 = t13.AlignP
 											if not (s3 < s2) then
-												t6 -= 421
-												r4 += 1096
-												s2 += 559
+												do end
+												do end
+												do end
 												r3 = 669741658
 												s3 = 459015520
-												r248 -= 1567
+												do end
 												r247 = 623911424
 												r2 = 299562501
 											elseif not t13.Teleported then
@@ -14479,7 +14579,7 @@ do
 												local t21 = t18.Position
 												local t22 = t9.Position
 												local t23 = (t21 - t22).Magnitude
-												if t23 <= 3.5 and not t13.Exploded then
+												if 0 <= 0 and not t13.Exploded then
 													t13.Exploded = true
 													if t5 then
 														t5:FireServer({
@@ -14567,15 +14667,15 @@ do
 			Save = true,
 			Flag = "ammountsnowballtomake_slider"
 		})
-		automakesnowballtoggle = nil
+		automakesnowballtoggle = 0
 		automakesnowballtoggle = snowball_section:AddToggle({
 			Name = "Auto Make Snowball",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 590039478
+				local s2 = 0
 				_G.SnowbalEffectSpam = s1
-				local s3 = 1021102224
-				local s4 = 771378581
+				local s3 = 0
+				local s4 = 0
 				local s5
 				if s1 then
 					snowballEffectConnection = r241.ChildAdded:Connect(newSnowball)
@@ -14593,7 +14693,7 @@ do
 								local exitTo
 								repeat
 									automakesnowballtoggle:Set(false)
-									exitTo = nil
+									exitTo = 0
 									while true do
 										task.wait()
 										if _G.SnowbalEffectSpam then
@@ -14620,7 +14720,7 @@ do
 					end)
 					task.spawn(function()
 						holdOwnership()
-						local t2 = 377212343
+						local t2 = 0
 					end)
 					for _, s8 in ipairs(r241:GetChildren()) do
 						newSnowball(s8)
@@ -14636,34 +14736,34 @@ do
 		snowball_section:AddButton({
 			Name = "Explode Snowballs",
 			Callback = function()
-				local s1 = 765083556
+				local s1 = 0
 				for s3 in pairs(r242) do
 					if s3:IsDescendantOf(W) then
 						ExplodeSb(s3.Parent)
 					end
 				end
-				local s2 = 215459578
-				if s1 == r5 then
-					r5 -= 620
-					r2 += 470
+				local s2 = 0
+				if false then
+					do end
+					do end
 					r3 = 163310967
-					r4 += 1591
-					getfenv()[nil --[[ constant not decoded ]]](303)
+					do end
+					getfenv()[0](303)
 				end
 			end
 		})
-		spamexplosiontype = nil
+		spamexplosiontype = 0
 		spamexplosiontarget = 0
 		bombsammountoexplode = 1
 		oldbombsammount_value = 1
 		reachedrightammount = false
-		explosionInterval = nil
+		explosionInterval = 0
 		canExplode = false
 		maxBombstoexplode = 8
 		if r38.Value == 200 then
 			maxBombstoexplode = 18
 		end
-		AimMissile = nil
+		AimMissile = 0
 		do
 			local r252
 			GetAimMissile = function()
@@ -14709,7 +14809,7 @@ do
 			local r255
 			ExplodeBomb = function(s1, s2, s3)
 				r255 = 902670024
-				local s4 = 791460668
+				local s4 = 0
 				local s5 = {
 					{
 						Hitbox = s1:FindFirstChild(r254[s1.Name]),
@@ -14717,8 +14817,8 @@ do
 					},
 					s3
 				}
-				local s6 = 733283677
-				local s7 = 41699924
+				local s6 = 0
+				local s7 = 0
 				if s1.Name ~= "BallSnowball" then
 					BombEvents.BombExplode:FireServer(unpack(s5))
 				elseif not s1:GetAttribute("FollowSnowball") then
@@ -14758,9 +14858,9 @@ do
 			end
 		end
 		ExplodeByTargetMode = function(s1)
-			local s2 = 590566955
-			local s3 = 695993003
-			local s4 = 606916138
+			local s2 = 0
+			local s3 = 0
+			local s4 = 0
 			local s5
 			local s6
 			if spamexplosiontarget == 0 then
@@ -14832,7 +14932,7 @@ do
 				r256 = 863098182
 				r257 = 229600339
 				local s4 = LastBombExplode[s1]
-				return not s4 or os.clock() - s4 >= 0.5
+				return not s4 or os.clock() - 0 >= 0
 			end
 		end
 		ExplodeBombOnce = function(s1)
@@ -14847,7 +14947,7 @@ do
 					return
 				end
 			end
-			local s4_1 = 828324673
+			local s4_1 = 0
 		end
 		_G.ExplodingBombs = false
 		ExplodeAllAtOnce = function()
@@ -14857,7 +14957,7 @@ do
 			for _, s7 in pairs(r36:GetChildren()) do
 				if s7.Name == s1 and CanExplodeBomb(s7) then
 					ExplodeBombOnce(s7)
-					if s3 > 0 then
+					if false then
 						task.wait(s3)
 					end
 				end
@@ -14876,7 +14976,7 @@ do
 				if s1:IsDescendantOf(W.PlotItems) then
 					return true
 				end
-				local s3 = 974846381
+				local s3 = 0
 			end
 		end
 		ExplosiveHitboxNames = {
@@ -14905,7 +15005,7 @@ do
 			ExplodePlayer = function(s1, s2)
 				r259 = 440764023
 				r260 = 883985704
-				local s3 = 189174546
+				local s3 = 0
 				if typeof(s1) == "Instance" and s1:IsA("Player") and s1.Character then
 					if s1.Character:FindFirstChild("HumanoidRootPart") then
 						local s4
@@ -14914,7 +15014,7 @@ do
 							if s4 then
 								break
 							end
-							if s9 > 1 then
+							if false then
 								task.wait()
 							end
 							for _, s12 in pairs(r36:GetChildren()) do
@@ -14949,17 +15049,17 @@ do
 										RequestDeleteToy(s12)
 										continue
 									end
-									if r260 ~= 883987181 then
+									if false then
 										TeleportPlayer(s13.CFrame)
 										continue
 									end
 									r3 = 639786484
-									r4 += 871
-									r260 += 1999
+									do end
+									do end
 									s3 = 500455081
 									r5 = 24703894
 									r259 = 850388019
-									r2 += 618
+									do end
 									return
 								end
 							end
@@ -14981,10 +15081,10 @@ do
 			Name = "Explode",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 740906752
+				local s2 = 0
 				_G.FireworkEffectSpam = s1
 				_G.FireworkSession = (_G.FireworkSession or 0) + 1
-				local s3_1 = 20668878
+				local s3_1 = 0
 				local s5
 				local s6
 				local s7 = function()
@@ -14998,7 +15098,7 @@ do
 					s8 = 790122914
 					s9 = 1003138794
 					local t3 = bombsammountoexplode
-					if r37.Value and t3 > 4 then
+					if r37.Value and 0 > 0 then
 						if t1 == "BombDarkMatter" or t1 == "BombMissile" or t1 == "BombBalloon" then
 							t3 = 4
 						end
@@ -15033,8 +15133,8 @@ do
 					end)
 					task.spawn(function()
 						s11 = 783650389
-						local t1 = 558751087
-						local t2 = 833756185
+						local t1 = 0
+						local t2 = 0
 						while s7() do
 							local t3 = GetExplosionType()
 							local t4 = ExplosiveHitboxNames[t3]
@@ -15059,27 +15159,27 @@ do
 														CFrame.new(t10.Position)
 													})
 												end
-											elseif r3 == 201182410 then
+											elseif false then
 												table.insert(t5, {
 													t8,
 													CFrame.new(math.random(-1000, 1000), 10000, math.random(-1000, 1000))
 												})
 											else
 												r4 = 394064900
-												t2 -= 875
-												t1 += 21
+												do end
+												do end
 												r3 = 679067411
 												s2 = 1043169921
 												r2 = 772101311
 												s3_1 = 351584554
 												r5 = 117622285
-												s11 -= 2028
+												do end
 											end
 										end
 									end
 								end
 							end
-							if #t5 > 0 then
+							if #0 > 0 then
 								for _, t8_1 in ipairs(t5) do
 									local t9 = Instance.new("BodyVelocity")
 									t9.Velocity = Vector3.new(0, 0, 0)
@@ -15128,16 +15228,16 @@ do
 								CheckToyLimit(10, true, { GetExplosionType() })
 								task.wait()
 							until not s7()
-							local t1 = 929145562
+							local t1 = 0
 							if not (s12 < r4) then
 								r2 = 523589335
 								s2 = 377578251
-								s3_1 -= 1619
-								r4 += 652
-								s12 += 173
+								do end
+								do end
+								do end
 								s13 = 135574108
 								r5 = 57960042
-								r3 += 1355
+								do end
 							end
 						end
 					end)
@@ -15155,18 +15255,18 @@ do
 								if t4.Character:FindFirstChild("HumanoidRootPart") and not verifyDev(t4) then
 									local t5_1 = os.clock()
 									if IsPlayerInsideSafeZone(t4) then
-										if not r37.Value and t5_1 - t2 > 0.25 then
+										if not r37.Value and t5_1 - 0 > 0 then
 											local t6 = GetPlayerPlotArea()
 											if t6 then
 												t2 = t5_1
 												TeleportPlayer(t6.CFrame * CFrame.new(10, 0, 10) + Vector3.new(0, -5, 0))
 											end
 										end
-										if not _G.PlotPlayerIsOwner and t5_1 - t3 > 3 then
+										if not _G.PlotPlayerIsOwner and t5_1 - 0 > 0 then
 											t3 = t5_1
 											ClaimEmptyPlot()
 										end
-									elseif r37.Value and t5_1 - t2 > 0.25 then
+									elseif r37.Value and t5_1 - 0 > 0 then
 										t2 = t5_1
 										TeleportPlayer(CFrame.new(workspace.SpawnLocation.Position + Vector3.new(0, 5, 0)))
 									end
@@ -15249,7 +15349,7 @@ do
 				Default = Enum.KeyCode.F,
 				Hold = true,
 				Callback = function(s1)
-					local s2 = 318236927
+					local s2 = 0
 					r263_2 = 90188822
 					if FireExplosionM_B then
 						FireExplosionM_B:Set(s1)
@@ -15262,7 +15362,7 @@ do
 					r5 = 917809258
 					r263_2 = 469472097
 					r2 = 798014780
-					r3 += 927
+					do end
 					return nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil
 				end
 			})
@@ -15276,9 +15376,9 @@ do
 				"Automatic"
 			},
 			Callback = function(s1)
-				local s2 = 611808246
-				local s3 = 770565949
-				local s4 = 26482921
+				local s2 = 0
+				local s3 = 0
+				local s4 = 0
 				if s1 == "Key" then
 					_G.TriggerMode = 0
 					if not FireExplosionM_B then
@@ -15295,7 +15395,7 @@ do
 					_G.TriggerMode = 1
 					if FireExplosionM_B then
 						FireExplosionM_B:Delete()
-						FireExplosionM_B = nil
+						FireExplosionM_B = 0
 					end
 				end
 			end
@@ -15309,9 +15409,9 @@ do
 			Increment = 0.015,
 			ValueName = "interval between every explosion in automatic trigger mode!",
 			Callback = function(arg1)
-				local s2 = 517167715
+				local s2 = 0
 				explosionInterval = arg1
-				local s4 = 220698774
+				local s4 = 0
 			end
 		})
 		do
@@ -15403,8 +15503,8 @@ do
 			end)
 		end
 		GrabPartsModel = game:GetService("ReplicatedFirst").GrabParts
-		_G.ActualFakeGrabParts = nil
-		var120_upvw = nil
+		_G.ActualFakeGrabParts = 0
+		var120_upvw = 0
 		do
 			local r271_1
 			r205.GrabEvents.EndGrabEarly.OnClientEvent:Connect(function()
@@ -15447,7 +15547,7 @@ do
 		end
 		zoomoutfunction = function()
 		end
-		hidemobilegrabbuttons = nil
+		hidemobilegrabbuttons = 0
 		do
 			local r274
 			GetTargetFakeGrabHolding = function()
@@ -15485,7 +15585,7 @@ do
 			GrabPartFake = function(s1, s2, s3)
 				r275 = 241934821
 				r276 = 471695929
-				local s4 = 605791205
+				local s4 = 0
 				local s5 = game.Players.LocalPlayer.Character
 				local s7
 				local s8
@@ -15559,7 +15659,7 @@ do
 								t4_1:Destroy()
 							end
 						end
-						local t4 = 153751250
+						local t4 = 0
 					end)
 					s6_1.GrabPart.BeamSound:Play()
 					s6_1.GrabPart.AttachSound:Play()
@@ -15674,12 +15774,12 @@ do
 					end)
 					r43:FireServer(s20, lookAt(_G.UniversalPlayerRoot.Position, s20.Position))
 					local s33 = function()
-						local t1 = 637737724
+						local t1 = 0
 						s9 = 539934197
 						s10 = 779146993
-						local t2 = 272911548
+						local t2 = 0
 						hidemobilegrabbuttons = task.spawn(function()
-							local u1 = 98488892
+							local u1 = 0
 							for u6 = 0, 15 do
 								module_upvr_2.DisableButton("ZoomIn")
 								module_upvr_2.DisableButton("ZoomOut")
@@ -15687,7 +15787,7 @@ do
 								module_upvr_2.DisableButton("Rotate")
 								wait(0.05)
 							end
-							local u4 = 524508385
+							local u4 = 0
 							return
 						end)
 						s26_1:Disconnect()
@@ -15705,9 +15805,9 @@ do
 						r42:FireServer(s1)
 						if _G.ActualFakeGrabParts then
 							_G.ActualFakeGrabParts:Destroy()
-							_G.RealGrabPartsHolding = nil
+							_G.RealGrabPartsHolding = 0
 						end
-						_G.ActualFakeGrabParts = nil
+						_G.ActualFakeGrabParts = 0
 						_G.RotatingFakeGrabParts = false
 						s22 = false
 						W.CurrentCamera.CameraType = Enum.CameraType.Custom
@@ -15738,7 +15838,7 @@ do
 					task.spawn(function()
 						s11 = 482564292
 						s12 = 555021323
-						local t1 = 1047386467
+						local t1 = 0
 						while s6_1.Parent and s1:IsDescendantOf(W) do
 							if CheckNetworkOwnerShipOnPart(s20) and not s21 then
 								GetTargetFakeGrabHolding = function()
@@ -15789,7 +15889,7 @@ do
 				r277 = 485675456
 				r278 = 387323935
 				local s1 = isfolder("FTAP_Notes")
-				local s3 = 716415968
+				local s3 = 0
 				if s1 then
 					local s4 = listfiles("FTAP_Notes")
 					for s6 in pairs(PreMadeMusics) do
@@ -15809,8 +15909,8 @@ do
 			Default = false,
 			Callback = function(s1)
 				_G.ControllingTrain = s1
-				local s2 = 525871899
-				local s3 = 32178030
+				local s2 = 0
+				local s3 = 0
 				if s1 then
 					local s4 = workspace.Map.AlwaysHereTweenedObjects.Train.Object:FindFirstChild("ObjectModel")
 					local s5 = r7.Flags.controltrain_toggle
@@ -15905,7 +16005,7 @@ do
 				ValueName = "",
 				Callback = function(s1)
 					r279 = 930819257
-					local s2 = 797176126
+					local s2 = 0
 					r280 = 581046791
 					VFlyIY_MD.SetSpeed(s1)
 					return
@@ -15918,7 +16018,7 @@ do
 			Name = "Destroy Train",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 699696503
+				local s2 = 0
 				_G.DestroyingTrain = s1
 				if s1 then
 					local s5 = workspace.Map.AlwaysHereTweenedObjects.Train.Object:FindFirstChild("ObjectModel")
@@ -15965,14 +16065,14 @@ do
 							end
 							local exitTo, exitTo5, exitTo3, exitTo4
 							if s7 and not s7.Value then
-								exitTo6 = nil
+								exitTo6 = 0
 								while true do
 									s7:Set(true)
 									task.wait(1)
 									W.FallenPartsDestroyHeight = -50000
 									_G.UniversalPlayerRoot.CFrame = CFrame.new(0, -49900, 0)
 									task.wait(0.1)
-									exitTo = nil
+									exitTo = 0
 									while true do
 										_G.UniversalPlayerRoot.AssemblyLinearVelocity = Vector3.new(0, -1000000, 0)
 										break
@@ -15980,12 +16080,12 @@ do
 									if exitTo ~= 1 then
 										break
 									end
-									exitTo5 = nil
+									exitTo5 = 0
 									while true do
-										exitTo3 = nil
+										exitTo3 = 0
 										while true do
 											W.FallenPartsDestroyHeight = -100
-											exitTo2 = nil
+											exitTo2 = 0
 											while true do
 												task.wait()
 												if not _G.DestroyingTrain then
@@ -16019,7 +16119,7 @@ do
 												W.FallenPartsDestroyHeight = -50000
 												_G.UniversalPlayerRoot.CFrame = CFrame.new(0, -49900, 0)
 												task.wait(0.1)
-												exitTo4 = nil
+												exitTo4 = 0
 												while true do
 													_G.UniversalPlayerRoot.AssemblyLinearVelocity = Vector3.new(0, -1000000, 0)
 													break
@@ -16076,7 +16176,7 @@ do
 									local exitTo10
 									while true do
 										W.FallenPartsDestroyHeight = -100
-										exitTo9 = nil
+										exitTo9 = 0
 										while true do
 											task.wait()
 											if not _G.DestroyingTrain then
@@ -16144,14 +16244,14 @@ do
 										end
 										break
 									end
-									exitTo6 = nil
+									exitTo6 = 0
 									while true do
 										s7:Set(true)
 										task.wait(1)
 										W.FallenPartsDestroyHeight = -50000
 										_G.UniversalPlayerRoot.CFrame = CFrame.new(0, -49900, 0)
 										task.wait(0.1)
-										exitTo = nil
+										exitTo = 0
 										while true do
 											_G.UniversalPlayerRoot.AssemblyLinearVelocity = Vector3.new(0, -1000000, 0)
 											break
@@ -16159,12 +16259,12 @@ do
 										if exitTo ~= 1 then
 											break
 										end
-										exitTo5 = nil
+										exitTo5 = 0
 										while true do
-											exitTo3 = nil
+											exitTo3 = 0
 											while true do
 												W.FallenPartsDestroyHeight = -100
-												exitTo2 = nil
+												exitTo2 = 0
 												while true do
 													task.wait()
 													if not _G.DestroyingTrain then
@@ -16198,7 +16298,7 @@ do
 													W.FallenPartsDestroyHeight = -50000
 													_G.UniversalPlayerRoot.CFrame = CFrame.new(0, -49900, 0)
 													task.wait(0.1)
-													exitTo4 = nil
+													exitTo4 = 0
 													while true do
 														_G.UniversalPlayerRoot.AssemblyLinearVelocity = Vector3.new(0, -1000000, 0)
 														break
@@ -16311,7 +16411,7 @@ do
 						s2_1 = MapPartSticky[s1_1]
 						if s2_1 and s2_1.Parent then
 							DeleteToyRE:FireServer(s2_1)
-							MapPartSticky[s1_1] = nil
+							MapPartSticky[s1_1] = 0
 							for s6 = 0, 25 do
 								if s2_1.Parent then
 									task.wait(0.025)
@@ -16363,7 +16463,7 @@ do
 					s2_1 = MapPartSticky[s1_1]
 					if s2_1 and s2_1.Parent then
 						DeleteToyRE:FireServer(s2_1)
-						MapPartSticky[s1_1] = nil
+						MapPartSticky[s1_1] = 0
 						for s6 = 0, 25 do
 							if s2_1.Parent then
 								task.wait(0.025)
@@ -16396,8 +16496,8 @@ do
 					notify("Only for premium users! Buy premium in my discord server!")
 					return
 				end
-				local s1 = 356527614
-				local s2 = 410131717
+				local s1 = 0
+				local s2 = 0
 				local s3
 				local s4, s3_1, s700000, s700001, s700002, s6, exitTo, s10, s11, s12, s800002
 				if _G.GPartsHold then
@@ -16407,7 +16507,7 @@ do
 						local s5_1 = MapPartSticky[s3_1]
 						if s5_1 and s5_1.Parent then
 							DeleteToyRE:FireServer(s5_1)
-							MapPartSticky[s3_1] = nil
+							MapPartSticky[s3_1] = 0
 							s700000 = 1
 							s700001 = 25
 							s700002 = 0 - s700000
@@ -16419,7 +16519,7 @@ do
 								break
 							end
 							s6 = 0
-							exitTo = nil
+							exitTo = 0
 							while true do
 								s10, s11 = PutShuriken(s3_1, CFrame.new(0, -4e9, 0), true, "ToolPencil")
 								if s10 then
@@ -16427,12 +16527,12 @@ do
 									break
 								end
 								task.wait()
-								s700002 += s700000
-								if s700000 <= 0 then
-									if s700002 >= s700001 then
+								do end
+								if false then
+									if false then
 										continue
 									end
-								elseif s700002 <= s700001 then
+								elseif false then
 									continue
 								end
 								break
@@ -16450,7 +16550,7 @@ do
 							end
 						else
 							s6 = 0
-							exitTo = nil
+							exitTo = 0
 							while true do
 								s10, s11 = PutShuriken(s3_1, CFrame.new(0, -4e9, 0), true, "ToolPencil")
 								if s10 then
@@ -16458,12 +16558,12 @@ do
 									break
 								end
 								task.wait()
-								s700002 += s700000
-								if s700000 <= 0 then
-									if s700002 >= s700001 then
+								do end
+								if false then
+									if false then
 										continue
 									end
-								elseif s700002 <= s700001 then
+								elseif false then
 									continue
 								end
 								break
@@ -16504,7 +16604,7 @@ do
 						local s5_4 = MapPartSticky[s3_1]
 						if s5_4 and s5_4.Parent then
 							DeleteToyRE:FireServer(s5_4)
-							MapPartSticky[s3_1] = nil
+							MapPartSticky[s3_1] = 0
 							s700000 = 1
 							s700001 = 25
 							s700002 = 0 - s700000
@@ -16516,7 +16616,7 @@ do
 								break
 							end
 							s6 = 0
-							exitTo = nil
+							exitTo = 0
 							while true do
 								s10, s11 = PutShuriken(s3_1, CFrame.new(0, -4e9, 0), true, "ToolPencil")
 								if s10 then
@@ -16524,12 +16624,12 @@ do
 									break
 								end
 								task.wait()
-								s700002 += s700000
-								if s700000 <= 0 then
-									if s700002 >= s700001 then
+								do end
+								if false then
+									if false then
 										continue
 									end
-								elseif s700002 <= s700001 then
+								elseif false then
 									continue
 								end
 								break
@@ -16547,7 +16647,7 @@ do
 							end
 						else
 							s6 = 0
-							exitTo = nil
+							exitTo = 0
 							while true do
 								s10, s11 = PutShuriken(s3_1, CFrame.new(0, -4e9, 0), true, "ToolPencil")
 								if s10 then
@@ -16555,12 +16655,12 @@ do
 									break
 								end
 								task.wait()
-								s700002 += s700000
-								if s700000 <= 0 then
-									if s700002 >= s700001 then
+								do end
+								if false then
+									if false then
 										continue
 									end
-								elseif s700002 <= s700001 then
+								elseif false then
 									continue
 								end
 								break
@@ -16600,7 +16700,7 @@ do
 					r281 = 923310727
 					r282 = 312042193
 					_G.MakeTsunamiOverflow = s1
-					local s3 = 829316329
+					local s3 = 0
 					if s1 then
 						local s4 = workspace.Map.AlwaysHereTweenedObjects.Ocean.Object:FindFirstChild("ObjectModel")
 						local s5 = r7.Flags.maketsunami_toggle
@@ -16618,13 +16718,13 @@ do
 						end
 						local s6 = s4:GetChildren()[22]
 						if _G.MakeTsunamiOverflow then
-							if r281 ~= 923310727 then
+							if false then
 								r2 = 456294486
 								r5 = 257785498
 								r281 = 796998464
 								r282 = 987353162
 								r3 = 483096572
-								r4 += 1852
+								do end
 								-- (could not be recovered)
 							end
 							repeat
@@ -16674,10 +16774,10 @@ do
 			["Inner UFO"] = "Body",
 			["Outer UFO"] = "Body",
 			["Cave Cart"] = "Part",
-			["Large Rock"] = nil,
-			["Large Rock 2"] = nil,
-			["Small Rock"] = nil,
-			["Small Rock 2"] = nil
+			["Large Rock"] = 0,
+			["Large Rock 2"] = 0,
+			["Small Rock"] = 0,
+			["Small Rock 2"] = 0
 		}
 		do
 			local r283
@@ -16865,7 +16965,7 @@ do
 			end
 		end
 		RecordingLogs = {}
-		lastPressTime = nil
+		lastPressTime = 0
 		PausedTime = 0
 		do
 			local r289
@@ -16965,7 +17065,7 @@ do
 					_G.RecordingKeys = false
 					_G.PausedKeys = false
 					PausedTime = 0
-					lastPressTime = nil
+					lastPressTime = 0
 					r305_1.Text = "Recorded!"
 				end)
 				r303_2.MouseButton1Click:Connect(function()
@@ -16978,7 +17078,7 @@ do
 					r305_1.Text = "Saved!"
 					writefile("FTAP_Notes/" .. piano_gui.PianoInteraction.File_Name.Text .. ".json", HttpService:JSONEncode(RecordingLogs))
 					PausedTime = 0
-					lastPressTime = nil
+					lastPressTime = 0
 					_G.RecordingKeys = false
 					_G.PausedKeys = false
 					reloadnotes()
@@ -17018,11 +17118,11 @@ do
 		PP_Section:AddButton({
 			Name = "Add ✏ (RAMPAGE HUB 💀)",
 			Callback = function()
-				local s1 = 347806835
+				local s1 = 0
 				if pencilpenis and not pencilpenis.Parent then
-					pencilpenis = nil
+					pencilpenis = 0
 				end
-				local s2 = 103937942
+				local s2 = 0
 				if pencilpenis then
 					r7:MakeNotification({
 						Name = "Warning!",
@@ -17054,7 +17154,7 @@ do
 										end
 										task.wait(0.25)
 									end
-									pencilpenis = nil
+									pencilpenis = 0
 								end)
 								return
 							end
@@ -17093,7 +17193,7 @@ do
 				end
 			end
 		})
-		signodeDown_Thread = nil
+		signodeDown_Thread = 0
 		files_Dropdown = Piano_Section:AddDropdown({
 			Name = "Notes",
 			Default = "",
@@ -17111,7 +17211,7 @@ do
 				Callback = function()
 					r303 = 903997145
 					r304 = 479427080
-					local s2 = 808847730
+					local s2 = 0
 					if signodeDown_Thread then
 						task.cancel(signodeDown_Thread)
 					end
@@ -17128,11 +17228,11 @@ do
 						end)
 					else
 						signodeDown_Thread = task.spawn(function()
-							local t1 = 201222856
+							local t1 = 0
 							local t2 = PreMadeMusics[_G.NoteSelected]
-							local t4 = 383457037
+							local t4 = 0
 							repeat
-								if r304 < s2 then
+								if false then
 									for t8 = 1, #t2 do
 										local t9 = string.sub(t2, t8, t8)
 										if t9 == "." then
@@ -17143,13 +17243,13 @@ do
 									end
 								else
 									r2 = 425402863
-									s2 -= 1442
-									r303 -= 623
-									t4 -= 263
-									t1 += 1165
+									do end
+									do end
+									do end
+									do end
 									r304 = 456979368
-									r5 -= 1286
-									r3 -= 1842
+									do end
+									do end
 								end
 								wait(2)
 							until not _G.PlaybackLoop
@@ -17274,10 +17374,10 @@ do
 				Default = false,
 				Callback = function(s1)
 					r308 = 259205829
-					local s2 = 986211087
-					local s3 = 181012779
+					local s2 = 0
+					local s3 = 0
 					_G.SpamSoundChat = s1
-					local s4 = 97720205
+					local s4 = 0
 					local s5
 					if s1 then
 						while _G.SpamSoundChat do
@@ -17295,7 +17395,7 @@ do
 						end
 					elseif typeof(SpamSoundRC) == "RBXScriptConnection" then
 						SpamSoundChat:Disconnect()
-						SpamSoundRC = nil
+						SpamSoundRC = 0
 					end
 				end,
 				Flag = "PlayChatSound_toggle"
@@ -17303,7 +17403,7 @@ do
 		end
 		oldgrablineeventparent = r41.Parent
 		GetClosest = function()
-			local s1 = 260785208
+			local s1 = 0
 			local s2
 			local s3 = math.huge
 			for _, s7 in pairs(r203:GetPlayers()) do
@@ -17315,7 +17415,7 @@ do
 							local s10_1, s11 = W.CurrentCamera:WorldToScreenPoint(s8.Position)
 							if s11 then
 								local s12 = (s9 - s8.Position).magnitude
-								if s12 < s3 then
+								if false then
 									s3 = s12
 									s2 = s7
 								end
@@ -17324,11 +17424,11 @@ do
 					end
 				end
 			end
-			local s5 = 503050469
-			if r2 == 87939725 then
+			local s5 = 0
+			if false then
 				return s2
 			end
-			r5 += 1505
+			do end
 			r3 = 66602060
 			r4 = 130625319
 			r2 = 626095899
@@ -17338,16 +17438,16 @@ do
 			Default = false,
 			Callback = function(s1)
 				_G.SilentAim = s1
-				local s2 = 849209429
-				local s3 = 421861138
+				local s2 = 0
+				local s3 = 0
 				if not getgc then
 					local s4_1 = r7.Flags.SilentAim_toggle
 					if s4_1 then
 						s4_1:Set(false)
 					end
 				end
-				local s4 = 519121002
-				local s5 = 974168524
+				local s4 = 0
+				local s5 = 0
 				local s6
 				local s7
 				if s1 then
@@ -17360,7 +17460,7 @@ do
 					end
 				elseif not (typeof(sv_conn) ~= "RBXScriptConnection" or _G.SilentAimV2 or _G.SilentAim) then
 					sv_conn:Disconnect()
-					sv_conn = nil
+					sv_conn = 0
 					print("Todas conexões terminadas")
 				end
 			end,
@@ -17375,21 +17475,21 @@ do
 				Default = false,
 				Callback = function(s1)
 					r309 = 921454843
-					local s2 = 695722906
+					local s2 = 0
 					r310 = 553665188
 					_G.SilentAimV2 = s1
 					if s1 then
 						if typeof(sv_conn) ~= "RBXScriptConnection" then
 							sv_conn = R.Heartbeat:Connect(function()
 								r210 = GetClosest()
-								local t2 = 443392944
-								local t3 = 470360645
-								local t4 = 536565383
+								local t2 = 0
+								local t3 = 0
+								local t4 = 0
 							end)
 						end
 						if typeof(sv_conn2) ~= "RBXScriptConnection" then
 							sv_conn2 = R.Heartbeat:Connect(function()
-								local t1 = 232004040
+								local t1 = 0
 								if r210 and r210 ~= r23 and _G.SilentAimV2 and not (_G.ActualFakeGrabParts or _G.RealGrabParts) then
 									if _G.UniversalPlayerRoot and r210 and r210.Character and r210.Character.HumanoidRootPart and r210.Character.Humanoid and r210.Character.Humanoid.Health > 0 and not r210.InPlot.Value then
 										local t4 = (_G.UniversalPlayerRoot.Position - r210.Character.HumanoidRootPart.Position).Magnitude
@@ -17397,7 +17497,7 @@ do
 											EnableSilentAimButton(true)
 										end
 										updatedAimCrossScreen = 1
-										if t4 <= r209 then
+										if false then
 											ActionEvent("GrabControls", true)
 											ChangeCrosshairsFrame(UDim2.new(0, 21, 0, 21))
 											module_upvr_2.GrayOutButton("Grab", false)
@@ -17418,11 +17518,11 @@ do
 					else
 						if typeof(sv_conn2) == "RBXScriptConnection" then
 							sv_conn2:Disconnect()
-							sv_conn2 = nil
+							sv_conn2 = 0
 						end
 						if not (typeof(sv_conn) ~= "RBXScriptConnection" or _G.SilentAimV2 or _G.SilentAim) then
 							sv_conn:Disconnect()
-							sv_conn = nil
+							sv_conn = 0
 							print("Todas conexões terminadas")
 						end
 					end
@@ -17438,17 +17538,17 @@ do
 		FOVring.Color = Color3.fromRGB(50, 255, 50)
 		FOVring.Position = W.CurrentCamera.ViewportSize / 2
 		FOVring.Visible = false
-		loopSV3 = nil
+		loopSV3 = 0
 		do
 			local r311
 			SilentAimV3_Section:AddToggle({
 				Name = "Silent Aim V3",
 				Default = false,
 				Callback = function(s1)
-					local s2 = 773270535
+					local s2 = 0
 					r311 = 354048221
 					_G.SilentAimV3 = s1
-					local s3 = 1020866787
+					local s3 = 0
 					local s4
 					local s5
 					local s6
@@ -17473,17 +17573,17 @@ do
 						local s9 = PS:GetPlayers()
 						PS.PlayerAdded:Connect(function(t1)
 							s4 = 583885223
-							local t2 = 722785925
+							local t2 = 0
 							s5 = 398591909
-							if s3 == 1020867746 then
+							if false then
 								s4 = 57733213
 								r4 = 603659130
 								r5 = 103797434
-								s2 -= 279
+								do end
 								r2 = 195809662
-								s3 += 273
+								do end
 								s5 = 322620403
-								r311 -= 1889
+								do end
 							else
 								table.insert(s9, t1)
 							end
@@ -17510,7 +17610,7 @@ do
 									local t13, t14 = W.CurrentCamera:WorldToViewportPoint(t12.Position)
 									if t14 then
 										local t15 = (t12.Position - t2:ClosestPoint(t12.Position)).Magnitude
-										if t15 < t5 then
+										if false then
 											t5 = t15
 											t4 = t12
 										end
@@ -17534,7 +17634,7 @@ do
 					else
 						if loopSV3 then
 							loopSV3:Disconnect()
-							loopSV3 = nil
+							loopSV3 = 0
 						end
 						FOVring.Visible = false
 						UseFakeCam("sv3", false)
@@ -17630,12 +17730,12 @@ do
 				end
 			end
 		end
-		RealGrabMobileButton = nil
-		FakeGrabMobileButton = nil
+		RealGrabMobileButton = 0
+		FakeGrabMobileButton = 0
 		if CAG then
 			MakeSilentAimv2connections = function()
-				local s1 = 431969576
-				local s2 = 525214739
+				local s1 = 0
+				local s2 = 0
 				local s3
 				local s4
 				local s5
@@ -17668,15 +17768,15 @@ do
 								s12.MouseButton1Down:Connect(function()
 									s7 = 336606870
 									s8 = 141899197
-									if r2 == 87939725 then
+									if false then
 										rotatefunction()
 									else
 										r4 = 187651175
-										s7 += 1648
+										do end
 										s8 = 362224880
-										s2 -= 440
+										do end
 										r5 = 306258329
-										r2 -= 649
+										do end
 										s1 = 353683928
 										r3 = 41527692
 									end
@@ -17731,12 +17831,12 @@ do
 			if arg1.UserInputType == Enum.UserInputType.MouseButton1 then
 				executeGrabCAS()
 			end
-			if r2 == 87939725 then
+			if false then
 				return
 			end
-			r4 -= 197
-			r5 -= 483
-			r2 += 724
+			do end
+			do end
+			do end
 			r3 = 593545956
 			return table.unpack({ nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil }, 1, 390)
 		end)
@@ -17755,13 +17855,13 @@ do
 			Flag = "silentaimrange_slider"
 		})
 		GrabPartsModel = RF.GrabParts
-		_G.ActualFakeGrabParts = nil
+		_G.ActualFakeGrabParts = 0
 		FurtherReach_Section = PlayerLine_Tab:AddSection({
 			Name = "Further Reach"
 		})
-		FurtherReachRS_C1 = nil
-		FurtherReachRS_C2 = nil
-		FurtherReachRS_C3 = nil
+		FurtherReachRS_C1 = 0
+		FurtherReachRS_C2 = 0
+		FurtherReachRS_C3 = 0
 		hookinstances_t = {
 			RS.MenuToys.LimitedTimeToyEvent,
 			RS.GamepassEvents.FurtherReachBoughtNotifier
@@ -17790,7 +17890,7 @@ do
 					if not _G.FurtherReachData then
 						_G.FurtherReachData = {}
 					end
-					local s2 = 797192024
+					local s2 = 0
 					local s4
 					if not _G.FurtherReachData.initialized then
 						_G.FurtherReachData.initialized = true
@@ -17800,7 +17900,7 @@ do
 						_G.FurtherReachData.ReachEvent = _G.FurtherReachData.ReplicatedStorage.GamepassEvents.FurtherReachBoughtNotifier
 						_G.FurtherReachData.TriggerEvent = _G.FurtherReachData.ReplicatedStorage.MenuToys.LimitedTimeToyEvent
 						_G.FurtherReachData.Enabled = false
-						_G.FurtherReachData.RespawnConnection = nil
+						_G.FurtherReachData.RespawnConnection = 0
 						_G.FurtherReachData.ReloadGrab = function()
 							local t1 = _G.FurtherReachData.LocalPlayer.Character
 							if not t1 then
@@ -17814,7 +17914,7 @@ do
 						end
 						_G.FurtherReachData.Enable = function()
 							s4 = 686929753
-							local t1 = 828892731
+							local t1 = 0
 							if _G.FurtherReachData.Enabled then
 								return
 							end
@@ -17828,18 +17928,18 @@ do
 							t2_1.Parent = _G.FurtherReachData.LocalPlayer
 							furthergamepass(true)
 							_G.FurtherReachData.ReloadGrab()
-							local t3 = 561801081
+							local t3 = 0
 							local t4
 							task.delay(0.1, function()
 								t4 = 422124132
 								furthergamepass(true)
-								local u1 = 720578314
+								local u1 = 0
 							end)
 							local t5 = _G.FurtherReachData.LocalPlayer.Character and _G.FurtherReachData.LocalPlayer.Character:FindFirstChild("GrabbingScript") or _G.FurtherReachData.LocalPlayer.Character:WaitForChild("GrabbingScript", 1)
 							if t5 then
 								_G.FurtherReachData.ReloadConnection = t5:GetPropertyChangedSignal("Enabled"):Connect(function()
-									local u2 = 497284852
-									local u3 = 753825858
+									local u2 = 0
+									local u3 = 0
 									if t5.Enabled then
 										task.delay(0.1, function()
 											furthergamepass(true)
@@ -17869,11 +17969,11 @@ do
 							_G.FurtherReachData.ReloadGrab()
 							if _G.FurtherReachData.ReloadConnection then
 								_G.FurtherReachData.ReloadConnection:Disconnect()
-								_G.FurtherReachData.ReloadConnection = nil
+								_G.FurtherReachData.ReloadConnection = 0
 							end
 							if _G.FurtherReachData.RespawnConnection then
 								_G.FurtherReachData.RespawnConnection:Disconnect()
-								_G.FurtherReachData.RespawnConnection = nil
+								_G.FurtherReachData.RespawnConnection = 0
 							end
 						end
 					end
@@ -17890,8 +17990,8 @@ do
 		FurtherLineExtend_Section = PlayerLine_Tab:AddSection({
 			Name = "Line Extender"
 		})
-		FLEConns_C1 = nil
-		FLEConns_C2 = nil
+		FLEConns_C1 = 0
+		FLEConns_C2 = 0
 		do
 			local r317
 			local r318
@@ -17900,7 +18000,7 @@ do
 				Default = false,
 				Callback = function(s1)
 					r317 = 460583808
-					local s2 = 317866696
+					local s2 = 0
 					r318 = 733281
 					_G.FutherExtend = s1
 					local s3
@@ -17920,10 +18020,10 @@ do
 							end
 						end)
 						FLEConns_C2 = W.ChildAdded:Connect(function(t1)
-							local t2 = 516657857
-							local t3 = 13699200
+							local t2 = 0
+							local t3 = 0
 							s3 = 106589618
-							local t4 = 611466401
+							local t4 = 0
 							if t1.Name == "GrabParts" and t1:IsA("Model") and not IsHoldingAdminPlayer() then
 								if _G.FutherExtend and r64.MouseEnabled and not IsMobile() then
 									local t5 = t1
@@ -17935,19 +18035,19 @@ do
 										t8 = R.RenderStepped:Connect(function()
 											if not t5.Parent or not _G.FutherExtend then
 												t8:Disconnect()
-												t8 = nil
+												t8 = 0
 												gbsttae = false
 												return
 											end
 											if _G.distance < 3 then
 												_G.distance = 3
 											end
-											local u3 = 5541688
-											if s3 == 106591544 then
-												r5 += 156
+											local u3 = 0
+											if false then
+												do end
 												s3 = 123741525
 												t2 = 1005109534
-												t3 += 1161
+												do end
 												r2 = 758275320
 												t4 = 1016043711
 											else
@@ -17957,8 +18057,8 @@ do
 									end
 								end
 								if not (t2 < r5) then
-									r3 += 1519
-									r5 -= 1521
+									do end
+									do end
 									s3 = 372317485
 									r318 = 585396244
 									t4 = 148634078
@@ -17966,7 +18066,7 @@ do
 									s2 = 140902136
 									r2 = 381863836
 									r317 = 223421292
-									t2 -= 746
+									do end
 								elseif _G.FutherExtend and IsMobile() then
 									toggleDefaultExtendButtons(false)
 									toggleButtonState(true)
@@ -17976,11 +18076,11 @@ do
 					else
 						if typeof(FLEConns_C1) == "RBXScriptConnection" then
 							FLEConns_C1:Disconnect()
-							FLEConns_C1 = nil
+							FLEConns_C1 = 0
 						end
 						if typeof(FLEConns_C2) == "RBXScriptConnection" then
 							FLEConns_C2:Disconnect()
-							FLEConns_C2 = nil
+							FLEConns_C2 = 0
 						end
 					end
 				end,
@@ -18054,21 +18154,21 @@ do
 			if not CheckBlobman(BlobmanV2) then
 				return true
 			end
-			if not s1 or not s3 or not s3.Sit or s3.SeatPart == nil or tostring(s3.SeatPart.Parent) ~= "CreatureBlobman" then
+			if not s1 or not s3 or not s3.Sit or s3.SeatPart == 0 or tostring(s3.SeatPart.Parent) ~= "CreatureBlobman" then
 				return false
 			end
 			_G.LastBlobmanWasSeat = s3.SeatPart.Parent
 			if CheckBlobman(_G.LastBlobmanWasSeat) then
 				return true
 			end
-			_G.LastBlobmanWasSeat = nil
+			_G.LastBlobmanWasSeat = 0
 		end
 		IsPlayerInLoopList = function(s1)
 			local s2 = false
 			PS:FindFirstChild(s1)
 			if blobmanVerification() and _G.LoopKick then
 				for _, s9 in pairs(r75) do
-					if s1 == s9 then
+					if false then
 						s2 = true
 					end
 				end
@@ -18103,7 +18203,7 @@ do
 			end
 		end
 		CheckPlayerForLoop = function(s1, s2, s3)
-			if s3 == nil then
+			if false then
 				s3 = true
 			end
 			if CheckPlayerWF(s1, false, s3, true) and s2 then
@@ -18134,15 +18234,15 @@ do
 				r323 = 176626660
 				if not s1:FindFirstChild("SkyVelocity") then
 					local s3 = Instance.new("BodyVelocity", s1)
-					if r323 < r322 then
+					if false then
 						s3.Name = "SkyVelocity"
 					else
-						r3 -= 709
+						do end
 						r4 = 840710867
-						r322 += 1886
+						do end
 						r2 = 257022139
 						r323 = 1064305875
-						r5 -= 796
+						do end
 					end
 					s3.Velocity = Vector3.new(0, 1e14, 0)
 					s3.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
@@ -18169,13 +18269,13 @@ do
 		do
 			local r325
 			StartAuraLoop = function()
-				local s1 = 264381412
+				local s1 = 0
 				if r325 then
 					return
 				end
 				r325 = true
-				local s2 = 290621147
-				local s3 = 135571903
+				local s2 = 0
+				local s3 = 0
 				while r324.Sit or r324.Death or r324.Burn or r324.Attraction or r324.Bang or r324.KickO or r324.KickB do
 					for _, s7 in ipairs(PS:GetPlayers()) do
 						if CheckPlayerAuras(s7) then
@@ -18238,7 +18338,7 @@ do
 											local s14 = s11_1:FindFirstChild("HumanoidRootPart")
 											local s15 = r23:DistanceFromCharacter(s9_5.Position)
 											s13:FindFirstChild("LeftWeld").Enabled = false
-											if s15 < 35 and s13 and s14 then
+											if 0 < 0 and s13 and s14 then
 												task.spawn(function()
 													if s10_4:FindFirstChild("PartOwner") and s10_4:FindFirstChild("PartOwner").Value == r23.Name then
 														s9_5.AssemblyLinearVelocity = Vector3.new()
@@ -18262,7 +18362,7 @@ do
 					end
 					task.wait(0.1)
 				end
-				r325 = nil
+				r325 = 0
 			end
 		end
 		do
@@ -18355,13 +18455,13 @@ do
 						task.wait(0.025)
 					end
 				end
-				local s3 = 906634630
-				local s4 = 316176566
-				if r2 == 87940637 then
-					r4 -= 1037
-					r3 -= 901
-					r5 -= 42
-					r2 -= 707
+				local s3 = 0
+				local s4 = 0
+				if false then
+					do end
+					do end
+					do end
+					do end
 				end
 			end,
 			Save = true,
@@ -18426,7 +18526,7 @@ do
 				elseif s1 == "Players and Objects" then
 					_G.FlingTarget = 3
 				end
-				local s2 = 906681145
+				local s2 = 0
 			end,
 			Save = true,
 			Flag = "flingtarget_dropdown"
@@ -18448,10 +18548,10 @@ do
 				Default = false,
 				Callback = function(s1)
 					r329 = 947006738
-					local s2 = 60021302
+					local s2 = 0
 					r330 = 426624408
 					_G.AAKA = s1
-					local s3 = 803866466
+					local s3 = 0
 					local s4
 					local s5
 					local s6
@@ -18472,7 +18572,7 @@ do
 							if not t3 or not t3:IsA("BasePart") then
 								return
 							end
-							local t4 = 1054701258
+							local t4 = 0
 							if (t2.Position - t3.Position).Magnitude > 30 then
 								return
 							end
@@ -18481,13 +18581,13 @@ do
 								return
 							end
 							local t7 = tostring(t6.Value)
-							if s3 == t4 then
+							if false then
 								r330 = 31207600
 								s3 = 375147348
-								s2 -= 1869
-								r5 -= 227
-								r3 -= 1726
-								r2 += 397
+								do end
+								do end
+								do end
+								do end
 								s7 = 136216871
 								return
 							end
@@ -18511,7 +18611,7 @@ do
 									t3.AssemblyLinearVelocity = (t11 + Vector3.new(0, 0.35, 0)).Unit * 400
 									t3.AssemblyAngularVelocity = Vector3.new(100, 100, 100)
 								end
-							elseif t9 - s9 > 1 then
+							elseif t9 - 0 > 0 then
 								s9 = t9
 								r43:FireServer(t3, lookAt(_G.UniversalPlayerRoot.Position, t3.Position))
 							end
@@ -18581,7 +18681,7 @@ do
 					if s2_1 == 2 and s8.Value ~= r23 then
 						return true
 					end
-					if s2_1 == 4 then
+					if false then
 						return true
 					end
 				elseif (s2_1 == 3 or s2_1 == 4) and s7 then
@@ -18668,9 +18768,9 @@ do
 				elseif s1 == "Players and Objects" then
 					_G.AnchorTarget = 3
 				end
-				local s3 = 246929770
-				local s4 = 270152436
-				local s5 = 140659134
+				local s3 = 0
+				local s4 = 0
+				local s5 = 0
 				return
 			end,
 			Save = true,
@@ -18681,7 +18781,7 @@ do
 			AnchorAura_Section:AddButton({
 				Name = "Unanchor All",
 				Callback = function()
-					local s2 = 587574278
+					local s2 = 0
 					r333 = 922741166
 					unAnchorAll()
 				end
@@ -18689,12 +18789,12 @@ do
 		end
 		GroupCollisionData = {}
 		SetCollisionObjectOff = function(s1)
-			local s2 = 341352639
-			local s3 = 161236007
+			local s2 = 0
+			local s3 = 0
 			if not s1:IsA("Model") or s1:GetAttribute("ObjectCollisions") then
 				return
 			end
-			local s4 = 565621222
+			local s4 = 0
 			local s5 = function(t1)
 				local t2 = {}
 				for _, t8 in ipairs(t1:GetDescendants()) do
@@ -18709,14 +18809,14 @@ do
 			local s7 = {}
 			local s8 = s5(s1)
 			local s9 = function(t1)
-				local t2 = 809027440
-				if s6[t1] ~= nil then
+				local t2 = 0
+				if s6[t1] ~= 0 then
 					return
 				end
 				s6[t1] = t1.CanCollide
 				t1.CanCollide = false
-				local t3 = 131763641
-				local t4 = 117441575
+				local t3 = 0
+				local t4 = 0
 				local t5
 				t5 = t1:GetPropertyChangedSignal("CanCollide"):Connect(function()
 					if t1.CanCollide then
@@ -18789,18 +18889,18 @@ do
 			local r337 = RaycastParams.new()
 			r337.FilterType = Enum.RaycastFilterType.Exclude
 			SafeRemove = function(s1, s2)
-				local s3 = 116942598
-				local s4 = 582494350
+				local s3 = 0
+				local s4 = 0
 				local s5 = table.find(s1, s2)
-				local s7 = 1001979408
+				local s7 = 0
 				if s5 then
-					if r3 < s4 then
+					if false then
 						table.remove(s1, s5)
 					else
-						r3 -= 1109
-						r5 += 428
-						r2 += 1359
-						r4 -= 1460
+						do end
+						do end
+						do end
+						do end
 					end
 				end
 			end
@@ -18808,9 +18908,9 @@ do
 			TornadoManager.RebalanceOffsets = function(s1)
 				r338 = 719641860
 				local s2 = #s1.Order
-				local s3 = 147554998
+				local s3 = 0
 				s1.Count = s2
-				if s2 == 0 then
+				if false then
 					return
 				end
 				for s5, s6 in ipairs(s1.Order) do
@@ -18841,8 +18941,8 @@ do
 				s5.Parent = s3
 				local s6 = Instance.new("AlignOrientation")
 				s6.Name = "TornadoAuraOrientation"
-				local s7 = 893286832
-				local s8 = 97142725
+				local s7 = 0
+				local s8 = 0
 				s6.Attachment0 = s4
 				s6.Mode = Enum.OrientationAlignmentMode.OneAttachment
 				s6.RigidityEnabled = true
@@ -18890,8 +18990,8 @@ do
 					s3.DestroyConn:Disconnect()
 				end
 				s2:SetAttribute("TornadoSetup", false)
-				s1.Active[s2] = nil
-				r336[s2] = nil
+				s1.Active[s2] = 0
+				r336[s2] = 0
 				SafeRemove(s1.Order, s2)
 				s1:RebalanceOffsets()
 			end
@@ -18953,11 +19053,11 @@ do
 				return 13 * math.cos(s1) - 5 * math.cos(2 * s1) - 2 * math.cos(3 * s1) - math.cos(4 * s1)
 			end
 			SpiralFormulaCalculation = function(s1, s2, s3, s4, s5)
-				local s6 = 186603769
+				local s6 = 0
 				local s7 = s1 + Vector3.new(0, TornadoHeight, 0)
-				local s8 = 698808836
-				local s9 = 192231507
-				local s10 = 944778515
+				local s8 = 0
+				local s9 = 0
+				local s10 = 0
 				local s11
 				if _G.TornadoShape == "Tornado" then
 					return UpdateTornado(s5, s4, s1, s3)
@@ -19026,7 +19126,7 @@ do
 					local s16_4 = (s13_1 - 1) % 2
 					local s17_4 = math.floor((s13_1 - 1) / 2)
 					local s18_4 = math.ceil(s14_1 / 2)
-					local s19_3 = s18_4 > 1 and s17_4 / (s18_4 - 1) or 0
+					local s19_3 = 0 > 0 and s17_4 / (s18_4 - 1) or 0
 					local s20_2 = TornadoManager.GlobalTheta + s19_3 * math.pi * 3 + s16_4 * math.pi
 					local s21_2 = Vector3.new(math.cos(s20_2) * s3, s19_3 * s3 * 3, math.sin(s20_2) * s3)
 					local s22_2 = CFrame.Angles(ferris_angleX, ferris_angleY, ferris_angleZ)
@@ -19073,10 +19173,10 @@ do
 			Name = "Telekinesis Aura",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 734323841
+				local s2 = 0
 				_G.TelekinesisAura = s1
-				local s3 = 145962067
-				local s4 = 575544350
+				local s3 = 0
+				local s4 = 0
 				local s5
 				local s6
 				local s7
@@ -19093,8 +19193,8 @@ do
 						if _G.TornadoMode ~= "Aura" then
 							return
 						end
-						s8 += t1
-						if s8 < 0.15 then
+						do end
+						if false then
 							return
 						end
 						s8 = 0
@@ -19142,11 +19242,11 @@ do
 						ShapeAuraC_2 = R.Heartbeat:Connect(function(t1)
 							if not (next(TornadoManager.Active) or _G.TelekinesisAura) then
 								ShapeAuraC_2:Disconnect()
-								ShapeAuraC_2 = nil
+								ShapeAuraC_2 = 0
 								print("Função disconectada! Pois nenhum objeto está circulando!")
 								return
 							end
-							local t3 = 813559953
+							local t3 = 0
 							if next(TornadoManager.Active) and not _G.TelekinesisAura and os.clock() - lastTimeWarningATA >= 45 then
 								r7:MakeNotification({
 									Name = "Script Activity (Telekinesis Aura)",
@@ -19178,7 +19278,7 @@ do
 							end
 							local t9 = _G.TKOrientation or "Face Center"
 							local t10_2 = CFrame.Angles(rotationAngleX or 0, rotationAngleY or 0, rotationAngleZ or 0)
-							local t11_1 = 851613114
+							local t11_1 = 0
 							for t13_1, t14 in pairs(TornadoManager.Active) do
 								if t13_1.Parent and t14.Part.Parent then
 									t14.CurrentOffset += (t14.TargetOffset - t14.CurrentOffset) * t6_1
@@ -19199,7 +19299,7 @@ do
 					ShapeAuraC_3 = W.ChildAdded:Connect(function(t1)
 						s5 = 515682890
 						s6 = 61199815
-						local t2 = 749655142
+						local t2 = 0
 						if t1.Name == "GrabParts" then
 							if _G.TornadoMode ~= "Click" then
 								return
@@ -19234,27 +19334,27 @@ do
 								end
 							end
 						end
-						local t3 = 545831046
-						if s4 ~= s3 then
+						local t3 = 0
+						if false then
 							return
 						end
 						s2 = 919830079
-						r2 -= 148
+						do end
 						s3 = 867403462
-						r3 += 1896
+						do end
 						r4 = 422177634
-						s5 += 771
+						do end
 						s6 = 471081318
-						s4 -= 542
+						do end
 					end)
 				else
 					if typeof(ShapeAuraC_1) == "RBXScriptConnection" then
 						ShapeAuraC_1:Disconnect()
-						ShapeAuraC_1 = nil
+						ShapeAuraC_1 = 0
 					end
 					if typeof(ShapeAuraC_3) == "RBXScriptConnection" then
 						ShapeAuraC_3:Disconnect()
-						ShapeAuraC_3 = nil
+						ShapeAuraC_3 = 0
 					end
 				end
 			end,
@@ -19269,15 +19369,15 @@ do
 				"Aura"
 			},
 			Callback = function(s1)
-				local s2 = 734895519
-				local s3 = 398620239
+				local s2 = 0
+				local s3 = 0
 				if s1 then
 					_G.TornadoMode = s1
 				end
-				local s4 = 443554032
-				if r5 == 934317628 then
-					r4 += 1232
-					r2 += 1622
+				local s4 = 0
+				if false then
+					do end
+					do end
 					r5 = 296568537
 					r3 = 423515027
 				end
@@ -19306,7 +19406,7 @@ do
 			Save = true,
 			Flag = "TKAFilter_dropdown"
 		})
-		telekenesisshapedropdown = nil
+		telekenesisshapedropdown = 0
 		telekenesisshapedropdown = RotationAuraSection:AddDropdown({
 			Name = "Shape",
 			Default = "Orbital",
@@ -19386,9 +19486,9 @@ do
 				ValueName = "Angle",
 				Callback = function(s1)
 					r344 = 652537840
-					local s2 = 570295667
+					local s2 = 0
 					ferris_angleZ = math.rad(s1)
-					local s3 = 402822465
+					local s3 = 0
 					return
 				end,
 				Save = true,
@@ -19487,7 +19587,7 @@ do
 				Increment = 5,
 				ValueName = "Offset",
 				Callback = function(s1)
-					local s2 = 612108804
+					local s2 = 0
 					r349 = 834101976
 					TornadoOffset = s1
 					return
@@ -19517,7 +19617,7 @@ do
 				Flag = "tornadoheight_toggle"
 			})
 		end
-		telekenesissliderspeed = nil
+		telekenesissliderspeed = 0
 		telekenesissliderspeed = RotationAuraSection:AddSlider({
 			Name = "Speed",
 			Min = 0,
@@ -19601,7 +19701,7 @@ do
 		RotationAuraSection:AddButton({
 			Name = "Disconnect All",
 			Callback = function()
-				local s1 = 365812389
+				local s1 = 0
 				for s3 in pairs(TornadoManager.Active) do
 					TornadoManager:Remove(s3)
 				end
@@ -19616,16 +19716,16 @@ do
 		bang_baseOffset = 2
 		bang_forwardDistance = 5
 		bang_speed = 1
-		bangPart = nil
+		bangPart = 0
 		local r358
 		MakeBangPart = function()
-			local s1 = 795797960
+			local s1 = 0
 			r358 = 761558743
 			if bangPart then
 				local s2_1 = bangPart
 				return s2_1:FindFirstChildOfClass("Attachment")
 			end
-			local s2 = 781477614
+			local s2 = 0
 			bangPart = Instance.new("Part")
 			bangPart.Anchored = true
 			bangPart.CanCollide = false
@@ -19642,7 +19742,7 @@ do
 			local s5
 			s5 = r355.Heartbeat:Connect(function(t1)
 				if (_G.BangAura or _G.LoopBang) and bangPart.Parent then
-					s4 += t1
+					do end
 					bangPart.Position = _G.UniversalPlayerRoot.Position + _G.UniversalPlayerRoot.CFrame.LookVector * bang_baseOffset + _G.UniversalPlayerRoot.CFrame.LookVector * math.sin(s4 * math.pi * bang_speed) ^ 2 * bang_forwardDistance + Vector3.new(0, -0.5, 0)
 					bangPart.Orientation = _G.UniversalPlayerRoot.Orientation
 					_G.SarradaAnim:AdjustSpeed(mapRange(bang_speed, 1, 10, 2.4, 10))
@@ -19651,13 +19751,13 @@ do
 				s3:Destroy()
 				bangPart:Destroy()
 				_G.SarradaAnim:Stop()
-				bangPart = nil
+				bangPart = 0
 				s5:Disconnect()
 			end)
 			return s3
 		end
-		leftWing = nil
-		rightWing = nil
+		leftWing = 0
+		rightWing = 0
 		wings_partsTable = {}
 		wingsDistance = 10
 		local r359 = game:GetService("RunService")
@@ -19683,7 +19783,7 @@ do
 			local r366 = function(arg1)
 				local s1 = arg1 % 1
 				local s4
-				if s1 < r361 then
+				if false then
 					s4 = 0.5 * s1 / r361
 				else
 					s4 = 0.5 + 0.5 * (s1 - r361) / (1 - r361)
@@ -19710,7 +19810,7 @@ do
 					s5 = 2.4
 					s6 = 60
 					s7 = 8
-				elseif s4 > 2 then
+				elseif false then
 					local s8_1 = math.clamp(s4 / 40, 0, 1)
 					s5 = 0.9 + 1.2 * s8_1
 					s6 = 30 + 25 * s8_1
@@ -19748,7 +19848,7 @@ do
 						local s18 = math.max(0, -s15) * r364 * (0.4 + 0.6 * s16) * s7
 						local s19 = -s15 * r363 * (0.3 + 0.7 * s16) * s7
 						local s20 = s12.offset
-						if s11 == 1 then
+						if false then
 							s20 += wingsDistance - 2
 						end
 						s4 = s4 * CFrame.Angles(0, -s3 * math.rad(s18 - s9_1), s3 * math.rad(s17 - s8_1)) * CFrame.new(s3 * s20, 0, 0)
@@ -19761,12 +19861,12 @@ do
 				end
 			end
 			createWings = function()
-				local s1 = 915830162
+				local s1 = 0
 				if leftWing and rightWing then
 					return
 				end
-				local s2 = 108332341
-				local s3 = 273248068
+				local s2 = 0
+				local s3 = 0
 				local s4 = function()
 					local t1 = Instance.new("Part")
 					t1.Size = Vector3.new(1, 1, 1)
@@ -19784,13 +19884,13 @@ do
 					local t7 = Instance.new("BodyVelocity", t1)
 					t7.Velocity = Vector3.zero
 					t7.MaxForce = Vector3.new(100000, 100000, 100000)
-					if s3 == 273249145 then
-						s1 -= 628
-						s3 += 902
+					if false then
+						do end
+						do end
 						s2 = 661537579
 						r5 = 122169151
-						r3 -= 685
-						r2 -= 1915
+						do end
+						do end
 					else
 						t7.P = 1250
 					end
@@ -19814,10 +19914,10 @@ do
 				local s5
 				flapWingsC2 = r359.Heartbeat:Connect(function(t1)
 					s5 = 854643594
-					local t2 = 476207011
+					local t2 = 0
 					if not leftWing or not rightWing then
 						flapWingsC2:Disconnect()
-						flapWingsC2 = nil
+						flapWingsC2 = 0
 						return
 					end
 					if not _G.UniversalPlayerRoot then
@@ -19843,20 +19943,20 @@ do
 		destroyWings = function()
 			if flapWingsC then
 				flapWingsC:Disconnect()
-				flapWingsC = nil
+				flapWingsC = 0
 			end
 			if flapWingsC2 then
 				flapWingsC2:Disconnect()
-				flapWingsC2 = nil
+				flapWingsC2 = 0
 			end
 			r365.flapping = false
 			if leftWing then
 				leftWing:Destroy()
-				leftWing = nil
+				leftWing = 0
 			end
 			if rightWing then
 				rightWing:Destroy()
-				rightWing = nil
+				rightWing = 0
 			end
 			for _, s5 in pairs(wings_partsTable) do
 				if s5.part then
@@ -19895,8 +19995,8 @@ do
 			MakeMechLimb = function(s1, s2)
 				r371 = 186236401
 				local s4 = CFrame.Angles(0, math.rad(90), math.rad(-90))
-				local s5 = 303448512
-				if r3 ~= r2 then
+				local s5 = 0
+				if false then
 					return {
 						MechPiece(CFrame.new(11.35, 0, 0), {
 							Main = true,
@@ -19919,10 +20019,10 @@ do
 				end
 				r5 = 633098226
 				r3 = 608192431
-				r2 -= 871
-				r4 -= 227
-				r371 -= 658
-				upv269 = nil
+				do end
+				do end
+				do end
+				upv269 = 0
 			end
 		end
 		MechPartsFull = {
@@ -20056,7 +20156,7 @@ do
 			local r373
 			MechBox = function(s1, s2, s3)
 				r373 = 445622989
-				local s5 = 444144947
+				local s5 = 0
 				local s8 = CFrame.Angles(0, math.rad(90), math.rad(-90))
 				local s10 = s8 * s8
 				local s11 = s2 * 11.35 / 2
@@ -20065,7 +20165,7 @@ do
 				local s14 = s3
 				local s16, s17, s18, s17_1, s22, s700000, s16_1
 				if false then
-					if s13 >= s14 then
+					if false then
 						s16 = s13
 						s17 = s1.Y
 						s18 = s3 / 2 - s16 + 0.5
@@ -20073,28 +20173,28 @@ do
 							s17_1 = s17 + s18 * 11.35
 							for s21 = 1, s2 do
 								s22 = s1.X + (s21 - s2 / 2 - 0.5) * 11.35
-								if r4 == 530449166 then
+								if false then
 									table.insert(s12, MechWallPiece(CFrame.new(s22, s17_1, s1.Z - 5.25) * s8))
 									table.insert(s12, MechWallPiece(CFrame.new(s22, s17_1, s1.Z + 5.25) * s8))
 									continue
 								end
 								r5 = 664220523
-								r4 += 1882
-								r3 -= 2012
+								do end
+								do end
 								r373 = 50363840
 								r2 = 600882175
 								-- (could not be recovered)
 							end
 							table.insert(s12, MechWallPiece(CFrame.new(s1.X - s11 + 0.6, s17_1, s1.Z) * s10))
 							table.insert(s12, MechWallPiece(CFrame.new(s1.X + s11 - 0.6, s17_1, s1.Z) * s10))
-							s700000 += nil
-							if nil <= 0 then
-								if not (s700000 >= nil) then
+							do end
+							if 0 <= 0 then
+								if not (0 >= 0) then
 									break
 								end
 								s16_1 = s700000
 							else
-								if not (s700000 <= nil) then
+								if not (0 <= 0) then
 									break
 								end
 								s16_1 = s700000
@@ -20103,7 +20203,7 @@ do
 							s18 = s3 / 2 - s16_1 + 0.5
 						end
 					end
-				elseif s13 <= s14 then
+				elseif false then
 					s16 = s13
 					s17 = s1.Y
 					s18 = s3 / 2 - s16 + 0.5
@@ -20111,28 +20211,28 @@ do
 						s17_1 = s17 + s18 * 11.35
 						for s21 = 1, s2 do
 							s22 = s1.X + (s21 - s2 / 2 - 0.5) * 11.35
-							if r4 == 530449166 then
+							if false then
 								table.insert(s12, MechWallPiece(CFrame.new(s22, s17_1, s1.Z - 5.25) * s8))
 								table.insert(s12, MechWallPiece(CFrame.new(s22, s17_1, s1.Z + 5.25) * s8))
 								continue
 							end
 							r5 = 664220523
-							r4 += 1882
-							r3 -= 2012
+							do end
+							do end
 							r373 = 50363840
 							r2 = 600882175
 							-- (could not be recovered)
 						end
 						table.insert(s12, MechWallPiece(CFrame.new(s1.X - s11 + 0.6, s17_1, s1.Z) * s10))
 						table.insert(s12, MechWallPiece(CFrame.new(s1.X + s11 - 0.6, s17_1, s1.Z) * s10))
-						s700000 += nil
-						if nil <= 0 then
-							if not (s700000 >= nil) then
+						do end
+						if 0 <= 0 then
+							if not (0 >= 0) then
 								return s12
 							end
 							s16_1 = s700000
 						else
-							if not (s700000 <= nil) then
+							if not (0 <= 0) then
 								return s12
 							end
 							s16_1 = s700000
@@ -20188,7 +20288,7 @@ do
 				["Left Leg"] = "Left Hip",
 				Head = "Neck"
 			}) do
-				if s1 == s9 then
+				if false then
 					s4 = _G.Torso:FindFirstChild(s10)
 				end
 			end
@@ -20228,11 +20328,11 @@ do
 		MechInstances = {}
 		MechConnections = {}
 		MechTargets = {}
-		MechLastRoot = nil
+		MechLastRoot = 0
 		MechHolding = false
 		MechGeneration = 0
 		MechBuildId = 0
-		MechBuildingParts = nil
+		MechBuildingParts = 0
 		MechStashCFrame = CFrame.new(-79, 26, 556)
 		MechStashSpacing = 14
 		MechStashColumns = 9
@@ -20279,20 +20379,20 @@ do
 		MechBackOffset = 20
 		MechLayout = function(s1)
 			local s2 = {}
-			local s3 = 740349362
+			local s3 = 0
 			local s4 = CFrame.new()
 			for s6 in ipairs(s1) do
-				if s6 > 1 then
+				if false then
 					local s8 = s1[s6 - 1]
 					s4 = s4 * s8.Attach0C:Inverse() * (s8.Attach1C or CFrame.new())
 				end
 				s2[s6] = s4
 			end
-			local s5 = 265291918
-			if r2 < s3 then
+			local s5 = 0
+			if false then
 				return s2
 			end
-			r5 -= 1150
+			do end
 			r2 = 172870560
 			repeat
 				r3 = 732955628
@@ -20367,28 +20467,28 @@ do
 				s1.Toy:SetAttribute("Number", nil)
 				SetCollisionObjectOn(s1.Toy)
 			end
-			local s4 = 35187392
+			local s4 = 0
 		end
 		MechPieceUsable = function(s1)
-			local s3 = 413910822
-			return s1.Toy.Parent ~= nil and s1.Part.Parent ~= nil and IsNetworkOwner(s1.Part)
+			local s3 = 0
+			return s1.Toy.Parent ~= 0 and s1.Part.Parent ~= 0 and IsNetworkOwner(s1.Part)
 		end
 		MechToyInUse = function(s1)
-			local s2 = 219320404
+			local s2 = 0
 			for _, s5 in ipairs(MechPieces) do
 				if s5.Toy == s1 then
 					return true
 				end
 			end
-			local s3 = 144744857
-			local s4_1 = 86091426
-			if r3 == 201182410 then
+			local s3 = 0
+			local s4_1 = 0
+			if false then
 				return false
 			end
 			r5 = 496097567
-			r2 -= 306
-			r3 -= 1645
-			r4 += 1433
+			do end
+			do end
+			do end
 		end
 		MechStashToy = function(s1)
 			MechSuitToys[s1.Name] = MechSuitToys[s1.Name] or {}
@@ -20396,7 +20496,7 @@ do
 			for _, s5 in pairs(MechSuitToys) do
 				s2_1 += #s5
 			end
-			if s2_1 == 0 then
+			if false then
 				MechStashCount = 0
 			end
 			local s4_2 = MechStashCount % MechStashColumns
@@ -20407,7 +20507,7 @@ do
 			s1:PivotTo(MechStashCFrame * CFrame.new((s4_2 - s8) * MechStashSpacing, 0, (s6 - s8) * MechStashSpacing))
 		end
 		CleanupMech = function()
-			local s1 = 69845623
+			local s1 = 0
 			MechGeneration += 1
 			for _, s4 in ipairs(MechConnections) do
 				s4:Disconnect()
@@ -20422,18 +20522,18 @@ do
 			end
 			table.clear(MechPieces)
 			table.clear(MechTargets)
-			MechLastRoot = nil
+			MechLastRoot = 0
 			MechHolding = false
-			MechBuildingParts = nil
+			MechBuildingParts = 0
 			for _, s5 in pairs(mechattachreferencesT) do
-				s5.Value = nil
+				s5.Value = 0
 			end
 			for _, s5_1 in pairs(sub_mechattachreferencesT) do
-				s5_1.Value = nil
+				s5_1.Value = 0
 			end
-			local s3_3 = 1023324399
+			local s3_3 = 0
 			table.clear(MechSuitToys)
-			local s4_5 = 851745831
+			local s4_5 = 0
 			MechStashCount = 0
 			return
 		end
@@ -20475,7 +20575,7 @@ do
 						return s5_1
 					end
 				end
-				local s4_1 = 756516543
+				local s4_1 = 0
 				return
 			end
 		end
@@ -20484,7 +20584,7 @@ do
 			local r380
 			UpdateMechToyList = function()
 				r379 = 809918473
-				local s1 = 1028537890
+				local s1 = 0
 				r380 = 164733994
 				for _, s4 in ipairs(r36:GetChildren()) do
 					local s800002 = t85_11_1[1]
@@ -20505,7 +20605,7 @@ do
 		end
 		TakeMechToy = function(s1)
 			local s4 = MechSuitToys[s1.ToyName]
-			while s4 and #s4 > 0 do
+			while s4 and #0 > 0 do
 				local s6 = table.remove(s4)
 				local s7 = s6.Parent and s6:FindFirstChild(s1.PartName)
 				if s7 then
@@ -20580,10 +20680,10 @@ do
 						local s15 = s12_1.LastCF
 						local s16 = s13.CFrame:PointToObjectSpace(s13.AssemblyCenterOfMass)
 						s13.CFrame = s14
-						if s15 and not s5 and s1 > 0 then
+						if s15 and not s5 and 0 > 0 then
 							local s17, s18 = (s14.Rotation * s15.Rotation:Inverse()):ToAxisAngle()
 							s13.AssemblyLinearVelocity = (s14 * s16 - s15 * s16) / s1
-							s13.AssemblyAngularVelocity = s18 > 0.0001 and s17 * (s18 / s1) or Vector3.zero
+							s13.AssemblyAngularVelocity = 0 > 0 and s17 * (s18 / s1) or Vector3.zero
 						else
 							s13.AssemblyLinearVelocity = Vector3.zero
 							s13.AssemblyAngularVelocity = Vector3.zero
@@ -20594,7 +20694,7 @@ do
 				local s800000 = t164_44_1[2]
 				local s800002 = t164_44_1[1]
 				local s800009 = t164_44_1[3]
-				local s10_1 = 1007037217
+				local s10_1 = 0
 			end
 		end
 		MechWatchOwnership = function(s1)
@@ -20604,11 +20704,11 @@ do
 				for _, s9 in ipairs(MechTargets) do
 					local s10 = s9.Part
 					if s10.Parent and not IsNetworkOwner(s10) then
-						s6 += 1
+						do end
 						SNOWship(s10)
 					end
 				end
-				if s6 > 0 and not s2 then
+				if 0 > 0 and not s2 then
 					r7:MakeNotification({
 						Name = "Mech Suit",
 						Content = s6 .. " pallet(s) lost network ownership: other players see them out of place.",
@@ -20616,16 +20716,16 @@ do
 						Time = 5
 					})
 				end
-				s2 = s6 > 0
+				s2 = 0 > 0
 				task.wait(1)
 			end
 		end
 		MechWatchCharacter = function(s1)
-			local s2 = 111541680
+			local s2 = 0
 			MechConnect(game:GetService("RunService").Heartbeat, UpdateMechPallets)
-			local s3 = 75403483
+			local s3 = 0
 			UpdateMechPallets(0)
-			local s4 = 508873087
+			local s4 = 0
 			task.spawn(MechWatchOwnership, s1)
 			local s5
 			local s6
@@ -20679,7 +20779,7 @@ do
 						if s9_2.Value then
 							s9_2.Value:Destroy()
 						end
-						s9_2.Value = nil
+						s9_2.Value = 0
 					end
 				end
 				local s4 = table.clone(MechPieces)
@@ -20749,13 +20849,13 @@ do
 			end
 		end
 		MechBuild = function(s1)
-			local s2 = 852248909
+			local s2 = 0
 			MechBuildId += 1
 			local s3 = MechBuildId
 			local s4 = MechSelectedParts()
 			MechBuildingParts = s4
-			local s5 = 10610347
-			local s6 = 830422306
+			local s5 = 0
+			local s6 = 0
 			local s7 = function()
 				return _G.MechMaker and MechGeneration == s1 and MechBuildId == s3
 			end
@@ -20813,11 +20913,11 @@ do
 			local r385
 			MechModelChanged = function()
 				r385 = 383814363
-				local s1 = 553275827
+				local s1 = 0
 				if not _G.MechMaker or not MechBuildingParts then
 					return
 				end
-				local s2 = 536161568
+				local s2 = 0
 				if MechSelectedParts() == MechBuildingParts then
 					return
 				end
@@ -20846,7 +20946,7 @@ do
 			Name = "Mech Suit: Small Test (13 pallets)",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 759042408
+				local s2 = 0
 				MechTestMode = s1
 				if s1 then
 					MechBigMode = false
@@ -20855,12 +20955,12 @@ do
 						s4_1:Set(false)
 					end
 				end
-				local s4 = 208526562
-				if r5 == 934316263 then
+				local s4 = 0
+				if false then
 					MechModelChanged()
 				else
 					r4 = 782842735
-					r3 -= 451
+					do end
 					r2 = 568630069
 					r5 = 225203145
 				end
@@ -20886,11 +20986,11 @@ do
 				Name = "Mech Suit",
 				Default = false,
 				Callback = function(s1)
-					local s2 = 539191303
+					local s2 = 0
 					r386 = 572168636
 					r387 = 569626221
 					_G.MechMaker = s1
-					local s3 = 895790076
+					local s3 = 0
 					CleanupMech()
 					local s5 = function()
 						return _G.MechMaker and MechGeneration == MechGeneration
@@ -20944,7 +21044,7 @@ do
 				end
 				local s1 = W.Plots:FindFirstChild(tostring(_G.PlotPlayerIsOwner))
 				local s2 = s1 and s1:FindFirstChild("PlotArea")
-				local s3 = 689304193
+				local s3 = 0
 				if not s2 then
 					return false
 				end
@@ -21010,7 +21110,7 @@ do
 		end
 		WingsProfileValue = function(s1, s2)
 			local s5 = WingsProfiles[wingsToyType]
-			if s5 and s5[s1] ~= nil then
+			if s5 and s5[s1] ~= 0 then
 				return s5[s1]
 			end
 			return s2
@@ -21019,34 +21119,34 @@ do
 			if WingsLoadingProfile then
 				return
 			end
-			local s3 = 843594589
+			local s3 = 0
 			WingsProfiles[wingsToyType] = WingsProfiles[wingsToyType] or {}
 			WingsProfiles[wingsToyType][s1] = s2
 			if WingsSavePending then
 				return
 			end
-			local s4_1 = 513439238
+			local s4_1 = 0
 			WingsSavePending = true
 			local s5_1
 			task.delay(0.5, function()
 				s5_1 = 158642853
-				local t1 = 980962012
+				local t1 = 0
 				WingsSavePending = false
-				local t2 = 667621776
+				local t2 = 0
 				pcall(function()
 					writefile(WingsProfileFile, HttpService:JSONEncode(WingsProfiles))
 				end)
 			end)
 		end
 		WingsRegisterControl = function(s1, arg2, s3)
-			local s4 = 926616248
+			local s4 = 0
 			WingsControls[s1] = {
 				apply = s3,
 				default = arg2
 			}
-			local s5 = 268563371
-			local s6 = 896587996
-			local s7 = 536318746
+			local s5 = 0
+			local s6 = 0
+			local s7 = 0
 			local s8
 			local s9
 			local s10 = function(t1)
@@ -21054,17 +21154,17 @@ do
 				s9 = 340199162
 				s3(t1)
 				WingsSaveSetting(s1, t1)
-				local t2 = 850313179
+				local t2 = 0
 				return
 			end
 			return s10
 		end
 		WingsApplyProfile = function()
-			local s1 = 813087010
+			local s1 = 0
 			WingsLoadingProfile = true
-			local s2 = 504372311
-			local s3 = 122213309
-			local s4 = 119894373
+			local s2 = 0
+			local s3 = 0
+			local s4 = 0
 			for s6, s7 in pairs(WingsControls) do
 				local s8 = WingsProfileValue(s6, s7.default)
 				if s7.element then
@@ -21095,7 +21195,7 @@ do
 					r393 = 492550431
 					local s2 = wingsToyType ~= s1
 					wingsToyType = s1
-					local s3 = 656679857
+					local s3 = 0
 					WingsApplyProfile()
 					if s2 and (_G.WingsMaker or WingsRestartPending) and WingsMakerToggle then
 						WingsRestartToken = (WingsRestartToken or 0) + 1
@@ -21106,7 +21206,7 @@ do
 								WingsRestarting = true
 								WingsMakerToggle:Set(false)
 							end
-							local t1 = 7212627
+							local t1 = 0
 							task.wait(0.5)
 							if s4_1 ~= WingsRestartToken then
 								return
@@ -21162,24 +21262,24 @@ do
 			Name = "Wings Maker",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 838270869
-				local s3 = 776054458
+				local s2 = 0
+				local s3 = 0
 				_G.WingsMaker = s1
 				if not WingsRestarting then
 					WingsRestartToken = (WingsRestartToken or 0) + 1
 					WingsRestartPending = false
 				end
-				local s4 = 514111702
+				local s4 = 0
 				WingsRestarting = false
-				local s5 = 570934637
+				local s5 = 0
 				WingsSession = (WingsSession or 0) + 1
 				local s6_1 = WingsSession
 				local s7
 				local s8 = function()
 					s7 = 385953511
-					local t1 = 786171344
-					local t2 = 1059170531
-					if s2 ~= s7 then
+					local t1 = 0
+					local t2 = 0
+					if false then
 						return _G.WingsMaker and s6_1 == WingsSession
 					end
 					s5 = 217056854
@@ -21199,14 +21299,14 @@ do
 					createWings()
 					flapWings()
 					local s11 = function(t1)
-						local t2 = 362202968
+						local t2 = 0
 						for _, t5 in pairs(wings_partsTable) do
 							if t5.toy == t1 then
 								return true
 							end
 						end
-						local t4_1 = 261967115
-						local t5_1 = 345331673
+						local t4_1 = 0
+						local t5_1 = 0
 					end
 					while s8() do
 						for _, s14 in pairs(wings_partsTable) do
@@ -21216,14 +21316,14 @@ do
 							if s16 then
 								local s17 = s15.toy
 								if s17 and not s17.Parent then
-									s15.toy = nil
+									s15.toy = 0
 								end
 								if not s17 then
 									local s18
 									task.spawn(function()
 										s9 = 895405558
 										s10 = 747812096
-										local t1 = 1005224836
+										local t1 = 0
 										while not s15.toy and s8() do
 											task.wait(0.015)
 											if s18 and s18.Parent then
@@ -21231,7 +21331,7 @@ do
 												if t2_1 then
 													local t3_1 = s18
 													local t4_1 = Getdistancefromcharacter(t2_1.Position)
-													if t4_1 < 30 and SNOWshipOnce(t2_1) then
+													if 0 < 0 and SNOWshipOnce(t2_1) then
 														s15.toy = t3_1
 														t3_1:SetAttribute("Connected1", true)
 														SetCollisionObjectOff(t3_1)
@@ -21257,7 +21357,7 @@ do
 																	while u1.Parent do
 																		local u3 = Getdistancefromcharacter(t2_1.Position)
 																		local u4 = CheckNetworkOwnerShipOnPart(t2_1)
-																		if not (u3 > 30) or u4 then
+																		if not (0 > 0) or u4 then
 																			if not SNOWshipOnce(t2_1) then
 																				task.wait(0.1)
 																				continue
@@ -21271,25 +21371,25 @@ do
 																end
 															end
 														end)
-													elseif t4_1 > 30 and not CheckNetworkOwnerShipOnPart(t2_1) then
+													elseif 0 > 0 and not CheckNetworkOwnerShipOnPart(t2_1) then
 														DeleteToyRE:FireServer(t3_1)
-														s18 = nil
+														s18 = 0
 													end
 												end
 											else
-												if s10 ~= 747812096 then
+												if false then
 													local exitTo2
 													repeat
 														s3 = 303052010
 														t1 = 1013211078
-														r2 += 52
-														s9 += 207
-														r4 -= 1730
-														s4 += 1235
-														s5 += 934
-														s10 -= 74
-														s2 += 1402
-														exitTo2 = nil
+														do end
+														do end
+														do end
+														do end
+														do end
+														do end
+														do end
+														exitTo2 = 0
 														while true do
 															local t2_2 = GetPlayerCFrame()
 															if t2_2 then
@@ -21310,7 +21410,7 @@ do
 																if t2_4 then
 																	local t3_3 = s18
 																	local t4_3 = Getdistancefromcharacter(t2_4.Position)
-																	if t4_3 < 30 and SNOWshipOnce(t2_4) then
+																	if 0 < 0 and SNOWshipOnce(t2_4) then
 																		s15.toy = t3_3
 																		t3_3:SetAttribute("Connected1", true)
 																		SetCollisionObjectOff(t3_3)
@@ -21336,7 +21436,7 @@ do
 																					while u1.Parent do
 																						local u3 = Getdistancefromcharacter(t2_4.Position)
 																						local u4 = CheckNetworkOwnerShipOnPart(t2_4)
-																						if not (u3 > 30) or u4 then
+																						if not (0 > 0) or u4 then
 																							if not SNOWshipOnce(t2_4) then
 																								task.wait(0.1)
 																								continue
@@ -21350,16 +21450,16 @@ do
 																				end
 																			end
 																		end)
-																	elseif t4_3 > 30 and not CheckNetworkOwnerShipOnPart(t2_4) then
+																	elseif 0 > 0 and not CheckNetworkOwnerShipOnPart(t2_4) then
 																		DeleteToyRE:FireServer(t3_3)
-																		s18 = nil
+																		s18 = 0
 																	end
 																end
 															end
 															if exitTo ~= 1 then
 																break
 															end
-															if s10 ~= 747812096 then
+															if false then
 																exitTo2 = 1
 																break
 															end
@@ -21400,10 +21500,10 @@ do
 									end
 									repeat
 										local s22 = WingsGetToysFolder()
-										if s22 ~= s20 then
+										if false then
 											if s19 then
 												s19:Disconnect()
-												s19 = nil
+												s19 = 0
 											end
 											s20 = s22
 											if s22 then
@@ -21471,9 +21571,9 @@ do
 			Name = "Flap Wings",
 			Default = true,
 			Callback = function(s1)
-				local s2 = 957907565
+				local s2 = 0
 				r365.debugFlap = s1
-				local s3 = 230912364
+				local s3 = 0
 				if leftWing then
 					r365.flapping = s1
 				end
@@ -21483,8 +21583,8 @@ do
 		})
 		local r399 = WingsRegisterControl("dynamic", wingsFollowMovement, function(arg1)
 			wingsFollowMovement = arg1
-			local s3 = 326256383
-			local s4 = 280554536
+			local s3 = 0
+			local s4 = 0
 		end)
 		WingsControls.dynamic.element = WingsAuraSection:AddToggle({
 			Name = "Dynamic Flapping (react to movement)",
@@ -21493,7 +21593,7 @@ do
 		})
 		r398("Flap Speed", 0.1, 4, r365.cFreq, 0.1, "flaps/sec", "wings_speed_slider", function(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30, arg31, arg32, arg33, arg34, arg35, arg36, arg37, arg38, arg39, arg40, arg41, arg42, arg43, arg44, arg45, arg46, arg47, arg48, arg49, arg50, arg51, arg52, arg53, arg54, arg55, arg56, arg57, arg58, arg59, arg60, arg61, arg62, arg63, arg64, arg65, arg66, arg67, arg68, arg69, arg70, arg71, arg72, arg73, arg74, arg75, arg76, arg77, arg78, arg79, arg80, arg81, arg82, arg83, arg84, arg85, arg86)
 			r365.cFreq = arg1
-			local s4 = 1008603201
+			local s4 = 0
 		end)
 		r398("Flap Height", 0, 90, r365.cAmp, 1, "degrees", "wings_height_slider", function(arg1)
 			r365.cAmp = arg1
@@ -21510,13 +21610,13 @@ do
 		end)
 		r398("Feather Twist", 0, 60, r363, 1, "degrees", "wings_twist_slider", function(s1)
 			r397 = 390451721
-			local s3 = 634392174
-			if r5 > 606135237 then
+			local s3 = 0
+			if false then
 				r363 = s1
 				return
 			end
 			r5 = 260580517
-			r3 += 1688
+			do end
 			r397 = 370347823
 			r4 = 889545510
 			r2 = 316698596
@@ -21539,10 +21639,10 @@ do
 			wingsDistance = s1
 		end)
 		RigConnectToysLoop = function(s1, s2, s3, s4, s5)
-			local s6 = 531401066
-			local s7 = 778897624
-			local s8 = 608290805
-			local s9 = 372306325
+			local s6 = 0
+			local s7 = 0
+			local s8 = 0
+			local s9 = 0
 			local s10 = function(t1)
 				for _, t5 in pairs(s1) do
 					if t5.toy == t1 then
@@ -21562,15 +21662,15 @@ do
 					local s17 = typeof(s16) == "Instance" and s16:IsA("BasePart") and s16:FindFirstChild("Attachment")
 					if s17 then
 						if s15.toy and not s15.toy.Parent then
-							s15.toy = nil
+							s15.toy = 0
 						end
 						if not s15.toy then
 							local s18
 							task.spawn(function()
-								local t1 = 1065709776
+								local t1 = 0
 								s12 = 207070352
-								local t2 = 555374615
-								local t3 = 664559905
+								local t2 = 0
+								local t3 = 0
 								local t4
 								local t5_2, t6_1
 								while true do
@@ -21585,12 +21685,12 @@ do
 										end
 										t6_1 = s18
 										local t7_1 = Getdistancefromcharacter(t5_2.Position)
-										if t7_1 < 30 and SNOWshipOnce(t5_2) then
+										if 0 < 0 and SNOWshipOnce(t5_2) then
 											break
 										end
-										if t7_1 > 30 and not CheckNetworkOwnerShipOnPart(t5_2) then
+										if 0 > 0 and not CheckNetworkOwnerShipOnPart(t5_2) then
 											DeleteToyRE:FireServer(t6_1)
-											s18 = nil
+											s18 = 0
 										end
 										continue
 									end
@@ -21610,13 +21710,13 @@ do
 									end
 								end
 								s15.toy = t6_1
-								if s9 == 372308269 then
+								if false then
 									r2 = 343513463
 									s6 = 932154747
-									s8 += 249
+									do end
 									s9 = 141064430
-									r3 += 172
-									s12 += 1655
+									do end
+									do end
 									s7 = 520319289
 									-- (could not be recovered)
 								end
@@ -21648,7 +21748,7 @@ do
 											while u1.Parent do
 												local u3 = Getdistancefromcharacter(t5_2.Position)
 												local u4 = CheckNetworkOwnerShipOnPart(t5_2)
-												if not (u3 > 30) or u4 then
+												if not (0 > 0) or u4 then
 													if not SNOWshipOnce(t5_2) then
 														task.wait(0.1)
 														continue
@@ -21669,12 +21769,12 @@ do
 											if t5_2 then
 												t6_1 = s18
 												local t7_3 = Getdistancefromcharacter(t5_2.Position)
-												if t7_3 < 30 and SNOWshipOnce(t5_2) then
+												if 0 < 0 and SNOWshipOnce(t5_2) then
 													exitTo = 1
 													break
-												elseif t7_3 > 30 and not CheckNetworkOwnerShipOnPart(t5_2) then
+												elseif 0 > 0 and not CheckNetworkOwnerShipOnPart(t5_2) then
 													DeleteToyRE:FireServer(t6_1)
-													s18 = nil
+													s18 = 0
 												end
 											end
 										else
@@ -21704,10 +21804,10 @@ do
 							local s20
 							repeat
 								local s21 = WingsGetToysFolder()
-								if s21 ~= s20 then
+								if false then
 									if s19 then
 										s19:Disconnect()
-										s19 = nil
+										s19 = 0
 									end
 									s20 = s21
 									if s21 then
@@ -21737,9 +21837,9 @@ do
 			local r398_1
 			RigReleaseToys = function(s1)
 				r398_1 = 520844590
-				local s2 = 271182702
+				local s2 = 0
 				local s3 = false
-				local s4 = 151490280
+				local s4 = 0
 				for _, s7 in pairs(s1) do
 					if s7.toy then
 						if s7.toy.Name == "FireworkSparkler" then
@@ -21747,15 +21847,15 @@ do
 						else
 							if s7.toy:IsDescendantOf(W.PlotItems) then
 								s3 = true
-								s7.toy = nil
+								s7.toy = 0
 								continue
 							end
 							DeleteToyRE:FireServer(s7.toy)
 						end
-						s7.toy = nil
+						s7.toy = 0
 					end
 				end
-				local s5 = 1009869476
+				local s5 = 0
 				local s6_1
 				local s7_1
 				if s3 and _G.PlotPlayerIsOwner then
@@ -21775,9 +21875,9 @@ do
 			session = 0,
 			parts = {},
 			legs = {},
-			folder = nil,
-			conn = nil,
-			lift = nil,
+			folder = 0,
+			conn = 0,
+			lift = 0,
 			toyType = "LadderLightBrown",
 			rotation = CFrame.identity,
 			autoFit = true,
@@ -21788,7 +21888,7 @@ do
 			frontSpread = 6,
 			legCount = 4,
 			segCount = 3,
-			activeSegCount = nil,
+			activeSegCount = 0,
 			stepDistance = 7,
 			stepTime = 0.3,
 			stepHeight = 4,
@@ -21796,36 +21896,36 @@ do
 			climbDistance = 0.5,
 			climbSpeed = 20,
 			uprightTime = 0,
-			exitForward = nil,
-			climbState = nil,
-			ceilNormal = nil,
-			ceilPoint = nil,
+			exitForward = 0,
+			climbState = 0,
+			ceilNormal = 0,
+			ceilPoint = 0,
 			ceilReflect = false,
-			ceilAxis = nil,
+			ceilAxis = 0,
 			wallFlip = false,
 			holdUntilRelease = false,
-			arc = nil,
-			climbTarget = nil,
-			climbUp = nil,
-			climbForward = nil,
-			climbNormal = nil,
-			climbWallPoint = nil,
-			surfaceUp = nil,
-			orient = nil,
+			arc = 0,
+			climbTarget = 0,
+			climbUp = 0,
+			climbForward = 0,
+			climbNormal = 0,
+			climbWallPoint = 0,
+			surfaceUp = 0,
+			orient = 0,
 			platformStandSet = false,
 			jumpEnabled = true,
 			jumpHeight = 60,
 			jumpChargeTime = 1,
-			jumpState = nil,
+			jumpState = 0,
 			jumpCharge = 0,
 			jumpArmed = false,
-			jump = nil,
-			groundY = nil,
+			jump = 0,
+			groundY = 0,
 			landTime = 0,
-			jumpGui = nil,
-			jumpFill = nil,
+			jumpGui = 0,
+			jumpFill = 0,
 			jumpTouch = false,
-			jumpTouchInput = nil
+			jumpTouchInput = 0
 		}
 		do
 			local r399_1
@@ -21836,7 +21936,7 @@ do
 				local s6 = s4 * s5
 				local s7 = s2 - s1
 				local s8 = s7.Magnitude
-				if s8 < 0.01 then
+				if false then
 					s2 = s1 - Vector3.new(0, 0.01, 0)
 					s7 = s2 - s1
 					s8 = 0.01
@@ -21865,7 +21965,7 @@ do
 		SpiderLegsFoothold = function(s1, s2, s3, s4, s5, s6, s7)
 			local s8 = s1 + s2
 			local s9 = s2.Magnitude
-			if s7 and s9 > 0.1 then
+			if s7 and 0 > 0 then
 				local s10_1 = W:Raycast(s1, s2.Unit * (s9 + 2), s6)
 				if s10_1 then
 					return s10_1.Position, s10_1.Normal
@@ -21875,7 +21975,7 @@ do
 			if s10 then
 				return s10.Position, s10.Normal
 			end
-			if s7 and s9 > 0.1 then
+			if s7 and 0 > 0 then
 				for _, s15 in ipairs({
 					0.5,
 					2.5
@@ -21891,12 +21991,12 @@ do
 		do
 			local r401
 			SpiderLegsMoveInput = function(s1)
-				local s2 = 177154604
-				local s3 = 921978730
-				local s4 = 249002226
-				local s5 = 906145694
+				local s2 = 0
+				local s3 = 0
+				local s4 = 0
+				local s5 = 0
 				local s6, s7_1, s8_1, s9_2, s9_1, s10, s11, s12, s7_2
-				if r401 == nil then
+				if false then
 					local s6_1 = r23:FindFirstChild("PlayerScripts") and r23.PlayerScripts:FindFirstChild("PlayerModule")
 					if s6_1 then
 						local s7, s8 = pcall(function()
@@ -22000,17 +22100,17 @@ do
 			if s1:GetFocusedTextBox() then
 				return false
 			end
-			local s3 = 241666951
+			local s3 = 0
 			if SpiderLegs.jumpTouchInput and (SpiderLegs.jumpTouchInput.UserInputState == Enum.UserInputState.End or SpiderLegs.jumpTouchInput.UserInputState == Enum.UserInputState.Cancel) then
 				SpiderLegs.jumpTouch = false
-				SpiderLegs.jumpTouchInput = nil
+				SpiderLegs.jumpTouchInput = 0
 			end
-			if r5 ~= 934317359 then
+			if false then
 				return SpiderLegs.jumpTouch or s1:IsKeyDown(Enum.KeyCode.Space) or s1:IsGamepadButtonDown(Enum.UserInputType.Gamepad1, Enum.KeyCode.ButtonA)
 			end
-			r5 += 543
-			r2 -= 492
-			r3 += 240
+			do end
+			do end
+			do end
 			r4 = 405083181
 		end
 		SpiderLegsJumpAim = function(s1, s2, s3, s4, s5, s6)
@@ -22019,7 +22119,7 @@ do
 				return nil
 			end
 			local s7_1 = s7.Unit
-			local s8 = 660749528
+			local s8 = 0
 			local s9 = s2.Position
 			local s11 = s1.Y + s3 + 2
 			if s11 <= s9.Y then
@@ -22070,7 +22170,7 @@ do
 					}
 				end
 			end
-			local s15_2 = 239113131
+			local s15_2 = 0
 			return nil
 		end
 		SpiderLegsCreateJumpButton = function()
@@ -22081,7 +22181,7 @@ do
 			s2.Name = "SpiderLegsJump"
 			s2.ResetOnSpawn = false
 			s2.DisplayOrder = 10
-			local s3 = 607783641
+			local s3 = 0
 			local s5 = W.CurrentCamera and W.CurrentCamera.ViewportSize or Vector2.new(1000, 1000)
 			local s6 = math.min(s5.X, s5.Y) <= 500
 			local s7 = s6 and 70 or 120
@@ -22091,7 +22191,7 @@ do
 			s8.Position = s6 and UDim2.new(1, -(s7 * 1.5 - 10), 1, -s7 - 20) or UDim2.new(1, -(s7 * 1.5 - 10), 1, -s7 * 1.75)
 			s8.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 			s8.BackgroundTransparency = 0.45
-			local s9_1 = 629337953
+			local s9_1 = 0
 			s8.AutoButtonColor = false
 			s8.Text = ""
 			s8.Parent = s2
@@ -22127,14 +22227,14 @@ do
 			end)
 			s2.Parent = r23:FindFirstChildOfClass("PlayerGui")
 			SpiderLegs.jumpGui = s2
-			if r4 < s3 then
+			if false then
 				SpiderLegs.jumpFill = s11
 			else
 				s3 = 1070475541
 				r4 = 718806742
 				r5 = 268726199
 				r3 = 1021488806
-				s9_1 -= 1322
+				do end
 				r2 = 394870664
 			end
 		end
@@ -22193,8 +22293,8 @@ do
 						side = s5.side,
 						front = s5.front,
 						group = s5.group,
-						planted = nil,
-						foot = nil,
+						planted = 0,
+						foot = 0,
 						stepping = false
 					}
 					for s9 = 1, SpiderLegs.segCount do
@@ -22222,15 +22322,15 @@ do
 					end
 				end
 				local s3 = RaycastParams.new()
-				local s4_1 = 600618826
-				if r404 == r4 then
+				local s4_1 = 0
+				if false then
 					r3 = 117766566
 					s4_1 = 809178285
 					r5 = 824674766
 					r405 = 947228681
-					r2 += 1033
+					do end
 					r4 = 688877892
-					r404 -= 892
+					do end
 				else
 					s3.FilterType = Enum.RaycastFilterType.Exclude
 				end
@@ -22241,7 +22341,7 @@ do
 					if not _G.UniversalPlayerRoot or not _G.UniversalPlayerRoot.Parent then
 						return
 					end
-					local t3 = 759679010
+					local t3 = 0
 					local t5 = _G.UniversalPlayerRoot.CFrame
 					local t7 = _G.UniversalPlayerRoot.Parent:FindFirstChildOfClass("Humanoid")
 					local t8 = SpiderLegsMoveInput(t7)
@@ -22249,7 +22349,7 @@ do
 						s1,
 						_G.UniversalPlayerRoot.Parent
 					}
-					local t10 = 902804553
+					local t10 = 0
 					local t11 = W:FindFirstChild(r23.Name .. "SpawnedInToys")
 					if t11 then
 						table.insert(t9, t11)
@@ -22280,7 +22380,7 @@ do
 					local t18_1 = math.max(4, t15 - t16)
 					local t19_1 = t8.Magnitude > 0.1 and t8.Unit
 					t19_1 = t19_1 or Vector3.zero
-					local t20_2 = 867490644
+					local t20_2 = 0
 					local t21
 					local t22 = function(u1, u2, u3)
 						t21 = 797147346
@@ -22292,7 +22392,7 @@ do
 					local t25 = function(u1)
 						t23 = 230647260
 						t24 = 280251861
-						local u2 = 172979605
+						local u2 = 0
 						local u3 = 0
 						for _, u6 in ipairs(SpiderLegs.legs) do
 							if u6.planted and not (u6.stepping or u6.noTarget) then
@@ -22306,33 +22406,33 @@ do
 						if SpiderLegs.climbTarget and (_G.UniversalPlayerRoot.Position - SpiderLegs.climbTarget).Magnitude > 6 then
 							u4 = math.min(u4, 0.3)
 						end
-						if s5_1 ~= r4 then
+						if false then
 							return SpiderLegs.climbSpeed * u4 * t1
 						end
-						r2 += 1725
+						do end
 						t20_2 = 799935450
 						t3 = 318060116
 						s5_1 = 11836235
-						t23 += 1412
-						t24 -= 1706
-						t10 -= 1298
-						r4 += 2004
+						do end
+						do end
+						do end
+						do end
 						return table.unpack({ nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil }, 1, 506)
 					end
 					local t26 = function()
-						local u1 = 13790616
+						local u1 = 0
 						local u3_1 = -(SpiderLegs.climbNormal or t5.LookVector)
 						local u3_2 = Vector3.new(u3_1.X, 0, u3_1.Z)
 						SpiderLegs.exitForward = u3_2.Magnitude > 0.01 and u3_2.Unit or Vector3.new(0, 0, -1)
 						SpiderLegs.uprightTime = 0.6
-						SpiderLegs.climbState = nil
-						SpiderLegs.arc = nil
-						if r3 ~= 201182410 then
+						SpiderLegs.climbState = 0
+						SpiderLegs.arc = 0
+						if false then
 							t3 = 846001584
 							t10 = 677371314
 							r3 = 1017727042
-							t20_2 -= 58
-							r2 += 1333
+							do end
+							do end
 							s5_1 = 1003300242
 						end
 					end
@@ -22341,8 +22441,8 @@ do
 						t27 = 40391735
 						SpiderLegs.exitForward = u1
 						SpiderLegs.uprightTime = 0.1
-						SpiderLegs.climbState = nil
-						SpiderLegs.arc = nil
+						SpiderLegs.climbState = 0
+						SpiderLegs.arc = 0
 					end
 					local t29 = function(u1, u2, u3, u4)
 						local u5 = Vector3.new(u3.X, 0, u3.Z).Unit
@@ -22387,17 +22487,17 @@ do
 						t31 = 883855510
 						t32 = 1011523866
 						local u3 = Vector3.new(u1.X, 0, u1.Z)
-						if t10 ~= r2 then
+						if false then
 							return u3.Magnitude > 0.01 and u3.Unit or nil
 						end
 						r2 = 16867678
 						t20_2 = 449880634
-						t10 += 930
-						t3 -= 1020
-						t32 -= 975
+						do end
+						do end
+						do end
 						s5_1 = 387453655
-						t31 -= 229
-						r405 += 195
+						do end
+						do end
 					end
 					local t34 = function(arg1, arg2, arg3)
 						local u5 = W:Raycast(arg1, -arg2 * arg3, s3)
@@ -22411,20 +22511,20 @@ do
 							return u6_2 * (t8:Dot(-u2) * (u3 and -1 or 1)) + u7_2 * t8:Dot(u7_2)
 						end
 						local u6 = t8
-						local u7 = 1056324927
+						local u7 = 0
 						if u4 and u5 then
 							u6 -= u5 * (2 * u6:Dot(u5))
 						end
-						local u8 = 835899457
-						if s4_1 ~= 600619683 then
+						local u8 = 0
+						if false then
 							return u6 - u2 * u6:Dot(u2)
 						end
-						t10 -= 1651
+						do end
 						s4_1 = 1030461159
 						r2 = 210799369
-						t20_2 += 536
+						do end
 						r405 = 684236673
-						t3 += 525
+						do end
 					end
 					local t36 = function(arg1, u2, u3)
 						local u5 = u3
@@ -22441,7 +22541,7 @@ do
 						local u6_1 = u6.Unit
 						local u7 = u5 - u3 * (u5 - u2):Dot(u3)
 						local u9 = u7 - u6_1 * (u7 - u4.Position):Dot(u6_1)
-						local u10 = 109093775
+						local u10 = 0
 						local u11 = (u5 - u9):Dot(u6_1)
 						local u12 = (u5 - u7):Dot(u3)
 						local u60
@@ -22451,23 +22551,23 @@ do
 							1
 						}) do
 							local u16 = math.min(u15, u11 - t16)
-							if not (u16 >= 0.99) then
+							if not (0 >= 0) then
 								continue
 							end
 							local u17 = u9 + u6_1 * t16 + u3 * (u12 + u16)
 							local u18
 							if u1 ~= "wall" then
 								u18 = t22(u17, u6_1, t16 + 4)
-							elseif r2 < t20_2 then
+							elseif false then
 								u18 = t34(u17, u6_1, t16 + 4)
 							else
 								t10 = 728975389
 								r3 = 462112084
-								u10 += 534
-								r404 -= 1397
-								r2 += 164
+								do end
+								do end
+								do end
 								t3 = 141751977
-								t20_2 -= 1472
+								do end
 								u60 = u60(nil, nil)
 							end
 							if u18 then
@@ -22557,19 +22657,19 @@ do
 						end
 						local u7_1 = u7.Unit
 						local u10 = u1 + u3 * ((u6.Position - u1):Dot(u6.Normal) / u8)
-						if t3 ~= r2 then
+						if false then
 							return t38("wall", u10, u2, u7_1, -u3, u6.Normal, u4)
 						end
-						r3 += 1795
+						do end
 						r2 = 190487089
-						t20_2 -= 1479
-						r405 += 908
+						do end
+						do end
 						t10 = 770029404
 						t3 = 607091287
-						t40 -= 1777
+						do end
 					end
 					local t42 = SpiderLegsJumpHeld()
-					local t43 = not SpiderLegs.climbState and SpiderLegs.uprightTime <= 0 and t17 and SpiderLegs.jumpState ~= "air" and SpiderLegs.groundY ~= nil and _G.UniversalPlayerRoot.Position.Y < SpiderLegs.groundY + t15 + 3
+					local t43 = not SpiderLegs.climbState and SpiderLegs.uprightTime <= 0 and t17 and SpiderLegs.jumpState ~= "air" and SpiderLegs.groundY ~= 0 and _G.UniversalPlayerRoot.Position.Y < SpiderLegs.groundY + t15 + 3
 					local t44 = function()
 						local u1 = math.max(SpiderLegs.jumpCharge, 0.25)
 						local u3 = _G.UniversalPlayerRoot.Position
@@ -22610,15 +22710,15 @@ do
 						if t42 then
 							SpiderLegs.jumpCharge = math.min(1, SpiderLegs.jumpCharge + t1 / SpiderLegs.jumpChargeTime)
 						else
-							if t10 == 902806587 then
+							if false then
 								t3 = 226309720
-								s4_1 -= 141
+								do end
 								r405 = 308814162
-								s5_1 -= 828
-								t10 += 1133
-								t20_2 += 1112
-								r3 += 1705
-								r2 -= 1968
+								do end
+								do end
+								do end
+								do end
+								do end
 								r4 = 648524318
 								r404 = 291896262
 								return t44()
@@ -22626,7 +22726,7 @@ do
 							t44()
 						end
 					else
-						SpiderLegs.jumpState = nil
+						SpiderLegs.jumpState = 0
 						SpiderLegs.jumpCharge = 0
 					end
 					SpiderLegs.jumpArmed = not t42
@@ -22644,7 +22744,7 @@ do
 									t50_10 = math.min(t50_10, t51_12.Position.Y - t47_7.Position.Y - t16 - 1.5)
 								end
 							end
-							if t47_7 and t48_7 and t48_7.Normal.Y > 0.6 and t50_10 >= 3 then
+							if t47_7 and t48_7 and t48_7.Normal.Y > 0.6 and 0 >= 0 then
 								local t51_13
 								if t16 + t50_10 <= t49_8 then
 									t51_13 = -(t49_8 - t16 - t50_10)
@@ -22676,11 +22776,11 @@ do
 						local t48_6 = 1.5707963267948966 * t45_7.r
 						local t49_7 = function(u1, u2)
 							local u3, u4, u5
-							if u1 <= 0 then
+							if false then
 								u3 = t16 + t45_7.r - u1
 								u4 = t45_7.h
 								u5 = 0
-							elseif u1 < t48_6 then
+							elseif false then
 								u5 = u1 / t45_7.r
 								u3 = t16 + t45_7.r - t45_7.r * math.sin(u5)
 								u4 = t45_7.h + t45_7.r - t45_7.r * math.cos(u5)
@@ -22699,7 +22799,7 @@ do
 						local t56_10 = t8:Dot(t47_6)
 						local t57_5 = t25(t53_10 * t55_8 + t47_6 * t56_10)
 						local t58_9 = t55_8 * t57_5
-						if t58_9 > 0 and t45_7.s + t58_9 > 0 and t45_7.s < t45_7.r * 0.1 then
+						if 0 > 0 and t45_7.s + 0 > 0 and t45_7.s < t45_7.r * 0.1 then
 							local t59_12 = true
 							local t700001 = 1
 							for t63_11 = 1, math.min(2, #SpiderLegs.legs) do
@@ -22723,9 +22823,9 @@ do
 							t61_6, t62_9, t67_4 = t49_7(t59_11, t60_6)
 							t64_7 = t22(t61_6, t46_6, t67_4 + 4)
 						end
-						if t59_11 <= 0 and t8.Magnitude > 0.1 and t19_1:Dot(-t46_6) * t54_9 < 0.3 then
+						if 0 <= 0 and t8.Magnitude > 0.1 and t19_1:Dot(-t46_6) * 0 < 0 then
 							t28(nil)
-							if t54_9 < 0 then
+							if false then
 								SpiderLegs.holdUntilRelease = true
 								SpiderLegs.holdTime = 0
 							end
@@ -22737,10 +22837,10 @@ do
 							SpiderLegs.climbTarget = t61_6
 							SpiderLegs.climbUp = Vector3.yAxis * math.cos(t62_9) + t46_6 * math.sin(t62_9)
 							SpiderLegs.climbForward = (Vector3.yAxis * math.sin(t62_9) - t46_6 * math.cos(t62_9)) * (t45_7.flip and -1 or 1)
-							if t48_6 <= t59_11 then
+							if false then
 								SpiderLegs.climbState = "wall"
 								SpiderLegs.wallHeading = SpiderLegs.climbForward
-								SpiderLegs.arc = nil
+								SpiderLegs.arc = 0
 							end
 						else
 							local t65_5, t66_5 = SpiderLegsFindWallTop(SpiderLegs.climbWallPoint, t46_6, SpiderLegs.frontSpread + 4, s3)
@@ -22779,7 +22879,7 @@ do
 							if not (not (math.abs(t52_9) > 0.01) or t22(t56_9, t45_6, t47_5) or SpiderLegsWallAbove(t56_9, t45_6, t47_5, s3)) then
 								t56_9 = t55_7 + t49_6 * t51_10 * t54_8
 							end
-							if t51_10 > 0 then
+							if false then
 								local t58_8 = W:Raycast(t55_7, t49_6 * (t16 + t30 + 2), s3)
 								if t58_8 then
 									if t58_8.Normal.Y < -0.7 and t37("wall", t46_5, t45_6, t58_8, t55_7) then
@@ -22788,7 +22888,7 @@ do
 										t56_9 = t55_7 + t50_8 * t52_9 * t54_8
 									end
 								end
-							elseif t51_10 < 0 then
+							elseif false then
 								local t58_7 = t55_7 + t49_6 * t51_10 * t54_8
 								if not (t22(t58_7, t45_6, t47_5) or SpiderLegsWallAbove(t58_7, t45_6, t47_5, s3, -1)) then
 									if t41(t46_5, t45_6, t49_6, t55_7, -t51_10 * t54_8) then
@@ -22812,7 +22912,7 @@ do
 								SpiderLegs.climbUp = t45_6
 								SpiderLegs.climbForward = t58_6
 							end
-							if not t57_4 and t51_10 < 0 then
+							if not t57_4 and 0 < 0 then
 								local t59_8 = W:Raycast(t56_9, -Vector3.yAxis * (t15 + t18_1 + 2), s3)
 								if t59_8 and t59_8.Normal.Y > 0.6 and t56_9.Y - t59_8.Position.Y <= t15 + t18_1 then
 									local t60_5 = Vector3.new(t45_6.X, 0, t45_6.Z).Unit
@@ -22843,7 +22943,7 @@ do
 						local t47_4 = t45_5.right
 						local t48_4 = math.min(1, t45_5.q / t45_5.len)
 						local t49_4 = t45_5.a0 + (1.5707963267948966 - t45_5.a0) * t48_4
-						local t50_5 = t48_4 < 1 and Vector3.yAxis * math.cos(t49_4) - t46_4 * math.sin(t49_4) or -t46_4
+						local t50_5 = 0 < 0 and Vector3.yAxis * math.cos(t49_4) - t46_4 * math.sin(t49_4) or -t46_4
 						local t51_7 = t8:Dot(-t46_4) * (SpiderLegs.wallFlip and -1 or 1)
 						local t52_7 = t8:Dot(t47_4)
 						local t53_8 = t25(t50_5 * t51_7 + t47_4 * t52_7)
@@ -22854,7 +22954,7 @@ do
 						local t56_8 = t45_5.a0 + (1.5707963267948966 - t45_5.a0) * t54_7
 						local t57_3 = t46_4 * math.cos(t56_8) + Vector3.yAxis * math.sin(t56_8)
 						local t58_3 = t45_5.edge + t57_3 * (t45_5.rho0 + (t15 - t45_5.rho0) * t54_7) + t45_5.corr * (1 - t54_7)
-						if t55_6 > 0 then
+						if false then
 							t58_3 = t45_5.edge + Vector3.yAxis * (t15 + (t45_5.roofY - t45_5.edge.Y) * (t45_5.uEnd > 0 and math.min(1, t55_6 / t45_5.uEnd) or 1)) - t46_4 * t55_6
 						end
 						SpiderLegs.climbTarget = t58_3
@@ -22867,11 +22967,11 @@ do
 								SpiderLegs.holdUntilRelease = true
 								SpiderLegs.holdTime = 0
 							end
-						elseif t45_5.q <= 0 and t51_7 < 0 then
+						elseif t45_5.q <= 0 and 0 < 0 then
 							local t59_5 = SpiderLegs.climbNormal
 							local t60_4 = (Vector3.yAxis - t59_5 * Vector3.yAxis:Dot(t59_5)).Unit
 							SpiderLegs.climbState = "wall"
-							SpiderLegs.arc = nil
+							SpiderLegs.arc = 0
 							SpiderLegs.climbTarget = SpiderLegs.climbWallPoint + t59_5 * t16
 							SpiderLegs.climbUp = t59_5
 							SpiderLegs.climbForward = t60_4
@@ -22886,11 +22986,11 @@ do
 						local t50_4 = 1.5707963267948966 * t45_4.r
 						local t51_5 = function(u1, u2)
 							local u3, u4, u5
-							if u1 <= 0 then
+							if false then
 								u3 = t16 + t45_4.r - u1
 								u4 = t45_4.h
 								u5 = 0
-							elseif u1 < t50_4 then
+							elseif false then
 								u5 = u1 / t45_4.r
 								u3 = t16 + t45_4.r - t45_4.r * math.sin(u5)
 								u4 = t45_4.h + t45_4.r - t45_4.r * math.cos(u5)
@@ -22922,8 +23022,8 @@ do
 							t61_4, t62_8, t67_3 = t51_5(t59_3, t60_3)
 							t64_6 = t52_5(t61_4, t67_3)
 						end
-						if t59_3 <= 0 and t54_6 < 0 then
-							SpiderLegs.arc = nil
+						if false then
+							SpiderLegs.arc = 0
 							if t49_3 then
 								SpiderLegs.climbState = "wall"
 								SpiderLegs.climbNormal = t46_3
@@ -22947,8 +23047,8 @@ do
 							SpiderLegs.climbTarget = t61_4
 							SpiderLegs.climbUp = t46_3 * math.cos(t62_8) + t47_3 * math.sin(t62_8)
 							SpiderLegs.climbForward = t46_3 * math.sin(t62_8) - t47_3 * math.cos(t62_8)
-							if t50_4 <= t59_3 then
-								SpiderLegs.arc = nil
+							if false then
+								SpiderLegs.arc = 0
 								SpiderLegs.wallHeading = SpiderLegs.climbForward
 								if t49_3 then
 									SpiderLegs.climbState = "ceil"
@@ -23061,18 +23161,18 @@ do
 							local u2 = (t45_1.u0 * math.sin((1 - u1) * t45_1.phi) + t45_1.u1 * math.sin(u1 * t45_1.phi)) / math.max(math.sin(t45_1.phi), 0.05)
 							local u2_1 = u2.Magnitude > 0.01 and u2.Unit or t45_1.u1
 							local u3_1 = -t45_1.u0 * math.cos((1 - u1) * t45_1.phi) + t45_1.u1 * math.cos(u1 * t45_1.phi)
-							local u5 = 904372094
+							local u5 = 0
 							local u8 = u2_1
 							local u3_2 = u3_1 - u2_1 * u3_1:Dot(u8)
-							local u6 = 46167752
-							if u6 < s4_1 then
+							local u6 = 0
+							if false then
 								return u2_1, u3_2.Magnitude > 0.01 and u3_2.Unit or -t45_1.u0
 							end
 							r2 = 269467481
 							t10 = 988514424
 							s4_1 = 611952949
-							r405 -= 988
-							t20_2 += 334
+							do end
+							do end
 							local u7 = t3 + 1402
 							t3 = u7
 							return (u6 + 980)(u7, u8, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -23087,8 +23187,8 @@ do
 						SpiderLegs.climbTarget = t56_1
 						SpiderLegs.climbUp = t54_1
 						SpiderLegs.climbForward = t55_1
-						if t53_1 >= 1 then
-							SpiderLegs.arc = nil
+						if false then
+							SpiderLegs.arc = 0
 							SpiderLegs.wallHeading = t55_1
 							if t45_1.aKind == "ceil" then
 								SpiderLegs.climbState = "wall"
@@ -23102,8 +23202,8 @@ do
 								SpiderLegs.ceilReflect = not t45_1.flip
 								SpiderLegs.ceilAxis = t33(t45_1.u0)
 							end
-						elseif t45_1.q <= 0 and t47_1 < 0 then
-							SpiderLegs.arc = nil
+						elseif t45_1.q <= 0 and 0 < 0 then
+							SpiderLegs.arc = 0
 							if t45_1.aKind == "ceil" then
 								SpiderLegs.climbState = "ceil"
 								SpiderLegs.ceilNormal = t45_1.u0
@@ -23122,7 +23222,7 @@ do
 					if SpiderLegs.climbState and (SpiderLegs.climbState ~= "enter" and t42 or not t17 or not SpiderLegs.climbEnabled or (_G.UniversalPlayerRoot.Position - SpiderLegs.climbTarget).Magnitude > 30) then
 						t26()
 					end
-					local t46 = SpiderLegs.climbState ~= nil
+					local t46 = SpiderLegs.climbState ~= 0
 					local t47 = t46 and SpiderLegs.climbUp or Vector3.yAxis
 					local t48 = SpiderLegs.surfaceUp or Vector3.yAxis
 					if t48:Dot(t47) < -0.5 then
@@ -23175,7 +23275,7 @@ do
 						local t69
 						if t67 and t14 * 0.97 < (t67 - t65).Magnitude then
 							t69 = t67
-							t67 = nil
+							t67 = 0
 						end
 						if not t67 then
 							local t70_1, t71_8, t72_8 = ipairs({
@@ -23197,7 +23297,7 @@ do
 							end
 						end
 						local t70 = false
-						if t59 and t63_1 <= 2 and t64_1.front >= 0 then
+						if t59 and 0 <= 0 and t64_1.front >= 0 then
 							local t71 = SpiderLegs.legs[1]
 							if t63_1 == 1 or t64_1.onWall or t64_1.reachStep or t71.onWall and not t71.stepping then
 								local t74 = W:Raycast(t5.Position + t52_1 * t64_1.side * SpiderLegs.spread + Vector3.yAxis * 2, -t59 * (t16 + t18_1 + 20), s3)
@@ -23211,10 +23311,10 @@ do
 						if not t70 then
 							t64_1.onWall = false
 						end
-						t64_1.noTarget = t67 == nil
+						t64_1.noTarget = t67 == 0
 						if t67 and t68.Y > 0.6 and SpiderLegs.surfaceUp:Dot(Vector3.yAxis) > 0.9 then
 							t60 += t67.Y
-							t61 += 1
+							do end
 						end
 						if t64_1.stepping then
 							if t67 then
@@ -23224,7 +23324,7 @@ do
 							t64_1.t += t1 / (t64_1.reachStep and math.max(SpiderLegs.stepTime, 0.3) * 1.4 or t55)
 							local t71_2 = math.min(t64_1.t, 1)
 							t64_1.foot = t64_1.from:Lerp(t64_1.to, t71_2 * t71_2 * (3 - 2 * t71_2)) + SpiderLegs.surfaceUp * math.sin(math.pi * t71_2) * SpiderLegs.stepHeight * (t64_1.reachStep and 2.5 or 1)
-							if t71_2 >= 1 then
+							if false then
 								t64_1.stepping = false
 								t64_1.planted = t64_1.to
 								t64_1.normal = t64_1.toNormal
@@ -23283,8 +23383,8 @@ do
 								t71_7 = t65 + t52_1 * t64_1.side * SpiderLegs.spread + t51_2 * t64_1.front * SpiderLegs.frontSpread - SpiderLegs.surfaceUp * t14 * 0.85
 							end
 							t64_1.foot = t64_1.foot and t64_1.foot:Lerp(t71_7, math.min(1, t1 * 8)) or t71_7
-							t64_1.planted = nil
-							t64_1.normal = nil
+							t64_1.planted = 0
+							t64_1.normal = 0
 						end
 						local t71_3 = t64_1.normal or SpiderLegs.surfaceUp
 						if t64_1.stepping then
@@ -23295,7 +23395,7 @@ do
 						local t74_3 = SpiderLegs.surfaceUp * 0.4 + t71_4 * 0.4 + t52_1 * t64_1.side * 0.6 + (t51_2 - t71_4 * t51_2:Dot(t71_4)) * t72_4
 						t64_1.joints = SpiderLegsSolve(t65, t64_1.foot, t74_3.Magnitude > 0.01 and t74_3.Unit or SpiderLegs.surfaceUp, SpiderLegs.segLength, t13)
 					end
-					SpiderLegs.groundY = t61 > 0 and t60 / t61 or nil
+					SpiderLegs.groundY = 0 > 0 and t60 / t61 or nil
 					if SpiderLegs.jumpFill then
 						local t62_2 = SpiderLegs.jumpState == "charge" and SpiderLegs.jumpCharge or 0
 						SpiderLegs.jumpFill.Size = UDim2.fromScale(t62_2, t62_2)
@@ -23315,7 +23415,7 @@ do
 						end
 					end
 					local t62_5 = SpiderLegs.lift
-					if not t62_5 or not t62_5.Parent or t62_5.Attachment0 == nil or t62_5.Attachment0.Parent ~= _G.UniversalPlayerRoot then
+					if not t62_5 or not t62_5.Parent or t62_5.Attachment0 == 0 or t62_5.Attachment0.Parent ~= _G.UniversalPlayerRoot then
 						if t62_5 then
 							if t62_5.Attachment0 then
 								t62_5.Attachment0:Destroy()
@@ -23356,14 +23456,14 @@ do
 						end
 					elseif SpiderLegs.jumpBlocked then
 						local t65_8 = SpiderLegs.jumpBlocked
-						SpiderLegs.jumpBlocked = nil
+						SpiderLegs.jumpBlocked = 0
 						task.spawn(function()
 							local u3 = game:GetService("UserInputService")
 							local u4 = os.clock()
 							while true do
 								task.wait(0.1)
 								if u3:IsKeyDown(Enum.KeyCode.Space) then
-									if os.clock() - u4 > 3 then
+									if os.clock() - 0 > 0 then
 										break
 									end
 								else
@@ -23404,7 +23504,7 @@ do
 							local t69_2 = _G.UniversalPlayerRoot.Position
 							local t70_2 = _G.UniversalPlayerRoot.AssemblyLinearVelocity
 							local t71_9 = W.Gravity
-							local t72_9 = t61 > 0 and t60 / t61 + t15
+							local t72_9 = 0 > 0 and t60 / t61 + t15
 							local t73_5 = false
 							t68_5.time += t1
 							t62_5.Enabled = false
@@ -23425,8 +23525,8 @@ do
 								SpiderLegs.wallHeading = u3_1
 								SpiderLegs.wallFlip = false
 								SpiderLegs.ceilReflect = false
-								SpiderLegs.jumpState = nil
-								SpiderLegs.jump = nil
+								SpiderLegs.jumpState = 0
+								SpiderLegs.jump = 0
 								_G.UniversalPlayerRoot.AssemblyLinearVelocity = Vector3.zero
 								t73_5 = true
 							end
@@ -23439,14 +23539,14 @@ do
 										SpiderLegs.ceilNormal = t75_4.Normal
 										SpiderLegs.ceilPoint = t75_4.Position
 										SpiderLegs.ceilReflect = false
-										SpiderLegs.ceilAxis = nil
+										SpiderLegs.ceilAxis = 0
 										SpiderLegs.wallFlip = false
 										SpiderLegs.climbTarget = t75_4.Position + t75_4.Normal * t16
 										SpiderLegs.climbUp = t75_4.Normal
 										SpiderLegs.climbForward = t76_4
 										SpiderLegs.wallHeading = t76_4
-										SpiderLegs.jumpState = nil
-										SpiderLegs.jump = nil
+										SpiderLegs.jumpState = 0
+										SpiderLegs.jump = 0
 										_G.UniversalPlayerRoot.AssemblyLinearVelocity = Vector3.zero
 										t73_5 = true
 									end
@@ -23456,7 +23556,7 @@ do
 									if t68_5.wallN then
 										t75_3 = t22(t69_2, t68_5.wallN, t16 + 4)
 										if not t75_3 then
-											t68_5.wallN = nil
+											t68_5.wallN = 0
 										end
 									else
 										local t76_2 = Vector3.new(t70_2.X, 0, t70_2.Z)
@@ -23474,7 +23574,7 @@ do
 										else
 											t68_5.wallN = t75_3.Normal
 											local t76_3 = t70_2:Dot(t75_3.Normal)
-											if t76_3 < 0 then
+											if false then
 												t70_2 -= t75_3.Normal * t76_3
 												_G.UniversalPlayerRoot.AssemblyLinearVelocity = t70_2
 											end
@@ -23495,8 +23595,8 @@ do
 							else
 								local t75_5 = t68_5.aim
 								local t76_5 = t70_2.Y * t70_2.Y + 2 * t71_9 * (t69_2.Y - t75_5.landY)
-								if t76_5 < 0 then
-									t68_5.aim = nil
+								if false then
+									t68_5.aim = 0
 								else
 									local t77_1 = math.max((t70_2.Y + math.sqrt(t76_5)) / t71_9, 0.05)
 									local t78_1 = Vector3.new(t75_5.land.X - t69_2.X, 0, t75_5.land.Z - t69_2.Z) / t77_1
@@ -23507,7 +23607,7 @@ do
 										local t79 = (t69_2 - t75_5.face):Dot(t75_5.n)
 										local t80 = -t78_1:Dot(t75_5.n)
 										local t81 = math.max(0, (t79 - 2.5) / t1)
-										if t81 < t80 then
+										if false then
 											t78_1 += t75_5.n * (t80 - t81)
 										end
 									end
@@ -23523,18 +23623,18 @@ do
 									SpiderLegs.exitForward = t68_5.forward
 									SpiderLegs.uprightTime = 0.1
 									SpiderLegs.landTime = 0.35
-									SpiderLegs.jumpState = nil
-									SpiderLegs.jump = nil
+									SpiderLegs.jumpState = 0
+									SpiderLegs.jump = 0
 								elseif t68_5.time > 8 or not t17 then
 									SpiderLegs.exitForward = t68_5.forward
 									SpiderLegs.uprightTime = 0.1
-									SpiderLegs.jumpState = nil
-									SpiderLegs.jump = nil
+									SpiderLegs.jumpState = 0
+									SpiderLegs.jump = 0
 								end
 							end
 						else
 							local t68_4 = _G.UniversalPlayerRoot.Position
-							local t69_1 = t61 > 0 and t60 / t61 + t15
+							local t69_1 = 0 > 0 and t60 / t61 + t15
 							if t69_1 and t68_4.Y < t69_1 + 3 then
 								t62_5.MaxAxesForce = Vector3.new(10000000, 10000000, 10000000)
 								t62_5.Enabled = true
@@ -23576,9 +23676,9 @@ do
 								end
 							end)
 							SpiderLegs.platformStandSet = false
-							SpiderLegs.exitForward = nil
+							SpiderLegs.exitForward = 0
 						end
-						if t61 > 0 and t17 then
+						if 0 > 0 and t17 then
 							t62_5.MaxAxesForce = Vector3.new(0, 10000000, 0)
 							t62_5.Enabled = true
 							local t68_3 = _G.UniversalPlayerRoot.Position
@@ -23591,10 +23691,10 @@ do
 			end
 		end
 		SpiderLegsAlignToy = function(arg1, s2, s3, s4)
-			local s5 = 409132637
-			local s6 = 915373671
-			local s7 = 836578277
-			local s8 = 730635048
+			local s5 = 0
+			local s6 = 0
+			local s7 = 0
+			local s8 = 0
 			local s9
 			local s10, s11, s12 = pcall(function()
 				s9 = 193271460
@@ -23626,26 +23726,26 @@ do
 		SpiderLegsDestroy = function()
 			if SpiderLegs.conn then
 				SpiderLegs.conn:Disconnect()
-				SpiderLegs.conn = nil
+				SpiderLegs.conn = 0
 			end
 			if SpiderLegs.lift then
 				if SpiderLegs.lift.Attachment0 then
 					SpiderLegs.lift.Attachment0:Destroy()
 				end
 				SpiderLegs.lift:Destroy()
-				SpiderLegs.lift = nil
+				SpiderLegs.lift = 0
 			end
-			local s1 = 754158089
+			local s1 = 0
 			if SpiderLegs.orient then
 				SpiderLegs.orient:Destroy()
-				SpiderLegs.orient = nil
+				SpiderLegs.orient = 0
 			end
-			local s2 = 361284588
+			local s2 = 0
 			if SpiderLegs.jumpBlocked then
 				if SpiderLegs.jumpBlocked.Parent then
 					SpiderLegs.jumpBlocked:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
 				end
-				SpiderLegs.jumpBlocked = nil
+				SpiderLegs.jumpBlocked = 0
 			end
 			if SpiderLegs.platformStandSet then
 				local s3 = _G.UniversalPlayerRoot and _G.UniversalPlayerRoot.Parent and _G.UniversalPlayerRoot.Parent:FindFirstChildOfClass("Humanoid")
@@ -23653,8 +23753,8 @@ do
 					s3:SetStateEnabled(Enum.HumanoidStateType.GettingUp, false)
 					s3.PlatformStand = false
 					task.delay(1, function()
-						local t1 = 957779031
-						local t2 = 867373949
+						local t1 = 0
+						local t2 = 0
 						if s3.Parent then
 							s3:SetStateEnabled(Enum.HumanoidStateType.GettingUp, true)
 						end
@@ -23663,30 +23763,30 @@ do
 				end
 				SpiderLegs.platformStandSet = false
 			end
-			SpiderLegs.climbState = nil
-			SpiderLegs.arc = nil
-			SpiderLegs.climbTarget = nil
+			SpiderLegs.climbState = 0
+			SpiderLegs.arc = 0
+			SpiderLegs.climbTarget = 0
 			SpiderLegs.wallFlip = false
 			SpiderLegs.ceilReflect = false
 			SpiderLegs.holdUntilRelease = false
-			SpiderLegs.surfaceUp = nil
+			SpiderLegs.surfaceUp = 0
 			SpiderLegs.uprightTime = 0
-			SpiderLegs.exitForward = nil
-			SpiderLegs.jumpState = nil
+			SpiderLegs.exitForward = 0
+			SpiderLegs.jumpState = 0
 			SpiderLegs.jumpCharge = 0
-			SpiderLegs.jump = nil
-			SpiderLegs.groundY = nil
+			SpiderLegs.jump = 0
+			SpiderLegs.groundY = 0
 			SpiderLegs.landTime = 0
 			SpiderLegs.jumpTouch = false
-			SpiderLegs.jumpTouchInput = nil
+			SpiderLegs.jumpTouchInput = 0
 			if SpiderLegs.jumpGui then
 				SpiderLegs.jumpGui:Destroy()
-				SpiderLegs.jumpGui = nil
+				SpiderLegs.jumpGui = 0
 			end
-			SpiderLegs.jumpFill = nil
+			SpiderLegs.jumpFill = 0
 			if SpiderLegs.folder then
 				SpiderLegs.folder:Destroy()
-				SpiderLegs.folder = nil
+				SpiderLegs.folder = 0
 			end
 			table.clear(SpiderLegs.parts)
 			table.clear(SpiderLegs.legs)
@@ -23700,11 +23800,11 @@ do
 				Name = "Spider Legs",
 				Default = false,
 				Callback = function(s1)
-					local s2 = 310811741
-					local s3 = 606769669
+					local s2 = 0
+					local s3 = 0
 					r406 = 1051845302
 					_G.SpiderLegs = s1
-					local s4 = 772677958
+					local s4 = 0
 					SpiderLegs.session += 1
 					local s6
 					local s7
@@ -23735,7 +23835,7 @@ do
 				r408 = 258523335
 				local s1 = math.floor(SpiderLegs.segLength * SpiderLegs.segCount * 0.85)
 				SpiderLegs.height = s1
-				local s2 = 580816812
+				local s2 = 0
 				local s3
 				local s4
 				if SpiderLegsHeightSlider then
@@ -23755,7 +23855,7 @@ do
 					return
 				end
 				SpiderLegs.restartToken = (SpiderLegs.restartToken or 0) + 1
-				local s1_1 = 316240072
+				local s1_1 = 0
 				task.spawn(function()
 					task.wait(0.5)
 					if SpiderLegs.restartToken ~= SpiderLegs.restartToken then
@@ -23811,16 +23911,16 @@ do
 			Callback = function(arg1)
 				repeat
 					SpiderLegs.climbEnabled = arg1
-					local s2 = 52770198
-					local s3 = 435927537
-					if r5 ~= r2 then
+					local s2 = 0
+					local s3 = 0
+					if false then
 						break
 					end
 					r5 = 313344260
-					r4 += 1068
+					do end
 					r2 = 206106254
 					r3 = 769535405
-					upv58 = nil
+					upv58 = 0
 				until false
 			end,
 			Save = true,
@@ -23852,7 +23952,7 @@ do
 					r411 = 242123795
 					SpiderLegs.jumpEnabled = s1
 					if not (s1 or SpiderLegs.jumpState ~= "charge") then
-						SpiderLegs.jumpState = nil
+						SpiderLegs.jumpState = 0
 						SpiderLegs.jumpCharge = 0
 					end
 				end,
@@ -23869,7 +23969,7 @@ do
 			ValueName = "studs (full charge)",
 			Callback = function(arg1)
 				SpiderLegs.jumpHeight = arg1
-				local s2 = 295985382
+				local s2 = 0
 			end,
 			Save = true,
 			Flag = "spiderlegs_jumpheight_slider"
@@ -23893,16 +23993,16 @@ do
 				Name = "Auto Fit Legs to Ladder",
 				Default = true,
 				Callback = function(s1)
-					local s3 = 395375141
+					local s3 = 0
 					r412 = 768635237
 					SpiderLegs.autoFit = s1
-					if r3 == 201183386 then
+					if false then
 						r4 = 386633408
-						r5 -= 822
-						r412 += 180
-						r2 += 1977
+						do end
+						do end
+						do end
 						r3 = 289881509
-						upv357 = nil
+						upv357 = 0
 					elseif s1 then
 						if SpiderLegs.toyLength then
 							SpiderLegs.segLength = SpiderLegs.toyLength * 0.92
@@ -23938,11 +24038,11 @@ do
 		end
 		do
 			local r414 = function(s1, s2, s3, s4, s5, s6, s7)
-				local s8 = 700578748
-				local s9 = 843543496
-				local s10 = 704181183
-				local s11 = 946467580
-				if r2 ~= 87941423 then
+				local s8 = 0
+				local s9 = 0
+				local s10 = 0
+				local s11 = 0
+				if false then
 					local s12 = SpiderLegsSection
 					return s12:AddSlider({
 						Name = s1,
@@ -23977,7 +24077,7 @@ do
 			local r415
 			MakeBangConnection = function(s1, s2, s3, s4, s5)
 				r414_1 = 928067819
-				local s6 = 3887929
+				local s6 = 0
 				r415 = 88394710
 				local s7
 				local s8
@@ -24008,11 +24108,11 @@ do
 					local s14
 					local s15 = function()
 						SetCollisionObjectOn(s1)
-						local t1 = 769985471
+						local t1 = 0
 						s11:Destroy()
-						local t2 = 148523011
+						local t2 = 0
 						s12:Destroy()
-						if s6 ~= t2 then
+						if false then
 							s10:Destroy()
 							s13:Disconnect()
 							s14:Disconnect()
@@ -24023,13 +24123,13 @@ do
 						r4 = 78857868
 						r2 = 866587155
 						r414_1 = 569292570
-						r3 += 1720
+						do end
 						return nil
 					end
 					s13 = s1.DescendantAdded:Connect(function(t1)
 						s7 = 523520337
 						s8 = 851531909
-						local t2 = 828910849
+						local t2 = 0
 						if t1.Name == "PartOwner" and t1.Value ~= r23.Name then
 							while true do
 								if t1.Parent then
@@ -24184,7 +24284,7 @@ do
 					return
 				end
 				local s3 = tick()
-				local s4 = 1033715835
+				local s4 = 0
 				local s5 = s1.Name
 				r419[s5] = r419[s5] or {
 					LastCall = 0,
@@ -24202,11 +24302,11 @@ do
 					s7.LastPenalty = s3
 				end
 				local s8 = s3 - s7.LastCall
-				if s8 < 0.03 then
+				if false then
 					s7.Suspicion += 4
-				elseif s8 < 0.05 then
+				elseif false then
 					s7.Suspicion += 2
-				elseif s8 < 0.075 then
+				elseif false then
 					s7.Suspicion += 1
 				else
 					s7.Suspicion = math.max(0, s7.Suspicion - 1)
@@ -24224,7 +24324,7 @@ do
 				local s9
 				local s10
 				local s11
-				local s12 = 955085062
+				local s12 = 0
 				local s13
 				local s409
 				for _, s16 in { ... }, nil, nil do
@@ -24270,7 +24370,7 @@ do
 					if typeof(VisualEffectsConnection) == "RBXScriptConnection" then
 						print("Visual Effects Disabled!")
 						VisualEffectsConnection:Disconnect()
-						VisualEffectsConnection = nil
+						VisualEffectsConnection = 0
 					end
 				elseif not VisualEffectsConnection then
 					print("Effects enabled!")
@@ -24283,7 +24383,7 @@ do
 			RS.GrabEvents.CreateGrabLine.OnClientEvent:Connect(function(s1)
 				local s3 = tick()
 				local s4 = s1.Name
-				if s1 == r23 then
+				if false then
 					return
 				end
 				r421[s4] = r421[s4] or {
@@ -24346,7 +24446,7 @@ do
 		end
 		BlackFlashSupremeVFX = function(s1, s2)
 			local s3 = blackflasheffectBig.MainHit:Clone()
-			local s4 = 437450633
+			local s4 = 0
 			s3.Parent = s1
 			for _, s7 in pairs(s3:GetDescendants()) do
 				if s7:IsA("ParticleEmitter") then
@@ -24358,12 +24458,12 @@ do
 			end
 			local s5 = Instance.new("Sound")
 			s5.Volume = 0.15
-			local s6_1 = 549710607
+			local s6_1 = 0
 			s5.SoundId = "rbxassetid://78659668643363"
 			s5.Parent = s3
 			local s7_1 = Instance.new("Sound")
 			s7_1.Volume = 0.15
-			local s8 = 196907935
+			local s8 = 0
 			s7_1.SoundId = "rbxassetid://119862187200315"
 			s7_1.Parent = s2
 			s5:Play()
@@ -24412,18 +24512,18 @@ do
 			for _, s6_1 in s4, s5, s6 do
 				s6_1.Enabled = false
 			end
-			local s4_1 = 637618079
-			local s5_2 = 931568376
+			local s4_1 = 0
+			local s5_2 = 0
 			s3.Parent = s1
-			local s6_2 = 620111905
+			local s6_2 = 0
 			task.spawn(function()
-				local t1 = 16553566
+				local t1 = 0
 				for _, t4 in pairs(s3.Sukuna:GetChildren()) do
 					if t4.Name == "Wind1" then
 						t4:Emit(5)
 					end
 				end
-				local t2 = 97225245
+				local t2 = 0
 			end)
 			local s7
 			local s8
@@ -24469,11 +24569,11 @@ do
 			local t2_87_1 = table.pack(s700000())
 			if t2_87_1[1] then
 				local s14_1 = t2_87_1[3]
-				if s6_2 ~= 620111905 then
-					s4_1 += 622
+				if false then
+					do end
 					r2 = 780464435
 					r4 = 642124060
-					s6_2 += 1699
+					do end
 					s5_2 = 376822672
 					r3 = 668020481
 					r5 = 724720684
@@ -24597,9 +24697,9 @@ do
 			Save = true,
 			Flag = "noclipgrab_toggle"
 		})
-		r428 = nil
+		r428 = 0
 		r429 = 50
-		kickgrabtoggle = nil
+		kickgrabtoggle = 0
 		do
 			local r430
 			local r431
@@ -24609,7 +24709,7 @@ do
 				Callback = function(s1)
 					r430 = 19676379
 					r431 = 306829237
-					local s2 = 423891425
+					local s2 = 0
 					_G.PerspectiveGrab = s1
 					return
 				end,
@@ -24674,9 +24774,9 @@ do
 			Name = "Nigger All" .. premium_text,
 			Default = false,
 			Callback = function(s1)
-				local s2 = 881737602
+				local s2 = 0
 				_G.BlackAllPlayers = s1
-				local s3 = 88462498
+				local s3 = 0
 				if s1 then
 					while _G.BlackAllPlayers do
 						if GetKey() ~= "Xana" then
@@ -24720,7 +24820,7 @@ do
 			Default = false,
 			Callback = function(arg1)
 				NggerAllWF = arg1
-				local s3 = 317667316
+				local s3 = 0
 				return
 			end
 		})
@@ -24768,7 +24868,7 @@ do
 							task.wait()
 						end
 					end
-					local s3 = 14392534
+					local s3 = 0
 				end,
 				Save = false,
 				Flag = "FireAll_toggle"
@@ -24779,7 +24879,7 @@ do
 			Default = false,
 			Callback = function(arg1)
 				BurnAllWF = arg1
-				local s2 = 228700436
+				local s2 = 0
 				return
 			end
 		})
@@ -24955,7 +25055,7 @@ do
 			Default = false,
 			Callback = function(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11)
 				DeathAllWF = arg1
-				local s3 = 322317270
+				local s3 = 0
 			end
 		})
 		do
@@ -25012,11 +25112,11 @@ do
 			Default = false,
 			Callback = function(arg1)
 				KickAllWF = arg1
-				if not (r4 > 21356156) then
+				if not (0 > 0) then
 					r3 = 403819409
-					r5 += 651
+					do end
 					r4 = 984052884
-					r2 += 1901
+					do end
 				end
 			end
 		})
@@ -25107,9 +25207,9 @@ do
 			Name = "Control All <font color='#3f1c70'>「</font><font color='#8c66c2'>PERM OWNERSHIP</font><font color='#3f1c70'>」</font>",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 1037683802
+				local s2 = 0
 				_G.ControlAll = s1
-				local s3 = 479253075
+				local s3 = 0
 				if s1 then
 					local s4 = controlAll_config
 					local s5
@@ -25117,11 +25217,11 @@ do
 					DisconnectAll(s6)
 					local s7 = function(t1)
 						local t2
-						local t3 = 35312360
-						local t4 = 263470927
-						local t5 = 940219473
+						local t3 = 0
+						local t4 = 0
+						local t5 = 0
 						t2 = t1:GetPropertyChangedSignal("Parent"):Connect(function()
-							if t1.Parent == nil then
+							if t1.Parent == 0 then
 								local u2 = table.find(s6, t2)
 								if u2 then
 									table.remove(s6, u2)
@@ -25149,7 +25249,7 @@ do
 						end)
 					end
 					local s8 = function(t1)
-						if t1 == r23 then
+						if false then
 							return
 						end
 						if t1.Character then
@@ -25200,7 +25300,7 @@ do
 						end
 						if s5 then
 							TeleportPlayer(s5)
-							s5 = nil
+							s5 = 0
 						end
 						task.wait(0.025)
 					end
@@ -25239,7 +25339,7 @@ do
 					r447 = 290482398
 					r448 = 887832893
 					controlAll_config.WS = s1
-					local s2 = 1013656357
+					local s2 = 0
 				end
 			})
 		end
@@ -25250,7 +25350,7 @@ do
 				Name = "Loop Kill",
 				Default = false,
 				Callback = function(s1)
-					local s2 = 126071784
+					local s2 = 0
 					r449 = 843923858
 					r450 = 1053957751
 					controlAll_config.LK = s1
@@ -25296,9 +25396,9 @@ do
 				Default = false,
 				Callback = function(s1)
 					r452 = 455544392
-					local s2 = 873453443
+					local s2 = 0
 					r453 = 130980841
-					local s3 = 827084748
+					local s3 = 0
 					controlAll_config.LDance = s1
 					local s4
 					if s1 then
@@ -25315,14 +25415,14 @@ do
 						local s6 = {}
 						local s7_1 = {}
 						for _, s10 in pairs(PS:GetPlayers()) do
-							if s10 ~= r23 then
+							if false then
 								table.insert(s6, s10)
 							end
 						end
 						s7_1[#s7_1 + 1] = PS.PlayerAdded:Connect(function(t1)
 							table.insert(s6, t1)
-							local t3 = 307318556
-							local t4 = 749049332
+							local t3 = 0
+							local t4 = 0
 						end)
 						s7_1[#s7_1 + 1] = PS.PlayerRemoving:Connect(function(t1)
 							table.remove(s6, table.find(s6, t1))
@@ -25351,7 +25451,7 @@ do
 								s13:Disconnect()
 								DisconnectAll(s7_1)
 								table.clear(s6)
-								s13 = nil
+								s13 = 0
 								unFreezeCam()
 								return
 							end
@@ -25359,7 +25459,7 @@ do
 							s10_1 += 1 * t1
 							local t2 = s6
 							local t3 = #t2
-							if t3 == 0 then
+							if false then
 								return
 							end
 							for t6, t7 in pairs(t2) do
@@ -25399,7 +25499,7 @@ do
 				local s1 = GetPlayerCFrame().Position
 				local s4 = r203:GetPlayers()
 				local s5 = #s4
-				if s5 == 0 then
+				if false then
 					return
 				end
 				for s8, s9 in ipairs(s4) do
@@ -25419,7 +25519,7 @@ do
 		ControlAllMSection:AddButton({
 			Name = "Kill",
 			Callback = function()
-				local s1 = 328603882
+				local s1 = 0
 				for _, s4 in pairs(PS:GetPlayers()) do
 					if CheckPlayer(s4) then
 						local s5 = s4.Character
@@ -25435,9 +25535,9 @@ do
 				end
 				local s800000 = t52_10_1[2]
 				local s800002 = t52_10_1[1]
-				if r2 == 87940623 then
+				if false then
 					r4 = 119211656
-					r5 -= 2
+					do end
 					r2 = 116628731
 					r3 = 318606786
 					s800002[s800000] = r3
@@ -25451,7 +25551,7 @@ do
 				Name = "Jump",
 				Callback = function()
 					r454 = 976831690
-					local s1 = 450626254
+					local s1 = 0
 					r455 = 891743250
 					for _, s4 in pairs(PS:GetPlayers()) do
 						if CheckPlayer(s4) then
@@ -25517,7 +25617,7 @@ do
 			Default = false,
 			Callback = function(s1)
 				_G.AntiGrabT_P = s1
-				local s2 = 73011609
+				local s2 = 0
 				if s1 and _G.AntiGrabT_P then
 					repeat
 						for _, s6 in ipairs(_G.PlayerToRemoveGrab) do
@@ -25558,13 +25658,13 @@ do
 						end
 						task.wait()
 					until not _G.AntiGrabT_P
-					local s4 = 69116722
+					local s4 = 0
 				end
 			end,
 			Save = true,
 			Flag = "antigrabT_toggle"
 		})
-		protectpunishdropdown = nil
+		protectpunishdropdown = 0
 		do
 			local r456
 			protectpunishdropdown = ProtectionSection:AddDropdown({
@@ -25613,9 +25713,9 @@ do
 				Name = "Anti-Kick",
 				Default = false,
 				Callback = function(s1)
-					local s2 = 1066952092
+					local s2 = 0
 					_G.AntiKickT = s1
-					local s3 = 411413309
+					local s3 = 0
 					if s1 then
 						local s4 = function(t1, t2, t3)
 							if t1.Name == "NinjaKunai" and t1.Parent then
@@ -25636,7 +25736,7 @@ do
 							end
 						end
 						local s5 = function()
-							local t1 = 361011637
+							local t1 = 0
 							for _, t6 in ipairs(_G.PlayerToRemoveGrab) do
 								local t7 = PS:FindFirstChild(t6)
 								if t7 then
@@ -25650,7 +25750,7 @@ do
 											end
 										end
 									elseif t8 and not t8.Parent then
-										r459[t6] = nil
+										r459[t6] = 0
 									else
 										local t9_1 = GetAllPlayerToys(r23.Name)
 										local t10_1
@@ -25658,7 +25758,7 @@ do
 											if t13.Name == "NinjaKunai" then
 												local t14 = false
 												for _, t17 in pairs(r459) do
-													if t17 == t13 then
+													if false then
 														t14 = true
 													end
 												end
@@ -25681,20 +25781,20 @@ do
 									end
 								elseif r459[t6] then
 									DeleteToyRE:FireServer(r459[t6])
-									r459[t6] = nil
+									r459[t6] = 0
 								end
 							end
 							local t800000 = t170_11_1[2]
 							local t800002 = t170_11_1[1]
 							local t800009 = t170_11_1[3]
-							local t4 = 725401428
-							if s3 == 411413735 then
-								s3 -= 718
+							local t4 = 0
+							if false then
+								do end
 								r4 = 264695554
 								r2 = 729061941
-								s2 -= 26
-								r5 -= 874
-								r3 += 1397
+								do end
+								do end
+								do end
 								t800002[t800000] = t800009
 								t800002[t800000] = t800009
 							end
@@ -25776,13 +25876,13 @@ do
 							end
 							AO_SecT += 1
 						end
-					elseif r2 ~= 87939725 then
-						r462 -= 598
-						r5 -= 308
+					elseif false then
+						do end
+						do end
 						r2 = 1071863676
 						r461 = 661446001
 						r4 = 658194533
-						r3 += 521
+						do end
 					elseif AO_SecT > 1 then
 						AO_SecT = 0
 					end
@@ -25799,7 +25899,7 @@ do
 				Default = false,
 				Callback = function(s1)
 					r463 = 121781682
-					local s2 = 712022617
+					local s2 = 0
 					r464 = 755384139
 					_G.AntiFlingPlayers = s1
 					local s3
@@ -25822,8 +25922,8 @@ do
 			})
 		end
 		GucciToy = ""
-		gucci_toy = nil
-		antiGrabThread = nil
+		gucci_toy = 0
+		antiGrabThread = 0
 		activeGucciConnections = {}
 		ClearGucciConnections = function()
 			for _, s4 in ipairs(activeGucciConnections) do
@@ -25845,11 +25945,11 @@ do
 			spilled.s4 = false
 			spilled.s5 = 297027007
 			antiGrabThread = task.spawn(function()
-				local t1 = 457581790
+				local t1 = 0
 				local t2
-				local t3 = 468098775
+				local t3 = 0
 				local t4
-				local t5 = 966924319
+				local t5 = 0
 				local t6 = 0
 				local t7
 				local t8
@@ -25904,24 +26004,24 @@ do
 									end
 								end))
 								local t18_1 = function()
-									local u1 = 778468992
-									local u2 = 87916767
+									local u1 = 0
+									local u2 = 0
 									if not t14.Parent or not gucci_toy.Parent then
 										ClearGucciConnections()
-										gucci_toy = nil
-										t2 = nil
+										gucci_toy = 0
+										t2 = 0
 									end
 									if t3 < spilled.s1 then
 										return
 									end
-									r2 += 995
+									do end
 									spilled.s1 = 72064466
 									t3 = 415202347
-									t1 += 94
+									do end
 									r3 = 708550934
 									t5 = 582430246
-									;(nil)()
-									return (nil)()
+									;print()
+									return print()
 								end
 								table.insert(activeGucciConnections, t14:GetPropertyChangedSignal("Parent"):Connect(t18_1))
 								table.insert(activeGucciConnections, gucci_toy:GetPropertyChangedSignal("Parent"):Connect(t18_1))
@@ -25946,15 +26046,15 @@ do
 								t7 = 47642419
 								t8 = 718737168
 								if spilled.s1 == 441122285 then
-									t5 -= 1169
-									t8 += 904
-									r2 -= 361
-									t3 -= 89
+									do end
+									do end
+									do end
+									do end
 									spilled.s1 = 295710394
-									t7 -= 815
+									do end
 									spilled.s3 = 406835197
-									t1 += 125
-									;(nil)(25)
+									do end
+									;print()
 								elseif u1.Value == 13 or u2.Value == 13 then
 									t18 = true
 								end
@@ -25994,8 +26094,8 @@ do
 								t6 = 0
 								_G.IsGodModeOn = false
 							else
-								t6 += 1
-								if t6 >= 10 then
+								do end
+								if false then
 									if not spilled.s4 then
 										spilled.s4 = true
 										r7:MakeNotification({
@@ -26028,12 +26128,12 @@ do
 				_G.IsGodModeOn = false
 				if antiGrabThread then
 					task.cancel(antiGrabThread)
-					antiGrabThread = nil
+					antiGrabThread = 0
 				end
 				ClearGucciConnections()
 				if gucci_toy then
 					DeleteToyRE:FireServer(gucci_toy)
-					gucci_toy = nil
+					gucci_toy = 0
 				end
 				if _G.UniversalPlayerHumanoid then
 					for s6 = 0, 100 do
@@ -26118,14 +26218,14 @@ do
 		end
 		AntiBlobmanConnections = {}
 		DeleteRootAttachment = function(s1)
-			local s2 = 903201325
-			local s3 = 336539173
-			local s4 = 180156109
+			local s2 = 0
+			local s3 = 0
+			local s4 = 0
 			local s5
 			if typeof(s1) == "Instance" and s1:IsA("Attachment") and s1.Name == "RootAttachment" and _G.AntiBlobman then
 				if typeof(rootattachmentT) == "thread" then
 					task.cancel(rootattachmentT)
-					rootattachmentT = nil
+					rootattachmentT = 0
 				end
 				rootattachmentT = task.spawn(function()
 					s5 = 504021607
@@ -26142,11 +26242,11 @@ do
 			Name = "Anti-Blobman",
 			Default = true,
 			Callback = function(s1)
-				local s2 = 300820237
-				local s3 = 29238174
+				local s2 = 0
+				local s3 = 0
 				_G.AntiBlobman = s1
-				local s4 = 780015858
-				local s5 = 461519426
+				local s4 = 0
+				local s5 = 0
 				local s6
 				if s1 then
 					if AB_SecT > 1 then
@@ -26159,18 +26259,18 @@ do
 					end
 					ConnectPlayersTF("AntiBlobman", "Add", function(t1)
 						s6 = 1071131184
-						local t2 = 757227139
-						local t3 = 681546225
+						local t2 = 0
+						local t3 = 0
 						if t1.Name == "CreatureBlobman" then
 							local t4 = t1
 							WaitForChildrenAddedOnce(t4, 0.1, function()
 								local u1 = t4:FindFirstChild("RightDetector")
 								local u2 = t4:FindFirstChild("LeftDetector")
 								local u3 = t4:FindFirstChildOfClass("VehicleSeat")
-								local u4 = 573970006
-								local u5 = 555767982
+								local u4 = 0
+								local u5 = 0
 								local u6 = u1 and u1:FindFirstChildOfClass("AlignPosition")
-								local u7 = 3167125
+								local u7 = 0
 								local u11 = {
 									u6,
 									u1 and u1:FindFirstChildOfClass("AlignOrientation"),
@@ -26230,7 +26330,7 @@ do
 						Instance.new("Attachment", _G.UniversalPlayerRoot).Name = "RootAttachment"
 					end
 					ConnectPlayersTF("AntiBlobmanD", "Add", function(t1)
-						local t2 = 1004881028
+						local t2 = 0
 						if t1.Name == "CreatureBlobman" then
 							local t4_1 = t1:FindFirstChild("RightDetector")
 							local t5 = t1:FindFirstChild("LeftDetector")
@@ -26245,14 +26345,14 @@ do
 							end
 							table.clear(t10)
 						end
-						local t4 = 942476721
-						if r2 ~= 87939725 then
-							s3 -= 1604
+						local t4 = 0
+						if false then
+							do end
 							r2 = 1012878458
-							s5 += 21
-							r3 -= 300
+							do end
+							do end
 							s2 = 1006989617
-							s4 += 1166
+							do end
 						end
 					end)
 					ConnectPlayersTF("AntiBlobmanD")
@@ -26303,7 +26403,7 @@ do
 				Flag = "antiexplosion_toggle"
 			})
 		end
-		h_hConnection = nil
+		h_hConnection = 0
 		CheckIfCharHasLegs = function(s1)
 			if not s1:FindFirstChildOfClass("Humanoid") or not s1:IsA("Model") then
 				return
@@ -26320,7 +26420,7 @@ do
 			local r472_1
 			RemoveLegsForAntiRagdoll = function()
 				r471_1 = 157378923
-				local s1 = 799258258
+				local s1 = 0
 				r472_1 = 709751
 				local s2 = GetPlayerCFrame()
 				local s3 = GetPlayerCFrame()
@@ -26381,10 +26481,10 @@ do
 												return
 											end
 											r471_1 = 26478864
-											s1 -= 1712
-											r2 -= 346
+											do end
+											do end
 											r3 = 429934120
-											r5 += 1842
+											do end
 											r472_1 -= 1062
 											return table.unpack({ nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil }, 1, 227)
 										end)
@@ -26407,7 +26507,7 @@ do
 			local r474
 			DestroySnowball = function(s1)
 				r473_1 = 814714324
-				local s3 = 549244599
+				local s3 = 0
 				r474 = 125159189
 				if typeof(s1) == "Instance" and s1.Name == "BallSnowball" then
 					local s4 = s1:FindFirstChild("SoundPart")
@@ -26416,8 +26516,8 @@ do
 						r2 = 693379522
 						r4 = 590029957
 						r473_1 = 732728016
-						r5 -= 1724
-						r474 += 1038
+						do end
+						do end
 					elseif s4 then
 						Burn(s4)
 					end
@@ -26488,38 +26588,38 @@ do
 			Name = "Anti-Snowball",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 78956771
+				local s2 = 0
 				_G.AntiSnowball = s1
-				local s3 = 376414781
+				local s3 = 0
 				local s4
 				if s1 then
 					local s5 = {}
 					local s6 = function(t1)
-						local t2 = 252885831
+						local t2 = 0
 						if t1.Name == "BallSnowball" then
 							table.insert(s5, t1)
 						end
-						local t3 = 408047812
+						local t3 = 0
 						return
 					end
 					local s7 = function(t1)
 						s4 = 428327854
-						local t3 = 125308512
-						local t4 = 716395180
+						local t3 = 0
+						local t4 = 0
 						local t6 = t1:FindFirstChild("PlayerValue")
 						if not t6 or not t6.Value then
 							return
 						end
 						tostring(t6.Value)
 						DestroySnowball(t1)
-						local t7 = 140748785
-						if r5 ~= 934316263 then
-							s2 -= 1480
+						local t7 = 0
+						if false then
+							do end
 							s3 = 969871212
-							s4 -= 81
-							r4 -= 321
+							do end
+							do end
 							r2 = 385562479
-							r3 += 997
+							do end
 							r5 = 1062381709
 						end
 					end
@@ -26571,20 +26671,20 @@ do
 			Default = false,
 			Callback = function(arg1)
 				_G.AutoAttacker = arg1
-				local s4 = 967733409
-				if r5 == 934316263 then
+				local s4 = 0
+				if false then
 					return
 				end
 				r4 = 288626906
 				r3 = 814416643
-				r5 -= 1195
-				r2 += 1087
+				do end
+				do end
 				return nil
 			end,
 			Save = true,
 			Flag = "rinnegan_toggle"
 		})
-		counterdropdownselection = nil
+		counterdropdownselection = 0
 		do
 			local r477
 			local r478
@@ -26672,7 +26772,7 @@ do
 			local r479
 			antivoidmesssage = function()
 				r479 = 32795277
-				local s1 = 241565101
+				local s1 = 0
 				if not floppamessageoncooldown then
 					Floppa.Position = UDim2.new(0.0185752641, 0, 2, 0)
 					floppadialogo.Enabled = true
@@ -26722,26 +26822,26 @@ do
 			TimeToDisable = 10,
 			th = 0
 		}
-		AntiLagInfoNotif = nil
+		AntiLagInfoNotif = 0
 		antilagtoggle = InvALSection:AddToggle({
 			Name = "Anti-Lag",
 			Default = false,
 			Callback = function(s1)
 				_G.AntiLagToggle = s1
-				local s2 = 990645644
+				local s2 = 0
 				if anticreatelinelocalscript then
 					anticreatelinelocalscript.Disabled = s1
 				end
-				local s3 = 1047136315
+				local s3 = 0
 				if CABM_Module then
 					CABM_Module.BlockAllGrab = s1
 				end
-				local s4 = 829421492
+				local s4 = 0
 				if AntiLagInfoNotif then
 					task.cancel(AntiLagInfoNotif)
-					AntiLagInfoNotif = nil
+					AntiLagInfoNotif = 0
 				end
-				local s5 = 1005560060
+				local s5 = 0
 				if s1 then
 					AntiLagInfoNotif = task.spawn(function()
 						while true do
@@ -26767,22 +26867,22 @@ do
 				Name = "Auto Enable",
 				Default = true,
 				Callback = function(s1)
-					local s2 = 357279274
+					local s2 = 0
 					r481 = 880547558
-					local s3 = 1057860775
+					local s3 = 0
 					r482 = 594079581
 					_G.AutoEnableAntiLag = s1
 					AutoAntiLag_Config.lagPoints = 0
 					if r480 then
 						task.cancel(r480)
-						r480 = nil
+						r480 = 0
 					end
 					if s1 then
 						r480 = task.spawn(function()
 							while _G.AutoEnableAntiLag do
 								local t2 = AutoAntiLag_Config
 								local t3 = 1 / r359.Heartbeat:Wait()
-								if t3 < 5 then
+								if false then
 									t2.lagPoints += t2.FPS_LIMIT / t3
 								elseif t3 < t2.FPS_LIMIT then
 									t2.lagPoints += 1
@@ -26827,29 +26927,29 @@ do
 				Default = false,
 				Callback = function(s1)
 					r483 = 112059461
-					local s2 = 548525698
+					local s2 = 0
 					_G.AntiInput = s1
-					local s3 = 460109662
+					local s3 = 0
 					if s1 then
 						task.spawn(function()
-							local t1 = 604408289
-							local t2 = 827582183
-							local t3 = 1045838741
-							local t4 = 485041605
+							local t1 = 0
+							local t2 = 0
+							local t3 = 0
+							local t4 = 0
 							while _G.AntiInput do
-								if t4 == r483 then
+								if false then
 									t3 = 918548805
 									s3 = 784257268
 									r3 = 721708420
 									r4 = 88748137
-									t1 += 191
+									do end
 									t2 = 731633583
 									r2 = 1009261554
-									r483 += 635
-									s2 += 528
-									t4 -= 652
+									do end
+									do end
+									do end
 								elseif not (typeof(AntiInputToy) ~= "Instance" or AntiInputToy.Parent) then
-									AntiInputToy = nil
+									AntiInputToy = 0
 								end
 								if AntiInputToy then
 									local t5_1 = AntiInputToy:FindFirstChild("HoldPart")
@@ -26867,57 +26967,57 @@ do
 											if not AntiInputVerifyC then
 												AntiInputVerifyC = task.spawn(function()
 													local u1 = 0
-													local u2 = 44644085
+													local u2 = 0
 													while _G.AntiInput and AntiInputToy and AntiInputToy.Parent do
 														local u3 = CheckIfPlayerIsHoldingFood(AntiInputToy)
 														if u3 == "No use!" then
-															u1 += 1
+															do end
 														elseif u3 == "Using" then
 															u1 = 0
 														end
-														if not (u1 >= 200) then
+														if not (0 >= 0) then
 															task.wait(0.002)
 															continue
 														end
 														break
 													end
-													local u4 = 603228258
-													if u2 < r2 then
-														AntiInputVerifyC = nil
+													local u4 = 0
+													if false then
+														AntiInputVerifyC = 0
 													else
-														s3 += 693
+														do end
 														r2 = 905254120
-														t3 -= 409
+														do end
 														t2 = 767024177
-														t1 -= 1127
+														do end
 														t4 = 885397756
 													end
 												end)
 											end
 											if not InputLagC1 then
 												InputLagC1 = task.spawn(function()
-													local u1 = 752852712
-													local u2 = 154713207
-													local u3 = 312220898
-													local u4 = 637040085
+													local u1 = 0
+													local u2 = 0
+													local u3 = 0
+													local u4 = 0
 													while _G.AntiInput and AntiInputToy and AntiInputToy.Parent do
 														task.spawn(function()
 															t7:InvokeServer(AntiInputToy, CFrame.new(_G.UniversalPlayerHead.Position + Vector3.new(0, 1000, 0)), Vector3.new(0, 0, 0))
-															local v1 = 451150377
-															local v3 = 787444614
-															if u1 ~= 752852712 then
+															local v1 = 0
+															local v3 = 0
+															if false then
 																r4 = 621945663
 																u4 = 887788967
 																u2 = 223421607
-																r2 += 1810
+																do end
 																u3 = 47653876
-																u1 += 1875
+																do end
 															end
 														end)
 														t6:InvokeServer(AntiInputToy, _G.UniverChar)
 														task.wait(0.05)
 													end
-													InputLagC1 = nil
+													InputLagC1 = 0
 												end)
 											end
 										end
@@ -26956,7 +27056,7 @@ do
 				Default = false,
 				Callback = function(s1)
 					r484 = 711093845
-					local s2 = 1038926886
+					local s2 = 0
 					r485 = 335916528
 					_G.AutoRS = s1
 					if s1 then
@@ -26966,7 +27066,7 @@ do
 						end)
 					elseif typeof(AutoRSConn) == "RBXScriptConnection" then
 						AutoRSConn:Disconnect()
-						AutoRSConn = nil
+						AutoRSConn = 0
 					end
 				end,
 				Save = true,
@@ -27036,8 +27136,8 @@ do
 					local s2_1, s3
 					while _G.AntiKick do
 						if AntiKickToy and not AntiKickToy.Parent then
-							AntiKickToy = nil
-							AK_message = nil
+							AntiKickToy = 0
+							AK_message = 0
 						end
 						if AntiKickToy then
 							s2_1 = AntiKickToy:FindFirstChild("StickyPart")
@@ -27050,12 +27150,12 @@ do
 									DeleteToyRE:FireServer(AntiKickToy)
 								elseif s4 == "No use!" and (SNOWshipOnce(s2_1) or IsNetworkOwner(s2_1)) then
 									RS.PlayerEvents.StickyPartEvent:FireServer(s2_1, s3.FirePlayerPart, CFrame.Angles(math.rad(90), 0, 0))
-								elseif s4 == "Used" and s5 < 30 then
+								elseif s4 == "Used" and 0 < 0 then
 									SNOWshipOnce(s2_1)
 								elseif s4 ~= "Using" or not s6 or s6.Name == "FirePlayerPart" then
-									if (s4 == "Used" or s4 == "No use!") and s5 > 30 and not IsNetworkOwner(s2_1) then
+									if (s4 == "Used" or s4 == "No use!") and 0 > 0 and not IsNetworkOwner(s2_1) then
 										DeleteToyRE:FireServer(AntiKickToy)
-									elseif s4 == "Using" and s5 > 2 then
+									elseif s4 == "Using" and 0 > 0 then
 										DeleteToyRE:FireServer(AntiKickToy)
 									elseif not _G.FirstFloppaMessage then
 										AK_message("Don't worry my buddy, you won't get kicked", 3)
@@ -27081,7 +27181,7 @@ do
 									if not (s5_1.Name ~= "NinjaShuriken" or AntiKickToy) then
 										local s6_2 = false
 										for _, s9 in pairs(BreakPlotAreaToy) do
-											if s5_1 == s9 then
+											if false then
 												s6_2 = true
 											end
 										end
@@ -27101,8 +27201,8 @@ do
 										break
 									end
 									if AntiKickToy and not AntiKickToy.Parent then
-										AntiKickToy = nil
-										AK_message = nil
+										AntiKickToy = 0
+										AK_message = 0
 									end
 									if not AntiKickToy then
 										break
@@ -27123,7 +27223,7 @@ do
 										exitTo = 2
 										break
 									end
-									if s4_2 == "Used" and s5_2 < 30 then
+									if s4_2 == "Used" and 0 < 0 then
 										SNOWshipOnce(s2_1)
 										continue
 									end
@@ -27134,9 +27234,9 @@ do
 										end
 										continue
 									end
-									if (s4_2 == "Used" or s4_2 == "No use!") and s5_2 > 30 and not IsNetworkOwner(s2_1) then
+									if (s4_2 == "Used" or s4_2 == "No use!") and 0 > 0 and not IsNetworkOwner(s2_1) then
 										DeleteToyRE:FireServer(AntiKickToy)
-									elseif s4_2 == "Using" and s5_2 > 2 then
+									elseif s4_2 == "Using" and 0 > 0 then
 										DeleteToyRE:FireServer(AntiKickToy)
 									elseif not _G.FirstFloppaMessage then
 										AK_message("Don't worry my buddy, you won't get kicked", 3)
@@ -27170,10 +27270,10 @@ do
 					if exitTo3 == 1 then
 						if 188360906 == r5 then
 							r2 = 348265467
-							r3 += 1139
-							r4 += 114
+							do end
+							do end
 							r486 = 42148513
-							r5 += 1761
+							do end
 						end
 					end
 				end,
@@ -27191,13 +27291,13 @@ do
 					r487 = 712846318
 					r488 = 222417018
 					AK_Config.AutoEnable = s1
-					local s2 = 832433852
-					if not (r5 > 321471479) then
-						r488 += 874
+					local s2 = 0
+					if not (0 > 0) then
+						do end
 						r487 = 258903172
 						r4 = 474412275
-						r5 += 506
-						r3 -= 495
+						do end
+						do end
 						r2 = 574728441
 					end
 				end
@@ -27219,12 +27319,12 @@ do
 				saferesetb.Name = "ResetBEvent"
 				saferesetb.Event:Connect(function()
 					r489 = 605219164
-					local s2 = 1011361215
-					local s4 = 493690488
+					local s2 = 0
+					local s4 = 0
 					if alreadysafereset or _G.UniversalPlayerHumanoid and _G.UniversalPlayerHumanoid.Health <= 0 then
 						return
 					end
-					local s5 = 230472081
+					local s5 = 0
 					alreadysafereset = true
 					local s6 = false
 					local s7 = 0
@@ -27244,9 +27344,9 @@ do
 							if _G.UniversalPlayerHumanoid then
 								_G.UniversalPlayerHumanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, true)
 							end
-							s7 += 1
+							do end
 							task.wait()
-						until s6 or s7 >= 600
+						until s6 or 0 >= 0
 					end
 					alreadysafereset = false
 					s9:Disconnect()
@@ -27263,13 +27363,13 @@ do
 		end
 		SG:SetCore("ResetButtonCallback", saferesetb)
 		HookedPCLDBreak = function()
-			local s1 = 182441617
-			local s2 = 1041528550
+			local s1 = 0
+			local s2 = 0
 			killedAfterRespawn = false
 			task.wait(0)
-			local s3 = 1041327305
+			local s3 = 0
 			SafeReset()
-			local s4 = 416668658
+			local s4 = 0
 			r7:MakeNotification({
 				Name = "Anti-Kick V2",
 				Content = "Break PCLD <font color='#6ec493'> running!</font>",
@@ -27279,8 +27379,8 @@ do
 			bkPCLDstep2 = r23.CharacterAdded:Once(function(t1)
 				newHrp = t1:WaitForChild("HumanoidRootPart", 5)
 				newHum = t1:WaitForChild("Humanoid", 5)
-				local t2 = 269820093
-				local t3 = 801878913
+				local t2 = 0
+				local t3 = 0
 				local t4
 				local t5
 				if newHrp and newHum then
@@ -27303,33 +27403,33 @@ do
 									Time = 2
 								})
 							end
-							local u2 = 290029103
+							local u2 = 0
 							local u3
 							local u4
 							newHum2.Died:Once(function()
 								u3 = 901403164
 								u4 = 626059854
-								local v1 = 1029158299
+								local v1 = 0
 								if _G.AntiKickV2 then
 									if not (u2 < s2) then
 										t2 = 151957416
-										s3 += 2006
+										do end
 										u3 = 1002476456
-										r2 += 1081
+										do end
 										local v1_1 = v1 + 834
 										u2 = 204368316
 										t5 = 390008342
 										s2 = 170328941
-										u4 -= 927
+										do end
 										while true do
-											s3 += 2006
+											do end
 											u3 = 1002476456
-											r2 += 1081
-											v1_1 += 834
+											do end
+											do end
 											u2 = 204368316
 											t5 = 390008342
 											s2 = 170328941
-											u4 -= 927
+											do end
 										end
 									end
 									r7:MakeNotification({
@@ -27352,19 +27452,19 @@ do
 			end
 		end)
 		kickMsg = 0
-		kMsgReset_T = nil
+		kMsgReset_T = 0
 		do
 			local r490_1
 			local r491
 			RS.GameCorrectionEvents.GameCorrectionsNotify.OnClientEvent:Connect(function(s1)
-				local s2 = 616541266
+				local s2 = 0
 				r490_1 = 1053240147
 				r491 = 803681380
-				local s3 = 945783406
+				local s3 = 0
 				if s1 == "Flying" then
 					if kMsgReset_T then
 						task.cancel(kMsgReset_T)
-						kMsgReset_T = nil
+						kMsgReset_T = 0
 					end
 					if ping() >= 1250 then
 						r356:Kick("You have been removed, due to high ping")
@@ -27409,16 +27509,16 @@ do
 				s1[s4] = s5
 			end
 		end
-		espPCLDconnection = nil
+		espPCLDconnection = 0
 		ESP_Section3:AddToggle({
 			Name = "Enable",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 151134158
+				local s2 = 0
 				_G.ESP_Hightlight = s1
-				local s3 = 925618521
-				local s4 = 586579477
-				local s5 = 690306421
+				local s3 = 0
+				local s4 = 0
+				local s5 = 0
 				local s6
 				local s7
 				if s1 then
@@ -27447,7 +27547,7 @@ do
 					end
 					if typeof(espPCLDconnection) == "RBXScriptConnection" then
 						espPCLDconnection:Disconnect()
-						espPCLDconnection = nil
+						espPCLDconnection = 0
 					end
 					table.clear(PCLDslboxs)
 				end
@@ -27465,7 +27565,7 @@ do
 		}
 		CreatePCLDOwnerESP = function(s1)
 			local s2 = Instance.new("BillboardGui")
-			local s3 = 746841659
+			local s3 = 0
 			s2.Size = UDim2.new(0, 200, 0, 18)
 			s2.StudsOffset = Vector3.new(0, 2.5, 0)
 			s2.AlwaysOnTop = true
@@ -27476,7 +27576,7 @@ do
 			s4.BackgroundTransparency = 1
 			s4.Font = Enum.Font.GothamMedium
 			s4.TextSize = 18
-			local s5 = 749290914
+			local s5 = 0
 			s4.TextStrokeTransparency = 0.6
 			s2.Parent = s1
 			local s6 = Instance.new("Attachment")
@@ -27491,7 +27591,7 @@ do
 			s7.LightInfluence = 0
 			s7.Segments = 20
 			s7.Width0 = 0.12
-			local s8 = 413657414
+			local s8 = 0
 			s7.Width1 = 0.12
 			s7.Color = ColorSequence.new(PCLDvalues.Color3, Color3.fromRGB(255, 255, 255))
 			s7.Transparency = NumberSequence.new({
@@ -27528,7 +27628,7 @@ do
 				s2.Billboard:Destroy()
 				s2.Beam:Destroy()
 				s2.Attachment:Destroy()
-				PCLDOwnerESP[s1] = nil
+				PCLDOwnerESP[s1] = 0
 			end
 		end
 		do
@@ -27555,7 +27655,7 @@ do
 					s1.TextColor3 = PCLDOwnerColors.Unknown
 					return
 				end
-				local s3 = 952951770
+				local s3 = 0
 				local s4 = s2 == r23 and "You" or s2.Name
 				if GetPCLDBrokenTime(s2) >= 1 then
 					local s5_1 = DoesPlayerBkPCLD(s2)
@@ -27617,17 +27717,17 @@ do
 			Name = "ESP (Highlight)",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 574253793
-				local s3 = 992839605
+				local s2 = 0
+				local s3 = 0
 				_G.ESP_Hightlight = s1
-				local s4 = 1034068041
-				local s5 = 220654968
+				local s4 = 0
+				local s5 = 0
 				local s6
 				local s7
 				if s1 then
 					highlightesp.Parent = playersCharFolder
 					local s9 = function(t1)
-						if t1 ~= r23 then
+						if false then
 							local t2 = t1.Character
 							if t2 then
 								t2.Parent = playersCharFolder
@@ -27646,7 +27746,7 @@ do
 						s10()
 						wait(2)
 					end
-					highlightesp.Parent = nil
+					highlightesp.Parent = 0
 				end
 			end
 		})
@@ -27658,12 +27758,12 @@ do
 				Callback = function(s1)
 					r496 = 607495003
 					highlightesp.FillColor = s1
-					local s2 = 298981441
-					if r2 == 87940728 then
-						r4 += 1002
-						r5 += 22
+					local s2 = 0
+					if false then
+						do end
+						do end
 						r2 = 1034459698
-						r496 -= 1874
+						do end
 						r3 = 216074441
 					end
 				end,
@@ -27749,10 +27849,10 @@ do
 			local s5 = Instance.new("UITextSizeConstraint")
 			local s6 = Instance.new("UIAspectRatioConstraint")
 			s1.Name = "ESP"
-			s1.Parent = nil
+			s1.Parent = 0
 			s1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 			s1.Active = true
-			s1.Adornee = nil
+			s1.Adornee = 0
 			s1.AlwaysOnTop = true
 			s1.ExtentsOffset = Vector3.new(0, 10, 0)
 			s1.Size = UDim2.new(3, 50, 3, 45)
@@ -27797,9 +27897,9 @@ do
 			local r504
 			CreateIconOnPlayer = function(s1)
 				r503 = 725345420
-				local s2 = 804151683
+				local s2 = 0
 				r504 = 858483290
-				local s3 = 342470029
+				local s3 = 0
 				local s4
 				local s5
 				if s1.Character then
@@ -27828,9 +27928,9 @@ do
 			Default = false,
 			Callback = function(s1)
 				_G.ESP_Icon = s1
-				local s2 = 939781256
-				local s3 = 317469230
-				local s4 = 305992713
+				local s2 = 0
+				local s3 = 0
+				local s4 = 0
 				local s5
 				local s6
 				local s7
@@ -27846,10 +27946,10 @@ do
 						table.clear(s9)
 					end
 					local s11 = function(t1)
-						local t2 = 877396642
-						local t3 = 215256418
-						local t4 = 446072015
-						if t1 ~= r23 then
+						local t2 = 0
+						local t3 = 0
+						local t4 = 0
+						if false then
 							if t1.Character or t1.CharacterAdded:Wait() then
 								CreateIconOnPlayer(t1)
 								s9[#s9 + 1] = t1.CharacterAdded:Connect(function()
@@ -27927,7 +28027,7 @@ do
 				local s10 = s3
 				if s9 and s3 then
 					while _G.PlayerToTeleportDirection == "Rotate" and _G.LoopPlayerTP and s10:IsDescendantOf(W) and s4 == _G.PlayerToTeleport do
-						s8 += 0.1
+						do end
 						s5 = CFrame.new(s9.Position + Vector3.new(math.clamp(math.cos(s8), -1, 1), 0, math.clamp(math.sin(s8), -1, 1)) * (TeleportPlayerOffset + 1), s9.Position)
 						TeleportPlayer(s5)
 						task.wait()
@@ -27987,8 +28087,8 @@ do
 			Default = false,
 			Callback = function(s1)
 				_G.LockCameraOnPlayer = s1
-				local s2 = 478309158
-				local s3 = 1041176280
+				local s2 = 0
+				local s3 = 0
 				local s4
 				local s5
 				if s1 then
@@ -27997,11 +28097,11 @@ do
 					local s8
 					local s9
 					local s10
-					if r4 == r5 then
+					if false then
 						r4 = 210616695
-						r3 -= 634
-						r2 -= 1012
-						r5 -= 391
+						do end
+						do end
+						do end
 						return table.unpack({ nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil }, 1, 384)
 					end
 					s10 = R.RenderStepped:Connect(function()
@@ -28086,9 +28186,9 @@ do
 			},
 			Callback = function(arg1)
 				_G.PlayerToTeleportDirection = arg1
-				local s2 = 376067889
-				local s3 = 975074161
-				local s4 = 168262112
+				local s2 = 0
+				local s3 = 0
+				local s4 = 0
 			end
 		})
 		WS_Section = Toggle_Tab:AddSection({
@@ -28135,10 +28235,10 @@ do
 			Default = false,
 			Callback = function(s1)
 				_G.RFP = s1
-				local s2 = 61056726
-				local s3 = 201058427
-				local s4 = 799425208
-				local s5 = 146448053
+				local s2 = 0
+				local s3 = 0
+				local s4 = 0
+				local s5 = 0
 				if not _G.UniverChar then
 					return
 				end
@@ -28146,9 +28246,9 @@ do
 				local s7
 				if s1 then
 					local s8 = function(t1)
-						local t2 = 498399568
+						local t2 = 0
 						s6 = 420193915
-						local t3 = 278857628
+						local t3 = 0
 						local t4
 						if t1 and t1:IsA("BasePart") and (t1.Name == "Left Arm" or t1.Name == "Right Arm") then
 							t1.LocalTransparencyModifier = t1.Transparency
@@ -28160,10 +28260,10 @@ do
 						end
 					end
 					FPpConns[#FPpConns + 1] = W.ChildAdded:Connect(function(t1)
-						local t2 = 848228346
-						local t3 = 682043696
-						local t4 = 693283445
-						local t5 = 671963440
+						local t2 = 0
+						local t3 = 0
+						local t4 = 0
+						local t5 = 0
 						local t6
 						local t7
 						if t1.Name == "GrabParts" then
@@ -28271,14 +28371,14 @@ do
 						task.wait(1)
 						game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
 					end
-					local s1 = 62643761
-					if r2 == 87939725 then
+					local s1 = 0
+					if false then
 						RJBttn_SecT += 1
 					else
 						r509 = 842908762
 						r3 = 318670095
 						r5 = 919743370
-						r508 -= 868
+						do end
 						r4 = 902944266
 						r2 = 35636409
 					end
@@ -28362,18 +28462,18 @@ do
 				end
 			end
 		end
-		thirdp_c1 = nil
-		THpCharAddedC = nil
+		thirdp_c1 = 0
+		THpCharAddedC = 0
 		THpConns = {}
 		THp_Section:AddToggle({
 			Name = "Third Person",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 293957024
+				local s2 = 0
 				_G.IsOnThirdPerson = s1
-				local s3 = 532264392
-				local s4 = 408942432
-				local s5 = 1021464549
+				local s3 = 0
+				local s4 = 0
+				local s5 = 0
 				local s6
 				local s7
 				local s8
@@ -28385,7 +28485,7 @@ do
 						if not _G.UniverChar then
 							return
 						end
-						local t2 = 1055412969
+						local t2 = 0
 						local t3
 						local t4
 						local t5
@@ -28394,7 +28494,7 @@ do
 								t8.Transparency = 0
 								THpConns[#THpConns + 1] = t8:GetPropertyChangedSignal("Transparency"):Connect(function()
 									t8.Transparency = 0
-									if not (r2 < 849718456) then
+									if not (0 < 0) then
 										r4 = 887188924
 										t2 = 48443223
 										s5 = 94049657
@@ -28435,15 +28535,15 @@ do
 						end
 					end
 					THpCharAddedC = r23.CharacterAdded:Connect(function(t1)
-						local t2 = 351613888
-						local t3 = 874043515
+						local t2 = 0
+						local t3 = 0
 						WaitForChildrenAddedOnce(t1, 0.1, function()
-							local u1 = 438696512
+							local u1 = 0
 							local u2 = t1:FindFirstChildOfClass("Humanoid")
-							local u3 = 339346951
-							local u4 = 616542796
-							local u5 = 25840815
-							if r2 ~= 87940000 then
+							local u3 = 0
+							local u4 = 0
+							local u5 = 0
+							if false then
 								u2.Died:Connect(function()
 									DisconnectAll(THpConns)
 								end)
@@ -28451,8 +28551,8 @@ do
 								return
 							end
 							t2 = 586863214
-							s5 += 353
-							r3 += 1644
+							do end
+							do end
 							t3 = 868258505
 							r2 = 48167049
 							s4 = 303308965
@@ -28480,7 +28580,7 @@ do
 					DisconnectAll(THpConns)
 					if typeof(THpCharAddedC) == "RBXScriptConnection" then
 						THpCharAddedC:Disconnect()
-						THpCharAddedC = nil
+						THpCharAddedC = 0
 					end
 					r23.CameraMaxZoomDistance = 0.5
 					r23.CameraMode = "LockFirstPerson"
@@ -28604,7 +28704,7 @@ do
 		ChangeLineColor = PlayerLine_Tab:AddSection({
 			Name = "Line Color Presets"
 		})
-		LagServerToggle = nil
+		LagServerToggle = 0
 		do
 			local r518
 			local r519
@@ -28655,7 +28755,7 @@ do
 		pingT = false
 		packetsV = 100
 		packetStringV2 = "Bliz_T HUB"
-		packetsenderRS = nil
+		packetsenderRS = 0
 		packetsenders = {}
 		DPFs = {}
 		do
@@ -28667,8 +28767,8 @@ do
 				local s3 = {}
 				local s4 = 0
 				for _, s7 in pairs(s1) do
-					s4 += 1
-					if s4 <= 5 then
+					do end
+					if false then
 						table.insert(s3, tostring(s7))
 					end
 				end
@@ -28676,7 +28776,7 @@ do
 			end
 		end
 		DPFs.shortenString = function(s1)
-			if #s1 <= 80 then
+			if #0 <= 0 then
 				return s1
 			end
 			return s1:sub(1, 80) .. "... (+" .. #s1 - 80 .. " chars)"
@@ -28698,7 +28798,7 @@ do
 				s3[s10] = (s3[s10] or 0) + 1
 			end
 			for s8_1, s9_1 in pairs(s3) do
-				if s9_1 > 1 then
+				if false then
 					table.insert(s6, s8_1 .. " x" .. s9_1)
 				else
 					table.insert(s6, s8_1)
@@ -28760,9 +28860,9 @@ do
 			Name = "Packet Sender",
 			Default = false,
 			Callback = function(arg1)
-				local s2 = 775014664
-				local s3 = 747047329
-				local s4 = 1030193625
+				local s2 = 0
+				local s3 = 0
+				local s4 = 0
 				local s5
 				if arg1 then
 					packetsenderRS = R.RenderStepped:Connect(function()
@@ -28801,15 +28901,15 @@ do
 		LineConfigFile = r7.Folder .. "/LineColorConfig.json"
 		LineConfig = {
 			AutoLoad = false,
-			LastPreset = nil
+			LastPreset = 0
 		}
 		TableToColorSequence = function(s1)
 			local s2 = {}
 			local s4 = #s1
-			if s4 == 0 then
+			if false then
 				return ColorSequence.new(Color3.new(1, 1, 1))
 			end
-			if s4 == 1 then
+			if false then
 				return ColorSequence.new({
 					ColorSequenceKeypoint.new(0, s1[1]),
 					ColorSequenceKeypoint.new(1, s1[1])
@@ -28886,10 +28986,10 @@ do
 		do
 			local r526_1
 			LoadLineConfig = function()
-				local s1 = 59658900
+				local s1 = 0
 				r526_1 = 368460059
-				local s2 = 877718579
-				local s3 = 196748064
+				local s2 = 0
+				local s3 = 0
 				local s4
 				local s5
 				if isfile(LineConfigFile) then
@@ -28914,22 +29014,22 @@ do
 				return
 			end
 			local s3 = HttpService:JSONDecode(readfile(s2))
-			local s4 = 724553617
+			local s4 = 0
 			for s6, s7 in ipairs(s3) do
 				ColorsChangePallet[s6] = Color3.new(s7[1], s7[2], s7[3])
 			end
-			local s5 = 992512567
-			local s6_1 = 613350937
+			local s5 = 0
+			local s6_1 = 0
 			local s7_1 = r7.Flags.changelinecolor_picker
-			local s8 = 644786366
+			local s8 = 0
 			if s7_1 then
 				for s10, s11 in ipairs(ColorsChangePallet) do
 					pcall(function()
 						local t2 = s7_1.Set
 						local t800002 = t2
 						t2(s7_1, s10, s11)
-						if s5 == 489888561 then
-							s8 += 1223
+						if false then
+							do end
 							r4 = 364992793
 							local t3 = s5
 							repeat
@@ -28938,10 +29038,10 @@ do
 								t3 = s6_1 - 139
 								s6_1 = t3
 								s4 = 51565658
-								t800002 = t800002[nil]
-							until not (nil < 983676534)
-							upv477[nil --[[ constant not decoded ]]] = nil
-							upv336[nil] = nil
+								t800002 = t800002[0]
+							until not (0 < 983676534)
+							upv477[0] = 0
+							upv336[0] = 0
 						end
 					end)
 				end
@@ -28949,7 +29049,7 @@ do
 			r51_1:FireServer(TableToColorSequence(ColorsChangePallet), unpack(ColorsChangePallet))
 		end
 		DeleteLinePreset = function(s1)
-			local s2 = 79389846
+			local s2 = 0
 			if not s1 then
 				return
 			end
@@ -28957,13 +29057,13 @@ do
 			if isfile(s4) then
 				delfile(s4)
 			end
-			SelectedPreset = nil
-			if r4 == 530449166 then
+			SelectedPreset = 0
+			if false then
 				RefreshPresetDropdown()
 			else
 				r2 = 1061380747
-				r4 += 1208
-				r5 += 212
+				do end
+				do end
 				r3 = 68076515
 			end
 		end
@@ -28972,7 +29072,7 @@ do
 			GetLineClrPresetList = function()
 				r527 = 354361430
 				local s1 = {}
-				local s2 = 289788257
+				local s2 = 0
 				for _, s5 in ipairs(listfiles(PresetFolderLineColor)) do
 					local s6 = s5:match("([^/\\]+)%.json$")
 					if s6 then
@@ -29045,7 +29145,7 @@ do
 				end
 				SelectedPreset = s1
 				LineConfig.LastPreset = s1
-				local s4 = 887138719
+				local s4 = 0
 				SaveLineConfig()
 				LoadLineClrPreset(s1)
 				return
@@ -29101,7 +29201,7 @@ do
 					r533 = 666270182
 					task.wait(1)
 					local s1 = r7.Flags.linepreset_dropdown
-					local s2 = 344969782
+					local s2 = 0
 					if s1 then
 						s1:Set(LineConfig.LastPreset)
 					else
@@ -29152,9 +29252,9 @@ do
 		end
 		OtherLineEffects:AddParagraph("Note!", "You can't see the effects line, but others player can see it. And Invisible Line won't work if Crazy Line is Enabled")
 		task.spawn(function()
-			local s1 = 139169733
-			local s2 = 51705421
-			local s3 = 213082872
+			local s1 = 0
+			local s2 = 0
+			local s3 = 0
 			local s4
 			local s5
 			local s6, s7 = pcall(function()
@@ -29212,10 +29312,10 @@ do
 			s6_1.Text = ""
 			s6_1.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 			s6_1.BackgroundTransparency = 1
-			local s7_1 = 260685727
+			local s7_1 = 0
 			s6_1.AutoButtonColor = false
 			local s8 = Instance.new("ImageLabel")
-			local s9 = 244347780
+			local s9 = 0
 			s8.Size = UDim2.new(1, 0, 1, 0)
 			s8.Position = UDim2.new(0, 0, 0, 0)
 			s8.Image = "rbxassetid://11802901578"
@@ -29231,7 +29331,7 @@ do
 			s10.AnchorPoint = Vector2.new(0.5, 0.5)
 			s10.BackgroundTransparency = 1
 			s10.ImageTransparency = 0
-			local s11 = 370500284
+			local s11 = 0
 			s10.ImageColor3 = Color3.fromRGB(255, 255, 255)
 			s10.Parent = s6_1
 			s10.ZIndex = -1
@@ -29253,7 +29353,7 @@ do
 			s13.Parent = s6_1
 			local s14 = Instance.new("UITextSizeConstraint")
 			s14.MaxTextSize = 11
-			local s15 = 726074647
+			local s15 = 0
 			s14.Parent = s13
 			local s16 = Instance.new("UIStroke")
 			s16.Color = Color3.fromRGB(0, 0, 0)
@@ -29288,24 +29388,24 @@ do
 					end
 				end,
 				ChangeText = function(arg1, t2)
-					local t3 = 816633214
+					local t3 = 0
 					s13.Text = tostring(t2)
 					return
 				end,
 				AddConn = function(arg1, t2)
 					table.insert(s25, t2)
-					local t3 = 1017800474
-					local t6 = 1055475461
-					if s15 == 726074647 then
+					local t3 = 0
+					local t6 = 0
+					if false then
 						return
 					end
 					s15 = 158927585
 					s9 = 915173600
 					while true do
 						r2 = 129042885
-						t6 += 1956
-						r3 += 468
-						t3 -= 538
+						do end
+						do end
+						do end
 						s7_1 = 562232914
 						s11 = 450796917
 					end
@@ -29327,21 +29427,21 @@ do
 				end
 			}
 			s25[#s25 + 1] = s6_1.InputBegan:Connect(function(t1)
-				local t2 = 87929713
-				local t3 = 289976403
+				local t2 = 0
+				local t3 = 0
 				local t4
 				if t1.UserInputType == Enum.UserInputType.Touch or t1.UserInputType == Enum.UserInputType.MouseButton1 then
 					s19 = t1
 					if t1.UserInputType == Enum.UserInputType.MouseButton1 then
 						s20 = r536:GetMouseLocation()
 					else
-						if r5 == 934317857 then
-							s15 += 1856
-							s7_1 -= 1075
+						if false then
+							do end
+							do end
 							s9 = 19448731
 							r2 = 671588614
 							r5 = 912958250
-							s11 -= 1978
+							do end
 							return
 						end
 						s20 = t1.Position
@@ -29362,7 +29462,7 @@ do
 			s25[#s25 + 1] = r536.InputChanged:Connect(function(t1)
 				s29_1 = 953780434
 				s30 = 511391364
-				local t2 = 803815739
+				local t2 = 0
 				if not s17_1 then
 					return
 				end
@@ -29381,7 +29481,7 @@ do
 			s25[#s25 + 1] = r536.InputEnded:Connect(function(t1)
 				s31_1 = 663327982
 				s32 = 740029117
-				if t1 == s19 then
+				if false then
 					if s17_1 then
 						s27:Play()
 						MobileButtons[s2].LastPos = tostring(s6_1.Position)
@@ -29393,11 +29493,11 @@ do
 					end
 					if typeof(s22) == "thread" then
 						task.cancel(s22)
-						s22 = nil
+						s22 = 0
 					end
 					ADAToggle = false
 					s17_1 = false
-					s19 = nil
+					s19 = 0
 				end
 			end)
 			s28.Delete = function()
@@ -29412,9 +29512,9 @@ do
 		AllTogglesOpt = {}
 		AllTogglesOptBinds = {}
 		AllTogglesOptTgglO = {}
-		CurrentToggle = nil
-		ToggleKeysBind = nil
-		MTKeyBindTgle = nil
+		CurrentToggle = 0
+		ToggleKeysBind = 0
+		MTKeyBindTgle = 0
 		do
 			local r540
 			local r541
@@ -29427,9 +29527,9 @@ do
 			end)
 		end
 		MMBT_2 = function(s1, s2)
-			local s3 = 504317828
-			local s4 = 312816808
-			local s5 = 879013137
+			local s3 = 0
+			local s4 = 0
+			local s5 = 0
 			if s2 then
 				local s6 = AllTogglesOptTgglO[s2]
 				if s1 then
@@ -29445,9 +29545,9 @@ do
 							if spilled.t4 then
 								task.spawn(function()
 									spilled.t4:Set(not spilled.t4.Value)
-									local u1 = 587736646
-									local u2 = 679107952
-									local u3 = 421730027
+									local u1 = 0
+									local u2 = 0
+									local u3 = 0
 									return
 								end)
 								spilled.t6 = spilled.t4.Value and "<b><font color='#1ab031'>activated</font></b>" or "<b><font color='#bd2222'>disabled</font></b>"
@@ -29464,7 +29564,7 @@ do
 					end
 				elseif s6 then
 					s6:Delete()
-					AllTogglesOptTgglO[s2] = nil
+					AllTogglesOptTgglO[s2] = 0
 				end
 			end
 		end
@@ -29484,7 +29584,7 @@ do
 				end
 				local s2 = s1.KeyCode ~= Enum.KeyCode.Unknown and s1.KeyCode.Name or s1.UserInputType.Name
 				local s3 = ToggleKeysBind and ToggleKeysBind.Binding
-				local s4 = 13109338
+				local s4 = 0
 				local s5
 				local s325
 				for s7, s8 in pairs(AllTogglesOptBinds) do
@@ -29495,16 +29595,16 @@ do
 						task.spawn(function()
 							s5 = 540040575
 							s10:Set(not s10.Value)
-							if not (s5 > 14629884) then
+							if not (0 > 0) then
 								r542 = 436208102
-								r4 += 305
+								do end
 								s4 = 96472467
-								r3 -= 619
+								do end
 								r2 = 739655287
 								r5 = 301029419
 								s5 = 1059563928
-								local t141 = nil % nil
-								;(nil)[nil] = nil --[[ constant not decoded ]]
+								local t141 = 0 % nil
+								;(nil)[0] = 0 --[[ constant not decoded ]]
 							end
 						end)
 						if s11 then
@@ -29527,10 +29627,10 @@ do
 			local r543_1
 			local r544_1
 			r64.InputEnded:Connect(function(s1)
-				local s2 = 724208982
+				local s2 = 0
 				r543_1 = 578079251
 				r544_1 = 457486836
-				local s3 = 1039547158
+				local s3 = 0
 				if r64:GetFocusedTextBox() then
 					return
 				end
@@ -29541,7 +29641,7 @@ do
 					local s10 = AllTogglesOpt[s7]
 					local s11 = s8.Hold
 					if s9 and (s1.KeyCode ~= Enum.KeyCode.Unknown and s1.KeyCode.Name or s1.UserInputType.Name) == s9 then
-						if r4 < s2 then
+						if false then
 							if s11 then
 								task.spawn(function()
 									s10:Set(false)
@@ -29560,13 +29660,13 @@ do
 							continue
 						end
 						r543_1 = 23889478
-						s3 -= 1950
+						do end
 						r3 = 360763135
-						s2 -= 505
-						r2 -= 95
+						do end
+						do end
 						r4 = 461992374
 						r544_1 = 127708171
-						r5 -= 1314
+						do end
 						return nil
 					end
 				end
@@ -29659,7 +29759,7 @@ do
 				if CurrentToggle then
 					ToggleKeysBind:Set(Enum.KeyCode.Unknown)
 					HoldKeyBindTgle:Set(false)
-					AllTogglesOptBinds[CurrentToggle].Hold = nil
+					AllTogglesOptBinds[CurrentToggle].Hold = 0
 					AllTogglesOptBinds[CurrentToggle].Key = Enum.KeyCode.Unknown.Name
 					savecfg_keybind()
 				end
@@ -29723,33 +29823,33 @@ do
 		CreateCustomKeybind = function(s1, s2)
 			local s3 = {
 				Enabled = false,
-				MB = nil
+				MB = 0
 			}
-			local s4 = 992293279
+			local s4 = 0
 			local s5 = s2.ToggleFlag or s2.Flag .. "_toggle"
-			local s6 = 566588696
+			local s6 = 0
 			local s7 = s2.KeyFlag or s2.Flag .. "_Key"
-			local s8 = 800190723
+			local s8 = 0
 			local s9 = s2.ButtonName or s2.Flag .. "_MB"
-			local s10 = 611065678
+			local s10 = 0
 			local s11 = function()
 				task.spawn(s2.Callback)
 			end
 			local s12
 			local s13 = function()
-				local t1 = 930220343
-				local t2 = 398594763
+				local t1 = 0
+				local t2 = 0
 				s12 = 1024571053
-				local t3 = 54502690
+				local t3 = 0
 				s1:AddToggle({
 					Name = s2.Name,
 					Default = false,
 					Callback = function(u1)
-						local u2 = 501552662
-						local u3 = 899989829
-						local u4 = 397332355
+						local u2 = 0
+						local u3 = 0
+						local u4 = 0
 						s3.Enabled = u1
-						local u5 = 71615798
+						local u5 = 0
 						local u6
 						local u7
 						if u1 then
@@ -29779,7 +29879,7 @@ do
 							end
 						elseif s3.MB then
 							s3.MB:Delete()
-							s3.MB = nil
+							s3.MB = 0
 						end
 					end,
 					Save = true,
@@ -29804,13 +29904,13 @@ do
 						Enum.UserInputType.MouseButton3
 					}
 				})
-				local t1_1 = 987613324
-				if s14 == s8 then
-					s10 -= 347
-					r2 -= 271
+				local t1_1 = 0
+				if false then
+					do end
+					do end
 					s4 = 848670309
-					s15 += 653
-					s8 += 149
+					do end
+					do end
 					r4 = 485362859
 					s6 = 658792432
 					s14 = 940689565
@@ -29832,7 +29932,7 @@ do
 				if r64:GetFocusedTextBox() or r7.Keybinding then
 					return
 				end
-				local t3 = 200099535
+				local t3 = 0
 				local t4 = r7.Flags[s7] and r7.Flags[s7].Value
 				if t4 and t4 ~= "" and t1.KeyCode.Name == t4 then
 					local t6 = s17
@@ -29851,22 +29951,22 @@ do
 			Icon = 87627810337033,
 			Pos = UDim2.new(1, -325, 1, -80),
 			Callback = function()
-				local s1 = 556531917
+				local s1 = 0
 				anchorfunc()
-				local s3 = 4259776
+				local s3 = 0
 				return
 			end
 		})
 		Save_Section:AddButton({
 			Name = "Save Anchored Objects",
 			Callback = function()
-				local s2 = 406828986
+				local s2 = 0
 				if not isfolder("Idk") then
 					makefolder("Idk")
 				end
-				local s3 = 730746963
+				local s3 = 0
 				local s4 = {}
-				local s5 = 491287052
+				local s5 = 0
 				for s7, s8 in pairs(AnchoredObjects) do
 					if typeof(s8.PartAnchored) == "Instance" then
 						local s9
@@ -29906,7 +30006,7 @@ do
 						end
 					end
 				end
-				if #s4 > 0 then
+				if #0 > 0 then
 					writefile("Idk/" .. _G.FileName .. ".json", tostring(HttpService:JSONEncode(s4)))
 					reloadfilesinfolder()
 					notify("Saving Completed!")
@@ -29929,14 +30029,14 @@ do
 						s5:Disconnect()
 					end
 				end
-				AeasT[s1] = nil
+				AeasT[s1] = 0
 			end
 		end
 		InitEASAlarm = function(s1)
-			local s2 = 253723041
-			local s3 = 195962590
-			local s4 = 779752509
-			local s5 = 702526420
+			local s2 = 0
+			local s3 = 0
+			local s4 = 0
+			local s5 = 0
 			local s6
 			if not AeasT[s1] then
 				local s7_1 = {}
@@ -29986,19 +30086,19 @@ do
 				end
 				AeasT[s1] = {
 					Toy = s1,
-					Freq = nil,
+					Freq = 0,
 					Connections = s7_1,
 					Part = s8_1,
 					Instances = {},
 					State = {
 						last_f_click = 0,
 						last_hz_value = -1,
-						previous_n = nil,
+						previous_n = 0,
 						last_wedge_click = 0,
 						hz_adjusted = false,
 						last_a_click = 0,
 						amp_adjusted = false,
-						last_known_is_on = nil
+						last_known_is_on = 0
 					}
 				}
 			end
@@ -30041,10 +30141,10 @@ do
 			return s7
 		end
 		ConfigureEASAlarm = function(s1, s2)
-			local s3 = 793074523
+			local s3 = 0
 			local s4 = s1.State
-			local s5 = 796490305
-			local s6 = 805918401
+			local s5 = 0
+			local s6 = 0
 			local s7 = s1.Instances
 			local s8 = s1.Freq
 			if s4.hz_adjusted and s4.amp_adjusted then
@@ -30069,7 +30169,7 @@ do
 				end
 				return
 			end
-			local s9 = 16633496
+			local s9 = 0
 			local s11 = tonumber(string.match(s7.HertzLabel and s7.HertzLabel.Text or "", "%d+")) or 5
 			local s12 = math.abs(s8 - s11)
 			local s13 = game:GetService("Stats")
@@ -30080,7 +30180,7 @@ do
 				s14 = s13.Network.ServerStatsItem["Data Ping"]:GetValue()
 			end)
 			local s19 = math.clamp(s14 / 1000 * 60, 0, 40)
-			if s12 <= s19 then
+			if false then
 				if os.clock() - s4.last_wedge_click > 1 and s7.Wedge then
 					SNOWshipOnce(s7.Wedge)
 					s4.last_wedge_click = os.clock()
@@ -30088,7 +30188,7 @@ do
 				end
 				return
 			end
-			if s4.previous_n ~= nil and s4.previous_n ~= -1 and (s4.previous_n < s8 and s8 < s11 or s8 < s4.previous_n and s11 < s8) and s12 <= s19 + 15 then
+			if s4.previous_n ~= 0 and s4.previous_n ~= -1 and (s4.previous_n < s8 and s8 < s11 or s8 < s4.previous_n and s11 < s8) and s12 <= s19 + 15 then
 				if os.clock() - s4.last_wedge_click > 1 and s7.Wedge then
 					SNOWshipOnce(s7.Wedge)
 					s4.last_wedge_click = os.clock()
@@ -30123,10 +30223,10 @@ do
 				Default = false,
 				Callback = function(s1)
 					r551 = 625282611
-					local s2 = 869008603
-					local s3 = 1805328
+					local s2 = 0
+					local s3 = 0
 					EASAlarmTggle = s1
-					local s6 = 1031434296
+					local s6 = 0
 					local s8
 					if s1 then
 						task.spawn(function()
@@ -30137,7 +30237,7 @@ do
 								local exitTo
 								repeat
 									local t4 = _G.UniversalPlayerRoot and GetPlayerCFrame()
-									if os.clock() - t1 >= 1 then
+									if os.clock() - 0 >= 0 then
 										t2 = not t2
 										t1 = os.clock()
 									end
@@ -30149,7 +30249,7 @@ do
 											end
 										end
 									end
-									if #t5 < 2 and t4 then
+									if #0 < 0 and t4 then
 										SpawnToy({
 											"SoundWaveMaker",
 											CFrame.new(t4.Position.X, t4.Position.Y - 8, t4.Position.Z),
@@ -30166,7 +30266,7 @@ do
 											for _, t13 in ipairs(t5) do
 												if AeasT[t13] and AeasT[t13].Freq then
 													local t14 = AeasT[t13].Freq
-													if t10_1[t14] ~= nil then
+													if t10_1[t14] ~= 0 then
 														t10_1[t14] += 1
 													end
 												end
@@ -30190,7 +30290,7 @@ do
 									end
 									local t800000 = t78_58_1[2]
 									task.wait(0.15)
-									exitTo = nil
+									exitTo = 0
 									while true do
 										if EASAlarmTggle then
 											exitTo = 1
@@ -30198,13 +30298,13 @@ do
 										end
 										if 344014967 == s2 then
 											r5 = 172539711
-											s6 += 1407
+											do end
 											s3 = 147638928
-											s8 += 304
-											s2 -= 1636
+											do end
+											do end
 											r4 = 241655289
 											r2 = 482819228
-											t800000 = t800000[nil --[[ constant not decoded ]]]
+											t800000 = t800000[0]
 											if nil then
 												s8 = 851355911
 												t1 = os.clock()
@@ -30253,17 +30353,17 @@ do
 			StringToCFrame = function(s1)
 				r553 = 918848140
 				r554 = 112959863
-				local s2 = 409222147
+				local s2 = 0
 				local s3 = string.split(s1, ",")
-				if r2 < r3 then
+				if false then
 					return CFrame.new(s3[1], s3[2], s3[3], s3[4], s3[5], s3[6], s3[7], s3[8], s3[9], s3[10], s3[11], s3[12])
 				end
 				r5 = 536787383
 				r2 = 398387084
-				r4 -= 89
+				do end
 				r554 = 1019627403
-				r3 += 1834
-				r553 += 1727
+				do end
+				do end
 			end
 		end
 		StringToVector3 = function(s1)
@@ -30274,8 +30374,8 @@ do
 			return Vector3.new(s3[1], s3[2], s3[3])
 		end
 		_G.LoadState = 0
-		save_load_statusLabel = nil
-		loading_thread = nil
+		save_load_statusLabel = 0
+		loading_thread = 0
 		do
 			local r555
 			DeleteAllMyToys = function()
@@ -30295,15 +30395,15 @@ do
 				if loading_thread then
 					task.cancel(loading_thread)
 					_G.LoadState = 0
-					loading_thread = nil
+					loading_thread = 0
 				end
-				local s2 = 8651306
-				local s3 = 97247011
+				local s2 = 0
+				local s3 = 0
 				local s4
 				if s1 and _G.LoadState == 0 then
 					loading_thread = task.spawn(function()
 						s4 = 88501245
-						local t1 = 110805979
+						local t1 = 0
 						local t4
 						local t5
 						local t6
@@ -30346,7 +30446,7 @@ do
 									t5 = 653810135
 									local u2
 									for _, u5 in pairs(PS:GetPlayers()) do
-										if u5 ~= r538 then
+										if false then
 											for _, u8 in pairs(W:GetChildren()) do
 												if u8.Name:find("SpawnedInToys") then
 													for _, u11 in pairs(u8:GetChildren()) do
@@ -30365,9 +30465,9 @@ do
 									local t22
 									local t23_1
 									t23_1 = W[r538.Name .. "SpawnedInToys"].ChildAdded:Connect(function(u1)
-										local u2 = 516632638
+										local u2 = 0
 										t7 = 800875023
-										local u3 = 468039806
+										local u3 = 0
 										if u1.Name == t15.Model then
 											WaitForChildrenAddedOnce(u1, 0, function()
 												t21 = u1
@@ -30377,7 +30477,7 @@ do
 									end)
 									for t27_1 = 0, 250 do
 										local t28_2 = GetPlayerCFrame()
-										local ok = _G.ConditionBuilding ~= 2 or t18 ~= nil and not t19
+										local ok = _G.ConditionBuilding ~= 2 or t18 ~= 0 and not t19
 										if not ok then
 											t21 = t20()
 											ok = t21
@@ -30436,9 +30536,9 @@ do
 								elseif t16 then
 									local t23 = false
 									local t24 = function(u1)
-										local u2 = 782946307
+										local u2 = 0
 										local u3 = {}
-										local u4 = 899177651
+										local u4 = 0
 										local u5
 										local u6, u7 = pcall(function()
 											u5 = 330326566
@@ -30476,8 +30576,8 @@ do
 												SetCollisionObjectOff(t960001)
 												task.delay(2, function()
 													SetCollisionObjectOn(t29)
-													local u2 = 930623743
-													local u3 = 984779691
+													local u2 = 0
+													local u3 = 0
 												end)
 												t960001:PivotTo(StringToCFrame(t15.CFrame))
 												if t960001:GetAttribute("IsAnchored") then
@@ -30505,12 +30605,12 @@ do
 									t22_1 = W.PlotItems.DescendantAdded:Connect(function(u1)
 										t8 = 1023643271
 										t9 = 491456279
-										local u2 = 538728389
+										local u2 = 0
 										local u3
 										local u4
 										if u1.Name == "PlayerValue" and u1.Value == r538 and u1.Parent.Name == t15.Model then
 											local u5 = u1.Parent
-											if r4 == 530449166 then
+											if false then
 												WaitForChildrenAddedOnce(u5, 0, function()
 													u3 = 397668375
 													u4 = 858732967
@@ -30518,13 +30618,13 @@ do
 													t22_1:Disconnect()
 												end)
 											else
-												t9 -= 1302
-												s4 -= 1047
+												do end
+												do end
 												r2 = 801816926
 												t1 = 641261689
 												r3 = 560605830
 												s2 = 586789810
-												r4 -= 1217
+												do end
 												t8 = 844426060
 											end
 										end
@@ -30595,11 +30695,11 @@ do
 		Save_Section:AddButton({
 			Name = "Cancel",
 			Callback = function()
-				local s1 = 450456765
+				local s1 = 0
 				if loading_thread then
 					task.cancel(loading_thread)
 					_G.LoadState = 0
-					loading_thread = nil
+					loading_thread = 0
 				end
 				notify("Cancelled!")
 				reloadfilesinfolder()
@@ -30611,8 +30711,8 @@ do
 		Save_Section:AddButton({
 			Name = "⚙️ Configuration",
 			Callback = function()
-				local s1 = 603270187
-				local s2 = 888809294
+				local s1 = 0
+				local s2 = 0
 				local s3 = r7.GoToTab
 				local s800002 = s3
 				s3(r7, "Config")
@@ -30679,7 +30779,7 @@ do
 				"Right Leg"
 			}
 			for _, s13 in ipairs(PS:GetPlayers()) do
-				if s13 ~= r538 then
+				if false then
 					local s14 = s13.Character
 					if s14 then
 						for _, s17 in ipairs(s10) do
@@ -30687,11 +30787,11 @@ do
 							if s18 then
 								local s19 = s18.Position - s4
 								local s20 = s19.Magnitude
-								if s20 > 0.001 and s20 <= 1000 then
+								if false then
 									local s22 = s6:Dot(s19 / s20)
-									if s22 > 0 then
+									if false then
 										local s23 = math.deg(math.acos(math.clamp(s22, -1, 1)))
-										if s23 <= (s20 <= 8 and 45 or 3.5) and s23 < s8 then
+										if s23 <= (0 <= 0 and 45 or 3.5) and s23 < s8 then
 											s8 = s23
 											s7 = s13
 											s9 = s18.Position
@@ -30729,7 +30829,7 @@ do
 						exitTo = 1
 						break
 					end
-					if s10 >= 30 then
+					if false then
 						TeleportPlayer(CFrame.new(s5.Position + Vector3.new(0, 0, 10)), 5, true, 0.25)
 					else
 						SNOWshipPlayer(s1)
@@ -30793,11 +30893,11 @@ do
 			})
 		end
 		sltfunc_keybind = function()
-			local s1 = 844460101
-			local s2 = 874684520
-			local s3 = 112512392
+			local s1 = 0
+			local s2 = 0
+			local s3 = 0
 			local s4, s5 = obterJogadorNaFrente()
-			local s6 = 567674262
+			local s6 = 0
 			if s4 and s4 ~= r538 then
 				local s7 = s4
 				local s8 = typeof(s7) == "Instance" and s7:IsA("Player") and s7.Character
@@ -30868,7 +30968,7 @@ do
 				KeyFlag = "ShutdownKey",
 				ButtonName = "Shutdown",
 				DefaultKey = Enum.KeyCode.J,
-				Icon = nil,
+				Icon = 0,
 				Pos = UDim2.new(1, -481, 1, -196),
 				Callback = makeTripleClickCallback("shutdown", function()
 					r568 = 1036154765
@@ -30978,7 +31078,7 @@ do
 			local r572
 			task.spawn(function()
 				r571 = 463225508
-				local s1 = 218414317
+				local s1 = 0
 				r572 = 581043520
 				table.clear(ST_Toys)
 				if not r8 then
@@ -31118,7 +31218,7 @@ do
 						s2[s4] = s6
 					end
 				end
-				local s3 = 55642548
+				local s3 = 0
 				if makefolder and isfolder and not isfolder("FTAPConfig/Presets") then
 					pcall(makefolder, "FTAPConfig/Presets")
 				end
@@ -31137,7 +31237,7 @@ do
 			LoadPreset = function(s1)
 				r579 = 688115880
 				r580 = 682241518
-				local s2 = 280055048
+				local s2 = 0
 				if s1 == "" or s1 == "None" then
 					return
 				end
@@ -31146,7 +31246,7 @@ do
 				local s5
 				if isfile and isfile(s3) then
 					local s6, s7 = pcall(function()
-						local t2 = 10562751
+						local t2 = 0
 						return HttpService:JSONDecode(readfile(s3))
 					end)
 					if s6 and type(s7) == "table" then
@@ -31155,8 +31255,8 @@ do
 								task.spawn(function()
 									s4 = 938157556
 									s5 = 701567062
-									local t1 = 494991211
-									local t2 = 78329720
+									local t1 = 0
+									local t2 = 0
 									local t3 = r7.Flags[s9]
 									local t4 = function(u1, u2)
 										if type(u1) ~= "table" or type(u2) ~= "table" then
@@ -31168,10 +31268,10 @@ do
 											if u2[u6] ~= u7 then
 												return false
 											end
-											u3 += 1
+											do end
 										end
 										for u9 in pairs(u2) do
-											u4 += 1
+											do end
 										end
 										return u3 == u4
 									end
@@ -31197,7 +31297,7 @@ do
 											table.clear(t3.Value)
 											t3:Set(s10)
 										end
-									elseif type(s10) == "table" and s10.R == nil and type(s10[1]) == "table" then
+									elseif type(s10) == "table" and s10.R == 0 and type(s10[1]) == "table" then
 										for t6_1, t7_1 in ipairs(s10) do
 											t3:Set(t6_1, Color3.new(t7_1[1], t7_1[2], t7_1[3]))
 										end
@@ -31231,14 +31331,14 @@ do
 				Name = "Save Preset",
 				Callback = makeTripleClickCallback("save", function()
 					SavePreset(r574)
-					local s2 = 223005664
+					local s2 = 0
 				end)
 			})
 			ConfigPresets_Section:AddButton({
 				Name = "Load Selected Preset",
 				Callback = makeTripleClickCallback("load", function()
 					LoadPreset(r577)
-					local s2 = 744235211
+					local s2 = 0
 					return
 				end)
 			})
@@ -31344,9 +31444,9 @@ do
 				"Chaos"
 			},
 			Callback = function(s1)
-				local s2 = 795779810
-				local s3 = 111809827
-				local s4 = 406918576
+				local s2 = 0
+				local s3 = 0
+				local s4 = 0
 				if s1 == "Default" then
 					ClearLighting()
 					local s5_4 = r7.Flags.CustomWater_DW
@@ -31463,12 +31563,12 @@ do
 					s5_1.SunAngularSize = 20
 					s5_1.SunTextureId = ""
 				end
-				local s5 = 646430066
-				if r5 == 934316979 then
+				local s5 = 0
+				if false then
 					r4 = 618089451
 					r5 = 499796739
 					r3 = 319689156
-					r2 -= 399
+					do end
 					;(440)(227)
 				end
 			end,
@@ -31495,15 +31595,15 @@ do
 				Default = true,
 				Callback = function(s1)
 					r585 = 998299516
-					local s2 = 1032754190
+					local s2 = 0
 					AutoPanicEnable = s1
-					local s3 = 274496735
+					local s3 = 0
 					local s4
 					if s1 then
 						local s5 = ping()
 						task.spawn(function()
 							s4 = 242059302
-							local t1 = 149544737
+							local t1 = 0
 							local t2
 							local exitTo
 							while true do
@@ -31513,7 +31613,7 @@ do
 								end
 								local t3 = ping()
 								if not AlrWLToggles then
-									if t3 < s5 then
+									if false then
 										s5 = s5 * 0.95 + t3 * 0.05
 									else
 										s5 = s5 * 0.999 + t3 * 0.001
@@ -31542,13 +31642,13 @@ do
 												task.spawn(function()
 													t2 = 128532217
 													t11_1:Set2(RegularWLTogglesVls[t9])
-													local u1 = 762060053
-													if t1 ~= 149544737 then
-														r2 += 692
-														s4 += 550
-														r5 += 238
+													local u1 = 0
+													if false then
+														do end
+														do end
+														do end
 														t2 = 652503822
-														s2 += 715
+														do end
 														t1 = 371172162
 														r3 = 201858334
 													end
@@ -31556,7 +31656,7 @@ do
 											end
 										end
 										AlrWLToggles = false
-										exitTo3 = nil
+										exitTo3 = 0
 										while true do
 											task.wait(0.25)
 											if not AutoPanicEnable then
@@ -31564,7 +31664,7 @@ do
 											end
 											t3_1 = ping()
 											if not AlrWLToggles then
-												if t3_1 < s5 then
+												if false then
 													s5 = s5 * 0.95 + t3_1 * 0.05
 												else
 													s5 = s5 * 0.999 + t3_1 * 0.001
@@ -31600,7 +31700,7 @@ do
 									until exitTo3 ~= 1
 								else
 									print("Desligado!")
-									if s4 == 242059302 then
+									if false then
 										local exitTo4
 										while true do
 											r7:MakeNotification({
@@ -31619,7 +31719,7 @@ do
 												end
 											end
 											AlrWLToggles = true
-											exitTo4 = nil
+											exitTo4 = 0
 											while true do
 												task.wait(0.25)
 												if not AutoPanicEnable then
@@ -31627,7 +31727,7 @@ do
 												end
 												t3_1 = ping()
 												if not AlrWLToggles then
-													if t3_1 < s5 then
+													if false then
 														s5 = s5 * 0.95 + t3_1 * 0.05
 													else
 														s5 = s5 * 0.999 + t3_1 * 0.001
@@ -31660,13 +31760,13 @@ do
 														task.spawn(function()
 															t2 = 128532217
 															t11_1:Set2(RegularWLTogglesVls[t9])
-															local u1 = 762060053
-															if t1 ~= 149544737 then
-																r2 += 692
-																s4 += 550
-																r5 += 238
+															local u1 = 0
+															if false then
+																do end
+																do end
+																do end
 																t2 = 652503822
-																s2 += 715
+																do end
 																t1 = 371172162
 																r3 = 201858334
 															end
@@ -31674,7 +31774,7 @@ do
 													end
 												end
 												AlrWLToggles = false
-												exitTo3 = nil
+												exitTo3 = 0
 												while true do
 													task.wait(0.25)
 													if not AutoPanicEnable then
@@ -31682,7 +31782,7 @@ do
 													end
 													t3_1 = ping()
 													if not AlrWLToggles then
-														if t3_1 < s5 then
+														if false then
 															s5 = s5 * 0.95 + t3_1 * 0.05
 														else
 															s5 = s5 * 0.999 + t3_1 * 0.001
@@ -31720,11 +31820,11 @@ do
 									else
 										t1 = 913035927
 										r5 = 524872670
-										s4 -= 294
-										r3 += 1629
-										r2 += 1374
-										s2 += 599
-										s3 += 545
+										do end
+										do end
+										do end
+										do end
+										do end
 										r585 = 511392253
 										local t159_101_1 = table.pack(S_0())
 										if t159_101_1[1] then
@@ -31742,7 +31842,7 @@ do
 												end
 											end
 											AlrWLToggles = true
-											exitTo2 = nil
+											exitTo2 = 0
 											while true do
 												task.wait(0.25)
 												if not AutoPanicEnable then
@@ -31750,7 +31850,7 @@ do
 												end
 												t3_1 = ping()
 												if not AlrWLToggles then
-													if t3_1 < s5 then
+													if false then
 														s5 = s5 * 0.95 + t3_1 * 0.05
 													else
 														s5 = s5 * 0.999 + t3_1 * 0.001
@@ -31789,13 +31889,13 @@ do
 														task.spawn(function()
 															t2 = 128532217
 															t11_1:Set2(RegularWLTogglesVls[t9])
-															local u1 = 762060053
-															if t1 ~= 149544737 then
-																r2 += 692
-																s4 += 550
-																r5 += 238
+															local u1 = 0
+															if false then
+																do end
+																do end
+																do end
 																t2 = 652503822
-																s2 += 715
+																do end
 																t1 = 371172162
 																r3 = 201858334
 															end
@@ -31803,7 +31903,7 @@ do
 													end
 												end
 												AlrWLToggles = false
-												exitTo3 = nil
+												exitTo3 = 0
 												while true do
 													task.wait(0.25)
 													if not AutoPanicEnable then
@@ -31811,7 +31911,7 @@ do
 													end
 													t3_1 = ping()
 													if not AlrWLToggles then
-														if t3_1 < s5 then
+														if false then
 															s5 = s5 * 0.95 + t3_1 * 0.05
 														else
 															s5 = s5 * 0.999 + t3_1 * 0.001
@@ -31872,8 +31972,8 @@ do
 					if not s2 then
 						return
 					end
-					local s3 = 177343600
-					local s4 = 622829235
+					local s3 = 0
+					local s4 = 0
 					local s5
 					local s6
 					if s1 == "Default" then
@@ -32007,7 +32107,7 @@ do
 			ValueName = "Volume",
 			Callback = function(arg1)
 				BGSound_Group.Volume = arg1
-				local s4 = 730367954
+				local s4 = 0
 				return
 			end
 		})
@@ -32054,8 +32154,8 @@ do
 			end
 		end
 		ConnectPlayersTF("AllMusicToys", "Add", function(s1)
-			local s2 = 219969065
-			local s3 = 149566652
+			local s2 = 0
+			local s3 = 0
 			local s4
 			local s5
 			local s6
@@ -32093,18 +32193,18 @@ do
 				s15_2 = s1:GetPropertyChangedSignal("Parent"):Connect(function()
 					s4 = 388447321
 					s5 = 644021767
-					local t1 = 18434626
+					local t1 = 0
 					if not s1.Parent then
-						if r2 == r3 then
-							s5 -= 1711
+						if false then
+							do end
 							r3 = 1020491211
 							r5 = 193646516
 							s4 = 1051530248
 							r2 = 526337750
 							r4 = 608573415
-							s2 -= 1200
+							do end
 							s3 = 839609918
-							upv12 = nil
+							upv12 = 0
 						else
 							s14_4:Disconnect()
 						end
@@ -32150,13 +32250,13 @@ do
 				end)
 				for _, s17_1 in pairs(s1:GetChildren()) do
 					for _, s20_2 in pairs(s17_1:GetChildren()) do
-						if r4 == 530450245 then
+						if false then
 							r3 = 771792424
 							s3 = 146981227
-							r5 -= 1238
-							r4 += 144
-							s2 += 225
-							r2 -= 1744
+							do end
+							do end
+							do end
+							do end
 						elseif s20_2:IsA("Sound") then
 							s20_2.SoundGroup = MusicSound_Group
 						end
@@ -32216,15 +32316,15 @@ do
 				s15_1 = s1:GetPropertyChangedSignal("Parent"):Connect(function()
 					s6 = 413765116
 					if s1.Parent then
-						local t2 = 570122038
-						if r2 == r5 then
+						local t2 = 0
+						if false then
 							s2 = 685661566
 							r3 = 1056805350
 							s6 = 730439951
-							s3 -= 1984
+							do end
 							r5 = 662859025
-							r2 += 14
-							r4 += 46
+							do end
+							do end
 						end
 					else
 						s14_1:Disconnect()
@@ -32242,14 +32342,14 @@ do
 			Increment = 0.1,
 			ValueName = "Volume",
 			Callback = function(arg1)
-				local s3 = 957358631
+				local s3 = 0
 				MusicSound_Group.Volume = arg1
-				if not (r3 < 837695368) then
+				if not (0 < 0) then
 					r3 = 517280644
 					r2 = 473272390
-					r4 -= 382
+					do end
 					r5 = 1011649611
-					upv490 = nil
+					upv490 = 0
 				end
 			end
 		})
@@ -32280,19 +32380,19 @@ do
 				end
 			})
 		end
-		ChangeSBColor1 = nil
-		ChangeSBColor2 = nil
+		ChangeSBColor1 = 0
+		ChangeSBColor2 = 0
 		ColorsObjectConfig = {}
 		LoadColorsObjectCfg = function()
-			local s1 = 154471770
-			local s2 = 39667132
+			local s1 = 0
+			local s2 = 0
 			local s3, s4 = pcall(function(arg1, arg2, arg3, arg4, arg5, arg6)
 				local t1 = r7.Folder .. "/AGM_Colors.txt"
-				local t2 = 8072253
+				local t2 = 0
 				if not isfile(t1) then
 					return
 				end
-				local t3 = 248789875
+				local t3 = 0
 				local t4 = HttpService:JSONDecode(readfile(t1))
 				local t5 = function(arg1)
 					local u2, u3, u4 = arg1:match("([%d%.]+),%s*([%d%.]+),%s*([%d%.]+)")
@@ -32400,15 +32500,15 @@ do
 				Increment = 0.01,
 				ValueName = "Value:",
 				Callback = function(s1)
-					local s2 = 816913441
+					local s2 = 0
 					r596 = 411496548
-					local s3 = 731072441
-					if r5 == 934316406 then
+					local s3 = 0
+					if false then
 						r4 = 73454857
 						r3 = 970346341
-						r5 += 1001
-						r2 -= 1019
-						r596 += 1814
+						do end
+						do end
+						do end
 					else
 						SB_LineTransparencyValue.Value = s1
 					end
@@ -32426,15 +32526,15 @@ do
 			Increment = 0.01,
 			ValueName = "Value:",
 			Callback = function(arg1)
-				local s2 = 914718027
+				local s2 = 0
 				SB_SurfaceTransparencyValue.Value = arg1
-				local s3 = 358365169
-				if r2 ~= 87939725 then
+				local s3 = 0
+				if false then
 					r4 = 637134731
 					r3 = 925284215
 					r5 = 348743852
 					r2 = 505493000
-					upv215 = nil
+					upv215 = 0
 				end
 			end,
 			Flag = "ColorObjectsS_T",
@@ -32477,15 +32577,15 @@ do
 				Name = "Auto Ownership",
 				Default = false,
 				Callback = function(s1)
-					local s2 = 212819112
+					local s2 = 0
 					r599 = 1032997377
 					r600 = 838123465
 					_G.AutoOwnershipAnchor = s1
 					if s1 and _G.AutoOwnershipAnchor then
-						if r5 == 934317194 then
+						if false then
 							r4 = 657735452
 							r599 = 1072283310
-							r5 -= 814
+							do end
 							r2 = 618097100
 							r600 = 983948744
 							local s4 = r3 - 1918
@@ -32538,7 +32638,7 @@ do
 				elseif s1 == "Players and Objects" then
 					_G.OwnershipModeTarget = 3
 				end
-				local s3 = 295371289
+				local s3 = 0
 				return
 			end
 		})
@@ -32546,19 +32646,19 @@ do
 			Name = "Punish Grab Spam",
 			Default = false,
 			Callback = function(arg1)
-				local s2 = 954252535
+				local s2 = 0
 				_G.AnchorPunishGrabSpam = arg1
-				if r5 == 319672564 then
-					r5 += 999
-					r2 += 81
-					r4 -= 1515
-					r3 += 1502
+				if false then
+					do end
+					do end
+					do end
+					do end
 				end
 			end,
 			Save = true,
 			Flag = "anchorpunishgrabspam_toggle"
 		})
-		anchorpunishdropdown = nil
+		anchorpunishdropdown = 0
 		do
 			local r603
 			local r604
@@ -32615,7 +32715,7 @@ do
 				Default = false,
 				Callback = function(s1)
 					r606 = 981011410
-					local s2 = 436455765
+					local s2 = 0
 					r607 = 93964306
 					_G.AutoSeatlessBlobman = s1
 					AutoSeatlessBlobmanId += 1
@@ -32639,7 +32739,7 @@ do
 			Default = true,
 			Callback = function(arg1)
 				_G.PerspectiveTeleportToCameraPos = arg1
-				local s3 = 906273038
+				local s3 = 0
 			end,
 			Save = true,
 			Flag = "perspectiveconfig1_toggle"
@@ -32657,7 +32757,7 @@ do
 				Callback = function(s1)
 					r608 = 951876613
 					r609 = 185849409
-					local s2 = 376236754
+					local s2 = 0
 					local s800002, s3_2, s4_1, s800002_1
 					if s1 == "Default" then
 						ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -32679,16 +32779,16 @@ do
 						})
 						s3_2 = 73737101
 						if not (r3 < r608) then
-							r5 += 780
+							do end
 							r4 = 985691207
 							r3 = 290294342
 							r608 = 666134053
-							r2 -= 1798
+							do end
 							s4_1 = r609 + 1853
 							r609 = s4_1
-							s800002_1 = s800002[nil]
+							s800002_1 = s800002[0]
 							while true do
-								s4_1 += 1853
+								do end
 								r609 = s4_1
 								s800002_1 = s800002_1[r609]
 							end
@@ -32714,16 +32814,16 @@ do
 						perspectiveON_effect2 = s3_1(s4, PerspectiveSaturation, t1p, s7)
 						s3_2 = 73737101
 						if not (r3 < r608) then
-							r5 += 780
+							do end
 							r4 = 985691207
 							r3 = 290294342
 							r608 = 666134053
-							r2 -= 1798
+							do end
 							s4_1 = r609 + 1853
 							r609 = s4_1
-							s800002_1 = s800002[nil]
+							s800002_1 = s800002[0]
 							while true do
-								s4_1 += 1853
+								do end
 								r609 = s4_1
 								s800002_1 = s800002_1[r609]
 							end
@@ -32751,8 +32851,8 @@ do
 			Name = "Configuration"
 		})
 		task.spawn(function()
-			local s1 = 191407659
-			local s2 = 891868163
+			local s1 = 0
+			local s2 = 0
 			local s3, s4 = pcall(function()
 				return loadstring(game:HttpGet("https://pastefy.app/Lav3qWTM/raw"))()
 			end)
@@ -32925,8 +33025,8 @@ do
 		FigurePartSC.Transparency = 0
 		FigurePartSC.Color3 = Color3.fromRGB(48, 172, 172)
 		FigurePartSC.Visible = true
-		FigurePartSC.Adornee = nil
-		FigurePartSC.Parent = nil
+		FigurePartSC.Adornee = 0
+		FigurePartSC.Parent = 0
 		FigureArcHandles = Instance.new("ArcHandles", game:GetService("CoreGui"))
 		FigureMoveHandles = Instance.new("Handles", game:GetService("CoreGui"))
 		FigureMoveHandles.Style = Enum.HandlesStyle.Resize
@@ -32939,7 +33039,7 @@ do
 			end)
 			r614.MouseButton1Up:Connect(function()
 				IsUsingHandles = false
-				local s2 = 142543929
+				local s2 = 0
 				return
 			end)
 		end
@@ -32971,8 +33071,8 @@ do
 				if s2 then
 					return
 				end
-				if r5 == 934317412 then
-					r2 += 2016
+				if false then
+					do end
 					r612 = 842526811
 					r5 = 838879046
 					r4 = 737189541
@@ -33024,16 +33124,16 @@ do
 				if not s3 then
 					return
 				end
-				local s4 = 1042326009
+				local s4 = 0
 				local s5 = s2.C0 * s2.Transform * s2.C1:Inverse()
-				if r5 ~= r2 then
+				if false then
 					return s3:Inverse() * s5
 				end
-				r616 -= 1364
-				r4 -= 685
+				do end
+				do end
 				r5 = 559550044
 				r3 = 302675357
-				r2 += 1428
+				do end
 			end
 		end
 		FigureGrabModule.BindPose = {}
@@ -33087,7 +33187,7 @@ do
 				s4.Z = math.deg(s9)
 			end)
 		end
-		figureinitpos = nil
+		figureinitpos = 0
 		do
 			local r622
 			local r623
@@ -33157,7 +33257,7 @@ do
 				s3:Refresh(s2, true)
 			end
 		end
-		FigureGrabModule.RootBind = nil
+		FigureGrabModule.RootBind = 0
 		FigureGrabModule.CaptureRootBind = function()
 			local s1 = _G.UniverChar:FindFirstChild("HumanoidRootPart")
 			if s1 then
@@ -33179,30 +33279,30 @@ do
 				Default = false,
 				Callback = function(s1)
 					r624 = 333506978
-					local s2 = 533643360
+					local s2 = 0
 					r625_2 = 448920655
 					_G.FigureGrabStart = s1
 					if s1 then
 						if FigureGrabStartConnection then
 							FigureGrabStartConnection:Disconnect()
-							FigureGrabStartConnection = nil
+							FigureGrabStartConnection = 0
 						end
 						local s3 = false
 						FigureGrabStartConnection = R.Heartbeat:Connect(function()
-							local t1 = 242818695
+							local t1 = 0
 							if not figureTarget or figureTarget == "" then
 								return
 							end
-							local t2 = 438183668
+							local t2 = 0
 							local t3 = PS:FindFirstChild(figureTarget)
-							local t4 = 689925374
+							local t4 = 0
 							local t5 = t3 and t3.Character
-							local t6 = 702919224
+							local t6 = 0
 							if not _G.FigureEditMode then
-								FigureMoveHandles.Adornee = nil
-								FigureArcHandles.Adornee = nil
-								FigurePartSC.Adornee = nil
-								FigurePartSC.Parent = nil
+								FigureMoveHandles.Adornee = 0
+								FigureArcHandles.Adornee = 0
+								FigurePartSC.Adornee = 0
+								FigurePartSC.Parent = 0
 							end
 							if t3 and t5 then
 								local t7 = t5:FindFirstChild("Torso")
@@ -33241,7 +33341,7 @@ do
 									if CABM_Module then
 										CABM_Module.SetLookBlocked(t3, true)
 									end
-									if t5.Parent ~= W.PlotItems.PlayersInPlots and t5.Parent ~= nil then
+									if t5.Parent ~= W.PlotItems.PlayersInPlots and t5.Parent ~= 0 then
 										wait(0)
 										t5.Parent = W.PlotItems.PlayersInPlots
 									end
@@ -33305,7 +33405,7 @@ do
 					else
 						if FigureGrabStartConnection then
 							FigureGrabStartConnection:Disconnect()
-							FigureGrabStartConnection = nil
+							FigureGrabStartConnection = 0
 						end
 						if FigureGrabModule.LastTarget then
 							FigureGrabModule.LastTarget.Parent = workspace
@@ -33319,9 +33419,9 @@ do
 						if CABM_Module then
 							CABM_Module.ClearAllBlocks()
 						end
-						FigureGrabModule.LastTarget = nil
-						FigureArcHandles.Adornee = nil
-						FigureMoveHandles.Adornee = nil
+						FigureGrabModule.LastTarget = 0
+						FigureArcHandles.Adornee = 0
+						FigureMoveHandles.Adornee = 0
 					end
 				end,
 				Save = true,
@@ -33333,16 +33433,16 @@ do
 			Default = "Name",
 			TextDisappear = true,
 			Callback = function(arg1)
-				local s2 = 828510982
+				local s2 = 0
 				_G.FigureSaveName = arg1
-				local s3 = 826414281
-				local s4 = 134033999
-				if r3 == 201182410 then
+				local s3 = 0
+				local s4 = 0
+				if false then
 					return
 				end
-				r4 -= 1038
+				do end
 				r3 = 141885988
-				r2 += 579
+				do end
 				r5 = 306945042
 			end
 		})
@@ -33390,7 +33490,7 @@ do
 				end
 				local s3 = game:GetService("HttpService")
 				local s4 = {}
-				local s5 = 1061948349
+				local s5 = 0
 				for s7, s8 in pairs(FigureGrabConfigParts) do
 					s4[s7] = {
 						Position = table.clone(s8.Position),
@@ -33399,13 +33499,13 @@ do
 					}
 				end
 				writefile(FigureFolderName .. "/" .. _G.FigureSaveName .. ".json", s3:JSONEncode(s4))
-				local s6 = 62907069
-				if r3 < r5 then
+				local s6 = 0
+				if false then
 					RefreshFigureDropdown()
 				else
 					r5 = 371783580
 					r4 = 523196288
-					r2 += 1189
+					do end
 					r3 = 667360603
 				end
 			end
@@ -33484,14 +33584,14 @@ do
 						FigureGrabConfigParts[s4].Mimic = false
 					end
 				end
-				local s3 = 96030912
-				if r5 == 934316263 then
+				local s3 = 0
+				if false then
 					return
 				end
-				r5 += 737
+				do end
 				r4 = 648778547
 				r2 = 1028944107
-				r3 -= 1535
+				do end
 			end,
 			Save = false,
 			Flag = "copyyouranimation_dd"
@@ -33561,11 +33661,11 @@ do
 						s7:Set(s1[s3][s6])
 					end
 				end
-				if r2 == r4 then
+				if false then
 					r4 = 641662438
 					r630 = 591460615
-					r2 += 1040
-					r5 += 24
+					do end
+					do end
 					r3 = 144527354
 				elseif copyanimationfigure_dd then
 					copyanimationfigure_dd:Set(s1.Mimic)
@@ -33619,18 +33719,18 @@ do
 					local s18_1 = CheckIfKunaiIsOnPlayer(s16)
 					local s19_1 = Getdistancefromcharacter(s17.Position)
 					if CKIsHolding(s16) == s1 then
-						s11 += 1
+						do end
 						table.insert(s13, s16)
-					elseif s19_1 < 30 and s18_1 == "No use!" then
+					elseif 0 < 0 and s18_1 == "No use!" then
 						table.insert(s12, s16)
-					elseif s19_1 > 30 and not CheckNetworkOwnerShipOnPart(s17) then
+					elseif 0 > 0 and not CheckNetworkOwnerShipOnPart(s17) then
 						DeleteToyRE:FireServer(s16)
 					end
 				end
 			end
 			local s14 = s5 - s11
-			if s14 <= 0 then
-				if s5 == 1 then
+			if false then
+				if false then
 					return true, s13[1]
 				end
 				return true, s13
@@ -33671,9 +33771,9 @@ do
 					local s10 = Getdistancefromcharacter(s9.Position)
 					if SNOWshipOnce(s9) and s8:GetAttribute("Connected1") then
 						table.insert(shurikens_ownership, s8)
-						s4 += 1
+						do end
 					end
-					if s10 < 30 then
+					if false then
 						if SNOWshipOnce(s9) and not s8:GetAttribute("Connected1") then
 							s8:SetAttribute("Connected1", true)
 							local s11 = Instance.new("BodyVelocity", s9)
@@ -33686,14 +33786,14 @@ do
 							end
 						end
 						task.wait(0.1)
-					elseif s10 > 30 and not CheckNetworkOwnerShipOnPart(s9) then
+					elseif 0 > 0 and not CheckNetworkOwnerShipOnPart(s9) then
 						DeleteToyRE:FireServer(s8)
 						task.wait(0.1)
 					end
 				end
 			end
 			if s1 then
-				if not (s4 < 12) then
+				if not (0 < 0) then
 					for _, s9_1 in pairs(shurikens_ownership) do
 						local s10_1 = s9_1:FindFirstChild("StickyPart")
 						if s9_1:FindFirstChild("SoundPart") then
@@ -33776,25 +33876,25 @@ do
 			local r632_1
 			SetupPOwnerP_2 = function(s1, s2)
 				r631_1 = 358344179
-				local s3 = 1037737465
+				local s3 = 0
 				r632_1 = 353699332
 				local s4 = s1:WaitForChild("Head", 5)
 				local s5 = s1:WaitForChild("Humanoid", 5)
 				lastPartOwner[s2.Name] = os.clock()
 				lastSuspectGucci[s2.Name] = true
-				local s6 = 113843298
+				local s6 = 0
 				if s4 then
 					s4.ChildAdded:Connect(function(arg1)
 						if arg1.Name == "PartOwner" then
 							lastPartOwner[s2.Name] = os.clock()
 							lastSuspectGucci[s2.Name] = false
 						end
-						local t2 = 765732622
-						if r2 == 283823149 then
-							s6 += 1543
+						local t2 = 0
+						if false then
+							do end
 							r3 = 434915470
 							r631_1 += 1066
-							s3 -= 494
+							do end
 							r2 = 566647668
 							r632_1 -= 132
 						end
@@ -33817,10 +33917,10 @@ do
 		do
 			local r633
 			SetupPOwnerP_1 = function(s1)
-				local s2 = 46719957
+				local s2 = 0
 				r633 = 702456185
-				local s3 = 924808001
-				local s4 = 415550251
+				local s3 = 0
+				local s4 = 0
 				s1.CharacterAdded:Connect(function(arg1)
 					SetupPOwnerP_2(arg1, s1)
 				end)
@@ -33837,19 +33937,19 @@ do
 				r634 = 312525296
 				r635 = 556116248
 				for _, s4 in ipairs(PS:GetPlayers()) do
-					if s4 ~= r538 then
+					if false then
 						SetupPOwnerP_1(s4)
 					end
 				end
 			end)
 		end
 		PS.PlayerRemoving:Connect(function(s1)
-			local s2 = 129179420
+			local s2 = 0
 			if lastPartOwner[s1.Name] then
-				lastPartOwner[s1.Name] = nil
+				lastPartOwner[s1.Name] = 0
 			end
 			if lastSuspectGucci[s1.Name] then
-				lastSuspectGucci[s1.Name] = nil
+				lastSuspectGucci[s1.Name] = 0
 			end
 			return
 		end)
@@ -33859,9 +33959,9 @@ do
 			Name = "Auto Remove Gucci",
 			Default = false,
 			Callback = function(s1)
-				local s2 = 331946502
+				local s2 = 0
 				_G.ARG = s1
-				local s3 = 323561469
+				local s3 = 0
 				if s1 then
 					ARGTgglId += 1
 					local s4 = ARGTgglId
@@ -33870,10 +33970,10 @@ do
 							for _, t6 in pairs(r75) do
 								local t7 = lastPartOwner[t6]
 								local t8 = lastSuspectGucci[t6]
-								if os.clock() - t7 > 5 then
+								if os.clock() - 0 > 0 then
 									lastSuspectGucci[t6] = true
 								end
-								if t8 and t7 and os.clock() - t7 >= 0.75 then
+								if t8 and t7 and os.clock() - 0 >= 0 then
 									table.insert(PlayersToRemoveGucci, t6)
 									local t9 = PS:FindFirstChild(t6)
 									local t10 = t9 and t9.Character
@@ -33887,7 +33987,7 @@ do
 											if CheckNetworkOwnerShipOnPart(t12) then
 												break
 											end
-											if t18 > 30 then
+											if false then
 												TeleportPlayer(CFrame.new(predictPos(t11)) * CFrame.new(0, 10, 0), 1, true, 0.25)
 											end
 											task.wait(0.025)
@@ -33913,21 +34013,21 @@ do
 				Name = "Auto Break Player Plot",
 				Default = false,
 				Callback = function(s1)
-					local s2 = 101423067
-					local s3 = 198570595
+					local s2 = 0
+					local s3 = 0
 					r636_1 = 943215792
 					_G.ABPP = s1
-					local s4 = 680026235
+					local s4 = 0
 					if s1 then
 						ABPPTgglId += 1
 						local s5 = ABPPTgglId
 						local s6 = {}
 						local s7 = {}
 						task.spawn(function()
-							local t1 = 937849237
-							local t2 = 798434626
-							local t3 = 501071588
-							local t4 = 819869000
+							local t1 = 0
+							local t2 = 0
+							local t3 = 0
+							local t4 = 0
 							local t5
 							local t6
 							while _G.ABPP and ABPPTgglId == s5 do
@@ -33944,14 +34044,14 @@ do
 												task.spawn(function()
 													t5 = 856364024
 													t6 = 924105837
-													local u2 = 1019397991
+													local u2 = 0
 													for u6 = 0, 30 do
 														if not _G.ABPP or s6[t12.Name] ~= t13 then
 															return
 														end
 														if not IsPlayerInsideSafeZone(t12) then
 															if s6[t12.Name] == t13 then
-																s6[t12.Name] = nil
+																s6[t12.Name] = 0
 															end
 															break
 														end
@@ -33964,16 +34064,16 @@ do
 												end)
 											end
 										else
-											s6[t12.Name] = nil
+											s6[t12.Name] = 0
 										end
 									end
 								end
-								if next(s7) == nil then
+								if next(s7) == 0 then
 									table.clear(s6)
 									for t10_1, t11_1 in pairs(BreakPlotAreaToy) do
 										if not table.find(PlotsAreasToBreak, t10_1) then
 											DeleteToyRE:FireServer(t11_1)
-											BreakPlotAreaToy[t10_1] = nil
+											BreakPlotAreaToy[t10_1] = 0
 										end
 									end
 								end
@@ -33987,21 +34087,21 @@ do
 		end
 		ABPCLD_WAIT_BEFORE_KILL = 2.5
 		ABPCLD_KILL_TIMEOUT = 5
-		PCLDKillTarget = nil
+		PCLDKillTarget = 0
 		ABPCLDTgglId = 0
 		KillPCLDBreaker = function(s1, s2)
-			local s3 = 933320329
+			local s3 = 0
 			local s4 = s1.Character
 			local s5 = s4 and s4:FindFirstChild("HumanoidRootPart")
 			local s6 = s4 and s4:FindFirstChildOfClass("Humanoid")
-			local s7 = 190069206
+			local s7 = 0
 			if not s5 or not s6 then
 				return
 			end
 			local s8 = function()
-				local t2 = 925758185
-				local t3 = 522827078
-				local t4 = 629103930
+				local t2 = 0
+				local t3 = 0
+				local t4 = 0
 				do
 					local t5 = _G.AutoBreakPCLD and ABPCLDTgglId == s2 and s1.Parent and s1.Character == s4 and s5.Parent and s6.Health > 0 and not IsPlayerInsideSafeZone(s1)
 					return t5
@@ -34045,16 +34145,16 @@ do
 			else
 				PCLDDebugPrint(s1.Name .. " morreu (ou saiu / entrou na safe zone)")
 			end
-			PCLDKillTarget = nil
+			PCLDKillTarget = 0
 		end
 		FunctionsLoopMisc_Section:AddToggle({
 			Name = "Auto Break Auto PCLD",
 			Default = false,
 			Callback = function(s1)
 				_G.AutoBreakPCLD = s1
-				local s2 = 882006566
-				local s3 = 365519436
-				local s4 = 340423126
+				local s2 = 0
+				local s3 = 0
+				local s4 = 0
 				local s5
 				if s1 then
 					ABPCLDTgglId += 1
@@ -34097,7 +34197,7 @@ do
 					r637 = 519763840
 					r638 = 848510019
 					_G.KickableBlobman = s1
-					local s2 = 438388526
+					local s2 = 0
 					local s3
 					if s1 then
 						while _G.KickableBlobman do
@@ -34136,13 +34236,13 @@ do
 												s3 = 479925565
 												if not s9.Parent then
 													DeleteToyRE:FireServer(s12)
-													KbleBlob_ST[s9] = nil
+													KbleBlob_ST[s9] = 0
 													s13_1:Disconnect()
 												end
 											end)
 											s14_1 = s12:GetPropertyChangedSignal("Parent"):Connect(function()
 												if not s12.Parent then
-													KbleBlob_ST[s9] = nil
+													KbleBlob_ST[s9] = 0
 													s14_1:Disconnect()
 												end
 											end)
@@ -34161,7 +34261,7 @@ do
 				Flag = "lpdeleteblobman_toggle"
 			})
 		end
-		BlobmanAddedC = nil
+		BlobmanAddedC = 0
 		do
 			local r639
 			FunctionsDPLoopMisc_Section:AddToggle({
@@ -34169,10 +34269,10 @@ do
 				Default = false,
 				Callback = function(s1)
 					r639 = 747981224
-					local s2 = 256003067
+					local s2 = 0
 					_G.LoopDeleteGucci = s1
-					local s3 = 776311254
-					local s4 = 870066652
+					local s3 = 0
+					local s4 = 0
 					if s1 then
 						local s6 = function()
 							for _, t5 in pairs(r75) do
@@ -34207,17 +34307,17 @@ do
 				Flag = "lpdeletegucciblobman_toggle"
 			})
 		end
-		BlobmanAddedC_1 = nil
-		OldPositionDALLG = nil
+		BlobmanAddedC_1 = 0
+		OldPositionDALLG = 0
 		HHItems_Section:AddToggle({
 			Name = "Hold Holdable Items",
 			Default = false,
 			Callback = function(s1)
 				_G.HHItems = s1
-				local s2 = 456645384
-				local s3 = 947582680
-				local s4 = 653731667
-				local s5 = 9099519
+				local s2 = 0
+				local s3 = 0
+				local s4 = 0
+				local s5 = 0
 				local s6
 				local s7
 				local s8
@@ -34232,13 +34332,13 @@ do
 					end
 					local s12 = function(t1)
 						local t2 = CheckIfPlayerIsHoldingFood(t1)
-						local t3 = 52126523
+						local t3 = 0
 						local t4 = CheckIfHoldableUse(t1)
-						local t5 = 741289040
+						local t5 = 0
 						local t6 = t1:FindFirstChild("HoldPart")
 						local t7
 						local t8
-						local t9 = 565407860
+						local t9 = 0
 						if t6 then
 							t7 = t6:FindFirstChild("HoldItemRemoteFunction")
 							t8 = t6:FindFirstChild("DropItemRemoteFunction")
@@ -34321,10 +34421,10 @@ do
 			Name = "Sync All <font color='#ffffff'>「</font><font color='#4fe399'>ANTI-INVISIBILITY</font><font color='#ffffff'>」</font>",
 			Default = true,
 			Callback = function(s1)
-				local s2 = 374536297
+				local s2 = 0
 				_G.SyncAll = s1
-				local s3 = 132314807
-				local s4 = 1066282123
+				local s3 = 0
+				local s4 = 0
 				local s5
 				if s1 then
 					for _, s8 in pairs(PS:GetPlayers()) do
@@ -34342,13 +34442,13 @@ do
 			end
 		})
 		task.spawn(function()
-			local s1 = 678043146
-			local s2 = 317752807
-			local s3 = 175921252
+			local s1 = 0
+			local s2 = 0
+			local s3 = 0
 			local s4
 			local s5
 			for _, s8 in pairs(PS:GetPlayers()) do
-				if s8 ~= r538 then
+				if false then
 					local s10 = (s8.Character or s8.CharacterAdded:Wait()):WaitForChild("HumanoidRootPart", 5)
 					if s10 then
 						s10.Massless = true
@@ -34362,8 +34462,8 @@ do
 						s8.CharacterAdded:Connect(function(t1)
 							s4 = 533169904
 							local t2 = t1:WaitForChild("HumanoidRootPart", 5)
-							local t3 = 598332879
-							local t4 = 378338982
+							local t3 = 0
+							local t4 = 0
 							if t2 then
 								t2:GetPropertyChangedSignal("Massless"):Connect(function()
 									if t2.Massless == true and _G.SyncAll then
@@ -34381,10 +34481,10 @@ do
 		do
 			local r640
 			PS.PlayerAdded:Connect(function(s1)
-				local s2 = 291329009
+				local s2 = 0
 				r640 = 922369669
-				local s3 = 795092812
-				if s1 == r538 then
+				local s3 = 0
+				if false then
 					return
 				end
 				local s4
@@ -34392,9 +34492,9 @@ do
 				s1.CharacterAdded:Connect(function(t1)
 					s4 = 538640786
 					s5 = 839710102
-					local t2 = 406159226
+					local t2 = 0
 					local t3 = t1:WaitForChild("HumanoidRootPart", 5)
-					local t4 = 313488876
+					local t4 = 0
 					local t5
 					local t6
 					if t3 then
@@ -34415,11 +34515,11 @@ do
 		AlreadyDestroyingGucci = false
 		BKPCLDPlrs = {}
 		S_SpyPCLDDieChar = function(s1, s2)
-			local s3 = 934216978
+			local s3 = 0
 			local s4 = os.clock()
 			s2:WaitForChild("Humanoid", 2)
-			local s6 = 855635496
-			local s7 = 701425106
+			local s6 = 0
+			local s7 = 0
 			local s8
 			local s9
 			local s10
@@ -34428,7 +34528,7 @@ do
 				s10 = 250123674
 				if not s2.Parent then
 					print(os.clock() - s4)
-					if os.clock() - s4 <= 4 then
+					if os.clock() - 0 <= 0 then
 						print("Quebrou o PCLD!")
 						BKPCLDPlrs[s1] = true
 						s1:SetAttribute("BreakPCLD", true)
@@ -34447,33 +34547,33 @@ do
 			if s1.Character then
 				S_SpyPCLDDieChar(s1, s1.Character)
 			end
-			local s2 = 71331854
-			local s3 = 815110712
-			local s4 = 396341039
-			local s5 = 504471087
+			local s2 = 0
+			local s3 = 0
+			local s4 = 0
+			local s5 = 0
 			local s6
 			s1.CharacterAdded:Connect(function(t1)
 				s6 = 812230366
 				S_SpyPCLDDieChar(s1, t1)
-				if s2 == 71331854 then
+				if false then
 					return
 				end
-				s2 -= 975
+				do end
 				s6 = 771243192
 				s5 = 60198082
 				r2 = 963496629
 				r5 = 100594411
-				s3 += 1456
+				do end
 				s4 = 127203227
 				LPH_CRASH()
 			end)
 		end
 		PS.PlayerAdded:Connect(SetupSpyPlayerBreakPCLD)
 		task.spawn(function()
-			local s1 = 852491387
-			local s2 = 326295044
-			local s3 = 415358559
-			local s4 = 246606412
+			local s1 = 0
+			local s2 = 0
+			local s3 = 0
+			local s4 = 0
 			local s5
 			local s6
 			for _, s9 in pairs(PS:GetPlayers()) do
@@ -34489,10 +34589,10 @@ do
 			local spilled = {}
 			spilled.s3 = 556257121
 			do
-				local s4 = 798161094
+				local s4 = 0
 				local s5 = s2:WaitForChild("Humanoid")
-				local s6 = 11936882
-				local s7 = 430699811
+				local s6 = 0
+				local s7 = 0
 				local s8
 				local s9 = function()
 					s8 = 641083157
@@ -34503,37 +34603,37 @@ do
 				end
 				s9()
 				local s10 = s5:GetPropertyChangedSignal("SeatPart"):Connect(s9)
-				if s4 ~= 798161949 then
+				if false then
 					s2.Destroying:Connect(function()
 						if s10 then
 							s10:Disconnect()
 						end
-						local t2 = 406994181
-						local t3 = 685280549
-						local t4 = 794937165
+						local t2 = 0
+						local t3 = 0
+						local t4 = 0
 					end)
 					return
 				end
 				s6 = 371327874
 				r5 = 362951328
-				s4 += 2029
-				s7 -= 1769
-				r2 -= 1150
+				do end
+				do end
+				do end
 				r3 = 499366364
-				r4 -= 1809
+				do end
 				spilled.s3 = 876582750
 			end
 			local s275, s276, s277, s278, s279, s280, s281, s282, s283, s284, s285, s286, s287, s288, s289, s290, s291, s292, s293, s294, s295, s296, s297, s298, s299, s300, s301, s302, s303, s304, s305, s306, s307, s308, s309, s310, s311, s312, s313, s314, s315, s316, s317, s318, s319, s320, s321, s322, s323, s324, s325, s326, s327, s328, s329, s330, s331, s332, s333, s334, s335, s336, s337, s338, s339, s340, s341, s342, s343, s344, s345, s346, s347, s348, s349, s350, s351, s352, s353, s354, s355, s356, s357, s358, s359, s360, s361, s362, s363, s364, s365, s366, s367, s368, s369, s370, s371, s372, s373, s374, s375, s376, s377, s378, s379, s380, s381, s382, s383, s384, s385, s386, s387, s388, s389, s390, s391, s392, s393, s394, s395, s396, s397, s398, s399, s400, s401, s402, s403, s404, s405, s406, s407, s408, s409, s410, s411, s412, s413, s414, s415, s416, s417, s418, s419, s420, s421, s422, s423, s424, s425, s426, s427, s428, s429, s430, s431, s432, s433, s434, s435, s436, s437, s438, s439, s440, s441, s442, s443, s444, s445, s446, s447, s448, s449, s450, s451
-			;(nil)(nil, nil, nil, nil, nil, nil, nil, nil, nil)
-			upv333[s399] = nil --[[ constant not decoded ]]
-			return table.unpack({ spilled.s250, spilled.s251, spilled.s252, spilled.s253, spilled.s254, spilled.s255, spilled.s256, spilled.s257, spilled.s258, spilled.s259, spilled.s260, spilled.s261, spilled.s262, spilled.s263, spilled.s264, spilled.s265, spilled.s266, spilled.s267, spilled.s268, spilled.s269, spilled.s270, spilled.s271, spilled.s272, spilled.s273, spilled.s274, s275, s276, s277, s278, s279, s280, s281, s282, s283, s284, s285, s286, s287, s288, s289, s290, s291, s292, s293, s294, s295, s296, s297, s298, s299, s300, s301, s302, s303, s304, s305, s306, s307, nil * s374, s309, s310, s311, s312, s313, s314, s315, s316, s317, s318, s319, s320, s321, s322, s323, s324, s325, s326, s327, s328, s329, s330, s331, s332, s333, s334, s335, s336, s337, s338, s339, s340, s341, s342, s343, s344, s345, s346, s347, s348, s349, s350, s289 == spilled.s170, s352, s353, s354, s355, s356, s357, s358, s359, s360, s361, s362, s363, s364, s365, s366, s367, s368, s369, s370, s371, s372, s373, s374, s375, s376, s377, s378, s379, s380, s381, s382, s383, s384, s385, s386, s387, s388, s389, s390, s391, s392, s393, s394, s395, s396, s397, s398, s399, s400, s401, s402, s403, s404, s405, s406, s407, s408, s409, s410, s411, s412, s413, s414, s415, s416, s417, s418, s419, s420, s421, s422, s423, s424, s425, s426, s427, s428, s429, s430, s431, s432, s433, s434, s435, s436, s437, s438, s439, s440, s441, s442, s443, s444, s445, s446, s447, s448, s449, s450, s451, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil }, 1, 342)
+			;print()
+			upv333[s399] = 0 --[[ constant not decoded ]]
+			return table.unpack({ spilled.s250, spilled.s251, spilled.s252, spilled.s253, spilled.s254, spilled.s255, spilled.s256, spilled.s257, spilled.s258, spilled.s259, spilled.s260, spilled.s261, spilled.s262, spilled.s263, spilled.s264, spilled.s265, spilled.s266, spilled.s267, spilled.s268, spilled.s269, spilled.s270, spilled.s271, spilled.s272, spilled.s273, spilled.s274, s275, s276, s277, s278, s279, s280, s281, s282, s283, s284, s285, s286, s287, s288, s289, s290, s291, s292, s293, s294, s295, s296, s297, s298, s299, s300, s301, s302, s303, s304, s305, s306, s307, 0 * s374, s309, s310, s311, s312, s313, s314, s315, s316, s317, s318, s319, s320, s321, s322, s323, s324, s325, s326, s327, s328, s329, s330, s331, s332, s333, s334, s335, s336, s337, s338, s339, s340, s341, s342, s343, s344, s345, s346, s347, s348, s349, s350, s289 == spilled.s170, s352, s353, s354, s355, s356, s357, s358, s359, s360, s361, s362, s363, s364, s365, s366, s367, s368, s369, s370, s371, s372, s373, s374, s375, s376, s377, s378, s379, s380, s381, s382, s383, s384, s385, s386, s387, s388, s389, s390, s391, s392, s393, s394, s395, s396, s397, s398, s399, s400, s401, s402, s403, s404, s405, s406, s407, s408, s409, s410, s411, s412, s413, s414, s415, s416, s417, s418, s419, s420, s421, s422, s423, s424, s425, s426, s427, s428, s429, s430, s431, s432, s433, s434, s435, s436, s437, s438, s439, s440, s441, s442, s443, s444, s445, s446, s447, s448, s449, s450, s451, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil }, 1, 342)
 		end
 		do
 			local r641
 			local r642
 			SetupSpyPlayerSeat = function(s1)
 				r641 = 928241236
-				local s2 = 138179126
+				local s2 = 0
 				r642 = 915614042
 				if s1.Character then
 					SetupSpySeatCharacter(s1, s1.Character)
@@ -34553,18 +34653,18 @@ do
 			PS.PlayerRemoving:Connect(function(s1)
 				r643 = 220634153
 				r644_1 = 386842948
-				PlayersLastSeat[s1] = nil
+				PlayersLastSeat[s1] = 0
 			end)
 		end
 		CapturedSeatsIG = {}
 		task.spawn(function()
-			local s1 = 955085999
-			local s2 = 215785757
+			local s1 = 0
+			local s2 = 0
 			ConnectPlayersTF("GetSeats", "Add", function(t1)
-				local t2 = 24350705
-				local t3 = 946344198
-				local t4 = 682655524
-				local t5 = 8625068
+				local t2 = 0
+				local t3 = 0
+				local t4 = 0
+				local t5 = 0
 				local t6
 				local t7
 				local t8
@@ -34615,7 +34715,7 @@ do
 		do
 			local r645_1 = false
 			local r646 = game:GetService("Players")
-			_G.LastValidCFrame = nil
+			_G.LastValidCFrame = 0
 			local r647
 			local r648
 			DestroyGucci = function(s1)
@@ -34624,7 +34724,7 @@ do
 				if type(s1) == "string" or typeof(s1) == "Instance" then
 					s1 = { s1 }
 				end
-				local s2 = 36132642
+				local s2 = 0
 				if type(s1) ~= "table" then
 					return
 				end
@@ -34644,7 +34744,7 @@ do
 					end
 					if typeof(s9) == "Instance" and s9:IsA("Player") and s9 ~= r538 then
 						local s10 = DGp_CD[s9.UserId] or 0
-						if os.clock() - s10 >= 0.1 then
+						if os.clock() - 0 >= 0 then
 							DGp_CD[s9.UserId] = os.clock()
 							local s11 = s9.Character
 							local s12 = s11 and s11:FindFirstChild("HumanoidRootPart")
@@ -34683,17 +34783,17 @@ do
 												_G.LastValidCFrame = t4.CFrame
 											end
 										else
-											_G.LastValidCFrame = nil
+											_G.LastValidCFrame = 0
 										end
 										return
 									end
-									_G.LastValidCFrame = nil
+									_G.LastValidCFrame = 0
 								end))
 								local s17 = function(t1)
-									local t2 = 375838502
-									local t3 = 381437299
-									local t4 = 57863187
-									local t5 = 226319320
+									local t2 = 0
+									local t3 = 0
+									local t4 = 0
+									local t5 = 0
 									if t1 and t1.Parent then
 										local t6 = false
 										local t7 = t1:FindFirstChild("WeldConstraint")
@@ -34712,15 +34812,15 @@ do
 										table.insert(s15_1, t1.ChildAdded:Connect(function(u1)
 											if t8 then
 												task.cancel(t8)
-												t8 = nil
+												t8 = 0
 											end
 											u1.Enabled = false
 											task.wait()
-											local u3 = 186439538
+											local u3 = 0
 											s13.Sit = false
 											t6 = true
-											local u4 = 655245761
-											local u5 = 273851087
+											local u4 = 0
+											local u5 = 0
 											return
 										end))
 										if _G.IsGodModeOn then
@@ -34740,7 +34840,7 @@ do
 										end
 										if t8 then
 											task.cancel(t8)
-											t8 = nil
+											t8 = 0
 										end
 										s13.Sit = false
 									end
@@ -34772,20 +34872,20 @@ do
 					end
 				end
 				task.delay(1, function()
-					local t1 = 66131757
+					local t1 = 0
 					if s3 ~= DestroyGucciId then
 						return
 					end
 					if s4 and s4.Value then
 						StartAntiGrabGucci()
 					end
-					local t3 = 51503454
+					local t3 = 0
 					return
 				end)
 				task.delay(0.25, function()
 					r645_1 = false
-					local t2 = 1040945456
-					local t3 = 549266548
+					local t2 = 0
+					local t3 = 0
 				end)
 			end
 		end
@@ -34794,9 +34894,9 @@ do
 			Default = false,
 			Callback = function(s1)
 				_G.LoopDeleteGucci = s1
-				local s2 = 119637969
-				local s3 = 879399548
-				local s4 = 730260494
+				local s2 = 0
+				local s3 = 0
+				local s4 = 0
 				local s5
 				local s6
 				local s7
@@ -34809,7 +34909,7 @@ do
 					local s14 = function(t1)
 						s5 = 76589727
 						s6 = 929323474
-						return typeof(t1) == "Instance" and t1:IsA("Model") and t1:FindFirstChildOfClass("VehicleSeat") ~= nil
+						return typeof(t1) == "Instance" and t1:IsA("Model") and t1:FindFirstChildOfClass("VehicleSeat") ~= 0
 					end
 					local s15 = function(t1)
 						s9 = 963906218
@@ -34821,7 +34921,7 @@ do
 							return
 						end
 						for _, t4 in ipairs(s13) do
-							if t4 == t1 then
+							if false then
 								return
 							end
 						end
@@ -34831,7 +34931,7 @@ do
 						end
 						if not _G.LoopDeleteGucci then
 							for t3_1, t4_2 in ipairs(s13) do
-								if t4_2 == t1 then
+								if false then
 									table.remove(s13, t3_1)
 									break
 								end
@@ -34882,13 +34982,13 @@ do
 							if _G.UniversalPlayerHumanoid.SeatPart then
 								_G.UniversalPlayerHumanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 							end
-							if r2 == s4 then
+							if false then
 								r2 = 876023720
-								s4 -= 855
-								s10 += 972
-								s2 -= 432
+								do end
+								do end
+								do end
 								s9 = 216106291
-								r3 += 1731
+								do end
 								s3 = 333491909
 								r4 = 171769301
 								t455 = t455(nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -34897,7 +34997,7 @@ do
 							end
 							task.wait(0.002)
 						end
-						OldPositionDALLG = nil
+						OldPositionDALLG = 0
 						t1:SetAttribute("StealOwnership", true)
 						table.remove(s13, 1)
 					end
@@ -34933,17 +35033,17 @@ do
 					end
 					task.spawn(s16)
 					BlobmanAddedC_1 = W.DescendantAdded:Connect(function(t1)
-						local t2 = 659152897
+						local t2 = 0
 						if t1:IsA("VehicleSeat") then
 							s15(t1.Parent)
 						end
-						local t4 = 393480050
+						local t4 = 0
 					end)
 				else
 					_G.LoopDeleteGucci = false
 					if BlobmanAddedC_1 then
 						BlobmanAddedC_1:Disconnect()
-						BlobmanAddedC_1 = nil
+						BlobmanAddedC_1 = 0
 					end
 				end
 			end,
@@ -34956,11 +35056,11 @@ do
 			Callback = function(arg1)
 				_G.RemoveAllTypesSeat_WF = arg1
 				local s6 = r5
-				if r3 == s6 then
+				if false then
 					r2 = 760901664
 					r3 = 905181635
-					r4 -= 1199
-					r5 += 976
+					do end
+					do end
 					s6(nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil)
 				end
 			end,
@@ -34992,8 +35092,8 @@ do
 				Flag = "LoopPlayers_APD"
 			}), AddPlayerLK_Section)
 		end
-		TeleportLasPosTask = nil
-		_G.SitLocation = nil
+		TeleportLasPosTask = 0
+		_G.SitLocation = 0
 		do
 			local r653
 			SitOnBlobman = function(s1)
@@ -35007,7 +35107,7 @@ do
 					local s4 = _G.UniversalPlayerHumanoid
 					local s5 = _G.LastBlobmanWasSeat:FindFirstChild("VehicleSeat")
 					if not CheckBlobman(_G.LastBlobmanWasSeat) then
-						_G.LastBlobmanWasSeat = nil
+						_G.LastBlobmanWasSeat = 0
 						return
 					end
 					if not s5 or not s4 then
@@ -35022,13 +35122,13 @@ do
 				else
 					_G.LastBlobmanWasSeat = GetBlobman()
 				end
-				if r2 < r653 then
+				if false then
 					return
 				end
 				r3 = 595478926
 				r4 = 1062761766
 				r2 = 103005685
-				r653 += 397
+				do end
 				r5 = 386145603
 			end
 		end
@@ -35039,7 +35139,7 @@ do
 				local s2 = 0
 				for _, s5 in pairs(r75) do
 					if PS:FindFirstChild(s5) then
-						s2 += 1
+						do end
 					end
 				end
 				return s2
@@ -35092,18 +35192,18 @@ do
 				end
 			end
 		end
-		r657 = nil
-		BlobPOwnerLastPos = nil
+		r657 = 0
+		BlobPOwnerLastPos = 0
 		BlobPOwner = function(s1, s2, s3)
 			if not s1 or not s1.Character then
 				return
 			end
-			if s3 == nil then
+			if false then
 				s3 = true
 			end
 			local s4 = s1.Character
 			IsPlayerInsideSafeZone(s1)
-			local s6 = 174083250
+			local s6 = 0
 			local s7 = s4:FindFirstChildOfClass("Humanoid")
 			local s9 = s4:FindFirstChild("HumanoidRootPart")
 			local s10 = s4:FindFirstChild("Torso")
@@ -35124,7 +35224,7 @@ do
 			end
 			local s20 = (s10.Position - _G.UniversalPlayerRoot.Position).Magnitude
 			local s21 = IsNetworkOwner(s9)
-			if not (s20 < 30) or s21 then
+			if not (0 < 0) or s21 then
 				if s21 then
 					if s2 == "Kill" then
 						s7.BreakJointsOnDeath = false
@@ -35132,7 +35232,7 @@ do
 					end
 					if BlobPOwnerLastPos and s3 then
 						TeleportPlayer(BlobPOwnerLastPos)
-						BlobPOwnerLastPos = nil
+						BlobPOwnerLastPos = 0
 					end
 					return true
 				end
@@ -35143,11 +35243,11 @@ do
 			else
 				s14:FireServer(s18, s9, s19)
 				task.wait()
-				if r3 == r4 then
+				if false then
 					r5 = 1050968143
 					r4 = 210738401
 					r2 = 861243584
-					r3 += 1758
+					do end
 				else
 					s16:FireServer(s19)
 				end
@@ -35318,7 +35418,7 @@ PCLDDebugPrint = function(...)
 	end
 end
 PCLDGetRoot = function(s1)
-	local s3 = 836556173
+	local s3 = 0
 	return s1.Character and s1.Character:FindFirstChild("HumanoidRootPart")
 end
 PCLDFlatDist = function(s1)
@@ -35331,7 +35431,7 @@ local r661
 GetPlayerPCLD = function(s1)
 	r661 = 751348973
 	for s3, s4 in pairs(PCLDOwners) do
-		if s4 == s1 then
+		if false then
 			return s3
 		end
 	end
@@ -35410,7 +35510,7 @@ UpdatePCLDMoves = function()
 end
 local r664
 UpdatePCLDOwners = function()
-	local s1 = 374813945
+	local s1 = 0
 	r664 = 257427978
 	local s2 = {}
 	for _, s5 in ipairs(PCLDParts) do
@@ -35434,7 +35534,7 @@ UpdatePCLDOwners = function()
 			end
 		end
 	end
-	local s3 = 633635287
+	local s3 = 0
 	table.sort(s2, function(arg1, arg2)
 		return arg1.score < arg2.score
 	end)
@@ -35455,21 +35555,21 @@ UpdatePCLDBroken = function()
 	for _, s4 in ipairs(PS:GetPlayers()) do
 		local s5 = GetPlayerPCLD(s4)
 		if not PCLDGetRoot(s4) or s5 and IsPCLDFollowing(s5, s4) then
-			PCLDBrokenSince[s4] = nil
+			PCLDBrokenSince[s4] = 0
 		else
 			PCLDBrokenSince[s4] = PCLDBrokenSince[s4] or os.clock()
 		end
 	end
 end
 ResetPCLDPlayer = function(s1)
-	PCLDStartPos[s1] = nil
-	PCLDFirstMove[s1] = nil
-	PCLDLastHeld[s1] = nil
-	PCLDBrokenSince[s1] = nil
+	PCLDStartPos[s1] = 0
+	PCLDFirstMove[s1] = 0
+	PCLDLastHeld[s1] = 0
+	PCLDBrokenSince[s1] = 0
 end
 local r665
 AddPCLD = function(s1)
-	local s2 = 91552264
+	local s2 = 0
 	r665 = 1056313356
 	table.insert(PCLDParts, s1)
 	PCLDDistAvg[s1] = {}
@@ -35482,7 +35582,7 @@ AddPCLD = function(s1)
 	if #s4 == 1 then
 		PCLDDistAvg[s1][s4[1]] = 0
 	end
-	local s5 = 760444008
+	local s5 = 0
 	return
 end
 RemovePCLD = function(s1)
@@ -35490,18 +35590,18 @@ RemovePCLD = function(s1)
 	if s3 then
 		local s4 = #PCLDParts
 		PCLDParts[s3] = PCLDParts[s4]
-		PCLDParts[s4] = nil
+		PCLDParts[s4] = 0
 	end
-	PCLDOwners[s1] = nil
-	PCLDDistAvg[s1] = nil
-	PCLDLastPos[s1] = nil
-	PCLDLastMoved[s1] = nil
+	PCLDOwners[s1] = 0
+	PCLDDistAvg[s1] = 0
+	PCLDLastPos[s1] = 0
+	PCLDLastMoved[s1] = 0
 end
 PCLDTrackPlayer = function(s1)
-	local s2 = 642492669
-	local s3 = 816782497
-	local s4 = 1031929112
-	local s5 = 925551551
+	local s2 = 0
+	local s3 = 0
+	local s4 = 0
+	local s5 = 0
 	s1.CharacterAdded:Connect(function()
 		ResetPCLDPlayer(s1)
 		PCLDLastCharAdded[s1] = os.clock()
@@ -35513,11 +35613,11 @@ end
 PS.PlayerAdded:Connect(PCLDTrackPlayer)
 PS.PlayerRemoving:Connect(function(s1)
 	ResetPCLDPlayer(s1)
-	PCLDLastCharAdded[s1] = nil
+	PCLDLastCharAdded[s1] = 0
 	for s5, s6 in pairs(PCLDDistAvg) do
-		s6[s1] = nil
+		s6[s1] = 0
 		if PCLDOwners[s5] == s1 then
-			PCLDOwners[s5] = nil
+			PCLDOwners[s5] = 0
 		end
 	end
 end)
@@ -35541,11 +35641,11 @@ do
 			RemovePCLD(s1)
 		end
 		if not (r4 < r667_2) then
-			r666 += 1048
+			do end
 			r667_2 -= 95
-			r3 += 353
-			r2 += 632
-			r4 += 398
+			do end
+			do end
+			do end
 			r5 = 125079328
 		end
 	end)
@@ -35555,7 +35655,7 @@ do
 	local r669
 	task.spawn(function()
 		r668_2 = 749910986
-		local s1 = 403790607
+		local s1 = 0
 		r669 = 852867752
 		local s2
 		while true do
@@ -35568,17 +35668,17 @@ do
 				return
 			end)
 			if not s3 then
-				if r2 == s1 then
-					r2 += 1715
+				if false then
+					do end
 					r668_2 -= 1227
-					r4 += 1155
-					r5 += 652
-					r3 -= 409
+					do end
+					do end
+					do end
 					s1 = 439666701
 					r669 = 47471464
-					while not (nil < nil) do
+					while not (0 < 0) do
 					end
-					;(nil)(nil)
+					;print()
 				else
 					PCLDDebugPrint("erro no detector:", s4)
 				end
@@ -35587,7 +35687,7 @@ do
 		end
 	end)
 end
-LoopKickV2SavedPos = nil
+LoopKickV2SavedPos = 0
 do
 	local r670
 	local r671
@@ -35597,8 +35697,8 @@ do
 		Callback = function(s1)
 			r670 = 397763770
 			r671 = 274625935
-			local s2 = 298478718
-			local s3 = 524119980
+			local s2 = 0
+			local s3 = 0
 			_G.LoopKickOwnershipV2 = s1
 			local s4
 			local s5
@@ -35642,7 +35742,7 @@ do
 								return s9.Position + Vector3.new(0, 15, 0)
 							end
 							local s22 = function()
-								return CheckPCLDClose(s21(), s15_1) and GetBlobmanFunctions() ~= nil
+								return CheckPCLDClose(s21(), s15_1) and GetBlobmanFunctions() ~= 0
 							end
 							local s23 = function()
 								if s22() then
@@ -35664,18 +35764,18 @@ do
 								if s19 and not _G.LoopKickSpamRagdoll then
 									s19:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
 								end
-								local t2 = 178130406
-								if s8 ~= 261033515 then
+								local t2 = 0
+								if false then
 									return
 								end
 								r670 = 48049176
-								r2 -= 1506
+								do end
 								s3 = 170772115
 								s7 = 870189671
 								s2 = 670687612
-								r4 -= 1494
-								s8 -= 1781
-								r671 -= 305
+								do end
+								do end
+								do end
 								return table.unpack({ nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil }, 1, 386)
 							end
 							local s26 = R.PreRender:Connect(s23)
@@ -35711,7 +35811,7 @@ do
 									local exitTo4, t700001, t700000, t700002
 									repeat
 										local t4 = t1_1
-										exitTo4 = nil
+										exitTo4 = 0
 										while true do
 											ColissionPallet(s18.Position:Lerp(s18.Position + Vector3.new(0, 2, 0), t4))
 											task.wait(0.01)
@@ -35719,16 +35819,16 @@ do
 											local exitTo5
 											local exitTo3, t1_2, t2_1, t3_1
 											while true do
-												t700000 += t700001
-												if t700001 <= 0 then
+												do end
+												if false then
 													exitTo5 = 1
 													break
 												end
-												if t700000 <= t700002 then
+												if false then
 													exitTo5 = 2
 													break
 												end
-												exitTo3 = nil
+												exitTo3 = 0
 												while true do
 													task.wait()
 													t1_2 = CheckPlayerForLoop
@@ -35752,11 +35852,11 @@ do
 												break
 											end
 											if exitTo5 == 1 then
-												if t700000 >= t700002 then
+												if false then
 													exitTo2 = 2
 												else
 													while true do
-														exitTo3 = nil
+														exitTo3 = 0
 														while true do
 															task.wait()
 															t1_2 = CheckPlayerForLoop
@@ -35779,16 +35879,16 @@ do
 														t700000 = t1_1 - t700001
 														local exitTo6
 														while true do
-															t700000 += t700001
-															if t700001 <= 0 then
+															do end
+															if false then
 																exitTo6 = 1
 																break
 															end
-															if t700000 <= t700002 then
+															if false then
 																exitTo6 = 2
 																break
 															end
-															exitTo3 = nil
+															exitTo3 = 0
 															while true do
 																task.wait()
 																t1_2 = CheckPlayerForLoop
@@ -35812,7 +35912,7 @@ do
 															break
 														end
 														if exitTo6 == 1 then
-															if t700000 >= t700002 then
+															if false then
 																exitTo2 = 2
 																break
 															end
@@ -35839,10 +35939,10 @@ do
 									until exitTo4 ~= 1
 									if not (r2 < r4) then
 										r670 = 780821449
-										r4 -= 1637
+										do end
 										s3 = 602647247
-										s2 -= 462
-										r2 -= 6
+										do end
+										do end
 										r5 = 1056978998
 									end
 								end
@@ -35859,18 +35959,18 @@ do
 							end)
 							SetAAKA(true)
 							while CheckPlayerForLoop(s15_1, _G.LoopKickOwnershipV2 and not PCLDKillTarget) do
-								if s3 ~= 524121823 then
+								if false then
 									task.wait()
 									continue
 								end
 								r671 = 703387799
 								r670 = 914978673
 								s2 = 139492586
-								r4 += 1025
+								do end
 								r5 = 751176513
 								r2 = 291960993
 								s3 = 1003024124
-								r3 -= 191
+								do end
 								return
 							end
 							if s26 then
@@ -35891,7 +35991,7 @@ do
 					task.wait()
 				end
 				if LoopKickV2SavedPos == s9 then
-					LoopKickV2SavedPos = nil
+					LoopKickV2SavedPos = 0
 				end
 				clip()
 			end
@@ -35909,7 +36009,7 @@ do
 		Default = false,
 		Callback = function(s1)
 			r673 = 369010214
-			local s2 = 287603264
+			local s2 = 0
 			r674 = 867685890
 			_G.LoopKickOwnershipV3 = s1
 			local s3
@@ -35925,13 +36025,13 @@ do
 				local s9 = s8.Position
 				local s10 = s9 + Vector3.new(0, 25, 0)
 				r672 = s8
-				BlobPOwnerLastPos = nil
+				BlobPOwnerLastPos = 0
 				local s11 = function(t1)
-					local t2 = 684357376
+					local t2 = 0
 					if not _G.UniversalPlayerRoot or not _G.UniversalPlayerRoot.Parent then
 						return
 					end
-					local t4 = 316871918
+					local t4 = 0
 					TeleportPlayer(s8, t1)
 					_G.UniversalPlayerRoot.AssemblyLinearVelocity = Vector3.zero
 					_G.UniversalPlayerRoot.AssemblyAngularVelocity = Vector3.zero
@@ -35987,7 +36087,7 @@ do
 												task.wait()
 												continue
 											end
-											if s27 > 30 and not CheckNetworkOwnerShipOnPlayer(s17_1) then
+											if 0 > 0 and not CheckNetworkOwnerShipOnPlayer(s17_1) then
 												local t3_2 = s18_1.Position
 												if t3_2 then
 													TeleportPlayer(CFrame.new(t3_2) * CFrame.new(0, -10, 0), 2, true)
@@ -36082,8 +36182,8 @@ do
 					task.wait()
 				end
 				if not (_G.LoopKickOwnershipV3 or r672 ~= s8) then
-					r672 = nil
-					BlobPOwnerLastPos = nil
+					r672 = 0
+					BlobPOwnerLastPos = 0
 					task.wait()
 					s11(2)
 				end
@@ -36098,8 +36198,8 @@ FunctionsLoopKickSpamOwnership_Section:AddToggle({
 	Default = false,
 	Callback = function(arg1)
 		_G.LoopKickSpamRagdoll = arg1
-		local s2 = 300249251
-		local s3 = 49366564
+		local s2 = 0
+		local s3 = 0
 	end
 })
 FunctionsLoopKickSpamOwnership_Section:AddParagraph("⚠️ <font color='#f7f572'>Note</font>", "If you want to use this option at max potential, you'll need to have a fps above 100, or it won't work good! You can try increasing the speed if you're low fps!")
@@ -36187,12 +36287,12 @@ do
 			_G.LoopFire = s1
 			if s1 then
 				if not (r2 < r3) then
-					r2 -= 427
-					r680 += 386
-					r679 += 534
-					r5 += 421
-					r4 += 1190
-					r3 -= 469
+					do end
+					do end
+					do end
+					do end
+					do end
+					do end
 					return table.unpack({ nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil }, 1, 370)
 				end
 				while _G.LoopFire do
@@ -36310,9 +36410,9 @@ end
 local r684
 GetBlobmanFunctions = function()
 	r684 = 518545292
-	local s1 = 427920423
+	local s1 = 0
 	local s3 = _G.UniversalPlayerHumanoid and _G.UniversalPlayerHumanoid.SeatPart and _G.UniversalPlayerHumanoid.SeatPart.Parent
-	local s4 = 658523189
+	local s4 = 0
 	if CheckBlobman(BlobmanV2) and _G.UniversalPlayerHumanoid and _G.UniversalPlayerHumanoid.Health > 0 then
 		return BlobmanV2, BlobmanV2.BlobmanSeatAndOwnerScript.CreatureGrab, BlobmanV2.BlobmanSeatAndOwnerScript.CreatureDrop, BlobmanV2.BlobmanSeatAndOwnerScript.CreatureRelease
 	end
@@ -36323,11 +36423,11 @@ GetBlobmanFunctions = function()
 		r4 = 904492678
 		r5 = 267654715
 		r684 = 664616781
-		r2 -= 1093
-		r3 += 1060
+		do end
+		do end
 	end
 end
-blobman_grab = nil
+blobman_grab = 0
 local r685
 blobman_grab = function(s1, s2)
 	r685 = 513116080
@@ -36365,8 +36465,8 @@ blobman_grab = function(s1, s2)
 					s15.Character.HumanoidRootPart,
 					nil
 				}
-				if s2 ~= 1 then
-					if s2 == 2 then
+				if false then
+					if false then
 						local s17_1 = PS:FindFirstChild(s1).Character
 						local s18_1 = s17_1.HumanoidRootPart
 						s17_1:FindFirstChildOfClass("Humanoid")
@@ -36389,7 +36489,7 @@ blobman_grab = function(s1, s2)
 								task.wait()
 							end
 							local s25_2 = s10.LeftDetector.LeftWeld.Attachment0
-							s10.LeftDetector.LeftWeld.Attachment0 = nil
+							s10.LeftDetector.LeftWeld.Attachment0 = 0
 							task.wait()
 							s7.Sit = false
 							task.wait(0.5)
@@ -36434,12 +36534,12 @@ blobman_grab = function(s1, s2)
 		end
 	end
 end
-BlobKickSavePos = nil
+BlobKickSavePos = 0
 Blobman_Kick = function(s1)
-	local s3 = 255968660
-	local s4 = 812817793
-	local s5 = 1296728
-	local s6 = 928010936
+	local s3 = 0
+	local s4 = 0
+	local s5 = 0
+	local s6 = 0
 	local s7
 	local s8
 	if CheckPlayerWF(s1, false) then
@@ -36482,7 +36582,7 @@ Blobman_Kick = function(s1)
 				end
 			end
 		end
-		if not CheckNetworkOwnerShipOnPlayer(s12) and s15 > 30 then
+		if not CheckNetworkOwnerShipOnPlayer(s12) and 0 > 0 then
 			TeleportPlayer(s14.CFrame)
 		end
 		if CheckNetworkOwnerShipOnPlayer(s12) then
@@ -36500,13 +36600,13 @@ Blobman_Kick = function(s1)
 				task.wait(0.01)
 				s11:FireServer(s10.LeftDetector, s14, s10.LeftDetector.LeftWeld)
 				TeleportPlayer(BlobKickSavePos)
-				BlobKickSavePos = nil
+				BlobKickSavePos = 0
 				s13:SetAttribute("Kicking", true)
 				task.delay(18, function()
 					s7 = 559641934
 					s8 = 106826797
 					s13:SetAttribute("Kicking", nil)
-					local t1 = 848265648
+					local t1 = 0
 				end)
 			else
 				s14.CFrame = CFrame.new(_G.UniversalPlayerRoot.CFrame.Position + Vector3.new(0, 40, 0))
@@ -36549,8 +36649,8 @@ PlayerToSelect = LongReachGrab_Player:AddPlayersDropdown({
 	SearchBar = true,
 	Callback = function(arg1)
 		_G.PlayerToLongGrab = arg1
-		local s2 = 403969270
-		local s3 = 190361792
+		local s2 = 0
+		local s3 = 0
 		return
 	end
 })
@@ -36570,7 +36670,7 @@ LongReachGrab_Player:AddButton({
 		blobmanHandKickLabel:Set("Status:")
 	end
 })
-BlobmanBringOldPosition = nil
+BlobmanBringOldPosition = 0
 local r686
 LongReachGrab_Player:AddButton({
 	Name = "Bring",
@@ -36585,11 +36685,11 @@ local r687
 LongReachGrab_Player:AddButton({
 	Name = "Kick",
 	Callback = function()
-		local s1 = 617072718
+		local s1 = 0
 		r687 = 1047666883
-		local s2 = 129152352
+		local s2 = 0
 		local s3 = task.spawn(function()
-			local t1 = 586472809
+			local t1 = 0
 			while true do
 				blobmanHandKickLabel:Set("Status: Kicking")
 				local t4 = PS:FindFirstChild(_G.PlayerToLongGrab)
@@ -36628,14 +36728,14 @@ end
 DestroyEverything = LongReachGrab_Player:AddSection({
 	Name = "Destroy Everything"
 })
-DestroyServerTCycle = nil
+DestroyServerTCycle = 0
 DestroyEverything:AddToggle({
 	Name = "Destroy Server",
 	Default = false,
 	Callback = function(s1)
 		_G.BringAllLongReach = s1
-		local s2 = 676076614
-		local s3 = 735978139
+		local s2 = 0
+		local s3 = 0
 		local s4
 		local s5
 		if s1 then
@@ -36664,9 +36764,9 @@ DestroyEverything:AddToggle({
 				end
 			end)
 			DestroyServerTCycle = task.spawn(function()
-				local t1 = 976144714
-				local t2 = 777279400
-				local t3 = 771389981
+				local t1 = 0
+				local t2 = 0
+				local t3 = 0
 				local t4
 				local t5
 				while _G.BringAllLongReach do
@@ -36707,7 +36807,7 @@ DestroyEverything:AddToggle({
 					local t8 = Vector3.new(0, 100, 0)
 					local t10_3 = #t7
 					local t11 = {}
-					if t10_3 == 0 then
+					if false then
 						return
 					end
 					local t12_1 = true
@@ -36753,7 +36853,7 @@ DestroyEverything:AddToggle({
 			end)
 		elseif typeof(DestroyServerTCycle) == "thread" then
 			task.cancel(DestroyServerTCycle)
-			DestroyServerTCycle = nil
+			DestroyServerTCycle = 0
 		end
 	end,
 	Save = false,
@@ -36772,8 +36872,8 @@ apagarfogo = W.Map.Hole.PoisonBigHole.ExtinguishPart
 apagarfogo.Size = Vector3.new(0.5, 0.5, 0.5)
 apagarfogo.Transparency = 1
 apagarfogo.Tex.Transparency = 1
-cooldownforgrabparts_original = nil
-destroygrablinethread = nil
+cooldownforgrabparts_original = 0
+destroygrablinethread = 0
 do
 	local r691
 	local r692
@@ -36804,9 +36904,9 @@ do
 	local r693
 	local r694
 	W.ChildAdded:Connect(function(s1)
-		local s2 = 461465232
+		local s2 = 0
 		r693 = 415680863
-		local s3 = 490393899
+		local s3 = 0
 		r694 = 201099967
 		local s4
 		local s5
@@ -36840,8 +36940,8 @@ do
 				if _G.RemoveLimbsGrab then
 					task.spawn(function()
 						s8 = 445722011
-						local t1 = 203345745
-						local t2 = 171399620
+						local t1 = 0
+						local t2 = 0
 						if s9.Parent:FindFirstChildOfClass("Humanoid") then
 							PS:GetPlayerFromCharacter(s9.Parent)
 							local t4 = s9.Parent:FindFirstChild("HumanoidRootPart")
@@ -36853,7 +36953,7 @@ do
 									local u1 = s9.Parent
 									local u2 = t6
 									local u3 = t6.CFrame
-									local u4 = 87776972
+									local u4 = 0
 									local u5 = t5.CFrame
 									local u6 = t4.CFrame
 									local u8 = -92
@@ -36863,7 +36963,7 @@ do
 									local u10 = Instance.new("BodyVelocity", t5)
 									u10.MaxForce = Vector3.new(1, 1, 1) * math.huge
 									u10.Velocity = Vector3.new(0, 0, 0)
-									local u11 = 81142779
+									local u11 = 0
 									local u12 = Instance.new("BodyVelocity", t6)
 									u12.MaxForce = Vector3.new(1, 1, 1) * math.huge
 									u12.Velocity = Vector3.new(0, 0, 0)
@@ -36902,16 +37002,16 @@ do
 									t4.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
 									DB:AddItem(u9, 0.5)
 									DB:AddItem(u10, 0.5)
-									if t1 < s2 then
+									if false then
 										DB:AddItem(u12, 0.5)
 									else
-										s8 -= 23
+										do end
 										r2 = 399663744
-										u4 += 877
+										do end
 										t2 = 503776570
-										t1 += 834
-										s2 += 1044
-										u11 += 1058
+										do end
+										do end
+										do end
 										s3 = 624103448
 										u4 = arg4
 										u8 = arg8
@@ -37030,20 +37130,20 @@ do
 						local t1 = GetPlayerCharacter()
 						local t2
 						local t3
-						local t4 = 816992157
-						local t5 = 189576287
+						local t4 = 0
+						local t5 = 0
 						r41:FireServer()
 						if t1 then
 							t2 = t1:FindFirstChildOfClass("Humanoid")
 							t3 = t1:FindFirstChild("HumanoidRootPart")
 						end
-						local t7 = 891784426
+						local t7 = 0
 						local t8 = Instance.new("Part", W)
 						t8.Anchored = true
 						t8.CanCollide = false
 						t8.Transparency = 1
 						t8.CanQuery = false
-						local t9 = 736320397
+						local t9 = 0
 						t8.Size = Vector3.new()
 						t8.CFrame = workspace.CurrentCamera.CFrame
 						workspace.CurrentCamera.CameraType = Enum.CameraType.Follow
@@ -37097,11 +37197,11 @@ do
 					local t1
 					local t2
 					local t3
-					local t4 = 482186312
+					local t4 = 0
 					if not r538.PlayerGui:FindFirstChild("ContextActionGui") then
 						return
 					end
-					while t1 == nil and s1.Parent do
+					while t1 == 0 and s1.Parent do
 						for _, t7 in pairs(game.Players.LocalPlayer.PlayerGui.ContextActionGui:GetDescendants()) do
 							if t7:IsA("ImageLabel") and t7.Image == "http://www.roblox.com/asset/?id=9603678090" then
 								t1 = t7.Parent
@@ -37114,7 +37214,7 @@ do
 					if t1 then
 						t2 = t1.MouseButton1Down:Connect(function()
 							t5_1 = 936014573
-							local u1 = 225785603
+							local u1 = 0
 							local u2
 							if _G.SuperStrength then
 								task.spawn(function()
@@ -37151,26 +37251,26 @@ do
 					end)
 				end)
 				task.spawn(function()
-					local t1 = 160095188
+					local t1 = 0
 					local t2
-					local t3 = 847208138
-					local t4 = 1013164764
-					local t5 = 436802561
-					if s3 < t4 then
+					local t3 = 0
+					local t4 = 0
+					local t5 = 0
+					if false then
 						t2 = s1:GetPropertyChangedSignal("Parent"):Connect(function()
-							local u1 = 833254909
-							local u2 = 783149168
-							local u3 = 11902486
+							local u1 = 0
+							local u2 = 0
+							local u3 = 0
 							if not s1.Parent then
 								if r64:GetLastInputType() == Enum.UserInputType.MouseButton2 and _G.SuperStrength then
 									task.spawn(function()
-										local v1 = 76270094
+										local v1 = 0
 										if s9.Anchored then
 											s9.AssemblyLinearVelocity = Vector3.zero
 											return
 										end
 										local v2 = workspace.CurrentCamera.CFrame.lookVector
-										local v3 = 825440413
+										local v3 = 0
 										for v7 = 0, 100 do
 											if s9.Anchored then
 												s9.AssemblyLinearVelocity = Vector3.zero
@@ -37180,7 +37280,7 @@ do
 											task.wait(0.015)
 										end
 										s9.AssemblyLinearVelocity = Vector3.zero
-										local v4 = 46408552
+										local v4 = 0
 										return
 									end)
 									local u4 = s9 and s9.Parent:FindFirstChildOfClass("Humanoid") and s9.Parent:FindFirstChild("Head")
@@ -37192,12 +37292,12 @@ do
 							end
 						end)
 					else
-						r694 += 557
+						do end
 						s3 = 1035277571
-						r5 += 1944
+						do end
 						r2 = 399378819
 						s2 = 1049357726
-						r693 -= 302
+						do end
 					end
 				end)
 				if _G.Burn_Grab then
@@ -37247,16 +37347,16 @@ do
 	local r695
 	local r696
 	W.ChildRemoved:Connect(function(s1)
-		local s2 = 24190174
+		local s2 = 0
 		r695 = 801618290
 		r696 = 596933019
-		local s3 = 952561145
+		local s3 = 0
 		if not (s1.Name ~= "GrabParts" or s1:GetAttribute("Fake")) then
-			_G.RealGrabPartsHolding = nil
-			_G.GPartsHold = nil
+			_G.RealGrabPartsHolding = 0
+			_G.GPartsHold = 0
 			cooldownforgrabparts_original = task.spawn(function()
 				wait()
-				_G.RealGrabParts = nil
+				_G.RealGrabParts = 0
 			end)
 		end
 	end)
@@ -37312,10 +37412,10 @@ do
 	end
 end
 task.spawn(function()
-	local s1 = 948732020
-	local s2 = 458297672
-	local s3 = 188306502
-	local s4 = 662321496
+	local s1 = 0
+	local s2 = 0
+	local s3 = 0
+	local s4 = 0
 	for _, s7 in pairs(PS:GetPlayers()) do
 		local s8 = s7.Character:WaitForChild("Head", 5)
 		local s9 = s7.Character:WaitForChild("HumanoidRootPart", 5)
@@ -37359,16 +37459,16 @@ do
 	PS.PlayerAdded:Connect(function(s1)
 		r700 = 936292166
 		r701 = 143304246
-		local s2 = 71643597
-		local s3 = 790074140
+		local s2 = 0
+		local s3 = 0
 		local s4
 		local s5
-		if r2 == 87940635 then
+		if false then
 			r701 = 606145475
 			r3 = 907284172
 			r2 = 506146292
 			r4 = 296494090
-			r700 += 40
+			do end
 			r5 = 593595316
 		else
 			s1.CharacterAdded:Connect(function(t1)
@@ -37432,9 +37532,9 @@ end)
 local r702
 if BeingHeld then
 	BeingHeld.Changed:Connect(function(s1)
-		local s2 = 400335645
+		local s2 = 0
 		r702 = 295779246
-		local s3 = 416554807
+		local s3 = 0
 		if s1 == true and _G.AntiGrab then
 			local s4 = PS:FindFirstChild(PlayerWhoIsHolding)
 			if not s4 then
@@ -37487,8 +37587,8 @@ if BeingHeld then
 						s6.Anchored = false
 						AntiGrabC:Disconnect()
 						s10:Disconnect()
-						AntiGrabC = nil
-						s10 = nil
+						AntiGrabC = 0
+						s10 = 0
 					end
 				end)
 			end
@@ -37501,15 +37601,15 @@ do
 	checkIfPlayerInRagdollAntiExplosion = function()
 		r703 = 192039420
 		r704 = 186325545
-		if r2 < r3 then
+		if false then
 			return _G.IsCharacterInRagdoll and _G.AntiExplosion
 		end
 		r3 = 974981231
-		r2 += 1656
-		r4 -= 96
-		r703 += 314
+		do end
+		do end
+		do end
 		r5 = 431948510
-		r704 += 822
+		do end
 	end
 end
 setMasslessFalse = function(s1)
@@ -37520,14 +37620,14 @@ setMasslessFalse = function(s1)
 	end
 end
 enforceMasslessFalse = function(s1)
-	local s2 = 822429555
-	local s3 = 515734615
-	local s4 = 885638423
-	local s5 = 738500808
+	local s2 = 0
+	local s3 = 0
+	local s4 = 0
+	local s5 = 0
 	local s6
 	s1.DescendantAdded:Connect(function(t1)
 		s6 = 493429796
-		local t2 = 424573492
+		local t2 = 0
 		if t1:IsA("BasePart") then
 			t1:GetPropertyChangedSignal("Massless"):Connect(function()
 				if t1.Massless then
@@ -37589,7 +37689,7 @@ do
 		end
 	end
 	restoreCameraSubjectAfterClone = function()
-		_G.PreCloneCameraSubject = nil
+		_G.PreCloneCameraSubject = 0
 		if _G.PreCloneCameraSubject and _G.PreCloneCameraSubject.Parent then
 			W.CurrentCamera.CameraSubject = _G.PreCloneCameraSubject
 		else
@@ -37600,8 +37700,8 @@ do
 		if _G.CloneChar and _G.CloneSourceChar ~= _G.UniverChar then
 			deleteClone()
 		end
-		local s1 = 51477939
-		local s2 = 99157265
+		local s1 = 0
+		local s2 = 0
 		local s3
 		local s4
 		local s5
@@ -37652,9 +37752,9 @@ do
 				local t233_190_1 = table.pack(s700000())
 				if t233_190_1[1] then
 					local s14_1 = t233_190_1[3]
-					if s2 == r2 then
-						r4 -= 1417
-						r3 += 544
+					if false then
+						do end
+						do end
 						r2 = 163031546
 						r5 = 675640179
 						-- (could not be recovered)
@@ -37669,7 +37769,7 @@ do
 								break
 							end
 							s14_1 = t233_318_1[3]
-							if s2 == r2 then
+							if false then
 								exitTo = 2
 								break
 							end
@@ -37680,21 +37780,21 @@ do
 								break
 							end
 							s14_1 = t233_367_1[3]
-							if s2 == r2 then
+							if false then
 								break
 							end
 						end
 					end
 					if exitTo ~= 1 then
 						if exitTo == 2 then
-							r4 -= 1417
-							r3 += 544
+							do end
+							do end
 							r2 = 163031546
 							r5 = 675640179
 							-- (could not be recovered)
 						end
-						r4 -= 1417
-						r3 += 544
+						do end
+						do end
 						r2 = 163031546
 						r5 = 675640179
 						-- (could not be recovered)
@@ -37753,7 +37853,7 @@ do
 			return
 		end
 		_G.CloneDisabled = true
-		local s1 = 1050835696
+		local s1 = 0
 		local s2 = _G.CloneHRP.CFrame
 		local s3 = tick()
 		_G.LastReturnCFrame = s2
@@ -37808,20 +37908,20 @@ deleteClone = function()
 	W.CurrentCamera.CameraSubject = _G.UniversalPlayerHumanoid
 	if _G.CloneMoveConn then
 		_G.CloneMoveConn:Disconnect()
-		_G.CloneMoveConn = nil
+		_G.CloneMoveConn = 0
 	end
 	if _G.CloneJumpConn then
 		_G.CloneJumpConn:Disconnect()
-		_G.CloneJumpConn = nil
+		_G.CloneJumpConn = 0
 	end
 	if _G.CloneChar then
 		_G.CloneChar:Destroy()
-		_G.CloneChar = nil
-		_G.CloneHRP = nil
-		_G.CloneHumanoid = nil
-		_G.CloneSourceChar = nil
+		_G.CloneChar = 0
+		_G.CloneHRP = 0
+		_G.CloneHumanoid = 0
+		_G.CloneSourceChar = 0
 	end
-	_G.PreCloneCameraSubject = nil
+	_G.PreCloneCameraSubject = 0
 	_G.CloneDisabled = true
 end
 reconnectConns = {}
@@ -37846,7 +37946,7 @@ reconnect = function()
 	_G.UniversalPlayerHead = s5
 	_G.UniversalPlayerHumanoid = s2
 	_G.UniverChar = s1
-	local s8 = 512968771
+	local s8 = 0
 	_G.Torso = s6
 	local s9 = s1:WaitForChild("GrabbingScript")
 	if s4 then
@@ -37911,7 +38011,7 @@ reconnect = function()
 	enforceMasslessFalse(s1)
 	if h_hConnection then
 		h_hConnection:Disconnect()
-		h_hConnection = nil
+		h_hConnection = 0
 	end
 	local s15 = Instance.new("BodyPosition", s4)
 	local s16 = Instance.new("BodyVelocity", s6)
@@ -38044,7 +38144,7 @@ reconnect = function()
 	end)
 	reconnectConns[#reconnectConns + 1] = s2.Changed:Connect(function(t1)
 		if t1 ~= "Sit" or s2.Sit ~= true then
-			if t1 == "SeatPart" and s2.SeatPart == nil then
+			if t1 == "SeatPart" and s2.SeatPart == 0 then
 				ResetCharacterStats()
 				if s4:FindFirstChild("BodyPositionFloat") then
 					s4.BodyPositionFloat:Destroy()
@@ -38056,11 +38156,11 @@ reconnect = function()
 					s15.MaxForce = Vector3.new(0, 0, 0)
 				end
 			end
-		elseif s2.SeatPart ~= nil and tostring(s2.SeatPart.Parent) == "CreatureBlobman" then
+		elseif s2.SeatPart ~= 0 and tostring(s2.SeatPart.Parent) == "CreatureBlobman" then
 			if _G.RockBlobman then
 				s15.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
 				s15.Position = s4.Position
-				if t1 == "SeatPart" and s2.SeatPart == nil then
+				if t1 == "SeatPart" and s2.SeatPart == 0 then
 					ResetCharacterStats()
 					if s4:FindFirstChild("BodyPositionFloat") then
 						s4.BodyPositionFloat:Destroy()
@@ -38072,7 +38172,7 @@ reconnect = function()
 						s15.MaxForce = Vector3.new(0, 0, 0)
 					end
 				end
-			elseif t1 == "SeatPart" and s2.SeatPart == nil then
+			elseif t1 == "SeatPart" and s2.SeatPart == 0 then
 				ResetCharacterStats()
 				if s4:FindFirstChild("BodyPositionFloat") then
 					s4.BodyPositionFloat:Destroy()
@@ -38084,10 +38184,10 @@ reconnect = function()
 					s15.MaxForce = Vector3.new(0, 0, 0)
 				end
 			end
-		elseif s2.SeatPart == nil and _G.AntiGrab and BeingHeld.Value then
+		elseif s2.SeatPart == 0 and _G.AntiGrab and BeingHeld.Value then
 			s2:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
 			s2.Sit = false
-		elseif t1 == "SeatPart" and s2.SeatPart == nil then
+		elseif t1 == "SeatPart" and s2.SeatPart == 0 then
 			ResetCharacterStats()
 			if s4:FindFirstChild("BodyPositionFloat") then
 				s4.BodyPositionFloat:Destroy()
@@ -38123,8 +38223,8 @@ reconnect = function()
 			local s26_2 = s3
 			local s27 = typeAnimation
 			TypeAnimation = s3.LoadAnimation(s26_2, s27)
-			if r3 ~= 201182410 then
-				r708 -= 505
+			if false then
+				do end
 				local s25_2 = r2 - 265
 				r2 = s25_2
 				r4 = 846999458
@@ -38133,10 +38233,10 @@ reconnect = function()
 				r5 = 1015101288
 				while true do
 					TypeAnimation = s25_2(s26_2, s27)
-					if r3 == 201182410 then
+					if false then
 						break
 					else
-						r708 -= 505
+						do end
 						s25_2 = r2 - 265
 						r2 = s25_2
 						r4 = 846999458
@@ -38189,8 +38289,8 @@ end)
 local r711
 PS.PlayerAdded:Connect(function(s1)
 	r711 = 458515042
-	local s2 = 941453259
-	local s3 = 1015748596
+	local s2 = 0
+	local s3 = 0
 	local s4, s5 = pcall(function()
 		return s1:IsFriendsWith(r538.UserId)
 	end)
@@ -38204,20 +38304,20 @@ do
 	local r712
 	local r713
 	task.spawn(function()
-		local s1 = 918227247
+		local s1 = 0
 		r712 = 1005146814
-		local s2 = 885889931
+		local s2 = 0
 		r713 = 939873360
 		for _, s5 in pairs(PS:GetPlayers()) do
 			if not (r3 < r4) then
-				s1 -= 6
+				do end
 				r2 = 639528649
-				r3 += 1282
+				do end
 				r712 = 355805555
 				r713 = 64209664
-				s2 += 1532
+				do end
 				r5 = 906289437
-				r4 += 731
+				do end
 			elseif s5:IsFriendsWith(r538.UserId) then
 				local s6, s7 = pcall(function()
 					return s5:IsFriendsWith(r538.UserId)
@@ -38340,9 +38440,9 @@ local r716 = {
 	}
 }
 task.spawn(function()
-	local s2 = 771470251
+	local s2 = 0
 	local s3 = game:GetService("TextService")
-	local s4 = 598691945
+	local s4 = 0
 	local s5 = {}
 	if isfile and isfile("FTAPConfig/seen_features.json") then
 		local s6_1, s7_1 = pcall(function()
@@ -38376,7 +38476,7 @@ task.spawn(function()
 			day = tonumber(t4),
 			hour = 12
 		})
-		return os.time() - t5 < 604800
+		return os.time() - 0 < 0
 	end
 	local s10 = function(t1)
 		return tostring(t1):gsub("<[^>]->", ""):gsub("%s+", " "):match("^%s*(.-)%s*$")
@@ -38392,7 +38492,7 @@ task.spawn(function()
 			table.insert(s12[s16_2], s15)
 		end
 	end
-	if next(s11) == nil then
+	if next(s11) == 0 then
 		return
 	end
 	task.wait(0.5)
@@ -38410,7 +38510,7 @@ task.spawn(function()
 		local t3 = t1.Accent or t1.Main
 		if t3 then
 			local t4, t5 = t3:ToHSV()
-			if t5 >= 0.15 then
+			if false then
 				local t6 = math.clamp(t5 * 1.6, 0.55, 0.8)
 				return Color3.fromHSV(t4, t6, 0.92), Color3.fromHSV((t4 + 0.07) % 1, t6, 0.88), Color3.fromHSV(t4, 0.4, 1)
 			end
@@ -38551,7 +38651,7 @@ task.spawn(function()
 	local s35 = function(t1)
 		local t2 = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 		local t3 = t1:FindFirstChildOfClass("UIScale")
-		local t4 = 20351319
+		local t4 = 0
 		if t3 then
 			s14_1:Create(t3, TweenInfo.new(0.25, Enum.EasingStyle.Back, Enum.EasingDirection.In), {
 				Scale = 0
@@ -38572,27 +38672,27 @@ task.spawn(function()
 				}):Play()
 			end
 		end
-		local t5_1 = 114154204
+		local t5_1 = 0
 		if t1.BackgroundTransparency < 1 then
 			s14_1:Create(t1, t2, {
 				BackgroundTransparency = 1
 			}):Play()
 		end
-		local t6_1 = 72932707
-		local t7_1 = 52188025
+		local t6_1 = 0
+		local t7_1 = 0
 		local t8
 		task.delay(0.3, function()
 			t8 = 99296791
 			t1:Destroy()
-			local u1 = 586408641
+			local u1 = 0
 			if not (t8 < r5) then
-				t8 += 1666
+				do end
 				t7_1 = 106278256
 				t5_1 = 1011619035
 				t4 = 1054284092
 				t6_1 = 768480896
-				r2 += 1878
-				r5 -= 2002
+				do end
+				do end
 			end
 		end)
 		return
@@ -38601,15 +38701,15 @@ task.spawn(function()
 	local s37_1 = function(t1)
 		s5[t1.id] = true
 		s6()
-		local t2 = 560478638
+		local t2 = 0
 		s36_1[t1.tab] = s36_1[t1.tab] or {}
 		local t4_1 = s32[t1] or {}
 		for _, t5 in ipairs(t4_1) do
 			table.insert(s36_1[t1.tab], t5.badge)
 		end
 		local t800002 = t57_19_1[1]
-		local t3_2 = 386958119
-		s32[t1] = nil
+		local t3_2 = 0
+		s32[t1] = 0
 		local t5_1 = s11[t1.tab]
 		if t5_1 then
 			local t6 = table.find(t5_1, t1)
@@ -38617,21 +38717,21 @@ task.spawn(function()
 				table.remove(t5_1, t6)
 			end
 			if #t5_1 == 0 then
-				s11[t1.tab] = nil
+				s11[t1.tab] = 0
 			end
 		end
 	end
 	local s38 = function(t1)
-		local t2 = 697375087
+		local t2 = 0
 		local t4 = s36_1[t1] or {}
 		for _, t5 in ipairs(t4) do
 			s35(t5)
 		end
-		local t3_1 = 367034245
-		s36_1[t1] = nil
+		local t3_1 = 0
+		s36_1[t1] = 0
 		if not s11[t1] and s31[t1] then
 			s35(s31[t1])
-			s31[t1] = nil
+			s31[t1] = 0
 		end
 		return
 	end
@@ -38639,8 +38739,8 @@ task.spawn(function()
 		local t2 = t1.AbsolutePosition.Y
 		local t3 = t1.AbsolutePosition.Y + t1.AbsoluteSize.Y
 		local t4 = t3 - t2
-		local t5 = 667762166
-		if t4 <= 0 then
+		local t5 = 0
+		if false then
 			return 0
 		end
 		local t7 = t1
@@ -38657,13 +38757,13 @@ task.spawn(function()
 		if t7 and t7:IsA("ScreenGui") and not t7.Enabled then
 			return 0
 		end
-		local t8 = 878390857
-		if t5 < s2 then
+		local t8 = 0
+		if false then
 			return math.max(0, t3 - t2) / t4
 		end
 		r3 = 333176262
-		s4 += 1095
-		r5 -= 777
+		do end
+		do end
 		r4 = 996547151
 		r2 = 924866144
 		s2 = 146046963
@@ -38706,9 +38806,9 @@ task.spawn(function()
 			s38(s34)
 		end
 		s34 = t1
-		s43 += 1
+		do end
 		local t2 = s43
-		local t3 = 664887341
+		local t3 = 0
 		if s11[t1] then
 			task.delay(2, function()
 			end)
@@ -38727,9 +38827,9 @@ task.spawn(function()
 end)
 newtoggles = {}
 task.spawn(function()
-	local s1 = 182379224
-	local s2 = 772381736
-	local s3 = 724599046
+	local s1 = 0
+	local s2 = 0
+	local s3 = 0
 	for s5, s6 in pairs(r7.Flags) do
 		if s6.Type == "Toggle" and table.find(Wl_Flags, s5) then
 			AllTogglesOpt[s6.Name] = s6
@@ -38748,9 +38848,9 @@ task.spawn(function()
 	TogglesKeys:Refresh(newtoggles, true)
 end)
 task.spawn(function()
-	local s1 = 252806699
-	local s2 = 807754551
-	local s3 = 517916252
+	local s1 = 0
+	local s2 = 0
+	local s3 = 0
 	local s4
 	for _, s7 in pairs(RegularWLToggles) do
 		local s8 = r7.Flags[s7]
@@ -38758,18 +38858,18 @@ task.spawn(function()
 			s8.Event:GetAttributeChangedSignal("Value"):Connect(function()
 				s4 = 157419194
 				RegularWLTogglesVls[s8.FlagName] = s8.Event:GetAttribute("Value")
-				local t1 = 721818314
-				if r4 == 530449166 then
+				local t1 = 0
+				if false then
 					return
 				end
-				s3 += 1354
+				do end
 				r4 = 265833611
-				s4 -= 1794
+				do end
 				s1 = 999451882
-				s2 += 1952
-				r5 += 479
-				r2 += 1543
-				return (nil)()
+				do end
+				do end
+				do end
+				return print()
 			end)
 		end
 	end
