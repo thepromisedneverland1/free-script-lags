@@ -1559,16 +1559,9 @@ if game.PlaceId == 6961824067 then
 					if child.Name ~= "Template" then
 						if child.ClassName == "ScrollingFrame" then
 							if child.Name ~= "Placeholder" then
-								local v6, v7, v8 = ipairs(child:GetChildren())
+								for _, v9 in ipairs(child:GetChildren()) do
 
-								while true do
-									local n = string.byte("\15\4q", 2, nil) + 122
-									local args = table.pack(J_2())
 
-									if not args[1] then
-										break
-									else
-										local v9 = args[3]
 
 										if v9.ClassName == "Frame" then
 											if v9.Name ~= "SectionSpacing" and v9.Name ~= "Placeholder" then
@@ -1597,7 +1590,6 @@ if game.PlaceId == 6961824067 then
 												end
 											end
 										end
-									end
 								end
 							end
 						end
@@ -2159,27 +2151,17 @@ if game.PlaceId == 6961824067 then
 								flag13 = true
 							end)
 
-							-- Fonction sécurisée pour extraire les valeurs HSV peu importe si c'est une fonction ou une propriété
-local function safeGetHSV(colorSource)
-    if not colorSource then return 0, 0, 0 end
-    
-    local col = colorSource
-    -- Si c'est une fonction, on l'appelle
-    if type(colorSource) == "function" then
-        col = colorSource()
-    end
-    
-    -- Si c'est un Color3 valide, on extrait le HSV
-    if typeof(col) == "Color3" then
-        return col:ToHSV()
-    end
-    
-    -- Valeur par défaut si rien ne correspond
-    return 0, 0, 0
-end
+							local n7, n8, n9 = 0, 0, 0
 
--- Utilisation à la place de votre ancienne ligne :
-local n7, n8, n9 = safeGetHSV(v6.Color)
+local n7, n8, n9 = 0, 0, 0
+
+-- Check if v6 exists and its Color property is specifically a Color3 datatype
+if v6 and v6.Color and typeof(v6.Color) == "Color3" then
+    n7, n8, n9 = v6.Color:ToHSV()
+else
+    -- This will print what v6.Color actually is in your Output window
+    warn("v6.Color failed! v6 type:", typeof(v6), "| v6.Color type:", typeof(v6 and v6.Color))
+end
 							local color = Color3.fromHSV(n7, n8, n9)
 							local text = string.format("#%02X%02X%02X", color.R * 255, color.G * 255, color.B * 255)
 							clone3.HexInput.InputBox.Text = text
@@ -3136,6 +3118,20 @@ end
 							return arg7
 						end,
 						CreateToggle = function(arg6, arg7)
+						arg7 = arg7 or {}
+
+						if type(arg7.Name) ~= "string" then
+							arg7.Name = "Toggle"
+						end
+
+						if arg7.CurrentValue == nil then
+							arg7.CurrentValue = false
+						end
+
+						if type(arg7.Callback) ~= "function" then
+							arg7.Callback = function() end
+						end
+
 							local clone3 = elements.Template.Toggle:Clone()
 							clone3.Name = arg7.Name
 							clone3.Title.Text = arg7.Name
@@ -3353,6 +3349,40 @@ end
 							return arg7
 						end,
 						CreateSlider = function(arg6, arg7)
+						arg7 = arg7 or {}
+
+						if type(arg7.Range) ~= "table" then
+							arg7.Range = { 0, 100 }
+						end
+
+						if type(arg7.Range[1]) ~= "number" then
+							arg7.Range[1] = 0
+						end
+
+						if type(arg7.Range[2]) ~= "number" then
+							arg7.Range[2] = 100
+						end
+
+						if arg7.Range[2] == arg7.Range[1] then
+							arg7.Range[2] = arg7.Range[1] + 1
+						end
+
+						if type(arg7.Increment) ~= "number" or arg7.Increment <= 0 then
+							arg7.Increment = 1
+						end
+
+						if type(arg7.CurrentValue) ~= "number" then
+							arg7.CurrentValue = arg7.Range[1]
+						end
+
+						if type(arg7.Name) ~= "string" then
+							arg7.Name = "Slider"
+						end
+
+						if type(arg7.Callback) ~= "function" then
+							arg7.Callback = function() end
+						end
+
 							local flag11 = false
 							local clone3 = elements.Template.Slider:Clone()
 							clone3.Name = arg7.Name
@@ -3869,17 +3899,20 @@ end
 			end
 
 			tbl.LoadConfiguration = function()
-				if flag4 then
-					local v6 = nil
-					local v7 = nil
+    if flag4 then
+        local v6 = nil
+        local v7 = nil
 
-					local ok, result = pcall(function()
-						local folderPath = type(callback) == "function" and callback() or callback
+        local ok, result = pcall(function()
+            local folderPath = type(callback) == "function" and callback() or callback
 
-if isfile(folderPath .. "/" .. fileName .. ".rfld") then
-							v7 = fn9(readfile(callback .. "/" .. fileName .. ".rfld"))
-						end
-					end)
+            if isfile(folderPath .. "/" .. fileName .. ".rfld") then
+                -- Fixed: changed 'callback' to 'folderPath'
+                v7 = fn9(readfile(folderPath .. "/" .. fileName .. ".rfld"))
+            end
+        end)
+    end
+end
 
 					if not ok or not v7 then
 						if not ok and not v6 then
@@ -4134,7 +4167,12 @@ Check the Developer Console for more information.]],
 			end
 		end
 
-		for _, v5 in ReplicatedStorage:GetDescendants() do
+		-- Properly define the service first
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Now the loop will work correctly
+for _, v5 in ipairs(ReplicatedStorage:GetDescendants()) do
+
 			callback = v5
 
 			if not (not v5.IsA(callback, "RemoteEvent") and not v5:IsA("RemoteFunction")) then
@@ -4352,7 +4390,15 @@ Check the Developer Console for more information.]],
 		end
 
 		do
-			local theme2 = v4.Theme
+			local theme2 = nil
+
+-- Check if v4 exists before trying to index .Theme
+if v4 and v4.Theme then
+    theme2 = v4.Theme
+else
+    -- Fallback or debug warning
+    warn("v4 is nil or does not contain a Theme property!")
+end
 			callback = 255; callback = 15; callback = 33; callback = 15
 			callback = 15; callback = 255; callback = 48; callback = 50
 
@@ -4415,7 +4461,19 @@ Check the Developer Console for more information.]],
 			wexort.InputStroke = Color3.fromRGB(callback, 41, 41)
 			callback = 150
 			wexort.PlaceholderColor = Color3.fromRGB(callback, 150, 150)
-			theme2.Wexort = wexort
+			-- Ensure v4 and v4.Theme exist, or create them if they are missing
+if not v4 then
+    v4 = {}
+end
+
+if not v4.Theme then
+    v4.Theme = {}
+end
+
+local theme2 = v4.Theme
+
+-- Now safely assign Wexort
+theme2.Wexort = wexort
 		end
 
 		local theme2 = {}
@@ -4439,7 +4497,12 @@ Check the Developer Console for more information.]],
 			Discord = { Enabled = false, Invite = "tokrascript", RememberJoins = true },
 		}
 
-		tbl2.GuiObjects.Window = v4:CreateWindow(callback)
+		-- Check if v4 and its CreateWindow function exist before calling
+if v4 and type(v4.CreateWindow) == "function" then
+    tbl2.GuiObjects.Window = v4:CreateWindow(callback)
+else
+    warn("v4 is missing CreateWindow! Make sure the UI library loaded correctly.")
+end
 		tbl2.BlobmanManager.Controllers = {}
 
 		tbl2.BlobmanManager.Setup = function(arg)
@@ -4601,49 +4664,63 @@ Check the Developer Console for more information.]],
 			tbl2.ClientManager.LastBlobmanController = v2
 		end
 
-		tbl2.ClientManager.UpdateCharacter = function()
-			character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
-			if character.Name ~= localPlayer.Name then
-				return
-			end
-			currentCamera = workspace.CurrentCamera
-			head = character:WaitForChild("Head", 3)
-			humanoid = character:WaitForChild("Humanoid", 3)
-			humanoidRootPart = character:WaitForChild("HumanoidRootPart", 3)
-			ragdolled = humanoid and humanoid:WaitForChild("Ragdolled", 3)
-			tbl2.Cleanup.Disconnect("UpdateSeatPart")
-			tbl2.Connections.UpdateSeatPart = humanoid:GetPropertyChangedSignal("SeatPart"):Connect(tbl2.ClientManager.UpdateSeatPart)
-			tbl2.ClientManager.UpdateSeatPart()
-		end
+	tbl2 = tbl2 or {}
+tbl2.ClientManager = tbl2.ClientManager or {}
+tbl2.Connections = tbl2.Connections or {}
+tbl2.Cleanup = tbl2.Cleanup or {}
 
-		tbl2.ClientManager.UpdateCharacter()
-		callback = tbl2.ClientManager
-		callback = callback.UpdateCharacter
-		tbl2.Connections.UpdateCharacter = localPlayer.CharacterAdded:Connect(callback)
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer or Players.PlayerAdded:Wait()
 
-		tbl2.ClientManager.Occupy = function(arg, arg2)
-			local humanoid2 = humanoid
-			if not humanoid2 then
-				return
-			end
-			local flag2 = true
+tbl2.ClientManager.UpdateCharacter = function()
+    local character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
+    if character.Name ~= localPlayer.Name then
+        return
+    end
+    currentCamera = workspace.CurrentCamera
+    head = character:WaitForChild("Head", 3)
+    humanoid = character:WaitForChild("Humanoid", 3)
+    humanoidRootPart = character:WaitForChild("HumanoidRootPart", 3)
+    ragdolled = humanoid and humanoid:WaitForChild("Ragdolled", 3)
+    
+    if tbl2.Cleanup.Disconnect then
+        tbl2.Cleanup.Disconnect("UpdateSeatPart")
+    end
+    
+    if humanoid then
+        tbl2.Connections.UpdateSeatPart = humanoid:GetPropertyChangedSignal("SeatPart"):Connect(tbl2.ClientManager.UpdateSeatPart)
+    end
+end
 
-			if not (not arg2 or typeof(arg2) ~= "number") then
-				task.delay(arg2, function()
-					flag2 = false
-				end)
-			end
+if localPlayer then
+    tbl2.Connections.UpdateCharacter = localPlayer.CharacterAdded:Connect(tbl2.ClientManager.UpdateCharacter)
+end
 
-			while not (not flag2 or not (humanoid2.Health > 0) or not humanoid2:IsDescendantOf(workspace) or not arg:IsDescendantOf(workspace)) do
-				if humanoid2.SeatPart ~= arg then
-					task.spawn(arg.Sit, arg, humanoid2)
-					wait()
-					continue
-				end
+tbl2.ClientManager.UpdateCharacter()
 
-				break
-			end
-		end
+tbl2.ClientManager.Occupy = function(arg, arg2)
+    local humanoid2 = humanoid
+    if not humanoid2 then
+        return
+    end
+    local flag2 = true
+
+    if not (not arg2 or typeof(arg2) ~= "number") then
+        task.delay(arg2, function()
+            flag2 = false
+        end)
+    end
+
+    while not (not flag2 or not (humanoid2.Health > 0) or not humanoid2:IsDescendantOf(workspace) or not arg:IsDescendantOf(workspace)) do
+        if humanoid2.SeatPart ~= arg then
+            task.spawn(arg.Sit, arg, humanoid2)
+            wait()
+            continue
+        end
+
+        break
+    end
+end
 
 		tbl2.NetworkOwnership.IsNetworkOwned = function(arg)
 			if not arg then
@@ -6424,49 +6501,51 @@ Check the Developer Console for more information.]],
 
 		tbl2.GuiObjects.Tabs = {}
 		callback = "Grab"
-		tbl2.GuiObjects.Tabs.Grab = tbl2.GuiObjects.Window:CreateTab(callback, "hand")
+		tbl2 = tbl2 or {}
+tbl2.GuiObjects = tbl2.GuiObjects or {}
+tbl2.GuiObjects.Tabs = tbl2.GuiObjects.Tabs or {}
 
-		do
-			local tabs = tbl2.GuiObjects.Tabs
-			local window = tbl2.GuiObjects.Window
-			local flag2 = true
-			local n = 36
-			callback = "Defense"
-			tabs.Defense = window:CreateTab(callback, "shield")
-		end
+if tbl2.GuiObjects.Window and type(tbl2.GuiObjects.Window.CreateTab) == "function" then
+    tbl2.GuiObjects.Tabs.Grab = tbl2.GuiObjects.Window:CreateTab(callback, "hand")
+else
+    warn("tbl2.GuiObjects.Window est nil ou ne possède pas la méthode CreateTab !")
+end
 
-		callback = "Loop"
-		tbl2.GuiObjects.Tabs.Loop = tbl2.GuiObjects.Window:CreateTab(callback, "recycle")
-		callback = "Blobman (BETA)"
-		tbl2.GuiObjects.Tabs.Blobman = tbl2.GuiObjects.Window:CreateTab(callback, 7733916988)
+		tbl2 = tbl2 or {}
+tbl2.GuiObjects = tbl2.GuiObjects or {}
+tbl2.GuiObjects.Tabs = tbl2.GuiObjects.Tabs or {}
 
-		do
-			local tabs = tbl2.GuiObjects.Tabs
-			local window = tbl2.GuiObjects.Window
-			local window2 = window
-			local createTab = window.CreateTab
-			local n = 35
-			callback = "Lag"
-			tabs.Lag = createTab(window2, callback, "turtle")
-		end
+local tabs = tbl2.GuiObjects.Tabs
+local window = tbl2.GuiObjects.Window
 
-		callback = "Auras"
-		tbl2.GuiObjects.Tabs.Auras = tbl2.GuiObjects.Window:CreateTab(callback, "shield-ellipsis")
-		callback = "Decoys"
-		tbl2.GuiObjects.Tabs.Decoys = tbl2.GuiObjects.Window:CreateTab(callback, "user-2")
-		callback = "Bombs"
-		tbl2.GuiObjects.Tabs.Bombs = tbl2.GuiObjects.Window:CreateTab(callback, "bomb")
-		callback = "ESP"
-		tbl2.GuiObjects.Tabs.ESP = tbl2.GuiObjects.Window:CreateTab(callback, "scan-eye")
-		callback = "Visual"
-		tbl2.GuiObjects.Tabs.Visual = tbl2.GuiObjects.Window:CreateTab(callback, "eye")
-		callback = "Whitelist"
-		tbl2.GuiObjects.Tabs.Whitelist = tbl2.GuiObjects.Window:CreateTab(callback, "list-checks")
-		callback = "Interface"
-		tbl2.GuiObjects.Tabs.Interface = tbl2.GuiObjects.Window:CreateTab(callback, "paint-bucket")
-		callback = "Misc"
-		tbl2.GuiObjects.Tabs.Misc = tbl2.GuiObjects.Window:CreateTab(callback, "box")
-		tbl2.GuiObjects.Tabs.Grab:CreateSection("Grab Modifications")
+if window and type(window.CreateTab) == "function" then
+    -- Onglet Defense
+    tabs.Defense = window:CreateTab("Defense", "shield")
+    
+    -- Onglet Loop
+    tabs.Loop = window:CreateTab("Loop", "recycle")
+    
+    -- Onglet Blobman
+    tabs.Blobman = window:CreateTab("Blobman (BETA)", 7733916988)
+    
+    -- Autres onglets
+    tabs.Lag = window:CreateTab("Lag", "turtle")
+    tabs.Auras = window:CreateTab("Auras", "shield-ellipsis")
+    tabs.Decoys = window:CreateTab("Decoys", "user-2")
+    tabs.Bombs = window:CreateTab("Bombs", "bomb")
+    tabs.ESP = window:CreateTab("ESP", "scan-eye")
+    tabs.Visual = window:CreateTab("Visual", "eye")
+    tabs.Whitelist = window:CreateTab("Whitelist", "list-checks")
+    tabs.Interface = window:CreateTab("Interface", "paint-bucket")
+    tabs.Misc = window:CreateTab("Misc", "box")
+    
+    -- Section Grab Modifications si l'onglet Grab existe
+    if tabs.Grab and type(tabs.Grab.CreateSection) == "function" then
+        tabs.Grab:CreateSection("Grab Modifications")
+    end
+else
+    warn("tbl2.GuiObjects.Window est nil ou CreateTab n'est pas disponible !")
+end
 
 		do
     tbl3.Grab = tbl3.Grab or {}
@@ -6492,9 +6571,17 @@ Check the Developer Console for more information.]],
         "Spin",
         "Orbit",
     }) do
-        local modeName = name
-        tbl3.Grab.Mode[modeName] = false
+    tbl2 = tbl2 or {}
+    tbl2.GuiObjects = tbl2.GuiObjects or {}
+    tbl3 = tbl3 or {}
+    tbl3.Grab = tbl3.Grab or {}
+    tbl3.Grab.Mode = tbl3.Grab.Mode or {}
 
+    local modeName = name
+    tbl3.Grab.Mode[modeName] = false
+
+    -- Vérification de sécurité pour grabTab et CreateToggle
+    if grabTab and type(grabTab.CreateToggle) == "function" then
         tbl2.GuiObjects[modeName .. "Grab"] = grabTab:CreateToggle({
             Name = modeName .. " Grab",
             Flag = "Grab_" .. modeName,
@@ -6503,37 +6590,38 @@ Check the Developer Console for more information.]],
                 task.spawn(tbl2.ApplyGrabMode, nil, nil, modeName, value)
             end,
         })
+    else
+        warn("grabTab est nil ou ne possède pas la méthode CreateToggle pour : " .. tostring(modeName))
     end
 end
 
-    tbl3.Grab = tbl3.Grab or {}
-    tbl3.Grab.Mode = tbl3.Grab.Mode or {}
+    tbl2 = tbl2 or {}
+tbl2.GuiObjects = tbl2.GuiObjects or {}
+tbl2.GuiObjects.Tabs = tbl2.GuiObjects.Tabs or {}
+tbl3 = tbl3 or {}
+tbl3.Grab = tbl3.Grab or {}
+tbl3.Grab.Mode = tbl3.Grab.Mode or {}
 
-    local guiObjects = tbl2.GuiObjects
-    local grabTab = guiObjects and guiObjects.Tabs and guiObjects.Tabs.Grab
-    local applyGrabMode = tbl2.ApplyGrabMode
-
-    if not grabTab or type(grabTab.CreateToggle) ~= "function" then
-        error("Create tbl2.GuiObjects.Tabs.Grab before creating the grab mode toggles.")
+-- 1. S'assurer que l'onglet Grab existe (crée-le s'il est nil)
+if not tbl2.GuiObjects.Tabs.Grab then
+    local window = tbl2.GuiObjects.Window
+    if window and type(window.CreateTab) == "function" then
+        tbl2.GuiObjects.Tabs.Grab = window:CreateTab("Grab", "hand")
+    else
+        warn("Impossible de créer l'onglet Grab car Window est nil !")
     end
-    if type(applyGrabMode) ~= "function" then
-        error("Define tbl2.ApplyGrabMode before creating the grab mode toggles.")
-    end
+end
 
-    
-	for _, modeName in ipairs(GrabModes or {}) do
-	tbl3.Grab.Mode[modeName] = false
+local guiObjects = tbl2.GuiObjects
+local grabTab = guiObjects.Tabs and guiObjects.Tabs.Grab
+local applyGrabMode = tbl2.ApplyGrabMode
 
-	guiObjects[modeName .. "Grab"] = grabTab:CreateToggle({
-		Name = modeName .. " Grab",
-		Flag = "Grab_" .. modeName,
-		Callback = function(value)
-			tbl3.Grab.Mode[modeName] = value
-			if type(applyGrabMode) == "function" then
-				task.spawn(applyGrabMode, nil, nil, modeName, value)
-			end
-		end,
-	})
+if not grabTab or type(grabTab.CreateToggle) ~= "function" then
+    error("Create tbl2.GuiObjects.Tabs.Grab before creating the grab mode toggles.")
+end
+
+if type(applyGrabMode) ~= "function" then
+    error("Define tbl2.ApplyGrabMode before creating the grab mode toggles.")
 end
 
 
@@ -6626,9 +6714,9 @@ end
 
 			createSlider(grab2, {
 				Name = "Throw Power",
-				Range = callback,
+				Range = { 0, 10000 },
 				Increment = 10,
-				CurrentValue = callback,
+				CurrentValue = tbl3.Grab.Throw.Power,
 				Flag = "Throw_Power",
 				Callback = callback,
 			})
@@ -6645,9 +6733,9 @@ end
 
 		tbl2.GuiObjects.Tabs.Grab:CreateSlider({
 			Name = "Throw Time",
-			Range = callback,
+			Range = { 0.05, 10 },
 			Increment = 0.05,
-			CurrentValue = callback,
+			CurrentValue = tbl3.Grab.Throw.Time,
 			Flag = "Throw_Time",
 			Callback = callback,
 		})
@@ -6666,14 +6754,14 @@ end
 			local grab2 = grab
 			local createSlider = grab.CreateSlider
 			callback = { 0, 1000 }
-			local tbl4 = { Name = "Extend Distance", Range = callback, Increment = 1 }
+			local tbl4 = { Name = "Extend Distance", Range = { 0, 1000 }, Increment = 1 }
 			callback = tbl3.Grab
 			local rshift = bit32.rshift
 			local value = 9
 			local n = rshift(0, value) + 35
 			callback = callback.Extend
 			callback = callback.Distance
-			tbl4.CurrentValue = callback
+			tbl4.CurrentValue = tbl3.Grab.Extend.Distance
 			tbl4.Flag = "Extend_Distance"
 
 			callback = function(distance)
@@ -6698,12 +6786,12 @@ end
 			local grab2 = grab
 			local createSlider = grab.CreateSlider
 			callback = { 1, 10 }
-			local tbl4 = { Name = "Extend Multiplier", Range = callback, Increment = 1 }
+			local tbl4 = { Name = "Extend Multiplier", Range = { 1, 10 }, Increment = 1 }
 			callback = tbl3.Grab
 			local n2 = 35
 			callback = callback.Extend
 			callback = callback.Multiplier
-			tbl4.CurrentValue = callback
+			tbl4.CurrentValue = tbl3.Grab.Extend.Multiplier
 			tbl4.Flag = "Extend_Distance"
 
 			callback = function(multiplier)
@@ -7916,7 +8004,7 @@ end
 				end
 			end
 
-			tabs.Defense:CreateToggle({ Name = "Anti-AFK", Flag = "Anti_AFK", CurrentValue = callback, Callback = callback })
+			tabs.Defense:CreateToggle({ Name = "Anti-AFK", Flag = "Anti_AFK", CurrentValue = tbl3.Defense.AntiAFK, Callback = callback })
 		end
 
 		callback = function(antiFling)
@@ -7976,7 +8064,7 @@ end
 			end
 		end
 
-		tbl2.GuiObjects.Tabs.Defense:CreateToggle({ Name = "Ocean Walk", Flag = "Ocean_Walk", CurrentValue = callback, Callback = callback })
+		tbl2.GuiObjects.Tabs.Defense:CreateToggle({ Name = "Ocean Walk", Flag = "Ocean_Walk", CurrentValue = tbl3.Defense.OceanWalk, Callback = callback })
 
 		callback = function(sitLock)
 			tbl3.Defense.SitLock = sitLock
@@ -8295,7 +8383,7 @@ end
 		tbl2.GuiObjects.Tabs.Blobman:CreateToggle({
 			Name = "Ignore Plots",
 			Flag = "Blobman_Loop_Ignore_Plots",
-			CurrentValue = callback,
+			CurrentValue = tbl3.Blobman.Loop.IgnorePlots,
 			Callback = callback,
 		})
 
@@ -8697,7 +8785,7 @@ end
 		tbl2.GuiObjects.Tabs.Blobman:CreateToggle({
 			Name = "Auto-Update On Change",
 			Flag = "Blobman_MS_Auto_Update",
-			CurrentValue = callback,
+			CurrentValue = tbl3.Blobman.Manual.AutoUpdate,
 			Callback = callback,
 		})
 
@@ -8957,9 +9045,9 @@ end
 
 		tbl2.GuiObjects.Tabs.Lag:CreateSlider({
 			Name = "Lines Amount",
-			Range = callback,
+			Range = { 1, 1000 },
 			Increment = 1,
-			CurrentValue = callback,
+			CurrentValue = tbl3.Lag.Lines.Amount,
 			Flag = "Lag_Lines",
 			Callback = callback,
 		})
@@ -9391,9 +9479,9 @@ end
 
 		tbl2.GuiObjects.Tabs.Decoys:CreateSlider({
 			Name = "Walk Speed",
-			Range = callback,
+			Range = { 0, 200 },
 			Increment = 1,
-			CurrentValue = callback,
+			CurrentValue = tbl3.Decoys.Speed,
 			Flag = "NPC_Speed",
 			Callback = callback,
 		})
@@ -9408,9 +9496,9 @@ end
 
 			local tbl4 = {
 				Name = "Jump Power",
-				Range = callback,
+				Range = { 0, 300 },
 				Increment = 1,
-				CurrentValue = callback,
+				CurrentValue = tbl3.Decoys.JumpPower,
 				Flag = "NPC_JumpPower",
 			}
 
@@ -9696,9 +9784,9 @@ end
 
 		tbl2.GuiObjects.Tabs.Bombs:CreateSlider({
 			Name = "Explosion Delay",
-			Range = callback,
+			Range = { 0, 1 },
 			Increment = 0.05,
-			CurrentValue = callback,
+			CurrentValue = tbl3.Bombs.Delay,
 			Flag = "Bombs_Delay",
 			Callback = callback,
 		})
@@ -9915,9 +10003,9 @@ end
 
 		tbl2.GuiObjects.Tabs.ESP:CreateSlider({
 			Name = "ESP Transparency",
-			Range = callback,
+			Range = { 0, 1 },
 			Increment = 0.01,
-			CurrentValue = callback,
+			CurrentValue = tbl3.ESP.Character.Transparency,
 			Flag = "ESP_Transparency",
 			Callback = callback,
 		})
@@ -10257,9 +10345,9 @@ end
 
 		tbl2.GuiObjects.Tabs.ESP:CreateSlider({
 			Name = "Base Transparency",
-			Range = callback,
+			Range = { 0, 1 },
 			Increment = 0.01,
-			CurrentValue = callback,
+			CurrentValue = tbl3.ESP.PCLD.Transparency,
 			Flag = "ESP_PCLD_Transparency",
 			Callback = callback,
 		})
@@ -10282,9 +10370,9 @@ end
 
 		tbl2.GuiObjects.Tabs.ESP:CreateSlider({
 			Name = "Surface Transparency",
-			Range = callback,
+			Range = { 0, 1 },
 			Increment = 0.01,
-			CurrentValue = callback,
+			CurrentValue = tbl3.ESP.PCLD.SurfaceTransparency,
 			Flag = "ESP_PCLD_SurfaceTransparency",
 			Callback = callback,
 		})
@@ -10310,9 +10398,9 @@ end
 
 			esp:CreateSlider({
 				Name = "Line Thickness",
-				Range = callback,
+				Range = { 0, 1 },
 				Increment = 0.01,
-				CurrentValue = callback,
+				CurrentValue = tbl3.ESP.PCLD.LineThickness,
 				Flag = "ESP_PCLD_LineThickness",
 				Callback = callback,
 			})
@@ -10356,7 +10444,7 @@ end
 		tbl2.GuiObjects.Tabs.Whitelist:CreateToggle({
 			Name = "Whitelist Check",
 			Flag = "CustomWhitelist_Whitelist_Check",
-			CurrentValue = callback,
+			CurrentValue = tbl3.CustomWhitelist.Whitelist.Toggle,
 			Callback = callback,
 		})
 
@@ -10386,7 +10474,7 @@ end
 		tbl2.GuiObjects.Tabs.Whitelist:CreateToggle({
 			Name = "Friend List Check",
 			Flag = "CustomWhitelist_FriendList_Check",
-			CurrentValue = callback,
+			CurrentValue = tbl3.CustomWhitelist.FriendList.Toggle,
 			Callback = callback,
 		})
 
@@ -10911,7 +10999,7 @@ end
 			end
 		end
 
-		tbl2.GuiObjects.Tabs.Misc:CreateToggle({ Name = "Plot Saver", Flag = "Plot_Saver", CurrentValue = callback, Callback = callback })
+		tbl2.GuiObjects.Tabs.Misc:CreateToggle({ Name = "Plot Saver", Flag = "Plot_Saver", CurrentValue = tbl3.Misc.Auto.PlotSaver, Callback = callback })
 		callback = tbl3.Misc
 		callback = callback.AutoFarm
 
@@ -11045,7 +11133,7 @@ end
 			end
 		end
 
-		tbl2.GuiObjects.Tabs.Misc:CreateToggle({ Name = "Auto-Farm Coins", Flag = "Auto_Farm", CurrentValue = callback, Callback = callback })
+		tbl2.GuiObjects.Tabs.Misc:CreateToggle({ Name = "Auto-Farm Coins", Flag = "Auto_Farm", CurrentValue = tbl2.SpinningSlot, Callback = callback })
 		tbl2.GuiObjects.Tabs.Misc:CreateSection("Sparkler Wings")
 
 		callback = {
@@ -11431,9 +11519,9 @@ end
 
 		tbl2.GuiObjects.Tabs.Misc:CreateSlider({
 			Name = "Wings Speed",
-			Range = callback,
+			Range = { 1, 10 },
 			Increment = 0.1,
-			CurrentValue = callback,
+			CurrentValue = tbl3.Misc.Wings.Speed,
 			Flag = "Misc_Wings_Speed",
 			Callback = callback,
 		})
@@ -11449,9 +11537,9 @@ end
 
 		tbl2.GuiObjects.Tabs.Misc:CreateSlider({
 			Name = "Wings Segments",
-			Range = callback,
+			Range = { 4, 30 },
 			Increment = 2,
-			CurrentValue = callback,
+			CurrentValue = tbl3.Misc.Wings.Segments,
 			Flag = "Misc_Wings_Segments",
 			Callback = callback,
 		})
@@ -12353,5 +12441,4 @@ loadConfiguration["NomDeVotreOption"] = 1
 
 		return
 	end
-end
 end
