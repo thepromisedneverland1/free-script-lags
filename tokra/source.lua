@@ -1,6 +1,56 @@
 -- Names recovered by dark reel nico (!fix): 36 renamed from context, uncertain names left untouched
 -- Deobfuscated by nico nico nii
 
+tokraNormalizeOption = function(option)
+	if type(option) ~= "table" then
+		option = { CurrentOption = option }
+	end
+
+	local raw = option.CurrentOption
+	local list = {}
+
+	if type(raw) == "table" then
+		for _, value in ipairs(raw) do
+			if value ~= nil then
+				list[#list + 1] = tostring(value)
+			end
+		end
+	elseif type(raw) == "string" or type(raw) == "number" then
+		list = { tostring(raw) }
+	end
+
+	if not option.MultipleOptions and #list > 1 then
+		list = { list[1] }
+	end
+
+	option.CurrentOption = list
+
+	return list
+end
+
+tokraSelectedText = function(list)
+	if type(list) ~= "table" or #list == 0 then
+		return "None"
+	end
+
+	if #list == 1 then
+		return tostring(list[1])
+	end
+
+	return "Various"
+end
+
+tokraRefreshDropdown = function(option, element)
+	local list = tokraNormalizeOption(option)
+	local text = tokraSelectedText(list)
+
+	if element and element.Selected then
+		element.Selected.Text = text
+	end
+
+	return text
+end
+
 if game.PlaceId == 6961824067 then
 	if not getgenv().TokraLoaded and not getgenv().TokraRan then
 		task.delay(5, function()
@@ -739,8 +789,7 @@ if game.PlaceId == 6961824067 then
 			screenGui2.DisplayOrder = 100
 			loadingFrame.Version.Text = "Build 1.68"
 			local lua = fn2("https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/refs/heads/main/icons.lua")
-			local configFileName = nil
-            local configFolder = "Rayfield/Configurations"
+			local fileName = nil
 			local flag4 = false; local flag5 = false; local flag6 = false; local flag7 = false
 			local flag8 = false
 			local notifications = screenGui2.Notifications
@@ -1005,7 +1054,7 @@ if game.PlaceId == 6961824067 then
 					end
 				end
 
-				writefile(configFolder .. "/" .. configFileName .. ".rfld", HttpService:JSONEncode(tbl3))
+				writefile(callback .. "/" .. fileName .. ".rfld", tostring(HttpService:JSONEncode(tbl3)))
 			end
 
 			tbl.Notify = function(arg, arg2)
@@ -1691,13 +1740,13 @@ if game.PlaceId == 6961824067 then
 						arg2.ConfigurationSaving.Enabled = false
 					end
 
-					configFileName = tostring(arg2.ConfigurationSaving.FileName)
-					configFolder = type(arg2.ConfigurationSaving.FolderName) == "string" and arg2.ConfigurationSaving.FolderName or "Rayfield/Configurations"
+					fileName = arg2.ConfigurationSaving.FileName
+					callback = arg2.ConfigurationSaving.FolderName or callback
 					flag4 = arg2.ConfigurationSaving.Enabled
 
 					if arg2.ConfigurationSaving.Enabled then
-						if not isfolder(configFolder) then
-							makefolder(configFolder)
+						if not isfolder(callback) then
+							makefolder(callback)
 						end
 					end
 				end)
@@ -2043,7 +2092,7 @@ if game.PlaceId == 6961824067 then
 									local TweenService4 = TweenService
 									local create3 = TweenService.Create
 									local mainCP2 = mainCP
-									
+									local TweenInfo; TweenInfo = TweenInfo
 									local rrotate = bit32.rrotate
 									local value2 = 27
 									local n7 = rrotate(334, value2) - 10682
@@ -2591,35 +2640,7 @@ if game.PlaceId == 6961824067 then
 							clone3.Parent = clone2
 							clone3.List.Visible = false
 
-							if not arg7.CurrentOption then
-								arg7.CurrentOption = {}
-							else
-								if type(arg7.CurrentOption) == "string" then
-									arg7.CurrentOption = { arg7.CurrentOption }
-								end
-
-								if not arg7.MultipleOptions then
-									if type(arg7.CurrentOption) == "table" then
-										arg7.CurrentOption = { arg7.CurrentOption[1] }
-									end
-								end
-							end
-
-							if not arg7.MultipleOptions then
-							clone3.Selected.Text = arg7.CurrentOption[1] or 
-								"None"
-							elseif not arg7.CurrentOption or type(arg7.CurrentOption) ~= "table" then
-								arg7.CurrentOption = {}
-								clone3.Selected.Text = "None"
-							elseif #arg7.CurrentOption ~= 1 then
-								if #arg7.CurrentOption ~= 0 then
-									clone3.Selected.Text = "Various"
-								else
-									clone3.Selected.Text = "None"
-								end
-							else
-								clone3.Selected.Text = arg7.CurrentOption[1]
-							end
+							tokraRefreshDropdown(arg7, clone3)
 
 							clone3.Toggle.ImageColor3 = default.TextColor
 							local TweenService4 = TweenService
@@ -2761,17 +2782,7 @@ if game.PlaceId == 6961824067 then
 
 											table.insert(arg7.CurrentOption, option)
 
-											if not arg7.MultipleOptions then
-												clone3.Selected.Text = arg7.CurrentOption[1]
-											elseif #arg7.CurrentOption ~= 1 then
-												if #arg7.CurrentOption ~= 0 then
-													clone3.Selected.Text = "Various"
-												else
-													clone3.Selected.Text = "None"
-												end
-											else
-												clone3.Selected.Text = arg7.CurrentOption[1]
-											end
+											tokraRefreshDropdown(arg7, clone3)
 
 											TweenService:Create(clone4.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), { Transparency = 1 }):Play()
 											local tbl4 = { BackgroundColor3 = default.DropdownSelected }
@@ -2780,17 +2791,7 @@ if game.PlaceId == 6961824067 then
 										else
 											table.remove(arg7.CurrentOption, table.find(arg7.CurrentOption, option))
 
-											if not arg7.MultipleOptions then
-												clone3.Selected.Text = arg7.CurrentOption[1]
-											elseif #arg7.CurrentOption ~= 1 then
-												if #arg7.CurrentOption ~= 0 then
-													clone3.Selected.Text = "Various"
-												else
-													clone3.Selected.Text = "None"
-												end
-											else
-												clone3.Selected.Text = arg7.CurrentOption[1]
-											end
+											tokraRefreshDropdown(arg7, clone3)
 										end
 
 										local ok, result = pcall(function()
@@ -2891,25 +2892,7 @@ if game.PlaceId == 6961824067 then
 							arg7.Set = function(arg8, currentOption)
 								arg7.CurrentOption = currentOption
 
-								if typeof(arg7.CurrentOption) == "string" then
-									arg7.CurrentOption = { arg7.CurrentOption }
-								end
-
-								if not arg7.MultipleOptions then
-									arg7.CurrentOption = { arg7.CurrentOption[1] }
-								end
-
-								if not arg7.MultipleOptions then
-									clone3.Selected.Text = tostring(arg7.CurrentOption[1]) or ""
-								elseif #arg7.CurrentOption ~= 1 then
-									if #arg7.CurrentOption ~= 0 then
-										clone3.Selected.Text = "Various"
-									else
-										clone3.Selected.Text = "None"
-									end
-								else
-									clone3.Selected.Text = arg7.CurrentOption[1]
-								end
+								tokraRefreshDropdown(arg7, clone3)
 
 								local ok, result = pcall(function()
 									arg7.Callback(currentOption)
@@ -3372,7 +3355,7 @@ if game.PlaceId == 6961824067 then
 							TweenService:Create(clone3, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), { BackgroundTransparency = 0 }):Play()
 							TweenService:Create(clone3.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), { Transparency = 0 }):Play()
 							TweenService:Create(clone3.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), { TextTransparency = 0 }):Play()
-							clone3.Main.Progress.Size = UDim2.new(math.clamp((arg7.CurrentValue - arg7.Range[1]) / math.max(arg7.Range[2] - arg7.Range[1], 0.000001), 0, 1), 0, 1, 0)
+							clone3.Main.Progress.Size = UDim2.new(0, ( (clone3.Main.AbsoluteSize.X * (arg7.CurrentValue + arg7.Range[1]) / (arg7.Range[2] - arg7.Range[1])) > 5 ) and (clone3.Main.AbsoluteSize.X * arg7.CurrentValue / (arg7.Range[2] - arg7.Range[1])) or 5, 1, 0)
 
 							if not arg7.Suffix then
 								clone3.Main.Information.Text = tostring(arg7.CurrentValue)
@@ -3859,8 +3842,8 @@ end
 					local v7 = nil
 
 					local ok, result = pcall(function()
-						if isfile(configFolder .. "/" .. configFileName .. ".rfld") then
-							v7 = fn9(readfile(configFolder .. "/" .. configFileName .. ".rfld"))
+						if isfile(callback .. "/" .. fileName .. ".rfld") then
+							v7 = fn9(readfile(callback .. "/" .. fileName .. ".rfld"))
 						end
 					end)
 
@@ -6451,7 +6434,7 @@ Check the Developer Console for more information.]],
 		tbl2.GuiObjects.Tabs.Misc = tbl2.GuiObjects.Window:CreateTab(callback, "box")
 		tbl2.GuiObjects.Tabs.Grab:CreateSection("Grab Modifications")
 
-do
+		do
     tbl3.Grab = tbl3.Grab or {}
     tbl3.Grab.Mode = tbl3.Grab.Mode or {}
 
@@ -6487,6 +6470,36 @@ do
             end,
         })
     end
+end
+
+    tbl3.Grab = tbl3.Grab or {}
+    tbl3.Grab.Mode = tbl3.Grab.Mode or {}
+
+    local guiObjects = tbl2.GuiObjects
+    local grabTab = guiObjects and guiObjects.Tabs and guiObjects.Tabs.Grab
+    local applyGrabMode = tbl2.ApplyGrabMode
+
+    if not grabTab or type(grabTab.CreateToggle) ~= "function" then
+        error("Create tbl2.GuiObjects.Tabs.Grab before creating the grab mode toggles.")
+    end
+    if type(applyGrabMode) ~= "function" then
+        error("Define tbl2.ApplyGrabMode before creating the grab mode toggles.")
+    end
+
+    
+	for _, modeName in ipairs(GrabModes or {}) do
+	tbl3.Grab.Mode[modeName] = false
+
+	guiObjects[modeName .. "Grab"] = grabTab:CreateToggle({
+		Name = modeName .. " Grab",
+		Flag = "Grab_" .. modeName,
+		Callback = function(value)
+			tbl3.Grab.Mode[modeName] = value
+			if type(applyGrabMode) == "function" then
+				task.spawn(applyGrabMode, nil, nil, modeName, value)
+			end
+		end,
+	})
 end
 
 
@@ -6562,30 +6575,48 @@ end
 			tabs.Grab:CreateToggle({ Name = "Stronger Throw", Flag = "Throw_Toggle", Callback = callback })
 		end
 
-        do
-            local throw = tbl3.Grab.Throw
-            local grab = tbl2.GuiObjects.Tabs.Grab
-            grab:CreateSlider({
-                Name = "Throw Power",
-                Range = { 0, 10000 },
-                Increment = 10,
-                CurrentValue = throw.Power,
-                Flag = "Throw_Power",
-                Callback = function(power)
-                    throw.Power = power
-                end,
-            })
-            grab:CreateSlider({
-                Name = "Throw Time",
-                Range = { 0.05, 10 },
-                Increment = 0.05,
-                CurrentValue = throw.Time,
-                Flag = "Throw_Time",
-                Callback = function(time)
-                    throw.Time = time
-                end,
-            })
-        end
+		do
+			local grab = tbl2.GuiObjects.Tabs.Grab
+			local grab2 = grab
+			local createSlider = grab.CreateSlider
+			local flag2 = true
+			local n = bit32.rshift(274 - string.byte("\178\1626", 2, nil), 12) + 1
+			callback = { 0, 10000 }
+			callback = tbl3.Grab
+			callback = callback.Throw
+			callback = callback.Power
+
+			callback = function(power)
+				tbl3.Grab.Throw.Power = power
+			end
+
+			createSlider(grab2, {
+				Name = "Throw Power",
+				Range = callback,
+				Increment = 10,
+				CurrentValue = callback,
+				Flag = "Throw_Power",
+				Callback = callback,
+			})
+		end
+
+		callback = { 0.05, 10 }
+		callback = tbl3.Grab
+		callback = callback.Throw
+		callback = callback.Time
+
+		callback = function(time_)
+			tbl3.Grab.Throw.Time = time_
+		end
+
+		tbl2.GuiObjects.Tabs.Grab:CreateSlider({
+			Name = "Throw Time",
+			Range = callback,
+			Increment = 0.05,
+			CurrentValue = callback,
+			Flag = "Throw_Time",
+			Callback = callback,
+		})
 
 		tbl2.GuiObjects.Tabs.Grab:CreateSection("Grab Line Extend")
 
