@@ -739,7 +739,8 @@ if game.PlaceId == 6961824067 then
 			screenGui2.DisplayOrder = 100
 			loadingFrame.Version.Text = "Build 1.68"
 			local lua = fn2("https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/refs/heads/main/icons.lua")
-			local fileName = nil
+			local configFileName = nil
+            local configFolder = "Rayfield/Configurations"
 			local flag4 = false; local flag5 = false; local flag6 = false; local flag7 = false
 			local flag8 = false
 			local notifications = screenGui2.Notifications
@@ -1004,7 +1005,7 @@ if game.PlaceId == 6961824067 then
 					end
 				end
 
-				writefile(callback .. "/" .. fileName .. ".rfld", tostring(HttpService:JSONEncode(tbl3)))
+				writefile(configFolder .. "/" .. configFileName .. ".rfld", HttpService:JSONEncode(tbl3))
 			end
 
 			tbl.Notify = function(arg, arg2)
@@ -1690,13 +1691,13 @@ if game.PlaceId == 6961824067 then
 						arg2.ConfigurationSaving.Enabled = false
 					end
 
-					fileName = arg2.ConfigurationSaving.FileName
-					callback = arg2.ConfigurationSaving.FolderName or callback
+					configFileName = tostring(arg2.ConfigurationSaving.FileName)
+					configFolder = type(arg2.ConfigurationSaving.FolderName) == "string" and arg2.ConfigurationSaving.FolderName or "Rayfield/Configurations"
 					flag4 = arg2.ConfigurationSaving.Enabled
 
 					if arg2.ConfigurationSaving.Enabled then
-						if not isfolder(callback) then
-							makefolder(callback)
+						if not isfolder(configFolder) then
+							makefolder(configFolder)
 						end
 					end
 				end)
@@ -2042,7 +2043,7 @@ if game.PlaceId == 6961824067 then
 									local TweenService4 = TweenService
 									local create3 = TweenService.Create
 									local mainCP2 = mainCP
-									local TweenInfo; TweenInfo = TweenInfo
+									
 									local rrotate = bit32.rrotate
 									local value2 = 27
 									local n7 = rrotate(334, value2) - 10682
@@ -2605,7 +2606,8 @@ if game.PlaceId == 6961824067 then
 							end
 
 							if not arg7.MultipleOptions then
-								clone3.Selected.Text = arg7.CurrentOption[1] or "None"
+							clone3.Selected.Text = arg7.CurrentOption[1] or 
+								"None"
 							elseif not arg7.CurrentOption or type(arg7.CurrentOption) ~= "table" then
 								arg7.CurrentOption = {}
 								clone3.Selected.Text = "None"
@@ -3370,7 +3372,7 @@ if game.PlaceId == 6961824067 then
 							TweenService:Create(clone3, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), { BackgroundTransparency = 0 }):Play()
 							TweenService:Create(clone3.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), { Transparency = 0 }):Play()
 							TweenService:Create(clone3.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), { TextTransparency = 0 }):Play()
-							clone3.Main.Progress.Size = UDim2.new(0, clone3.Main.AbsoluteSize.X * (arg7.CurrentValue + arg7.Range[1]) / (arg7.Range[2] - arg7.Range[1]) > 5 and clone3.Main.AbsoluteSize.X * arg7.CurrentValue / (arg7.Range[2] - arg7.Range[1]) or 5, 1, 0)
+							clone3.Main.Progress.Size = UDim2.new(math.clamp((arg7.CurrentValue - arg7.Range[1]) / math.max(arg7.Range[2] - arg7.Range[1], 0.000001), 0, 1), 0, 1, 0)
 
 							if not arg7.Suffix then
 								clone3.Main.Information.Text = tostring(arg7.CurrentValue)
@@ -3857,8 +3859,8 @@ end
 					local v7 = nil
 
 					local ok, result = pcall(function()
-						if isfile(callback .. "/" .. fileName .. ".rfld") then
-							v7 = fn9(readfile(callback .. "/" .. fileName .. ".rfld"))
+						if isfile(configFolder .. "/" .. configFileName .. ".rfld") then
+							v7 = fn9(readfile(configFolder .. "/" .. configFileName .. ".rfld"))
 						end
 					end)
 
@@ -6449,74 +6451,41 @@ Check the Developer Console for more information.]],
 		tbl2.GuiObjects.Tabs.Misc = tbl2.GuiObjects.Window:CreateTab(callback, "box")
 		tbl2.GuiObjects.Tabs.Grab:CreateSection("Grab Modifications")
 
-		local v6, v7, v8 = ipairs({
-			"Kick",
-			"Kill",
-			"Void",
-			"Fling",
-			"Swing",
-			"Strong",
-			"Spam",
-			"SoftLock",
-			"Invisible",
-			"Noclip",
-			"Ragdoll",
-			"Unstick",
-			"Freeze",
-			"Crazy",
-			"Spin",
-			"Orbit",
-		})
-
-		do
-    if type(J_1) ~= "function" then
-        error("The grab mode iterator J_1 is not initialized.")
-    end
-    if type(tbl2) ~= "table" or type(tbl3) ~= "table" then
-        error("Initialize tbl2 and tbl3 before creating the grab mode toggles.")
-    end
-
+do
     tbl3.Grab = tbl3.Grab or {}
     tbl3.Grab.Mode = tbl3.Grab.Mode or {}
 
-    local guiObjects = tbl2.GuiObjects
-    local grabTab = guiObjects and guiObjects.Tabs and guiObjects.Tabs.Grab
-    local applyGrabMode = tbl2.ApplyGrabMode
+    local grabTab = tbl2.GuiObjects.Tabs.Grab
 
-    if not grabTab or type(grabTab.CreateToggle) ~= "function" then
-        error("Create tbl2.GuiObjects.Tabs.Grab before creating the grab mode toggles.")
-    end
-    if type(applyGrabMode) ~= "function" then
-        error("Define tbl2.ApplyGrabMode before creating the grab mode toggles.")
-    end
+    for _, name in ipairs({
+        "Kick",
+        "Kill",
+        "Void",
+        "Fling",
+        "Swing",
+        "Strong",
+        "Spam",
+        "SoftLock",
+        "Invisible",
+        "Noclip",
+        "Ragdoll",
+        "Unstick",
+        "Freeze",
+        "Crazy",
+        "Spin",
+        "Orbit",
+    }) do
+        local modeName = name
+        tbl3.Grab.Mode[modeName] = false
 
-    while true do
-        local args = table.pack(J_1())
-        if args[1] == nil or args[1] == false then
-            break
-        end
-
-        local mode = args[3]
-        if type(mode) ~= "string" then
-            mode = args[2]
-        end
-        if type(mode) ~= "string" and type(args[1]) == "string" then
-            mode = args[1]
-        end
-
-        if type(mode) == "string" and mode ~= "" then
-            local modeName = mode
-            tbl3.Grab.Mode[modeName] = false
-
-            guiObjects[modeName .. "Grab"] = grabTab:CreateToggle({
-                Name = modeName .. " Grab",
-                Flag = "Grab_" .. modeName,
-                Callback = function(value)
-                    tbl3.Grab.Mode[modeName] = value
-                    task.spawn(applyGrabMode, nil, nil, modeName, value)
-                end,
-            })
-        end
+        tbl2.GuiObjects[modeName .. "Grab"] = grabTab:CreateToggle({
+            Name = modeName .. " Grab",
+            Flag = "Grab_" .. modeName,
+            Callback = function(value)
+                tbl3.Grab.Mode[modeName] = value
+                task.spawn(tbl2.ApplyGrabMode, nil, nil, modeName, value)
+            end,
+        })
     end
 end
 
@@ -6593,48 +6562,30 @@ end
 			tabs.Grab:CreateToggle({ Name = "Stronger Throw", Flag = "Throw_Toggle", Callback = callback })
 		end
 
-		do
-			local grab = tbl2.GuiObjects.Tabs.Grab
-			local grab2 = grab
-			local createSlider = grab.CreateSlider
-			local flag2 = true
-			local n = bit32.rshift(274 - string.byte("\178\1626", 2, nil), 12) + 1
-			callback = { 0, 10000 }
-			callback = tbl3.Grab
-			callback = callback.Throw
-			callback = callback.Power
-
-			callback = function(power)
-				tbl3.Grab.Throw.Power = power
-			end
-
-			createSlider(grab2, {
-				Name = "Throw Power",
-				Range = callback,
-				Increment = 10,
-				CurrentValue = callback,
-				Flag = "Throw_Power",
-				Callback = callback,
-			})
-		end
-
-		callback = { 0.05, 10 }
-		callback = tbl3.Grab
-		callback = callback.Throw
-		callback = callback.Time
-
-		callback = function(time_)
-			tbl3.Grab.Throw.Time = time_
-		end
-
-		tbl2.GuiObjects.Tabs.Grab:CreateSlider({
-			Name = "Throw Time",
-			Range = callback,
-			Increment = 0.05,
-			CurrentValue = callback,
-			Flag = "Throw_Time",
-			Callback = callback,
-		})
+        do
+            local throw = tbl3.Grab.Throw
+            local grab = tbl2.GuiObjects.Tabs.Grab
+            grab:CreateSlider({
+                Name = "Throw Power",
+                Range = { 0, 10000 },
+                Increment = 10,
+                CurrentValue = throw.Power,
+                Flag = "Throw_Power",
+                Callback = function(power)
+                    throw.Power = power
+                end,
+            })
+            grab:CreateSlider({
+                Name = "Throw Time",
+                Range = { 0.05, 10 },
+                Increment = 0.05,
+                CurrentValue = throw.Time,
+                Flag = "Throw_Time",
+                Callback = function(time)
+                    throw.Time = time
+                end,
+            })
+        end
 
 		tbl2.GuiObjects.Tabs.Grab:CreateSection("Grab Line Extend")
 
