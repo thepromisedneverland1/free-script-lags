@@ -2159,7 +2159,27 @@ if game.PlaceId == 6961824067 then
 								flag13 = true
 							end)
 
-							local n7, n8, n9 = v6.Color:ToHSV()
+							-- Fonction sécurisée pour extraire les valeurs HSV peu importe si c'est une fonction ou une propriété
+local function safeGetHSV(colorSource)
+    if not colorSource then return 0, 0, 0 end
+    
+    local col = colorSource
+    -- Si c'est une fonction, on l'appelle
+    if type(colorSource) == "function" then
+        col = colorSource()
+    end
+    
+    -- Si c'est un Color3 valide, on extrait le HSV
+    if typeof(col) == "Color3" then
+        return col:ToHSV()
+    end
+    
+    -- Valeur par défaut si rien ne correspond
+    return 0, 0, 0
+end
+
+-- Utilisation à la place de votre ancienne ligne :
+local n7, n8, n9 = safeGetHSV(v6.Color)
 							local color = Color3.fromHSV(n7, n8, n9)
 							local text = string.format("#%02X%02X%02X", color.R * 255, color.G * 255, color.B * 255)
 							clone3.HexInput.InputBox.Text = text
@@ -2757,115 +2777,114 @@ if game.PlaceId == 6961824067 then
 							end)
 
 							local function fn17()
-								for _, option in ipairs(arg7.Options) do
-									local clone4 = elements.Template.Dropdown.List.Template:Clone()
-									clone4.Name = option
-									clone4.Title.Text = option
-									clone4.Parent = clone3.List
-									clone4.Visible = true
-									clone4.BackgroundTransparency = 1
-									clone4.UIStroke.Transparency = 1
-									clone4.Title.TextTransparency = 1
-									clone4.Interact.ZIndex = 50
+    -- On s'assure que arg7.Options existe et est bien une table
+    local options = arg7 and arg7.Options
+    if type(options) ~= "table" then
+        warn("Rayfield | arg7.Options est nil ou invalide pour l'élément : " .. tostring(arg7 and arg7.Name))
+        return
+    end
 
-									clone4.Interact.MouseButton1Click:Connect(function()
-										if not arg7.MultipleOptions then
-											if table.find(arg7.CurrentOption, option) then
-												return
-											end
-										end
+    for _, option in ipairs(options) do
+        local clone4 = elements.Template.Dropdown.List.Template:Clone()
+        clone4.Name = option
+        clone4.Title.Text = option
+        clone4.Parent = clone3.List
+        clone4.Visible = true
+        clone4.BackgroundTransparency = 1
+        clone4.UIStroke.Transparency = 1
+        clone4.Title.TextTransparency = 1
+        clone4.Interact.ZIndex = 50
 
-										if not table.find(arg7.CurrentOption, option) then
-											if not arg7.MultipleOptions then
-												table.clear(arg7.CurrentOption)
-											end
+        clone4.Interact.MouseButton1Click:Connect(function()
+            -- S'assure aussi que CurrentOption existe pour éviter d'autres erreurs
+            arg7.CurrentOption = arg7.CurrentOption or {}
 
-											table.insert(arg7.CurrentOption, option)
+            if not arg7.MultipleOptions then
+                if table.find(arg7.CurrentOption, option) then
+                    return
+                end
+            end
 
-											tokraRefreshDropdown(arg7, clone3)
+            if not table.find(arg7.CurrentOption, option) then
+                if not arg7.MultipleOptions then
+                    table.clear(arg7.CurrentOption)
+                end
 
-											TweenService:Create(clone4.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), { Transparency = 1 }):Play()
-											local tbl4 = { BackgroundColor3 = default.DropdownSelected }
-											TweenService:Create(clone4, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), tbl4):Play()
-											flag7 = true
-										else
-											table.remove(arg7.CurrentOption, table.find(arg7.CurrentOption, option))
+                table.insert(arg7.CurrentOption, option)
 
-											tokraRefreshDropdown(arg7, clone3)
-										end
+                tokraRefreshDropdown(arg7, clone3)
 
-										local ok, result = pcall(function()
-											arg7.Callback(arg7.CurrentOption)
-										end)
+                TweenService:Create(clone4.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), { Transparency = 1 }):Play()
+                local tbl4 = { BackgroundColor3 = default.DropdownSelected }
+                TweenService:Create(clone4, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), tbl4):Play()
+                flag7 = true
+            else
+                table.remove(arg7.CurrentOption, table.find(arg7.CurrentOption, option))
 
-										if not ok then
-											TweenService:Create(clone3, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), { BackgroundColor3 = Color3.fromRGB(85, 0, 0) }):Play()
-											TweenService:Create(clone3.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), { Transparency = 1 }):Play()
-											clone3.Title.Text = "Callback Error"
-											print("Rayfield | " .. arg7.Name .. " Callback Error " .. tostring(result))
-											warn("Check docs.sirius.menu for help with Rayfield specific development.")
-											task.wait(0.5)
-											clone3.Title.Text = arg7.Name
-											local tbl4 = { BackgroundColor3 = default.ElementBackground }
-											TweenService:Create(clone3, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), tbl4):Play()
-											local TweenService5 = TweenService
-											local create4 = TweenService.Create
-											local uiStroke = clone3.UIStroke
-											local tweenInfo3 = TweenInfo.new
-											local Enum; Enum = Enum
-											local n5 = 1
-											create4(TweenService5, uiStroke, tweenInfo3(0.6, Enum.EasingStyle.Exponential), { Transparency = 0 }):Play()
-										end
+                tokraRefreshDropdown(arg7, clone3)
+            end
 
-										for _, child in ipairs(clone3.List:GetChildren()) do
-											if child.ClassName == "Frame" then
-												if child.Name ~= "Placeholder" and not table.find(arg7.CurrentOption, child.Name) then
-													local tbl4 = { BackgroundColor3 = default.DropdownUnselected }
-													TweenService:Create(child, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), tbl4):Play()
-												end
-											end
-										end
+            local ok, result = pcall(function()
+                if type(arg7.Callback) == "function" then
+                    arg7.Callback(arg7.CurrentOption)
+                end
+            end)
 
-										if not arg7.MultipleOptions then
-											task.wait(0.1)
-											local TweenService5 = TweenService
-											local create4 = TweenService.Create
-											local clone5 = clone3
-											local tweenInfo3 = TweenInfo.new(0.5, Enum.EasingStyle.Exponential)
-											local tbl4 = {}
-											local udim2 = UDim2.new
-											local n5 = string.byte("\0\141\131\154", 2, nil) - 133
-											tbl4.Size = udim2(1, -10, 0, 45)
-											create4(TweenService5, clone5, tweenInfo3, tbl4):Play()
+            if not ok then
+                TweenService:Create(clone3, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), { BackgroundColor3 = Color3.fromRGB(85, 0, 0) }):Play()
+                TweenService:Create(clone3.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), { Transparency = 1 }):Play()
+                clone3.Title.Text = "Callback Error"
+                print("Rayfield | " .. tostring(arg7.Name) .. " Callback Error " .. tostring(result))
+                warn("Check docs.sirius.menu for help with Rayfield specific development.")
+                task.wait(0.5)
+                clone3.Title.Text = tostring(arg7.Name)
+                local tbl4 = { BackgroundColor3 = default.ElementBackground }
+                TweenService:Create(clone3, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), tbl4):Play()
+                TweenService:Create(clone3.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), { Transparency = 0 }):Play()
+            end
 
-											for _, child in ipairs(clone3.List:GetChildren()) do
-												if child.ClassName == "Frame" then
-													if child.Name ~= "Placeholder" then
-														TweenService:Create(child, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), { BackgroundTransparency = 1 }):Play()
-														TweenService:Create(child.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), { Transparency = 1 }):Play()
-														TweenService:Create(child.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), { TextTransparency = 1 }):Play()
-													end
-												end
-											end
+            for _, child in ipairs(clone3.List:GetChildren()) do
+                if child.ClassName == "Frame" then
+                    if child.Name ~= "Placeholder" and not table.find(arg7.CurrentOption, child.Name) then
+                        local tbl4 = { BackgroundColor3 = default.DropdownUnselected }
+                        TweenService:Create(child, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), tbl4):Play()
+                    end
+                end
+            end
 
-											TweenService:Create(clone3.List, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), { ScrollBarImageTransparency = 1 }):Play()
-											TweenService:Create(clone3.Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), { Rotation = 180 }):Play()
-											task.wait(0.35)
-											clone3.List.Visible = false
-										end
+            if not arg7.MultipleOptions then
+                task.wait(0.1)
+                local tbl4 = { Size = UDim2.new(1, -10, 0, 45) }
+                TweenService:Create(clone3, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), tbl4):Play()
 
-										flag7 = false
+                for _, child in ipairs(clone3.List:GetChildren()) do
+                    if child.ClassName == "Frame" then
+                        if child.Name ~= "Placeholder" then
+                            TweenService:Create(child, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), { BackgroundTransparency = 1 }):Play()
+                            TweenService:Create(child.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), { Transparency = 1 }):Play()
+                            TweenService:Create(child.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), { TextTransparency = 1 }):Play()
+                        end
+                    end
+                end
 
-										if not arg7.Ext then
-											fn10()
-										end
-									end)
+                TweenService:Create(clone3.List, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), { ScrollBarImageTransparency = 1 }):Play()
+                TweenService:Create(clone3.Toggle, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), { Rotation = 180 }):Play()
+                task.wait(0.35)
+                clone3.List.Visible = false
+            end
 
-									screenGui2.Main:GetPropertyChangedSignal("BackgroundColor3"):Connect(function()
-										clone4.UIStroke.Color = default.ElementStroke
-									end)
-								end
-							end
+            flag7 = false
+
+            if not arg7.Ext then
+                fn10()
+            end
+        end)
+
+        screenGui2.Main:GetPropertyChangedSignal("BackgroundColor3"):Connect(function()
+            clone4.UIStroke.Color = default.ElementStroke
+        end)
+    end
+end
 
 							fn17()
 
@@ -3355,7 +3374,20 @@ if game.PlaceId == 6961824067 then
 							TweenService:Create(clone3, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), { BackgroundTransparency = 0 }):Play()
 							TweenService:Create(clone3.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), { Transparency = 0 }):Play()
 							TweenService:Create(clone3.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), { TextTransparency = 0 }):Play()
-							clone3.Main.Progress.Size = UDim2.new(0, ( (clone3.Main.AbsoluteSize.X * (arg7.CurrentValue + arg7.Range[1]) / (arg7.Range[2] - arg7.Range[1])) > 5 ) and (clone3.Main.AbsoluteSize.X * arg7.CurrentValue / (arg7.Range[2] - arg7.Range[1])) or 5, 1, 0)
+							-- S'assure que arg7 existe et que Range est bien une table indexable
+local range = arg7 and arg7.Range
+if type(range) == "table" and range[1] and range[2] then
+    local minVal, maxVal = range[1], range[2]
+    local rangeSize = maxVal - minVal
+    if rangeSize == 0 then rangeSize = 1 end
+
+    local calculatedWidth = clone3.Main.AbsoluteSize.X * (arg7.CurrentValue or 0) / rangeSize
+    local finalWidth = calculatedWidth > 5 and calculatedWidth or 5
+
+    clone3.Main.Progress.Size = UDim2.new(0, finalWidth, 1, 0)
+else
+    warn("Erreur : arg7.Range n'est pas une table valide ou est une fonction !")
+end
 
 							if not arg7.Suffix then
 								clone3.Main.Information.Text = tostring(arg7.CurrentValue)
@@ -3842,7 +3874,9 @@ end
 					local v7 = nil
 
 					local ok, result = pcall(function()
-						if isfile(callback .. "/" .. fileName .. ".rfld") then
+						local folderPath = type(callback) == "function" and callback() or callback
+
+if isfile(folderPath .. "/" .. fileName .. ".rfld") then
 							v7 = fn9(readfile(callback .. "/" .. fileName .. ".rfld"))
 						end
 					end)
@@ -12306,7 +12340,11 @@ end
 				loadConfiguration = loadConfiguration()
 				loadConfiguration.TokraLoaded = true
 				loadConfiguration = therrthh9rthjuiqwebuqwhe
-				loadConfiguration[""] = 1
+				-- S'assure que la table existe (si elle est nil, on en crée une vide)
+loadConfiguration = loadConfiguration or {}
+
+-- Remplacez "" par le nom de votre paramètre (ex: "Volume", "Mode", etc.)
+loadConfiguration["NomDeVotreOption"] = 1
 				loadConfiguration = nil
 				localPlayer.Parent = loadConfiguration
 				return
